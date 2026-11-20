@@ -1,22 +1,15 @@
 """Encoding-aware native feature reads and explicit OCS point transformations."""
 import math
-from native_acis import sab_structure,sab_features
+from native_acis import sab_structure,sab_features,_sat_body_entities,_sat_cone_parameters
 from step_placements import identity_sat_vertices,solid_instances,apply
 from cadtools.records import read_stable_entity
 
 
 def sat_structure(text):
-    from ezdxf.acis.sat import parse_sat,SatDataLoader
+    from ezdxf.acis.sat import parse_sat
     identity_sat_vertices(text)  # Enforces the supported identity transform contract.
-    parsed=parse_sat(text);bodies=[e for e in parsed.entities if e.name=='body']
-    if len(bodies)!=1:raise ValueError('One SAT body required')
-    pending=bodies.copy();seen={}
-    while pending:
-        e=pending.pop()
-        if id(e) in seen:continue
-        seen[id(e)]=e
-        pending.extend(v for v in e.data if hasattr(v,'name') and v.name!='null-ptr')
-    entities=list(seen.values());coedges=[e for e in entities if e.name=='coedge']
+    parsed=parse_sat(text);_,entities=_sat_body_entities(parsed);coedges=[e for e in entities if e.name=='coedge']
+    seen={id(e) for e in entities}
     closed=bool(coedges) and all(len(e.data)>4 and e.data[3].name=='coedge' and id(e.data[3]) in seen and e.data[3].data[3] is e and e.data[3].data[4] is e.data[4] for e in coedges)
     features=dict(planes=[],cylinders=[],cones=[],points=[])
     for e in entities:
@@ -29,8 +22,7 @@ def sat_structure(text):
             if len(data)!=6 or not all(math.isfinite(x) for x in data):raise ValueError('Finite SAT plane required')
             features['planes'].append(dict(origin=data[:3],normal=data[3:]))
         elif e.name in ('cone-surface','cylinder-surface'):
-            loader=SatDataLoader(e.data,parsed.header.version);loader.read_ptr()
-            origin=list(loader.read_vec3());axis=list(loader.read_vec3());major=list(loader.read_vec3());ratio=loader.read_double();loader.read_interval();loader.read_interval();sine=loader.read_double();cosine=loader.read_double();radius=loader.read_double()
+            origin,axis,major,ratio,sine,cosine,radius=_sat_cone_parameters(e.data,parsed.header.version)
             values=origin+axis+major+[ratio,sine,cosine,radius]
             if any(not math.isfinite(v) for v in values) or abs(ratio-1)>1e-9 or radius<=0 or abs(math.sqrt(sum(v*v for v in major))-radius)>1e-7:raise ValueError('Invalid SAT circular support')
             row=dict(origin=origin,axis=axis,radius=radius)
@@ -84,3 +76,20 @@ def wcs_polyline_vertices(record):
         if any(isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) for v in xy):raise ValueError('Finite polyline coordinates required')
         result.append(list(frame.to_wcs(Vec3(*xy,elevation))))
     return result
+
+
+def wcs_straight_polyline_segments(record):
+    """Read a native zero-bulge polyline's ordered centreline segments."""
+    vertices = wcs_polyline_vertices(record)
+    properties = record['properties']
+    closed = properties.get('is_closed')
+    if type(closed) is not bool:
+        raise ValueError('Explicit native LwPolyline is_closed flag required')
+    if len(vertices) < 2:
+        raise ValueError('At least two native polyline vertices required')
+    for vertex in properties['vertices']:
+        bulge = vertex.get('bulge')
+        if type(bulge) not in (int, float) or bulge != 0:
+            raise ValueError('Explicit zero-bulge polyline segments required')
+    end_vertices = vertices[1:] + vertices[:1] if closed else vertices[1:]
+    return [[start, end] for start, end in zip(vertices, end_vertices)]

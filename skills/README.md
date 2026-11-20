@@ -27,10 +27,10 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 
 ## OCS engineering procedures
 
-[Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, sidewall cuts, insertion, quantities and native SVG/PNG views with caller-supplied inputs.
+[Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, sidewall cuts, insertion, quantities and native solid and straight polyline boundary views with caller-supplied inputs.
 
 1. [OCS control](cad-ocs-engineering/references/ocs-control.md) — session discovery, installed schemas and guarded requests.
-   [Incremental saving](cad-ocs-engineering/SKILL.md#save-work-in-progress) preserves IN_PROGRESS native models and supporting files at verified checkpoints throughout long jobs.
+   [Incremental saving](cad-ocs-engineering/SKILL.md#save-work-in-progress) preserves IN_PROGRESS native models and supporting files at verified checkpoints throughout long jobs. The pre-save audit uses the checkpoint destination.
 2. [Computational engineering](cad-ocs-engineering/references/computational-engineering.md) — equations, geometry/material/solver contracts and representation handoffs.
 3. [Capability evidence](cad-ocs-engineering/references/sources-and-capabilities.md) — original dated OCS and tool findings with source locators.
 4. [Non-geometric requirements](cad-ocs-engineering/references/non-geometric-requirements.md) — explicit source-pinned tasks whose scope requires no CAD geometry.
@@ -143,9 +143,9 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 
 ## Service clearance
 
-1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, conservative enclosures, projected separation and interference witnesses.
+1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, seated lifts, nested bore guards, source-attributed endpoints and interference witnesses.
 
-- [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, fit and contact witnesses, source trims, shell orientation and representation-sensitive recovery.
+- [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, fit and contact witnesses, source trims, source-preserving STEP wrappers and shell orientation.
 - [Job history archives](cad-ocs-engineering/references/job-history-archive.md) preserve and verify raw receipts and debug histories for each revision.
 
 [Photo and multi-view blueprint handoff](cad-ocs-engineering/references/source-view-evidence.md#ruler-photographs-and-multi-view-blueprints) covers independent photo controls and orthographic landmark agreement. [Mating-interface evaluation](cad-ocs-engineering/references/assembly-evidence.md#judge-a-mating-interface) applies the job’s stated fit to measured geometry.

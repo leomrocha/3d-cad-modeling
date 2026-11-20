@@ -1,4 +1,6 @@
 """Stable native record pagination and entity readback using a caller-bound client."""
+from collections import Counter
+
 from .runtime import CadError
 
 
@@ -50,3 +52,9 @@ def read_stable_entity(client,handle):
             if key in source and source[key]!=value:raise CadError('Native record identity differs')
     if identity(client.read('state'))!=before:raise CadError('Document changed during entity read')
     return rows[0],dict(zip(('document_id','revision','geometry_revision'),before))
+
+
+def audit_type_counts(records):
+    """Translate observed native entity labels to their audit manifest labels."""
+    audit_labels = {'Solid3D': '3D Solid', 'Insert': 'Block Reference'}
+    return dict(Counter(audit_labels.get(row['type'], row['type']) for row in records))

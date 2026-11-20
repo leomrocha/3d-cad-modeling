@@ -1,4 +1,4 @@
-"""Read supported native OCS ACIS700 SAB records through ezdxf's MIT parser.
+"""Read supported native OCS ACIS700 SAB and SAT records through ezdxf's MIT parser.
 
 This adapter reads geometry; it creates no CAD/export files. Values retain OCS
 model coordinates. ACIS header unit metadata is reported separately.
@@ -358,3 +358,215 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
     out['encoding']='SAB';out['decoder']='ezdxf.acis.sab.parse_sab'
     out['acis_header_units_in_mm']=b.header.units_in_mm
     return out
+
+
+def _sat_body_entities(parsed):
+    bodies = [entity for entity in parsed.entities if entity.name == 'body']
+    if len(bodies) != 1:
+        raise ValueError('Exactly one native SAT body required')
+    body = bodies[0]
+    pending = [body]
+    reachable = {}
+    while pending:
+        entity = pending.pop()
+        if id(entity) not in reachable:
+            reachable[id(entity)] = entity
+            pending.extend(ref for ref in entity.data
+                           if hasattr(ref, 'name') and ref.name != 'null-ptr')
+    return body, list(reachable.values())
+
+
+def _sat_cone_parameters(tokens, version):
+    from ezdxf.acis.sat import SatDataLoader
+
+    loader = SatDataLoader(tokens, version)
+    loader.read_ptr()
+    origin, axis, major = (list(loader.read_vec3()) for _ in range(3))
+    ratio = loader.read_double()
+    loader.read_interval()
+    loader.read_interval()
+    sine, cosine, radius = (loader.read_double() for _ in range(3))
+    return origin, axis, major, ratio, sine, cosine, radius
+
+
+def sat_readback(data, *, allow_rigid=False, include_cylinders=True):
+    """Read live OCS ACIS700 text topology, vertices and supported curves.
+
+    Unknown edge equations retain their native trim endpoints. Only circular
+    cylindrical support surfaces are extracted for dimensional comparisons.
+    ACIS header units describe the payload and do not rescale coordinates.
+    """
+    from ezdxf.acis.sat import SatEntity, parse_sat
+
+    if not isinstance(data, str) or not data.strip():
+        raise ValueError('Nonempty native SAT text required')
+    parsed = parse_sat(data)
+    if parsed.header.version != 700:
+        raise ValueError('Observed ACIS700 SAT layout required')
+    body, entities = _sat_body_entities(parsed)
+    matrix, translation = _sat_transform(body.data[-1], allow_rigid)
+
+    def world(values, point=False):
+        vector = [float(value) for value in values]
+        if len(vector) != 3 or any(not math.isfinite(v) for v in vector):
+            raise ValueError('Finite SAT vector required')
+        if matrix is None:
+            return vector
+        return [
+            sum(matrix[j][i] * vector[j] for j in range(3)) +
+            (translation[i] if point else 0)
+            for i in range(3)
+        ]
+
+    points = [_sat_point(entity, world) for entity in entities if entity.name == 'point']
+    faces = [entity for entity in entities if entity.name == 'face']
+    if not faces or not points:
+        raise ValueError('A native SAT body requires faces and vertices')
+    coedges = [entity for entity in entities if entity.name == 'coedge']
+    closed = bool(coedges) and all(_sat_reciprocal(entity) for entity in coedges)
+
+    # Only face-bound surfaces describe this represented body.
+    surfaces = {}
+    for face in faces:
+        support = [ref for ref in face.data
+                   if isinstance(ref, SatEntity) and ref.name.endswith('-surface')]
+        if len(support) != 1:
+            raise ValueError('Expected one SAT support surface per face')
+        surfaces[id(support[0])] = support[0]
+    cylinders = []
+    if include_cylinders:
+        for surface in surfaces.values():
+            if surface.name in ('cone-surface', 'cylinder-surface'):
+                cylinder = _sat_cylinder(surface.data, world)
+                if cylinder is not None:
+                    cylinders.append(cylinder)
+    edges = [_sat_edge(entity, world) for entity in entities if entity.name == 'edge']
+    if not edges:
+        raise ValueError('Native SAT boundary edges required')
+    result = {
+        'encoding': 'native SAT ACIS 700',
+        'points': points,
+        'surface_types': sorted({surface.name for surface in surfaces.values()}),
+        'cylinders': cylinders,
+        'edges': edges,
+        'acis_header_units_in_mm': parsed.header.units_in_mm,
+        'topology': {
+            'bodies': 1,
+            'lumps': sum(entity.name == 'lump' for entity in entities),
+            'shells': sum(entity.name == 'shell' for entity in entities),
+            'faces': len(faces),
+            'coedges': len(coedges),
+            'reciprocal_closed_partners': closed,
+        },
+    }
+    if matrix is not None:
+        result['body_transform'] = {
+            'column_major_rotation': matrix,
+            'translation': translation,
+            'scale': 1,
+        }
+    return result
+
+
+def _sat_transform(transform, allow_rigid):
+    if getattr(transform, 'name', None) == 'null-ptr':
+        return None, None
+    if not allow_rigid:
+        raise ValueError('Transformed SAT requires the rigid-frame reader option')
+    if getattr(transform, 'name', None) != 'transform' or len(transform.data) != 16:
+        raise ValueError('Unsupported SAT body transform')
+    values = [float(value) for value in transform.data[:13]]
+    if (any(not math.isfinite(value) for value in values) or
+            abs(values[12] - 1) > 1e-9 or
+            transform.data[-2:] != ['no_reflect', 'no_shear']):
+        raise ValueError('Only unit-scale SAT rigid transforms supported')
+    rotation = [values[i:i + 3] for i in (0, 3, 6)]
+    for i, column in enumerate(rotation):
+        if any(abs(sum(a * b for a, b in zip(column, other)) - (i == j)) > 1e-8
+               for j, other in enumerate(rotation)):
+            raise ValueError('Nonrigid SAT body transform')
+    x, y, z = rotation
+    determinant = sum(x[i] * (y[(i + 1) % 3] * z[(i + 2) % 3] -
+                              y[(i + 2) % 3] * z[(i + 1) % 3]) for i in range(3))
+    if abs(determinant - 1) > 1e-8:
+        raise ValueError('Reflected or singular SAT body transform unsupported')
+    return rotation, values[9:12]
+
+
+def _sat_reciprocal(coedge):
+    if len(coedge.data) < 5:
+        return False
+    partner, edge = coedge.data[3:5]
+    return (getattr(partner, 'name', None) == 'coedge' and partner is not coedge and
+            getattr(edge, 'name', None) == 'edge' and len(partner.data) >= 5 and
+            partner.data[3] is coedge and partner.data[4] is edge)
+
+
+def _sat_point(point, world):
+    if getattr(point, 'name', None) != 'point':
+        raise ValueError('Boundary vertex requires a native SAT point')
+    return world(point.data[1:4], point=True)
+
+
+def _sat_edge(edge, world):
+    data = edge.data
+    vertices = [data[i] for i in (1, 3)]
+    curve = data[6]
+    if any(getattr(v, 'name', None) != 'vertex' for v in vertices):
+        raise ValueError('Two native SAT edge vertices required')
+    curve_type = getattr(curve, 'name', '')
+    if not curve_type.endswith('-curve'):
+        raise ValueError('Expected a native SAT boundary curve')
+    result = {
+        'curve_type': curve_type,
+        'endpoints': [_sat_point(vertex.data[2], world) for vertex in vertices],
+    }
+    if curve_type == 'ellipse-curve':
+        tokens = curve.data
+        start, end, ratio = float(data[2]), float(data[4]), float(tokens[10])
+        normal, major = world(tokens[4:7]), world(tokens[7:10])
+        if (not all(math.isfinite(v) for v in (start, end, end - start, ratio)) or
+                not 0 < ratio <= 1 or math.hypot(*major) <= 0 or
+                abs(math.hypot(*normal) - 1) > 1e-8 or
+                abs(sum(a * b for a, b in zip(normal, major))) >
+                1e-8 * max(1, math.hypot(*major))):
+            raise ValueError('Invalid SAT ellipse basis or interval')
+        result.update(start_parameter=start, end_parameter=end, ellipse={
+            'center': world(tokens[1:4], point=True), 'normal': normal,
+            'major_axis': major, 'minor_to_major_ratio': ratio,
+        })
+    elif curve_type != 'straight-curve':
+        result['representation'] = 'native trim endpoints'
+    return result
+
+
+def _sat_cylinder(tokens, world):
+    origin, axis, major, ratio, sine, cosine, radius = _sat_cone_parameters(tokens, 700)
+    if any(not math.isfinite(value) for value in (ratio, sine, cosine, radius)):
+        raise ValueError('Nonfinite SAT cylinder parameters')
+    if abs(sine) > 1e-9 or abs(cosine - 1) > 1e-9 or abs(ratio - 1) > 1e-9:
+        return None
+    axis = world(axis)
+    if (radius <= 0 or abs(math.hypot(*world(major)) - radius) > 1e-7 or
+            abs(math.hypot(*axis) - 1) > 1e-8):
+        raise ValueError('Invalid SAT cylinder axis or radius')
+    return {'origin': world(origin, point=True), 'axis': axis, 'radius': radius}
+
+
+def solid_acis_payload(record):
+    """Select the observed Solid3D native record payload without changing it."""
+    if record.get('type') != 'Solid3D':
+        raise ValueError('Solid3D native record required')
+    data = record['properties']['acis_data']
+    binary = data.get('is_binary')
+    if binary is True or (binary is None and data.get('sab_data')):
+        payload = bytes(data['sab_data'])
+    elif binary is False or (binary is None and data.get('sat_data')):
+        payload = data['sat_data']
+        if not isinstance(payload, str):
+            raise ValueError('Native text payload must be SAT text')
+    else:
+        raise ValueError('Unknown native ACIS payload representation')
+    if not payload:
+        raise ValueError('Nonempty native ACIS payload required')
+    return payload

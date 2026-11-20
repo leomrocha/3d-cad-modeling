@@ -3,13 +3,13 @@
 ## Reusable native construction and recovery
 
 1. [Stable record pagination](../scripts/cadtools/records.py) — bounded page-size recovery and native document/revision binding.
-2. [Durable progress checkpoints](../scripts/cadtools/checkpoints.py) — ordered stage evidence and verified IN_PROGRESS native saves.
+2. [Durable progress checkpoints](../scripts/cadtools/checkpoints.py) — ordered stage evidence and verified IN_PROGRESS saves that audit the intended DWG path.
 3. [Plate operations](../scripts/plate_reference.py) — supplied outlines, bulges, holes, transforms and actual sidewall checks.
 4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion and analytic equal-radius opening clipping.
 5. [Component insertion](../scripts/assembly_build.py) — source hashes, exact interactive prompts, native metadata and saved placements.
 6. [Assembly occurrences](../scripts/assembly_occurrences.py) — nested part quantities, mirrored hands and original insertion-journal recovery.
-7. [Native views](../scripts/native_views.py) — saved boundary samples, nested placements and hashed SVG/PNG orthographic/isometric views.
-8. [Encoding-aware native geometry](../scripts/native_geometry.py) — stable SAT/SAB readback, OCS points and placed vertex extrema.
+7. [Native views](../scripts/native_views.py) — native SAT/SAB boundary samples, straight polyline centrelines, nested placements and hashed SVG/PNG orthographic/isometric views.
+8. [Encoding-aware native geometry](../scripts/native_geometry.py) — stable SAT/SAB readback, OCS points, straight polyline segments and placed vertex extrema.
 9. [Source vector paths](../scripts/source_vector_paths.py) — bounded SVG segment grammar, affine frames and explicit unit conversion.
 
 The [reusable integration procedure](../skills/cad-ocs-engineering/references/generic-integration.md) defines inputs, outputs, units, representation limits and recovery conditions. Component data remains caller supplied.
@@ -69,7 +69,7 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 
 Some of these are specialized tools for particular geometries. I still have work to do on these things.
 
-1. [native_acis.py](../scripts/native_acis.py) — reads supported native solids, analytic surfaces and optional [circular boundary curves and adjacent faces](../skills/cad-ocs-engineering/references/circular-boundary-checks.md).
+1. [native_acis.py](../scripts/native_acis.py) — reads ACIS700 SAT topology and trimmed edge samples, plus SAB analytic surfaces and optional [circular boundary curves and adjacent faces](../skills/cad-ocs-engineering/references/circular-boundary-checks.md).
 2. [step_solid_inventory.py](../scripts/step_solid_inventory.py) — inventories STEP solid definitions without counting nested shells as additional solids.
 3. [step_placements.py](../scripts/step_placements.py) — reads supported STEP/native placement matrices and compares component positions.
 4. [assembly_units.py](../scripts/assembly_units.py) — prepares a unit-change plan for specified assembly root inserts, preserving internal geometry.
@@ -116,7 +116,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Insertion recovery, resume and assembly verification
 
 1. [insert_recovery.py](../scripts/insert_recovery.py) — exact native INSERT default contracts, durable same-request continuation and completion checkpoints.
-2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching and caller-defined envelope checks.
+2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching, optional unique endpoint attribution and caller-defined envelope checks.
 3. [assembly_build.py](../scripts/assembly_build.py) — guarded insertion-point compare-and-set correction with complete placement readback.
 4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pinned incremental saves and verified live-document resume gates.
 
@@ -147,7 +147,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 
 ## Service clearance
 
-1. [service_clearance.py](../scripts/service_clearance.py) checks continuous box overlap during finite straight translation and supplies exact coincidence witnesses for verified shared definitions.
+1. [service_clearance.py](../scripts/service_clearance.py) checks continuous box overlap and axial source-section coverage and supplies exact coincidence witnesses for verified shared definitions.
 
 ## Source assembly recovery and evidence
 
@@ -156,7 +156,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [Mounting patterns](../scripts/mounting_pattern.py) screens injective assignments against distance bounds and checks finite pin clearance at a supplied planar pose.
 - [Mesh checks](../scripts/mesh_checks.py) reports shell components, closed-manifold vertex links, Euler characteristic and signed volume.
 - [Source trim loops](../scripts/source_trim_loop.py) follows oriented edge uses, computes shared trim corners and independently checks curve endpoint and surface inverse residuals.
-- [Finite solid contact](../scripts/finite_solid_contact.py) classifies finite solid pairs and checks independent inside witnesses with a caller-supplied OpenCascade environment.
-- [STEP entity graph](../scripts/step_entity_graph.py) identifies reachable dependencies within a bounded Part 21 data grammar.
+- [Finite solid contact](../scripts/finite_solid_contact.py) classifies finite solid pairs, checks inside witnesses and tests axial bore withdrawal with a numerical reserve with a caller-supplied OpenCascade environment.
+- [STEP entity graph](../scripts/step_entity_graph.py) fingerprints simple STEP instance graphs and renumbers original simple or complex assignment payloads for a caller-owned wrapper.
 
 [Orthographic landmark checks](../scripts/orthographic_checks.py) compare shared world coordinates and their worst-case uncertainty bounds across named drawing views.

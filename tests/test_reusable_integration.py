@@ -21,7 +21,7 @@ from planar_profiles import clip_circular_openings,bounded_extrusion
 from plate_reference import build_plate,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline
 from native_views import sample,render_views,boundary_curves,placed_boundaries
 from source_vector_paths import parse_path,page_point,local_point,cubic_point
-from native_geometry import wcs_polyline_vertices,sat_structure
+from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments,sat_structure
 from ocs_document_cleanup import cleanup_owned_documents
 from retained_artifacts import verify_manifest
 
@@ -148,6 +148,9 @@ class Checkpoints(unittest.TestCase):
             c=Mock();c.namespace='job';c.journal=journal;c.document_id=1
             c.read.side_effect=lambda op,**kw:state.copy() if op=='state' else dict(document_id=1,summary={'errors':0,'warnings':0},manifest=manifest)
             def mutate(label,op,**kw):
+                audit_requests = [request.kwargs for request in c.read.call_args_list if request.args == ("audit",)]
+                self.assertEqual(audit_requests, [{"path": str(path), "target_format": "dwg", "target_version": "2018"}])
+                self.assertEqual(kw["path"], str(path))
                 path.write_bytes(b'native transport fixture')
                 return dict(result=dict(saved=str(path),verified=True,dropped_on_save=0,manifest=manifest,sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
             c.mutate.side_effect=mutate
@@ -278,6 +281,49 @@ class ViewsAndVectors(unittest.TestCase):
             result=sab_features(b'fixture',include_edge_curves=True,edge_policy='endpoints')
             self.assertEqual(result['face_boundary_edges'][0]['loops'][0]['edges'][0]['representation'],'native trim endpoints')
             with self.assertRaises(ValueError):sab_features(b'fixture',include_edge_curves=True)
+    @staticmethod
+    def polyline(closed):
+        return dict(handle='B', type='LwPolyline', properties=dict(
+            normal=dict(x=0, y=1, z=0), elevation=3, is_closed=closed,
+            vertices=[dict(location=dict(x=x, y=y), bulge=0)
+                      for x, y in [(0, 0), (4, 0), (4, 2), (0, 2)]],
+        ))
+
+    def test_straight_polyline_open_and_closed_in_wcs(self):
+        open_path = wcs_straight_polyline_segments(self.polyline(False))
+        closed_path = wcs_straight_polyline_segments(self.polyline(True))
+        self.assertEqual(open_path, [
+            [[0, 3, 0], [-4, 3, 0]], [[-4, 3, 0], [-4, 3, 2]], [[-4, 3, 2], [0, 3, 2]],
+        ])
+        self.assertEqual(closed_path, open_path + [[[0, 3, 2], [0, 3, 0]]])
+
+    def test_polyline_placement_preserves_closure_and_ignores_circle(self):
+        insert = dict(handle='A', type='Insert', properties=dict(
+            normal=dict(x=0, y=0, z=1), rotation=0, insert_point=dict(x=5, y=10, z=0),
+            x_scale=1, y_scale=-1, z_scale=1, block_name='child',
+        ))
+        blocks = [
+            dict(name='*Model_Space', properties=dict(entity_handles=['A', 'C'])),
+            dict(name='child', properties=dict(base_point=dict(x=0, y=0, z=0), entity_handles=[11])),
+        ]
+        edges, instances = placed_boundaries(
+            [insert, self.polyline(True), dict(handle='C', type='Circle')], blocks,
+        )
+        self.assertEqual([i['handle'] for i in instances], ['B'])
+        self.assertEqual(len(edges), 4)
+        self.assertEqual(edges[-1]['points'], [[5, 7, 2], [5, 7, 0]])
+        self.assertTrue(all(e['curve_type'] == 'straight-curve' and not e['endpoints_only'] for e in edges))
+
+    def test_polyline_rejects_bulge_and_legacy_closure_field(self):
+        row = self.polyline(True)
+        row['properties']['vertices'][0]['bulge'] = 0.25
+        with self.assertRaisesRegex(ValueError, 'zero-bulge'):
+            wcs_straight_polyline_segments(row)
+        row['properties']['vertices'][0]['bulge'] = 0
+        row['properties']['closed'] = row['properties'].pop('is_closed')
+        with self.assertRaisesRegex(ValueError, 'is_closed'):
+            wcs_straight_polyline_segments(row)
+
     def test_ocs_polyline_points(self):
         row=dict(type='LwPolyline',properties=dict(normal=dict(x=0,y=0,z=1),elevation=3,vertices=[dict(location=dict(x=1,y=2))]))
         self.assertEqual(wcs_polyline_vertices(row),[[1,2,3]])

@@ -66,3 +66,35 @@ class ServiceClearance(unittest.TestCase):
         singular[0][0] = 0
         with self.assertRaises(ValueError):
             shared_definition_coincidence(singular, singular, [0, 0, 1])
+
+
+class SourceSection(unittest.TestCase):
+    def test_signed_travel_reverse_projection_and_reserve(self):
+        from service_clearance import axial_section_window
+        self.assertEqual(axial_section_window([0, 12], [2, 3], [-4, -1], clearance=0.25),
+                         {'axial_gap_lower_bound': '0', 'source_section': ['11/4', '29/4']})
+
+    def test_touch_at_first_or_last_and_narrow_miss(self):
+        from service_clearance import axial_section_window
+        result = axial_section_window([1, 2], [4, 5], [0, 1], clearance=1)
+        self.assertEqual(result, {'axial_gap_lower_bound': '1', 'source_section': ['2', '2']})
+        self.assertIsNone(axial_section_window([1, 2], [4, 5], [0, 0.5], clearance=1)['source_section'])
+        with self.assertRaises(ValueError):
+            axial_section_window([1, 2], [5, 4], [0, 1])
+
+
+class EndpointAttribution(unittest.TestCase):
+    def test_overlapping_candidate_definitions_do_not_identify_a_body(self):
+        from assembly_verification import match_world_vertices
+        def body(name, x):
+            return dict(id=name, points=[[x,0,0]], face_count=4, closed=True)
+        sources = [body('left', 0), body('right', 0)]
+        saved = [body('one', 0), body('two', 0)]
+        self.assertEqual(match_world_vertices(sources, saved, length_tolerance=0.01)['result'], 'PASS')
+        proof = match_world_vertices(sources, saved, length_tolerance=0.01, require_unique_source=True)
+        self.assertEqual(proof['result'], 'FAIL')
+        self.assertEqual(proof['matches'], [])
+        self.assertEqual(proof['unresolved_source_candidates'], {'one': ['left','right'], 'two': ['left','right']})
+        sources[1], saved[1] = body('right', 1), body('two', 1)
+        self.assertEqual(match_world_vertices(sources, saved, length_tolerance=0.01,
+                                            require_unique_source=True)['result'], 'PASS')

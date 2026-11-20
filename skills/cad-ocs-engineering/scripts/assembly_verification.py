@@ -95,12 +95,15 @@ def _bounds(points):
     return [[min(p[i] for p in points),max(p[i] for p in points)] for i in range(3)]
 
 
-def match_world_vertices(source,target,*,length_tolerance,max_instances=10000):
+def match_world_vertices(source,target,*,length_tolerance,max_instances=10000,
+                         require_unique_source=False):
     """Match point sets, face counts and closed flags with repeated-instance multiplicity.
 
     Each row has id, points, face_count and closed. This compares vertices and
     topology observations; analytic surface equations retain separate checks.
     """
+    if type(require_unique_source) is not bool:
+        raise ValueError('Expected a boolean source attribution option')
     tolerance=_tolerance(length_tolerance)
     if type(max_instances) is not int or max_instances<1 or max(len(source),len(target))>max_instances:
         raise ValueError('Positive instance bound exceeded')
@@ -125,6 +128,16 @@ def match_world_vertices(source,target,*,length_tolerance,max_instances=10000):
             if error<=tolerance:hits.append(j);residuals[i,j]=error
         candidates.append(hits)
     proof=_bijection(candidates,len(target))
+    if require_unique_source:
+        alternatives = {row['id']: [] for row in target}
+        for i, hits in enumerate(candidates):
+            for j in hits:
+                alternatives[target[j]['id']].append(source[i]['id'])
+        ambiguous = {key: ids for key, ids in alternatives.items() if len(ids) != 1}
+        proof['unresolved_source_candidates'] = ambiguous
+        if ambiguous:
+            proof.update(result='FAIL', reason='Target occurrences require unique geometric source identities')
+            proof['matching'] = {}
     proof.update(scope='world vertex sets, face counts and closed-topology observations',length_tolerance=tolerance,
                  matches=[dict(source_id=source[i]['id'],target_id=target[j]['id'],residual=residuals[i,j]) for i,j in proof['matching'].items()])
     return proof

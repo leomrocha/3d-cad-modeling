@@ -1,4 +1,4 @@
-"""Render native SAB boundary samples with exact instance transforms.
+"""Render native solids and straight polyline boundaries with exact instance transforms.
 
 Displayed point bounds describe samples/endpoints. Source geometry and dimensions
 remain separate caller inputs. Imports make no native connection or filesystem writes.
@@ -8,7 +8,8 @@ import math
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from native_acis import _rigid_world
+from native_acis import _rigid_world, sat_readback, solid_acis_payload
+from native_geometry import wcs_straight_polyline_segments
 from step_placements import native_matrix,eye,multiply,apply
 from cadtools.records import iter_records,identity
 from cadtools.runtime import owned_document,CadError
@@ -16,6 +17,11 @@ from ocs_document_cleanup import cleanup_owned_documents
 
 
 def boundary_curves(data):
+    if isinstance(data, str):
+        result = sat_readback(data, allow_rigid=True, include_cylinders=False)
+        if not result['topology']['reciprocal_closed_partners']:
+            raise ValueError('Reciprocal boundary graph required')
+        return result['edges']
     from ezdxf.acis.sab import parse_sab
     from ezdxf.acis.const import Tags
     parsed=parse_sab(data)
@@ -83,16 +89,23 @@ def placed_boundaries(records,blocks,*,max_instances=10000):
             transform=multiply(matrix,native_matrix(props,allow_unit_reflection=True))
             for child in block['entity_handles']:visit(child if isinstance(child,str) else format(child,'X'),transform,path+[handle],active|{handle})
         elif row['type']=='Circle':return
-        elif row['type']=='Solid3D':
+        elif row['type'] in ('Solid3D','LwPolyline'):
             if len(instances)>=max_instances:raise ValueError('Display instance bound exceeded')
             instances.append(dict(handle=handle,path=path,matrix=matrix))
-            if handle not in cache:cache[handle]=boundary_curves(bytes(row['properties']['acis_data']['sab_data']))
+            if handle not in cache:
+                if row['type'] == 'Solid3D':
+                    cache[handle] = boundary_curves(solid_acis_payload(row))
+                else:
+                    cache[handle] = [
+                        {'curve_type': 'straight-curve', 'endpoints': ends}
+                        for ends in wcs_straight_polyline_segments(row)
+                    ]
             for edge in cache[handle]:
                 points,fallback=sample(edge)
                 out.append(dict(points=[apply(matrix,p) for p in points],endpoints_only=fallback,handle=handle,curve_type=edge['curve_type']))
         else:raise ValueError('Unsupported native display leaf '+row['type'])
     for root in by_name['*Model_Space']['entity_handles']:visit(root if isinstance(root,str) else format(root,'X'),eye(),[],set())
-    if not instances:raise ValueError('No native solids reached')
+    if not instances:raise ValueError('No supported native boundaries reached')
     return out,instances
 
 
