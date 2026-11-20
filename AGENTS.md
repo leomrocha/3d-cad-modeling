@@ -80,7 +80,7 @@ After creating, changing or deleting reusable Python helpers, package dependenci
 4. When asked for existing results, report results already present in the project sources. Do not fill a missing result with a new operating point, parameter sweep or calculation.
 5. Illustrative calculations remain labelled as illustrations. Tests verify the implementation they exercise; they do not establish physical capacity, stability, braking performance or author acceptance.
 6. Run checks appropriate to the userized change. Do not rerun unchanged expensive calculations without a reason. Run one computational job at a time unless the user explicitly authorizes another arrangement.
-7. OpenCADStudio is the CAD application identified for this project. Preserve existing documents. Use explicit units, axes, component boundaries and input provenance. Keep schematic arrangements separate from dimensioned manufacturing geometry.
+7. Use explicit units, axes, component boundaries and input provenance. Keep schematic arrangements separate from dimensioned manufacturing geometry.
 8. Display an existing requested image directly using its absolute path. Do not regenerate, crop or replace it to answer a display request. Keep explanations in the chat and labels in the image.
 9. A file-format conversion needs explicit scope: source, target format, tool and information changes. Preserve the original and identify the derivative. Opening or showing an existing file does not authorize an unrelated conversion.
 
@@ -99,8 +99,6 @@ Standing instruction from 13 November 2026:
 5. Every execution order and delegated component assignment must start with this instruction: inspect the actual matching component models and all manifest, work-record, input-sheet and CAD-index references, including when the status is NOT_STARTED. If a matching completed model exists, mark that item DONE with its readable name, actual model path and recorded checks, then move to the next unfinished item. Reuse its completed geometry and checks. Construction starts only after this reconciliation establishes that the required model is absent; a script's NEW_MODEL_REQUIRED label alone does not complete the reconciliation.
 
 ## Portable stored paths
-
-Instruction date: 13 November 2026.
 
 1. Store repository-relative paths and page-relative Markdown links for this checkout.
 2. Keep machine-specific workspace locations out of committed text and captured metadata. Normalize paths before registering new job records or examples.
