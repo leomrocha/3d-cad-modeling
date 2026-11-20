@@ -30,6 +30,14 @@
       "source": "requirements.txt",
       "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
     },
+    "scripts/batch_dxf_lines.py": {
+      "source": "scripts/batch_dxf_lines.py",
+      "sha256": "973d68dd5f4330b180f2b2c3dbfaa413920826eee6258970e7e1f6c867de82fe"
+    },
+    "scripts/batch_request.py": {
+      "source": "scripts/batch_request.py",
+      "sha256": "5b159122bb4b71db8fce7bd059088d0d83254a1ceaab5ad86f3a58c378ece6af"
+    },
     "scripts/blend_exchange.py": {
       "source": "scripts/blend_exchange.py",
       "sha256": "7dbc69a79ce0de4e45f066c1976a45d0cd5778cc48a8d57ddcc0673995718777"
@@ -44,7 +52,7 @@
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "0f826c6f51661a21b53958d5d9f10ad07e969ba1a6032d1124eab68a140a0253"
+      "sha256": "c9d8d306c1551ac995800e9a33ec4786c3ead0029bf41592db413452b1f287b7"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",

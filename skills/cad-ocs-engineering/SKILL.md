@@ -42,6 +42,30 @@ For ruler photographs or parts dimensioned across several views, follow the [pho
 
 Inspect actual matching models and all manifest, work-record, input-sheet and CAD-index references, including NOT_STARTED entries. Mark matching completed components DONE with their readable names, actual model paths and recorded checks. Reuse that geometry and those checks, then select an unfinished item. Construction starts only after reconciliation establishes that the required matching model is absent. Follow [model inventory](references/existing-model-start-check.md).
 
+### Prepare a batch of CAD operations
+
+1. Identify the source drawing or model, its revision and model length unit. Specify one action (`create`, `modify`, `replace`, or `place`), entity type and requested output. Use one request per action, entity and output combination. List targets in execution order. Give each element or pattern position its ID, reference (including its host or frame), and current value or placement for existing elements.
+2. Run `python scripts/batch_request.py REQUEST.json --catalogue OPERATIONS.json` from the installed skill. The following example shows the request fields for two bar dimensions. Use measured starting values and the real model revision in a job.
+
+   ```json
+   {
+     "model": "frame", "revision": 7, "model_unit": "mm",
+     "action": "modify", "entity": "driving sketch dimension", "output": "bar length",
+     "targets": [
+       {"id": "left", "reference": "left bar, fixed lower end", "current": {"value": 100, "unit": "mm"}},
+       {"id": "right", "reference": "right bar, fixed lower end", "current": {"value": 120, "unit": "mm"}}
+     ],
+     "values": {"left": {"value": 15, "unit": "cm"}, "right": {"value": 0.18, "unit": "m"}}
+   }
+   ```
+
+3. For a shared result use `value` in place of `values`. Use quantities with explicit units for lengths and angles, including coordinates inside placements. The helper converts lengths to model units and rotations to right-hand-positive degrees. Give each rotation its axis and frame and convert a clockwise source angle to the indicated right-hand convention before entry. Record replacement definitions and references as named properties. Review the emitted rows before geometry writes. Resolve ambiguity when alternative interpretations produce different geometry.
+4. Save the preview JSON in the owning job. Review each target, reference, current state, requested result and action. Record its SHA-256 after review. When applying the request, use the same file and digest. In Python, `prepare` returns an immutable `Preview`. Pass that object, the current catalogue path, the selected resource and method, and the backend revision reader to `execution_rows`. It checks the current qualification evidence and model revision and returns the reviewed rows. Use those rows directly.
+5. Catalogue assembly insert placement, driving sketch dimension modification, an existing solid cut and occurrence replacement separately, using the exact action, input entity and output for each. For each qualification sample use an owned output and an identified backend and version. Set `action` on the method and `backend` on the resource. A method becomes available for batch execution after a completed sample edit and independent readback. Keep the source, changed sample, operation receipt and readback receipt with the owning job.
+6. Set the method’s `readback_file` to the qualification evidence JSON. Resolve a relative path from the imported resource list. The evidence names the two receipt files in `operation` and `readback`, with their SHA-256 values in `operation_sha256` and `readback_sha256`. Each receipt identifies the resource, method (`name`), backend, action, input, output, completion status, operation ID, resulting sample file and its SHA-256. The operation receipt records the source file and SHA-256 and its expected properties by target ID. The readback receipt records its own readback ID and observed properties by target ID. Preserve direct backend measurements when recording receipts. Refresh the catalogue before preparing the execution preview.
+7. For the installed [DXF LINE length operation](scripts/batch_dxf_lines.py), select `action=modify`, `entity=DXF LINE`, `output=line length from fixed start` and method `resize-line`. Use the drawing path as the model, its SHA-256 as the revision and modelspace LINE handles as target IDs. Set each reference to the exact token `fixed LINE start`. Supply the drawing unit explicitly for a unitless source. On an owned sample, run `python scripts/batch_dxf_lines.py sample PREVIEW.json NEW_JOB_DIR --preview-sha256 DIGEST --resource RESOURCE`. Register the resulting `evidence.json` and backend `ezdxf/VERSION` on that resource, refresh, prepare and review the execution preview. Run the same command with `execute` and `--catalogue OPERATIONS.json`. The writer preserves each LINE start and direction, saves a new DXF, reopens it and measures each selected LINE. A qualification sample must demonstrate a length change. Normal execution accepts a length already present. Qualification currently verifies saved DXF LINE geometry.
+8. When a route fails, record the failure with `operation_catalogue.py failed` and inspect any uncertain write using its request ID. Proceed through the remaining applicable scripts and guided native operations in reuse order after resolving the failed operation’s effect. Record a new candidate’s actual sample edit and readback before batch execution.
+
 ## Construct and check bounded changes
 
 1. Inspect installed command/entity/record schemas and native state before unfamiliar requests. Select one existing session and one owned document. Bind each mutation to its document, expected revision and stable request ID. Use one writer and a coordinated exclusive interval for interactive native sequences.

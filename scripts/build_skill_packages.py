@@ -133,12 +133,13 @@ def inputs(name, committed=False):
         raise ValueError('Unknown skill package: ' + name)
     paths = source_paths(committed)
     common = [*AVAILABILITY, 'scripts/component_records.py', 'scripts/part_index.py', 'scripts/package_check.py']
+    availability = dependency_closure(AVAILABILITY, paths, committed)
     if name == 'cad-opencv-setup':
-        return list(AVAILABILITY)
+        return availability
     if name == FORMAT:
-        return ['format_translation/' + module for module in FORMAT_MODULES] + ['scripts/package_check.py', *AVAILABILITY]
+        return ['format_translation/' + module for module in FORMAT_MODULES] + ['scripts/package_check.py', *availability]
     if name == TRANSLATOR:
-        return ['translator/' + module for module in TRANSLATOR_MODULES] + list(AVAILABILITY)
+        return ['translator/' + module for module in TRANSLATOR_MODULES] + availability
     if name == 'cad-source-intake':
         return dependency_closure(common + ['scripts/source_intake.py', 'scripts/image_observations.py', 'scripts/sam_mask.py', 'scripts/vision_provider.py', 'scripts/vision_provider_sam2.py'], paths, committed)
     if name == 'cad-drawing-inspection':
@@ -236,13 +237,14 @@ def build(check=False, committed=False):
             if relative not in previous and relative not in files:
                 raise ValueError('Unassigned packaged script; register canonical source first: ' + name + '/' + relative)
         plans.append((name, target, files, previous))
-    # Navigation and repair are standalone skills without generated manifests.
+    # Navigation and repair share the catalogue runtime and its local import closure.
+    availability = dependency_closure(AVAILABILITY, source_paths(committed), committed)
     for name in ('cad-model-navigation', 'cad-model-repair'):
         target = ROOT / 'skills' / name
-        for relative in (*AVAILABILITY, ROUTE_REFERENCE):
+        for relative in (*availability, ROUTE_REFERENCE):
             if not (target / relative).resolve().is_relative_to(target.resolve()):
                 raise ValueError('Shared file outside skill: ' + name + '/' + relative)
-        files = {relative: source_bytes(relative, committed) for relative in AVAILABILITY}
+        files = {relative: source_bytes(relative, committed) for relative in availability}
         files[ROUTE_REFERENCE] = source_bytes(ROUTE_SOURCE, committed)
         plans.append((name, target, files, {}))
     for name, target, files, previous in plans:

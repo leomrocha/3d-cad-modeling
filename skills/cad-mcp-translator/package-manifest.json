@@ -42,6 +42,14 @@
       "source": "requirements.txt",
       "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
     },
+    "scripts/batch_dxf_lines.py": {
+      "source": "scripts/batch_dxf_lines.py",
+      "sha256": "973d68dd5f4330b180f2b2c3dbfaa413920826eee6258970e7e1f6c867de82fe"
+    },
+    "scripts/batch_request.py": {
+      "source": "scripts/batch_request.py",
+      "sha256": "5b159122bb4b71db8fce7bd059088d0d83254a1ceaab5ad86f3a58c378ece6af"
+    },
     "scripts/bore_check.py": {
       "source": "scripts/bore_check.py",
       "sha256": "4dd55bae43623fac53f61a2f04c171e4a88faf2ea667364ea27523afa74e8db8"
@@ -52,11 +60,11 @@
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "0f826c6f51661a21b53958d5d9f10ad07e969ba1a6032d1124eab68a140a0253"
+      "sha256": "c9d8d306c1551ac995800e9a33ec4786c3ead0029bf41592db413452b1f287b7"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
-      "sha256": "b495aab0546aafb3dbbb1f11ea4c6119e3aafc42d443e13f83def84e8b6b7281"
+      "sha256": "4783626c97f6f72269e4bd04323e7c49c49c808692667d4591a2cd8bf1d83446"
     },
     "scripts/state.py": {
       "source": "scripts/state.py",

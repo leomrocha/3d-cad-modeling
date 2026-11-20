@@ -34,6 +34,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 2. [Computational engineering](cad-ocs-engineering/references/computational-engineering.md) — equations, geometry/material/solver contracts and representation handoffs.
 3. [Capability evidence](cad-ocs-engineering/references/sources-and-capabilities.md) — original dated OCS and tool findings with source locators.
 4. [Non-geometric requirements](cad-ocs-engineering/references/non-geometric-requirements.md) — explicit source-pinned tasks whose scope requires no CAD geometry.
+5. [Prepare a batch of CAD operations](cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations) covers grouping targets by action, input entity and output, reviewing unit-normalized rows, and qualifying the selected catalogue operation with readback before applying those rows.
 
 ## Installed package references
 

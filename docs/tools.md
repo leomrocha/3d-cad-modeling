@@ -11,6 +11,8 @@
 7. [Native views](../scripts/native_views.py) — native SAT/SAB boundary samples, native lines and straight polyline centrelines, nested placements and hashed SVG/PNG orthographic/isometric views. PNG rendering batches edge paths and endpoint markers into separate collections without joining paths.
 8. [Encoding-aware native geometry](../scripts/native_geometry.py) — stable SAT/SAB readback, OCS points, straight polyline segments and placed vertex extrema.
 9. [Source vector paths](../scripts/source_vector_paths.py) — bounded SVG segment grammar, affine frames and explicit unit conversion.
+10. [batch_request.py](../scripts/batch_request.py) prepares ordered CAD operation rows from shared or per-target values, normalizes lengths and angles, and supplies execution rows for an operation with verified readback. [CAD batch procedure](../skills/cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations).
+11. [batch_dxf_lines.py](../scripts/batch_dxf_lines.py) applies reviewed lengths to modelspace DXF LINE entities with ezdxf. It preserves each start and direction, writes a new DXF, and reopens it to measure the selected lines. [CAD batch procedure](../skills/cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations).
 
 The [reusable integration procedure](../skills/cad-ocs-engineering/references/generic-integration.md) defines inputs, outputs, units, representation limits and recovery conditions. Component data remains caller supplied.
 

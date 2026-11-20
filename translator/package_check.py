@@ -9,6 +9,7 @@ REQUIRED = {
     'SKILL.md', 'references/modeling-operation-selection.md', 'references/operations.md', 'references/contributing.md',
     'mappings/openscad.json', 'mappings/freecad.json', 'mappings/fusion.json',
     'scripts/operation_catalogue.py', 'scripts/opencv_probe.py',
+    'scripts/batch_request.py', 'scripts/batch_dxf_lines.py',
     'fixtures/plate.scad', 'scripts/translator.py', 'scripts/state.py',
     'scripts/bore_check.py', 'scripts/package_check.py', 'requirements.txt', 'LICENSE',
 }

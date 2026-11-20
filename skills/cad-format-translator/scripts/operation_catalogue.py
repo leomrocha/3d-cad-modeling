@@ -1,6 +1,7 @@
 """Check approved modeling methods by their dependencies and save their local availability."""
 
 import argparse
+import hashlib
 from contextlib import contextmanager
 import fcntl
 import json
@@ -11,6 +12,7 @@ import subprocess
 import sys
 import tempfile
 
+ACTIONS = {'create', 'modify', 'replace', 'place'}
 VERSION = 2
 HERE = Path(__file__).resolve().parent
 OPENCV = {
@@ -216,7 +218,83 @@ def changes(before, after):
     }
 
 
-def refresh(path, resources):
+def file_digest(path):
+    with Path(path).open("rb") as stream:
+        return hashlib.file_digest(stream, "sha256").hexdigest()
+
+
+def receipt_object(value, field):
+    if not isinstance(value, dict) or not value:
+        raise ValueError(f"Specify a nonempty {field} record")
+    return value
+
+
+def receipt_text(record, field):
+    value = record.get(field)
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"Specify {field} in receipt")
+    return value
+
+
+def bound_path(base, record, field):
+    path = (base / receipt_text(record, field)).resolve()
+    if file_digest(path) != receipt_text(record, field + "_sha256"):
+        raise ValueError(f"Changed {field} file")
+    return path
+
+
+def verify_receipts(row, resource, path):
+    """Validate the actual writer and independent readback records for one sample."""
+    evidence = receipt_object(read(path), "evidence")
+    base = path.parent
+    writer_path = bound_path(base, evidence, "operation")
+    reader_path = bound_path(base, evidence, "readback")
+    if writer_path == reader_path:
+        raise ValueError("Operation and readback receipts must be separate files")
+    writer = receipt_object(read(writer_path), "operation")
+    reader = receipt_object(read(reader_path), "readback")
+    for record in (writer, reader):
+        for field in ("resource", "name", "action", "input", "output"):
+            if receipt_text(record, field) != row[field]:
+                raise ValueError(f"Receipt describes a different {field}")
+        if receipt_text(record, "backend") != receipt_text(resource, "backend"):
+            raise ValueError("Receipt describes a different backend")
+        if receipt_text(record, "status") != "completed":
+            raise ValueError("Incomplete operation or readback")
+    if receipt_text(reader, "operation_id") != receipt_text(writer, "operation_id"):
+        raise ValueError("Readback belongs to another operation")
+    if receipt_text(reader, "readback_id") == writer["operation_id"]:
+        raise ValueError("Specify a separate readback ID")
+    source = bound_path(writer_path.parent, writer, "source")
+    result = bound_path(writer_path.parent, writer, "result")
+    if writer["source_sha256"] == writer["result_sha256"]:
+        raise ValueError("Sample edit must change the source revision")
+    if bound_path(reader_path.parent, reader, "result") != result:
+        raise ValueError("Readback belongs to another model")
+    expected = receipt_object(writer.get("expected"), "expected target properties")
+    observed = receipt_object(reader.get("observed"), "measured target properties")
+    for target, properties in expected.items():
+        if not isinstance(target, str) or not target.strip():
+            raise ValueError("Specify a target ID")
+        receipt_object(properties, "expected target properties")
+    if set(expected) != set(observed):
+        raise ValueError("Readback target set differs from the operation")
+    if writer["backend"].startswith("ezdxf/") and row["input"] == "DXF LINE":
+        from batch_dxf_lines import verify_sample
+        verify_sample(source, result, writer, expected)
+        from batch_dxf_lines import drawing, line, measured
+        saved = drawing(result, writer["unit"])
+        for target, props in observed.items():
+            start, _, length = measured(line(saved, target))
+            actual = {"start": list(start), "length": length}
+            if json.dumps(actual, sort_keys=True) != json.dumps(props, sort_keys=True):
+                raise ValueError("Readback differs from saved DXF geometry")
+    else:
+        raise ValueError("No backend artifact verification for this operation")
+    return file_digest(path)
+
+
+def refresh(path, resources, *, resource_base=None):
     previous = load(path)
     if not isinstance(resources, list):
         raise ValueError("Approved resources must be a JSON list")
@@ -255,9 +333,21 @@ def refresh(path, resources):
                     "prompt",
                 ):
                     method.pop(obsolete, None)
+                if "action" in method:
+                    row.update(action=method["action"], readback_verified=False)
+                    if method.get("readback_file"):
+                        method["readback_file"] = str(((resource_base or path.parent) / method["readback_file"]).resolve())
                 qualify(resource, method)
+                if "action" in method:
+                    if method["action"] not in ACTIONS:
+                        raise ValueError("Unknown batch action")
+                    if not method.get("readback_file"):
+                        raise ValueError("Operation needs sample execution and readback")
+                    evidence_path = Path(method["readback_file"])
+                    digest = verify_receipts(row, resource, evidence_path)
+                    row.update(readback_verified=True, readback_file=str(evidence_path), evidence_sha256=digest, backend=resource["backend"])
                 row["usable"] = True
-            except (OSError, ValueError, KeyError, subprocess.SubprocessError) as exc:
+            except (OSError, ValueError, KeyError, TypeError, ImportError, subprocess.SubprocessError) as exc:
                 row["reason"] = str(exc)
             operations.append(row)
     catalogue = dict(version=VERSION, resources=resources, operations=operations)
@@ -322,12 +412,13 @@ def main():
                 resources = (
                     read(args.resources) if args.resources else current["resources"]
                 )
-                result = refresh(args.catalogue, resources)
+                result = refresh(args.catalogue, resources, resource_base=args.resources.resolve().parent if args.resources else args.catalogue.parent)
         elif args.action == "routes":
             result = [
                 row
                 for row in catalogue["operations"]
                 if row["usable"] and row["output"] == args.output
+                and ("action" not in row or row.get("readback_verified") is True and row.get("evidence_sha256"))
             ]
         else:
             result = record_result(args.catalogue, args)
