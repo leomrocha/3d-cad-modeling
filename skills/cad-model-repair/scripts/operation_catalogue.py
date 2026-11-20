@@ -1,18 +1,17 @@
-"""Check approved modeling methods with operation fixtures and save their local availability."""
+"""Check approved modeling methods by their dependencies and save their local availability."""
 
 import argparse
 from contextlib import contextmanager
 import fcntl
-import hashlib
 import json
 import os
 from pathlib import Path
-import re
+from urllib.parse import urlsplit
 import subprocess
 import sys
 import tempfile
 
-VERSION = 1
+VERSION = 2
 HERE = Path(__file__).resolve().parent
 OPENCV = {
     "contours": ("binary image", "contours"),
@@ -34,7 +33,7 @@ def load(path):
     if not path.exists():
         return {"version": VERSION, "resources": [], "operations": []}
     catalogue = read(path)
-    if catalogue.get("version") != VERSION:
+    if catalogue.get("version") not in (1, VERSION):
         raise ValueError("Unsupported operation catalogue version")
     return catalogue
 
@@ -73,178 +72,122 @@ def selected_script(resource, name):
     return path
 
 
-def digest(path):
-    with Path(path).open("rb") as source:
-        return hashlib.file_digest(source, "sha256").hexdigest()
-
-
-def run_checked(command, server=False):
-    try:
-        result = subprocess.run(
-            command,
-            capture_output=True,
-            text=True,
-            timeout=180,
-            stdin=subprocess.DEVNULL,
-            check=False,
-        )
-    except subprocess.TimeoutExpired:
-        raise ValueError("Operation fixture timed out after 180 seconds") from None
-    if result.returncode:
-        detail = result.stderr.strip() or result.stdout.strip()
-        # Server error bodies, URLs and request arguments can contain credentials.
-        if server:
-            missing = re.search(r"No module named '([A-Za-z0-9_.]+)'", detail)
-            status = re.search(r"returned HTTP (\d{3})", detail)
-            if missing:
-                raise ValueError(f"Missing Python module {missing[1]}")
-            if status:
-                raise ValueError(f"Inference server returned HTTP {status[1]}")
-            if "Connection refused" in detail:
-                raise ValueError("Connection refused by the selected inference server")
-            raise ValueError("Inference fixture failed to return the requested output")
-        raise ValueError(
-            detail.splitlines()[-1][:500]
-            if detail
-            else f"Fixture exited with status {result.returncode}"
-        )
-    return result.stdout
+def require_path(value, *, file=False):
+    path = Path(value)
+    if not value or not (path.is_file() if file else path.exists()):
+        raise ValueError(f"Missing dependency: {value}")
+    return path
 
 
 def qualify(resource, method):
     kind = method["probe"]
-    expected = {
+    helpers = {
+        "vision": "vision_provider.py",
+        "sam": "sam_mask.py",
+        "sam2": "vision_provider_sam2.py",
+        "parts": "catalogue_candidates.py",
+        "dxf": "dxf_inspect.py",
+        "intake": "source_intake.py",
+        "cad-sequence": "learned_cad_provider.py",
+    }
+    outputs = {
         "sam": "mask",
         "sam2": "mask",
         "cad-sequence": "editable sequence",
         "dxf": "entity inventory",
         "parts": "part candidates",
         "intake": "source revision",
-        **{k: v[1] for k, v in OPENCV.items()},
+        **{name: pair[1] for name, pair in OPENCV.items()},
     }
-    if kind in expected and method["output"] != expected[kind]:
-        raise ValueError(f"{kind} produces {expected[kind]}")
+    if kind in outputs and method["output"] != outputs[kind]:
+        raise ValueError(f"{kind} produces {outputs[kind]}")
+    modules = list(method.get("modules", []))
+    for dependency in method.get("paths", []):
+        require_path(dependency)
     if kind == "guided":
-        if not Path(resource["location"]).exists():
-            raise ValueError("Selected guided tool or skill path is missing")
-        raise ValueError(
-            "Exercise the selected skill or tool with its input and check the output"
-        )
-    python = resource["python"]
-    if not Path(python).is_absolute():
+        require_path(resource["location"])
+        if not modules and "python" not in resource:
+            return
+    elif kind in helpers:
+        helper = selected_script(resource, helpers[kind])
+    elif kind not in OPENCV:
+        raise ValueError(f"Unknown operation: {kind}")
+    python = require_path(resource["python"], file=True)
+    if not python.is_absolute():
         raise ValueError("Specify the absolute path of the selected interpreter")
     if kind in OPENCV:
         command = [python, "-I", str(HERE / "opencv_probe.py"), kind]
-        result = subprocess.run(command, capture_output=True, text=True, timeout=30)
-        if not result.stdout:
-            raise ValueError(result.stderr.strip() or "OpenCV probe returned no output")
-        outcome = json.loads(result.stdout)
-        if result.returncode or outcome["status"] != "tested":
-            raise ValueError(outcome.get("error") or outcome["status"])
-        return
-    with tempfile.TemporaryDirectory(prefix="cad-operation-") as temporary:
-        output = Path(temporary) / "result"
-        if kind == "vision":
-            config = read(method["config"])
-            # Bind live qualification to the listed server or local checkpoint.
-            if (config.get("url") or config.get("local_checkpoint")) != resource[
-                "location"
-            ]:
-                raise ValueError("Vision configuration selects a different resource")
-            run_checked(
-                [
-                    python,
-                    selected_script(resource, "vision_provider.py"),
-                    method["sample"],
-                    method["config"],
-                    output,
-                ],
-                server="url" in config,
-            )
-            observations = read(output / "observations.json")["instances"]
-            if not any(
-                row["kind"] == method["output"]
-                and (row["kind"] != "mask" or any(any(line) for line in row["mask"]))
-                for row in observations
-            ):
-                raise ValueError(f"Fixture returned no {method['output']} instance")
+    else:
+        if kind in ("vision", "cad-sequence"):
+            location = resource["location"]
+            if kind == "vision":
+                modules.extend(["numpy", "PIL.Image", "image_observations"])
+                config = read(method["config"])
+                if (config.get("url") or config.get("local_checkpoint")) != location:
+                    raise ValueError(
+                        "Vision configuration selects a different resource"
+                    )
+                if config.get("format") == "moondream":
+                    modules.append("cairosvg")
+                if "local_checkpoint" in config:
+                    require_path(location)
+                    modules.extend(["torch", "ultralytics"])
+            if kind == "cad-sequence" or "url" in config:
+                endpoint = urlsplit(location)
+                if (
+                    endpoint.scheme not in ("http", "https")
+                    or not endpoint.hostname
+                    or endpoint.username is not None
+                    or endpoint.password is not None
+                    or endpoint.fragment
+                ):
+                    raise ValueError("Missing HTTP(S) inference endpoint")
         elif kind in ("sam", "sam2"):
-            script = "sam_mask.py" if kind == "sam" else "vision_provider_sam2.py"
-            run_checked(
-                [
-                    python,
-                    selected_script(resource, script),
-                    method["sample"],
-                    resource["location"],
-                    method["prompt"],
-                    output,
-                ]
+            model = require_path(resource["location"])
+            files = ["config.json", "model.safetensors", "preprocessor_config.json"]
+            if kind == "sam2":
+                files.append("processor_config.json")
+            for filename in files:
+                require_path(model / filename, file=True)
+            modules.extend(
+                ["torch", "transformers", "PIL.Image", "numpy", "safetensors"]
             )
-            instances = read(output)["instances"]
-            if not any(
-                i["kind"] == "mask" and any(any(row) for row in i["mask"])
-                for i in instances
-            ):
-                raise ValueError("Fixture returned no foreground mask")
-        elif kind == "cad-sequence":
-            command = [
-                python,
-                selected_script(resource, "learned_cad_provider.py"),
-                resource["location"],
-                method["model"],
-                method["sample"],
-                output,
-            ]
-            for image in method.get("images", []):
-                command.extend(["--image", image])
-            if method.get("key_env"):
-                command.extend(["--key-env", method["key_env"]])
-            run_checked(command, server=True)
-            if not read(output / "sequence.json")["features"]:
-                raise ValueError("CAD fixture returned no features")
-        elif kind == "intake":
-            run_checked(
-                [
-                    python,
-                    selected_script(resource, "source_intake.py"),
-                    "--input",
-                    method["sample"],
-                    "--output",
-                    output,
-                ]
-            )
-            if not (output / "revision/source-index.json").is_file():
-                raise ValueError("Source intake fixture returned no revision index")
         elif kind == "dxf":
-            run_checked(
-                [
-                    python,
-                    selected_script(resource, "dxf_inspect.py"),
-                    method["sample"],
-                    "--output",
-                    output,
-                ]
-            )
-            if not read(output)["counts"]["selected_occurrences"]:
-                raise ValueError("DXF fixture returned no selected entities")
+            modules.append("ezdxf")
         elif kind == "parts":
-            raw = run_checked(
-                [
-                    python,
-                    selected_script(resource, "catalogue_candidates.py"),
-                    "--search-cli",
-                    method["search_cli"],
-                    "--source",
-                    "parts",
-                    resource["location"],
-                    method["query"],
-                ]
-            )
-            candidates = json.loads(raw)["sources"]["parts"]["candidates"]
-            if not any(row.get("sha256") for row in candidates):
-                raise ValueError("Parts lookup returned no matching local asset")
-        else:
-            raise ValueError(f"No operation fixture configured for {kind}")
+            require_path(method["search_cli"], file=True)
+            for filename in ("catalogue.json", "catalogue.sqlite"):
+                require_path(Path(resource["location"]) / filename, file=True)
+        # Import the client and its dependencies, without invoking the operation.
+        directory = str(helper.parent) if kind in helpers else str(HERE)
+        if kind in helpers:
+            modules.append(helper.stem)
+        code = (
+            "import importlib, sys; sys.path.insert(0, sys.argv[1]); "
+            "[importlib.import_module(name) for name in sys.argv[2:]]"
+        )
+        if kind in ("sam", "sam2"):
+            prefix = "Sam2" if kind == "sam2" else "Sam"
+            code += f"; from transformers import {prefix}Model, {prefix}Processor"
+        command = [python, "-B", "-c", code, directory, *modules]
+    env = dict(
+        os.environ,
+        YOLO_OFFLINE="true",
+        YOLO_AUTOINSTALL="false",
+        HF_HUB_OFFLINE="1",
+        TRANSFORMERS_OFFLINE="1",
+        PIP_NO_INDEX="1",
+    )
+    result = subprocess.run(command, capture_output=True, text=True, env=env)
+    if result.returncode:
+        if kind in OPENCV and result.stdout:
+            outcome = json.loads(result.stdout)
+            raise ValueError(outcome.get("error") or outcome["status"])
+        raise ValueError(
+            result.stderr.strip().splitlines()[-1]
+            if result.stderr.strip()
+            else f"Dependency check exited with status {result.returncode}"
+        )
 
 
 def methods(resource):
@@ -273,17 +216,7 @@ def changes(before, after):
     }
 
 
-def approved_files(method):
-    # Confirm these exact bytes before a server fixture transmits user input.
-    if method["probe"] in ("vision", "cad-sequence"):
-        paths = [method["sample"], *method.get("images", [])]
-        if method["probe"] == "vision":
-            paths.append(method["config"])
-        return {name: digest(name) for name in paths}
-    return {}
-
-
-def refresh(path, resources, *, confirm_files=True):
+def refresh(path, resources):
     previous = load(path)
     if not isinstance(resources, list):
         raise ValueError("Approved resources must be a JSON list")
@@ -314,13 +247,14 @@ def refresh(path, resources, *, confirm_files=True):
                 usable=False,
             )
             try:
-                hashes = approved_files(method)
-                if confirm_files:
-                    method["approved_files"] = hashes
-                elif hashes != method.get("approved_files", {}):
-                    raise ValueError(
-                        "Fixture input or server configuration changed; confirm the new revision"
-                    )
+                for obsolete in (
+                    "approved_files",
+                    "sample",
+                    "images",
+                    "query",
+                    "prompt",
+                ):
+                    method.pop(obsolete, None)
                 qualify(resource, method)
                 row["usable"] = True
             except (OSError, ValueError, KeyError, subprocess.SubprocessError) as exc:
@@ -344,33 +278,7 @@ def record_result(path, args):
         )
         if row is None:
             raise ValueError("Unknown catalogued operation")
-        if args.action == "failed":
-            row.pop("check", None)
-            row.pop("evidence", None)
-            row.pop("evidence_sha256", None)
-            row.update(usable=False, reason=args.reason)
-        else:
-            resource = next(
-                item for item in catalogue["resources"] if item["id"] == args.resource
-            )
-            method = next(
-                item for item in methods(resource) if item["name"] == args.method
-            )
-            if method["probe"] != "guided":
-                raise ValueError("Use the selected automatic operation fixture")
-            if not Path(resource["location"]).exists():
-                raise ValueError("Selected guided tool or skill path is missing")
-            if not args.evidence.is_file() or not args.evidence.stat().st_size:
-                raise ValueError(
-                    "Supply the existing local evidence from the operation check"
-                )
-            row.pop("reason", None)
-            row.update(
-                usable=True,
-                check=args.check,
-                evidence=str(args.evidence.resolve()),
-                evidence_sha256=digest(args.evidence),
-            )
+        row.update(usable=False, reason=args.reason)
         write(path, catalogue)
         return row
 
@@ -390,16 +298,14 @@ def main():
     failed.add_argument("resource")
     failed.add_argument("method")
     failed.add_argument("reason")
-    passed = sub.add_parser("observed", help="Record an exercised guided operation")
-    passed.add_argument("resource")
-    passed.add_argument("method")
-    passed.add_argument("evidence", type=Path)
-    passed.add_argument(
-        "check", help="Actual input, observed output and checked property"
-    )
     args = parser.parse_args()
     try:
         catalogue = load(args.catalogue)
+        if catalogue["version"] == 1 and args.action != "refresh":
+            with update_lock(args.catalogue):
+                catalogue = load(args.catalogue)
+                if catalogue["version"] == 1:
+                    catalogue = refresh(args.catalogue, catalogue["resources"])
         if args.action == "show":
             result = {
                 **catalogue,
@@ -416,9 +322,7 @@ def main():
                 resources = (
                     read(args.resources) if args.resources else current["resources"]
                 )
-                result = refresh(
-                    args.catalogue, resources, confirm_files=args.resources is not None
-                )
+                result = refresh(args.catalogue, resources)
         elif args.action == "routes":
             result = [
                 row

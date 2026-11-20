@@ -14,29 +14,28 @@ Choose the first suitable level. Within that level consider total setup time, co
 
 During setup, or on first call after copying a skill, run `python3 "$SKILL_ROOT/scripts/operation_catalogue.py" show`. Ordinary jobs read this saved catalogue. It is shared across the modeling skills at `$XDG_CONFIG_HOME/cad-modeling/operations.json` (default `~/.config/cad-modeling/operations.json`). An explicit `--catalogue FILE` before the command selects another catalogue. The CAD Models parts index supplies reusable geometry.
 
-Show the existing resources, the discovered interpreter and any tools, skills, environments, model files, servers and parts sources the user has already identified. Ask which resources may be used, including the permitted fixture input for each server. Discovery alone grants no permission. For **“Refresh the available skills”**, show the saved selections and ask what to add, remove or change, including keeping the same list. Use already installed dependencies and existing model files. Refresh installs and downloads nothing.
+Show the existing resources, the discovered interpreter and any tools, skills, environments, model files, servers and parts sources the user has already identified. Ask which resources may be used. Discovery alone grants no permission. For **“Refresh the available skills”**, show the saved selections and ask what to add, remove or change, including keeping the same list. Use already installed dependencies and existing model files. Refresh installs and downloads nothing.
 
-Supply the complete confirmed list to `refresh --resources FILE`, or run `refresh` to repeat the saved checks. Each resource has a unique `id`, a `kind` and the selected paths or endpoint. Store absolute paths to the selected interpreter, owned helper directory and existing fixture files. Include only credential references. For example, a confirmed OpenCV environment is a JSON list with one object:
+Supply the complete confirmed list to `refresh --resources FILE`, or run `refresh` to repeat the saved checks. Each resource has a unique `id`, a `kind` and the selected paths or endpoint. Store absolute paths to the selected interpreter, owned helper directory. Include only credential references. For example, a confirmed OpenCV environment is a JSON list with one object:
 
 ```json
 [{"id":"drawing-python","kind":"opencv","python":"/selected/environment/bin/python"}]
 ```
 
-This selection runs separate contour, plane and thinning fixtures in that interpreter. Other resources declare `location`, `python`, optional `scripts` (the owning installed package's scripts directory) and a `methods` list. Each method has a readable `name`, `input`, exact `output` and a `probe`. Give each distinct operation its own fixture. Use a positive sample with the expected object or feature.
+The OpenCV entry checks whether the selected interpreter provides the functions for contours, planar calibration and thinning. Other resources declare a `location`, a `python` interpreter when needed, an optional `scripts` directory and a `methods` list. Each method names its `name`, `input`, `output` and `probe`. Match inputs and outputs to the selected deployment. Use `modules` and `paths` for additional dependencies of that method.
 
-| Probe | Resource and fixture fields | Checked output |
-| --- | --- | --- |
-| `vision` | Approved endpoint or local YOLO checkpoint as `location`, `sample` image and `config` for the source-intake client. Identify image-only, text, box or point prompts in `input`. | Actual source-frame instance of the requested kind, such as `box`, `polygon` or `mask` |
-| `sam`, `sam2` | Local model directory as `location`, `sample` image and `prompt` JSON | `mask` with foreground pixels |
-| `cad-sequence` | Chat endpoint as `location`, `model`, `sample` prompt file, optional `images` and `key_env` | `editable sequence` with features |
-| `intake` | Source-intake helper directory and `sample` source specification | `source revision` with a revision index |
-| `dxf` | Drawing-inspection helper directory and `sample` DXF | `entity inventory` with selected geometry |
-| `parts` | CAD Models data directory as `location`, trusted local `search_cli` and known `query` | `part candidates` with a local asset hash |
-| `guided` | Selected tool or skill and a named operation, including tools with interactive interfaces | Run that operation on its fixture and inspect its output. Record a successful fresh check with `observed RESOURCE METHOD EVIDENCE_FILE "input, output and checked property"`. |
+| Probe | Dependencies to select |
+| --- | --- |
+| `vision` | Source-intake client, interpreter and `config` for the selected endpoint or local model at `location`. Record the deployment's supported prompts and outputs. Only local YOLO needs the local YOLO runtime. |
+| `sam`, `sam2` | Local model directory and the selected segmentation runtime. |
+| `cad-sequence` | CAD client, selected endpoint and deployed model. |
+| `intake`, `dxf` | The corresponding installed helper and its Python dependencies. |
+| `parts` | CAD Models data directory and its local `search_cli`. |
+| `guided` | Selected tool or skill path and the dependencies of the named operation. |
 
-The catalogue binds a server fixture to the exact sample, views and configuration approved at setup. A changed file needs confirmation before transmission. For a tool such as OpenCADStudio, a translator or a navigation skill, name the selected installation in `location` and use a `guided` fixture for each intended operation. For example, inspect a known saved assembly and verify a named occurrence in the returned tree. During refresh, run each guided fixture again using the approved resource. The catalogue clears its previous qualification until the new output has been checked. Report the operations that became available or unavailable, including the final results of guided checks. A resource can remain listed with its exact failed requirement. Keep user selections and machine availability in this local catalogue.
+Setup and refresh check dependencies without running modeling jobs or sending requests to a server. Report which methods became available or unavailable and name missing dependencies. Keep the selected resources in the local catalogue.
 
-For a job, use `routes OUTPUT` for the checked methods with the needed result. If one fails, use `failed RESOURCE METHOD "specific error"` and try the next suitable route in the reuse order. For an outline, reuse a saved trace, run a qualified contour or segmentation method, or trace the image with guidance. A detection box locates the region for a subsequent trace. Verify the contour, polygon or mask needed by the downstream operation. When every route falls short, report the exact missing output.
+For a job, use `routes OUTPUT` to find methods with the required output. If a dependency is missing or a result falls short, tell the user which method was affected, what it returned and what is still needed. Immediately try the next applicable, authorized route in the reuse order. Carry useful partial results forward, for example a detection box can guide a segmenter or a trace. An empty search or detection applies to that input and leaves the method available. For a tool failure use `failed RESOURCE METHOD "specific error"` and bypass that method. Continue until the requested result is obtained or every applicable, authorized route has been tried. If those routes are exhausted, report the methods tried and the missing output.
 
 ## Choose a provider by its actual capability
 

@@ -1,6 +1,7 @@
 """Call a selected JSON vision endpoint or decode its saved response for source intake."""
 
 import argparse
+from contextlib import ExitStack
 import base64
 import hashlib
 import io
@@ -9,10 +10,11 @@ import math
 import os
 from pathlib import Path
 import re
+import tempfile
 import time
 from urllib.error import HTTPError
 from urllib.parse import urlencode, urlunsplit
-from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_opener
+from urllib.request import HTTPRedirectHandler, Request, build_opener
 from local_model_runtime import inference_endpoint, offline_model_libraries
 from xml.etree.ElementTree import Element, SubElement, tostring
 
@@ -229,27 +231,30 @@ class _NoRedirect(HTTPRedirectHandler):
         raise ValueError("Use the selected deployment's final endpoint URL")
 
 
-def local_yolo_response(source, checkpoint):
+def local_yolo_response(source, checkpoint, device=None):
     """Run an existing Ultralytics checkpoint and use the same rows as a YOLO server."""
     checkpoint = Path(checkpoint).resolve(strict=True)
-    if not checkpoint.is_file() or checkpoint.suffix.lower() != ".pt":
-        raise ValueError("Select an existing local YOLO .pt checkpoint")
+    if checkpoint.suffix.lower() in (".yaml", ".yml"):
+        raise ValueError("Select trained YOLO weights or an exported model")
     offline_model_libraries()
     os.environ.update(YOLO_OFFLINE="true", YOLO_AUTOINSTALL="false")
     from PIL import Image
     from ultralytics import YOLO
     from ultralytics.utils.checks import check_yolov5u_filename
 
-    selected = check_yolov5u_filename(str(checkpoint), verbose=False)
-    if selected != str(checkpoint):
-        raise ValueError(
-            "The YOLO runtime maps this filename to a different checkpoint"
-        )
-    model = YOLO(str(checkpoint))
-    if model.task not in ("detect", "segment"):
-        raise ValueError("Select a YOLO detection or segmentation checkpoint")
-    with Image.open(source) as image:
-        (result,) = model.predict(image.convert("RGB"), device="cpu", verbose=False)
+    with ExitStack() as stack:
+        selected = checkpoint
+        if check_yolov5u_filename(str(checkpoint), verbose=False) != str(checkpoint):
+            # Present the exact selected bytes under a name the loader leaves alone.
+            folder = stack.enter_context(tempfile.TemporaryDirectory())
+            selected = Path(folder) / ("model" + checkpoint.suffix)
+            selected.symlink_to(checkpoint)
+        model = YOLO(str(selected))
+        if model.task not in ("detect", "segment"):
+            raise ValueError("Select a YOLO detection or segmentation model")
+        options = {} if device is None else {"device": device}
+        with Image.open(source) as image:
+            (result,) = model.predict(image.convert("RGB"), verbose=False, **options)
     return json.dumps(result.summary(normalize=False, decimals=4)).encode()
 
 
@@ -286,7 +291,9 @@ def run(source, config, output, saved=None, timeout=120):
         if config.get("source_sha256", source_hash) != source_hash:
             raise ValueError("The configured image revision has changed")
         start = time.monotonic()
-        original = local_yolo_response(io.BytesIO(raw), config["local_checkpoint"])
+        original = local_yolo_response(
+            io.BytesIO(raw), config["local_checkpoint"], config.get("device")
+        )
         elapsed = time.monotonic() - start
         output.mkdir(parents=True, exist_ok=False)
     else:
@@ -319,9 +326,7 @@ def run(source, config, output, saved=None, timeout=120):
         output.mkdir(parents=True, exist_ok=False)
         start = time.monotonic()
         try:
-            with build_opener(ProxyHandler({}), _NoRedirect).open(
-                request, timeout=timeout
-            ) as connection:
+            with build_opener(_NoRedirect).open(request, timeout=timeout) as connection:
                 original = connection.read(64 * 1024 * 1024 + 1)
         except HTTPError as error:
             raise ValueError(f"Vision endpoint returned HTTP {error.code}") from None

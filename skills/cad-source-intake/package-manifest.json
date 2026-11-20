@@ -12,11 +12,11 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "e0e7980408028e5478897958393bbb2530c7660077e27071e8fc63b217413e40"
+      "sha256": "4511a6e6815ca821d37b226b87ac7b122a0e615ae5dcff6a3c0e501c96ee1c5f"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
-      "sha256": "f13d82a1959f2e1dc570523a0bbc9c17e437f8274192dd1e00328a2d4802ab14"
+      "sha256": "7765ce56d42f233fbfe79e3d820faabc9923e482f444474bc6d2e0b88f1529ae"
     },
     "requirements.txt": {
       "source": "requirements.txt",
@@ -36,11 +36,11 @@
     },
     "scripts/opencv_probe.py": {
       "source": "scripts/opencv_probe.py",
-      "sha256": "9364fee09afb0a60ab15c46be5a9abca65b052f81b54b0907a48d2f7d95d8cd1"
+      "sha256": "404eb34487f7ea2d3558f0bc55653fce00ba633cab13cb72ef78b27774faacf7"
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "ac4b418e5bc1bb65fa7ff2024d42aac8380354569339f85eab341c2d2dd0632a"
+      "sha256": "0f826c6f51661a21b53958d5d9f10ad07e969ba1a6032d1124eab68a140a0253"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
@@ -64,7 +64,7 @@
     },
     "scripts/vision_provider.py": {
       "source": "scripts/vision_provider.py",
-      "sha256": "f426382694d3a214d9a8e94d3ae0303bf31dedb0ec75418f92b37b171c8dfdcc"
+      "sha256": "ab66e39c755220283443bbe3646896f29ef6f8d80c1504957e55be8e132dff41"
     },
     "scripts/vision_provider_sam2.py": {
       "source": "scripts/vision_provider_sam2.py",

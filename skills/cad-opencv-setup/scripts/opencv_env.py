@@ -71,11 +71,11 @@ def prepare(args):
                 else {}
             )
             if (
-                current.get("status") == "tested"
+                current.get("status") == "available"
                 and current["distributions"] == saved["distributions"]
                 and current["numpy"] == saved["numpy"]
             ):
-                return saved
+                return {**saved, **current, "interpreter": saved["interpreter"]}
         start = time.monotonic()
         target = Path(tempfile.mkdtemp(prefix=key + "-", dir=root))
         python = target / "bin/python"
@@ -126,9 +126,9 @@ def prepare(args):
             setup_s=time.monotonic() - start,
             disk_bytes=sum(p.stat().st_size for p in target.rglob("*") if p.is_file()),
         )
-        if result["status"] == "tested" and list(result["distributions"]) != [family]:
+        if result["status"] == "available" and list(result["distributions"]) != [family]:
             result.update(status="wrong-distribution", expected=family)
-        if result["status"] == "tested":
+        if result["status"] == "available":
             pending = receipt.with_suffix(".pending")
             pending.write_text(json.dumps(result, indent=2))
             pending.replace(receipt)
@@ -148,13 +148,9 @@ if __name__ == "__main__":
     setup.add_argument("--version")
     setup.add_argument("--numpy-version")
     setup.add_argument("--gui", action="store_true")
-    setup.add_argument(
-        "--authorization",
-        required=True,
-        choices=["EXECUTE-OPENCV-INSTALL"],
-        help="Pass only after the user's standalone EXECUTE request to install OpenCV",
-    )
     args = parser.parse_args()
+    if args.command == "setup":
+        print("This installer will install OpenCV", file=sys.stderr, flush=True)
     report = probe(args.operation) if args.command == "probe" else prepare(args)
     print(json.dumps(report, indent=2))
-    sys.exit(report["status"] != "tested")
+    sys.exit(report["status"] != "available")

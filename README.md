@@ -253,7 +253,7 @@ Keep `SKILL_ROOT` set to the installed directory. Use an existing Python environ
 1. Ask the user which interpreters, tools, local models, parts sources and configured servers the agent may use. Check the operations during setup or on first use.
 2. Show the saved availability catalogue with `python "$SKILL_ROOT/scripts/operation_catalogue.py" show`. Follow the skill’s setup procedure to check the approved resources. If an optional tool is missing, choose another method that produces the requested output.
 3. After changing the available software, ask the agent to **refresh the available skills**. The refresh checks resources without installing software.
-4. OpenCV installation is a separate action. The setup skill explains what it will install and requires a standalone user message explicitly requesting that installation with `EXECUTE`.
+4. OpenCV installation is a separate action. When the user invokes the OpenCV installer, it announces the installation and installs OpenCV in that run.
 
 Give the agent your source files, job location and output paths. The `cad-ocs-engineering` package includes the OCS engineering workflow, component procedures, OCS control transport, geometry adapter and save/reopen helpers.
 

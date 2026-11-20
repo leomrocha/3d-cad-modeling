@@ -193,4 +193,4 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [Invoke a supplied Text2CAD runtime and decode its operations](../scripts/learned_cad_text2cad.py)
 
 - [operation_catalogue.py](../scripts/operation_catalogue.py) checks approved modeling operations, lists available outputs and records method failures in the user’s local catalogue.
-- [opencv_probe.py](../scripts/opencv_probe.py) exercises contours, four-point calibration and skeleton thinning in a selected interpreter.
+- [opencv_probe.py](../scripts/opencv_probe.py) checks the OpenCV functions for contours, four-point calibration and skeleton thinning in a selected interpreter.

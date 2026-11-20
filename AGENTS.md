@@ -51,7 +51,7 @@ Exact vocabulary, explicit context and unambiguous engineering communication are
 
 1. Skills must not download anything during execution. Use only resources already available. This rule includes downloads triggered by a library, installer or subprocess. No skill may download models or model weights.
 2. The separate optional OpenCV installer skill is the explicit exception for installing OpenCV. Before installation, it must tell the user that the requested operation needs OpenCV and that the installer will install OpenCV. A modeling skill may point to the installer when OpenCV is missing.
-3. Every exception must come explicitly from the user. To run an exception, require a single, simple user message that contains the word `EXECUTE` and requests only that one action. For example, `EXECUTE the OpenCV installation.` Run it alone. A general execution order, a combined request, an earlier approval or a missing dependency cannot authorize an exception.
+3. Invoking the separate OpenCV installer authorizes that installation in the same run. Other exceptions require a single, simple user message containing `EXECUTE` and requesting only that action.
 
 ## Research and delegation
 
