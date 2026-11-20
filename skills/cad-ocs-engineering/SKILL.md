@@ -70,6 +70,10 @@ Inspect actual matching models and all manifest, work-record, input-sheet and CA
 
 Use [planar positions](references/planar-positions.md) and `python scripts/planar_positions.py REQUEST.json` to calculate ordered coordinates and optional tangents on an identified drawing edge, curve, polygon or circle, or in a bounded region with cutouts. Transfer the resulting position IDs, coordinates, unit and frame to the batch action.
 
+### Resolve row spacing and measure surface gaps
+
+Use the [row spacing procedure](references/row-spacing.md) and `python scripts/row_spacing.py REQUEST.json` to calculate row stations from specified pitches or face gaps and border margins. Review the resolved stations and margins before applying placement. For clearance checks, supply the measured outlines or sphere geometry in a common frame and specify a shortest or directed gap.
+
 ### Position and orient occurrences in 3D
 
 Use the [3D placement procedure](references/spatial-positions.md) and `python scripts/spatial_positions.py REQUEST.json` to calculate occurrence transforms in the parent and world frames from a measured prism, cylinder or sphere. Check the requested distances between positions. Apply the reviewed parent transform to each assigned occurrence and compare its reopened placement with the expected world transform.

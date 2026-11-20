@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "bcf0c2bb9cb62cf02957b865a66a8b0f5cab83fbf8c933f1d22df9530adac281"
+      "sha256": "646e2b6759740722e3b972e16dc3b6f928cc43a447d95ac022b743469fbe857e"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -177,6 +177,10 @@
     "references/reversible-source-workflows.md": {
       "source": "references/reversible-source-workflows.md",
       "sha256": "777db3afbe837d129733698e38de64c719978c0d3d15d92b395fadbd8e2fed52"
+    },
+    "references/row-spacing.md": {
+      "source": "references/row-spacing.md",
+      "sha256": "378b2fecd1752afbc5e584bf5b5df56a379da6ce42fafd39e862b82cc73c3d3f"
     },
     "references/scaled-assemblies.md": {
       "source": "references/scaled-assemblies.md",
@@ -557,6 +561,10 @@
     "scripts/rounded_tube.py": {
       "source": "scripts/rounded_tube.py",
       "sha256": "7a49023f708ef56feed28ad318078fb48b73d7cd55d7bac62c2804efc2b9d03b"
+    },
+    "scripts/row_spacing.py": {
+      "source": "scripts/row_spacing.py",
+      "sha256": "77018988971adc8e8275cfdd7e56ab28e435d0c8f9e4299a7e30e61ea5b0417a"
     },
     "scripts/sam_mask.py": {
       "source": "scripts/sam_mask.py",

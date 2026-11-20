@@ -38,6 +38,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 6. [Resolve batch targets against measured geometry](cad-ocs-engineering/SKILL.md#resolve-batch-targets-against-measured-geometry) covers occurrence paths, named selections, distance conditions from measured references, DXF inventories, and target and reference checks after reopening.
 7. [Generate positions on a planar reference](cad-ocs-engineering/references/planar-positions.md) covers ordered coordinates, tangent directions, and transferring position IDs, units and frames to a batch action.
 8. [Position and orient occurrences in 3D](cad-ocs-engineering/references/spatial-positions.md) covers prism, cylinder and sphere positions, mounting directions, parent and world transforms, and distance and placement checks.
+9. [Resolve row spacing and measure surface gaps](cad-ocs-engineering/references/row-spacing.md) covers centre pitches, face gaps, border margins, residual spacing and clearance measurements between placed shapes.
 
 ## Installed package references
 
