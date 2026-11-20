@@ -1,0 +1,242 @@
+"""Check creation on a sloping drawing plane and on a solid with a retained bore."""
+
+import importlib.util
+import json
+import os
+import subprocess
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+from unittest.mock import patch
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from batch_creation import execute, load_solid  # noqa: E402
+from operation_catalogue import file_digest  # noqa: E402
+
+
+class CreationTests(unittest.TestCase):
+    def setUp(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.root = Path(temp.name)
+        self.request = self.root / "request.json"
+        self.job = self.root / "job"
+        self.pattern = dict(
+            kind="explicit",
+            unit="mm",
+            tolerance=0.001,
+            reference="plate datum",
+            frame=dict(origin=[0, 0, 10], x=[1, 0, 0], y=[0, 1, 0]),
+            positions=[dict(id="H1", xy=[10, 10]), dict(id="H2", xy=[30, 10])],
+        )
+
+    def prepare(self, source, operation, **extra):
+        spec = dict(
+            model=str(source),
+            revision=file_digest(source),
+            pattern=self.pattern,
+            relationship="individual",
+            operation=operation,
+            **extra,
+        )
+        self.request.write_text(json.dumps(spec))
+        return spec
+
+    @unittest.skipUnless(importlib.util.find_spec("ezdxf"), "requires local ezdxf")
+    def test_oriented_drawing_publication_and_retry(self):
+        import ezdxf
+
+        doc = ezdxf.new("R2010", units=4)
+        doc.modelspace().add_line([0, 0], [8, 0])
+        source = self.root / "drawing.dxf"
+        doc.saveas(source)
+        self.pattern["frame"]["y"] = [0, 0, 1]
+        spec = self.prepare(
+            source, "circle", value={"diameter": {"value": 0.4, "unit": "cm"}}
+        )
+        spec["model"] = source.name
+        self.request.write_text(json.dumps(spec))
+        with patch("batch_creation.publish_directory", side_effect=InterruptedError):
+            with self.assertRaises(InterruptedError):
+                execute(self.request, self.job)
+        self.assertFalse(self.job.exists())
+        receipt = execute(self.request, self.job)
+        self.assertEqual(receipt, execute(self.request, self.job))
+        saved = ezdxf.readfile(self.job / "result.dxf")
+        self.assertEqual(len(saved.modelspace().query("CIRCLE")), 2)
+        self.assertEqual(len(saved.modelspace().query("LINE")), 1)
+        self.assertEqual(receipt["elements"][1]["centre"], [30, 0, 20])
+        self.assertEqual(receipt["elements"][0]["diameter"], 4)
+        self.assertEqual(receipt["elements"][0]["normal"], [0, -1, 0])
+        stored = self.job / "readback.json"
+        changed = json.loads(stored.read_text())
+        changed["elements"] = []
+        stored.write_text(json.dumps(changed))
+        with self.assertRaisesRegex(ValueError, "readback changed"):
+            execute(self.request, self.job)
+
+    @unittest.skipUnless(
+        importlib.util.find_spec("cadquery"), "requires local CadQuery"
+    )
+    def test_through_and_blind_on_existing_host(self):
+        import cadquery as cq
+
+        source = self.root / "host.step"
+        existing = cq.Workplane("XY").box(60, 40, 10, centered=(False, False, False))
+        existing = existing.cut(cq.Workplane("XY").center(17, 23).circle(5).extrude(10))
+        cq.exporters.export(existing, str(source))
+        spec = self.prepare(
+            source,
+            "cut",
+            direction="-normal",
+            values={
+                "H1": dict(end="through", diameter=3, depth=10),
+                "H2": dict(end="blind", diameter=5, depth=3),
+            },
+        )
+        self.assertEqual(
+            execute(self.request, self.job)["elements"][1]["bottom"], [30, 10, 7]
+        )
+        self.assertEqual(file_digest(source), spec["revision"])
+        saved = cq.importers.importStep(str(self.job / "result.step")).val()
+        for xyz, expected in [
+            ((17, 23, 5), False),
+            ((10, 10, 0.1), False),
+            ((30, 10, 8), False),
+            ((30, 10, 6), True),
+            ((40, 30, 5), True),
+        ]:
+            self.assertEqual(saved.Solids()[0].isInside(cq.Vector(*xyz)), expected)
+        spec["values"]["H1"]["end"] = "blind"
+        self.request.write_text(json.dumps(spec))
+        invalid = self.root / "invalid"
+        with self.assertRaisesRegex(ValueError, "bore rim|endpoint material"):
+            execute(self.request, invalid)
+        self.assertFalse(invalid.exists())
+
+    @unittest.skipUnless(
+        importlib.util.find_spec("cadquery"), "requires local CadQuery"
+    )
+    def test_membrane_and_entry_skin(self):
+        import cadquery as cq
+
+        source = self.root / "host.step"
+        cq.exporters.export(
+            cq.Workplane("XY").box(60, 40, 10, centered=(False, False, False)),
+            str(source),
+        )
+        self.pattern["positions"] = [dict(id="H1", xy=[15, 15])]
+        for z, depth, end in ((10, 9.995, "through"), (9.997, 4, "blind")):
+            with self.subTest(z=z, depth=depth):
+                self.pattern["frame"]["origin"][2] = z
+                self.prepare(
+                    source,
+                    "cut",
+                    direction="-normal",
+                    value=dict(end=end, diameter=12, depth=depth),
+                )
+                with self.assertRaisesRegex(ValueError, "bore rim|endpoint material"):
+                    execute(self.request, self.job)
+                self.assertFalse(self.job.exists())
+
+    @unittest.skipUnless(
+        importlib.util.find_spec("cadquery"), "requires local CadQuery"
+    )
+    def test_reject_multiple_step_roots_and_independent_geometry(self):
+        import cadquery as cq
+        from OCP.STEPControl import STEPControl_Writer, STEPControl_AsIs
+        from OCP.IFSelect import IFSelect_RetDone
+
+        solid = cq.Solid.makeBox(20, 20, 10)
+        edge = cq.Edge.makeLine((25, 25, 0), (25, 25, 10))
+        vertex = cq.Vertex.makeVertex(25, 25, 0)
+        source = self.root / "source.step"
+        for shapes in [
+            [solid, solid.translate((30, 0, 0))],
+            [solid, edge],
+            [cq.Compound.makeCompound([solid, edge])],
+            [solid, vertex],
+        ]:
+            with self.subTest(types=[s.ShapeType() for s in shapes]):
+                writer = STEPControl_Writer()
+                for shape in shapes:
+                    self.assertEqual(
+                        writer.Transfer(shape.wrapped, STEPControl_AsIs),
+                        IFSelect_RetDone,
+                    )
+                self.assertEqual(writer.Write(str(source)), IFSelect_RetDone)
+                with self.assertRaisesRegex(
+                    ValueError, "independent geometry|exactly one valid solid"
+                ):
+                    load_solid(source)
+
+    @unittest.skipUnless(
+        importlib.util.find_spec("cadquery"), "requires local CadQuery"
+    )
+    def test_selected_catalogue_occurrences(self):
+        import cadquery as cq
+
+        request = os.environ.get("CAD_CREATION_OCCURRENCE_REQUEST")
+        if not request:
+            self.skipTest(
+                "set CAD_CREATION_OCCURRENCE_REQUEST to an existing catalogue occurrence request"
+            )
+        original = Path(request).resolve()
+        spec = json.loads(original.read_bytes())
+        self.assertEqual(spec["operation"], "occurrence")
+        spec["model"] = os.path.relpath(original.parent / spec["model"], self.root)
+        for field in ("data", "search_cli"):
+            spec["part"][field] = os.path.relpath(
+                original.parent / spec["part"][field], self.root
+            )
+        self.request.write_text(json.dumps(spec))
+        run = [
+            sys.executable,
+            str(ROOT / "scripts/batch_creation.py"),
+            str(self.request),
+            str(self.job),
+        ]
+        first = subprocess.run(run, cwd="/", capture_output=True, text=True, check=True)
+        again = subprocess.run(
+            run, cwd=self.root, capture_output=True, text=True, check=True
+        )
+        self.assertEqual(json.loads(first.stdout), json.loads(again.stdout))
+        self.assertEqual(
+            (self.job / "request.json").read_bytes(), self.request.read_bytes()
+        )
+        saved = cq.Assembly.load(str(self.job / "result.xbf"))
+        rows = json.loads(first.stdout)["elements"]
+        self.assertGreaterEqual(len(saved.children), 2)
+        self.assertEqual({c.name for c in saved.children}, {r["id"] for r in rows})
+        self.assertTrue(
+            all(
+                saved.children[0].obj.wrapped.IsPartner(child.obj.wrapped)
+                for child in saved.children[1:]
+            )
+        )
+        self.assertGreater(len({tuple(row[3] for row in r["frame"]) for r in rows}), 1)
+        self.assertTrue(
+            any(
+                any(abs(row[i] - float(i == j)) > 1e-8 for i in range(3))
+                for r in rows
+                for j, row in enumerate(r["frame"])
+            )
+        )
+        spec["part"]["search_cli"] = "missing-search.py"
+        self.request.write_text(json.dumps(spec))
+        failed = subprocess.run(
+            run[:-1] + [str(self.root / "failed")],
+            cwd="/",
+            capture_output=True,
+            text=True,
+        )
+        self.assertNotEqual(failed.returncode, 0)
+        self.assertNotIn("Traceback", failed.stderr)
+        self.assertFalse((self.root / "failed").exists())
+
+
+if __name__ == "__main__":
+    unittest.main()

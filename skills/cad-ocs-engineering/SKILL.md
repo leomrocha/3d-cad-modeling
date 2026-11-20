@@ -78,6 +78,10 @@ Use the [row spacing procedure](references/row-spacing.md) and `python scripts/r
 
 Use the [3D placement procedure](references/spatial-positions.md) and `python scripts/spatial_positions.py REQUEST.json` to calculate occurrence transforms in the parent and world frames from a measured prism, cylinder or sphere. Check the requested distances between positions. Apply the reviewed parent transform to each assigned occurrence and compare its reopened placement with the expected world transform.
 
+### Create a group of elements
+
+Use the [batch creation procedure](references/batch-creation.md) for drawing entities, cuts in a selected host, or shared part occurrences. Select native patterns when the requested dimensions and relationships are editable in the available provider.
+
 ### Place existing occurrences at reviewed destinations
 
 Use the [existing occurrence placement procedure](references/existing-batch-placement.md) to assign measured positions to existing DXF INSERT entities and review each requested world block-base frame. Move the selected occurrences in the job copy, then verify the reopened frames and retained geometry. Use the original request IDs when resuming an interrupted job.

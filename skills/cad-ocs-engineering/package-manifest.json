@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "b028414628751fe691507e6f8512f88ba24c5a0aa181024e730d4d615398f17b"
+      "sha256": "38252a3b524161c27f8b5a29c8e3b628d0627e15277e88f367517a74dbba020b"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -37,6 +37,10 @@
     "references/axial-motor.md": {
       "source": "references/axial-motor.md",
       "sha256": "8bd355cdae973921868d891cafb57c490b6755ed85ff3957f81291f4e1a84dcf"
+    },
+    "references/batch-creation.md": {
+      "source": "references/batch-creation.md",
+      "sha256": "c28768590d33784f6f39d87623ce4b8b2662632cd461b3bbb6bb8832e96d099b"
     },
     "references/calibrated-trace.md": {
       "source": "references/calibrated-trace.md",
@@ -285,6 +289,10 @@
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",
       "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6"
+    },
+    "scripts/batch_creation.py": {
+      "source": "scripts/batch_creation.py",
+      "sha256": "97205b7184f4ad36e88e21f8a0e7f9a93c021f471eb341c48bd6b4238c08d80b"
     },
     "scripts/batch_dxf_frames.py": {
       "source": "scripts/batch_dxf_frames.py",

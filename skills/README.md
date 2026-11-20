@@ -41,6 +41,8 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 9. [Resolve row spacing and measure surface gaps](cad-ocs-engineering/references/row-spacing.md) covers centre pitches, face gaps, border margins, residual spacing and clearance measurements between placed shapes.
 10. [Place existing occurrences at reviewed destinations](cad-ocs-engineering/references/existing-batch-placement.md) covers matching DXF INSERT entities to position IDs, moving them in their parent frames, resuming individual requests and checking saved placements.
 
+11. [Create a group of elements](cad-ocs-engineering/references/batch-creation.md) covers drawing circles, holes in a selected solid and shared part occurrences.
+
 ## Installed package references
 
 1. [Bundled OCS runtime](cad-ocs-engineering/references/ocs-runtime.md), [model and coordinate-check contract](cad-ocs-engineering/references/model-contract.md) and [caller-owned paths](cad-ocs-engineering/references/paths.md) explain cad-ocs-engineering execution from its installed directory.
