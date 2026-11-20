@@ -18,13 +18,21 @@
       "source": "requirements.txt",
       "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
     },
+    "scripts/batch_dxf_inventory.py": {
+      "source": "scripts/batch_dxf_inventory.py",
+      "sha256": "37c0cb7570bae0ad43ff5ec1f0f8f27eae3959f202e99dd8626c5592926a35e6"
+    },
     "scripts/batch_dxf_lines.py": {
       "source": "scripts/batch_dxf_lines.py",
-      "sha256": "973d68dd5f4330b180f2b2c3dbfaa413920826eee6258970e7e1f6c867de82fe"
+      "sha256": "c03a00644ea54fcc8aff0c604daa5be735f7cbf5b6050f648cf1defd5d50b1a3"
     },
     "scripts/batch_request.py": {
       "source": "scripts/batch_request.py",
-      "sha256": "5b159122bb4b71db8fce7bd059088d0d83254a1ceaab5ad86f3a58c378ece6af"
+      "sha256": "f243c11b4db3703a23d69d181eee829043cae1781263916dd3be5b7d19f3d624"
+    },
+    "scripts/batch_selection.py": {
+      "source": "scripts/batch_selection.py",
+      "sha256": "5d736298c81c032214ef20494bd5e6d6aa5b086ea042080c08f7da54f7d8ca1e"
     },
     "scripts/opencv_env.py": {
       "source": "scripts/opencv_env.py",
@@ -37,6 +45,10 @@
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
       "sha256": "c9d8d306c1551ac995800e9a33ec4786c3ead0029bf41592db413452b1f287b7"
+    },
+    "scripts/step_placements.py": {
+      "source": "scripts/step_placements.py",
+      "sha256": "ae70a2c208a124d5691eaf9e1bdac09b67dd9a4b6509a87876fe3b5cf9646691"
     }
   }
 }

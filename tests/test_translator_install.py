@@ -66,7 +66,8 @@ class TranslatorInstallation(unittest.TestCase):
                         continue
                     path = (page.parent / unquote(target.path)).resolve()
                     self.assertTrue(path.is_relative_to(package.resolve()) and path.exists(), (page, link))
-            for name in ('translator', 'bore_check', 'state'):
+            for name in ('translator', 'bore_check', 'state', 'batch_request', 'batch_dxf_lines',
+                         'batch_selection', 'batch_dxf_inventory', 'step_placements'):
                 code = ('import importlib,pathlib,sys; root=pathlib.Path(sys.argv[1]);'
                         'sys.path.insert(0,str(root)); module=importlib.import_module(sys.argv[2]);'
                         'assert pathlib.Path(module.__file__).resolve().parent==root')

@@ -13,6 +13,8 @@
 9. [Source vector paths](../scripts/source_vector_paths.py) — bounded SVG segment grammar, affine frames and explicit unit conversion.
 10. [batch_request.py](../scripts/batch_request.py) prepares ordered CAD operation rows from shared or per-target values, normalizes lengths and angles, and supplies execution rows for an operation with verified readback. [CAD batch procedure](../skills/cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations).
 11. [batch_dxf_lines.py](../scripts/batch_dxf_lines.py) applies reviewed lengths to modelspace DXF LINE entities with ezdxf. It preserves each start and direction, writes a new DXF, and reopens it to measure the selected lines. [CAD batch procedure](../skills/cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations).
+12. [batch_selection.py](../scripts/batch_selection.py) resolves occurrence paths, named selections and measured conditions against a model inventory. It records local geometry and composed placements, then checks target and reference identity and measurements after reopening. [Batch selection procedure](../skills/cad-ocs-engineering/SKILL.md#resolve-batch-targets-against-measured-geometry).
+13. [batch_dxf_inventory.py](../scripts/batch_dxf_inventory.py) reads DXF modelspace groups, LINE, CIRCLE, POINT and LWPOLYLINE geometry, and block definitions reached by single rigid INSERT entities. It binds the inventory to the drawing SHA-256. [Batch selection procedure](../skills/cad-ocs-engineering/SKILL.md#resolve-batch-targets-against-measured-geometry).
 
 The [reusable integration procedure](../skills/cad-ocs-engineering/references/generic-integration.md) defines inputs, outputs, units, representation limits and recovery conditions. Component data remains caller supplied.
 

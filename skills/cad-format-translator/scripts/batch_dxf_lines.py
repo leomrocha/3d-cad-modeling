@@ -102,14 +102,20 @@ def apply(preview, directory, *, resource, catalogue_path=None, sample=False):
         raise ValueError("Source revision changed")
     unit = data["model_unit"]
     doc = drawing(source, unit)
+    from batch_dxf_inventory import read_inventory
     if sample:
         rows = data["rows"]
+        if any("selection" in row for row in rows):
+            from batch_selection import verify_reopened
+            paths = verify_reopened(preview, read_inventory(data["model"], unit))
+            for row, path in zip(rows, paths):
+                row["target"] = "/".join(path)
     else:
         if not any(route.get("backend") == backend() and route["name"] == METHOD and route["resource"] == resource
                    for route in data["routes"]):
             raise ValueError("No matching DXF operation with verified readback for this backend")
         rows = execution_rows(preview, resource, METHOD, catalogue_path=catalogue_path,
-                              read_revision=file_digest)
+                              read_revision=file_digest, read_inventory=read_inventory)
     expected = {}
     for row in rows:
         handle = row["target"]

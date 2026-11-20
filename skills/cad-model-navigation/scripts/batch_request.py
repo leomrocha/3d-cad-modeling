@@ -89,7 +89,20 @@ def prepare(request, catalogue):
     unit = label(request["model_unit"], "model length unit")
     if unit not in LENGTH_MM:
         raise ValueError("Specify a supported model length unit")
-    targets = request["targets"]
+    if "selection" in request:
+        from batch_selection import resolve
+        if "targets" in request:
+            raise ValueError("Specify targets or a selection")
+        if "inventory" in request and (Path(header["model"]).suffix.lower() == ".dxf" or header["entity"].startswith("DXF ")):
+            raise ValueError("DXF selection requires the saved drawing as its inventory")
+        if "inventory" in request:
+            snapshot = request["inventory"]
+        else:
+            from batch_dxf_inventory import read_inventory
+            snapshot = read_inventory(request["model"], unit)
+        targets = resolve(request, snapshot)
+    else:
+        targets = request["targets"]
     if not isinstance(targets, list) or not targets or not all(isinstance(t, dict) for t in targets):
         raise ValueError("Specify one or more target records")
     ids = [label(item["id"], "target ID") for item in targets]
@@ -115,16 +128,20 @@ def prepare(request, catalogue):
             raise ValueError(f"Inconsistent result properties for {target}")
         rows.append(dict(target=target, action=action, reference=label(item["reference"], "reference"),
                          current=current, requested=requested))
+        if "selection" in request:
+            rows[-1]["selection"] = item["selection"]
     routes = [row for row in catalogue["operations"]
               if row.get("action") == action and row["input"] == header["entity"]
               and row["output"] == header["output"]]
     result = dict(**header, action=action, revision=revision, model_unit=unit,
                   angle_convention="degrees, right-hand positive about the named axis",
                   rows=rows, routes=routes)
+    if "selection" in request:
+        result["selection"] = request["selection"]
     return Preview(json.dumps(result, indent=2, allow_nan=False))
 
 
-def execution_rows(preview, resource, method, *, catalogue_path, read_revision):
+def execution_rows(preview, resource, method, *, catalogue_path, read_revision, read_inventory=None):
     """Recheck the selected route and actual model revision before handing off reviewed rows."""
     data = preview.read()
     catalogue = load(Path(catalogue_path))
@@ -138,6 +155,13 @@ def execution_rows(preview, resource, method, *, catalogue_path, read_revision):
             actual = read_revision(data["model"])
             if type(actual) is not type(data["revision"]) or actual != data["revision"]:
                 raise ValueError("Model revision changed after preview")
+            if any("selection" in target for target in data["rows"]):
+                from batch_selection import verify_reopened
+                if read_inventory is None:
+                    raise ValueError("Selected occurrences require a live inventory reader")
+                paths = verify_reopened(preview, read_inventory(data["model"], data["model_unit"]))
+                for target, path in zip(data["rows"], paths):
+                    target["target"] = "/".join(path)
             return data["rows"]
     raise ValueError(f"No matching operation with verified readback: {resource}/{method}")
 

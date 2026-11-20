@@ -66,6 +66,27 @@ Inspect actual matching models and all manifest, work-record, input-sheet and CA
 7. For the installed [DXF LINE length operation](scripts/batch_dxf_lines.py), select `action=modify`, `entity=DXF LINE`, `output=line length from fixed start` and method `resize-line`. Use the drawing path as the model, its SHA-256 as the revision and modelspace LINE handles as target IDs. Set each reference to the exact token `fixed LINE start`. Supply the drawing unit explicitly for a unitless source. On an owned sample, run `python scripts/batch_dxf_lines.py sample PREVIEW.json NEW_JOB_DIR --preview-sha256 DIGEST --resource RESOURCE`. Register the resulting `evidence.json` and backend `ezdxf/VERSION` on that resource, refresh, prepare and review the execution preview. Run the same command with `execute` and `--catalogue OPERATIONS.json`. The writer preserves each LINE start and direction, saves a new DXF, reopens it and measures each selected LINE. A qualification sample must demonstrate a length change. Normal execution accepts a length already present. Qualification currently verifies saved DXF LINE geometry.
 8. When a route fails, record the failure with `operation_catalogue.py failed` and inspect any uncertain write using its request ID. Proceed through the remaining applicable scripts and guided native operations in reuse order after resolving the failed operation’s effect. Record a new candidate’s actual sample edit and readback before batch execution.
 
+### Resolve batch targets against measured geometry
+
+Use `selection` in place of `targets` in the batch request. Set `scope` to the native occurrence path of the owning drawing, part, face or assembly. An empty path selects the root. Select by `paths` (ordered lists of native IDs), by `named` (a saved selection name), or by `condition` (entity kind and inclusive distance range in model units). Values keyed by occurrence use slash-separated native IDs. `operation_reference` is the reference required by the selected write operation. For example, this selection measures circle centres from a directed edge within one inserted block.
+
+```json
+{
+  "scope": ["7A"],
+  "operation_reference": "hole radius",
+  "condition": {"kind": "CIRCLE", "range": [0, 10]},
+  "measurement": {
+    "reference_path": ["7A", "BC"], "reference_kind": "edge",
+    "reference_anchor": "start", "direction": "left", "side": "positive",
+    "target_anchor": "centre", "measure_to": "anchor"
+  }
+}
+```
+
+1. For DXF, give the saved file path and its SHA-256. The batch reader measures reachable LINE, CIRCLE, POINT, LWPOLYLINE and single rigid INSERT geometry and resolves modelspace groups. LINE starts and ends, circle centres, POINT vertices and numbered polyline vertices supply anchors. Use a LINE's `along` or `left` direction, or a measured reference's `frame-x`, `frame-y` or `frame-z`. The measurement endpoints are the projected point on the reference plane and the selected target anchor or nearest circular wall. The preview records both original anchors separately. For circular wall clearance in the circle plane use `measure_to: "wall"`. A DXF circle supplies circle geometry. Through-hole classification requires a solid feature reader.
+2. For other readers, supply a measured `inventory` for the request's model, revision and model unit. Its `root` names a definition. `definitions` maps each owning definition to its ordered children. Each child has a native `id`, readable `name`, `kind`, measured local `geometry`, named local `anchors`, named local `directions` and supported `reference_kinds`. Supply measured `current` properties for existing targets, a rigid 4 × 4 local `matrix` for placed children, and a child `definition` for assemblies. `named` maps saved selection names to ordered native paths. Supply the observed vertex, edge, outside border, inside border, centreline, axis, plane, face or existing feature classification on its reference record. Select one measured anchor and direction on that geometry. Use the nearest-wall calculation only with a circular centre, radius and measured normal. For a finite edge, the reported projection measures distance to the plane through its named anchor perpendicular to the specified direction.
+3. Review the native path, owning definitions, local geometry, composed transform, both measurement endpoints, side and requested value in each preview row. In `execution_rows`, pass `read_inventory(model, model_unit)` to read the current backend inventory. After reopening a saved model at the reviewed revision, use `batch_selection.verify_reopened(preview, fresh_inventory)`. A reassigned ID needs one matching child under the same resolved parent with matching geometry and placement. The reader checks a changed or reassigned ID against sibling geometry, then rechecks the named group or measured condition against the live inventory. Ambiguous matches, incorrect sides and changed membership stop the operation. A measured condition covering unsupported scaled or array INSERTs requires a reader for those placements.
+
 ## Construct and check bounded changes
 
 1. Inspect installed command/entity/record schemas and native state before unfamiliar requests. Select one existing session and one owned document. Bind each mutation to its document, expected revision and stable request ID. Use one writer and a coordinated exclusive interval for interactive native sequences.
