@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "6ad216c4c711d92af6b7d5db1bfaaaf5c371ca03b69b537bce10cc81538d49d2"
+      "sha256": "383de34c3898a72cee96c1f7dce3a1c9ffdd26b831d1614d3bf823650d937a6d"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -130,6 +130,10 @@
       "source": "references/model-contract.md",
       "sha256": "1d52c3c8104d8abb9643030d2432cec06ea1e5ee28a428f8dae49c033103c76e"
     },
+    "references/modeling-input-operations.md": {
+      "source": "references/modeling-input-operations.md",
+      "sha256": "4aa25a4f8e54b1a065f42a1b811c98378216393f42864805d607d882edb177c8"
+    },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
       "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
@@ -204,7 +208,7 @@
     },
     "references/source-view-evidence.md": {
       "source": "references/source-view-evidence.md",
-      "sha256": "9f6c138aa84cb02e7e380dece0f64dc822652c5f977580c14d3c05284ba7f041"
+      "sha256": "a7e9c8d1338b297749ddeea0ca1e0044e789f955b73a1d379b171567e797d5b0"
     },
     "references/sources-and-capabilities.md": {
       "source": "references/sources-and-capabilities.md",
@@ -270,6 +274,10 @@
       "source": "scripts/battery_module.py",
       "sha256": "fafa8c57d579d5329b93b0681d890d7dc28c5706c1d9f9531ac53b53380a0d08"
     },
+    "scripts/bearing_variant.py": {
+      "source": "scripts/bearing_variant.py",
+      "sha256": "a6b8b5b9502d14bec6b938200b2985dc60f681fd8e245f1ec4c19dbf0f01b242"
+    },
     "scripts/cadtools/__init__.py": {
       "source": "scripts/cadtools/__init__.py",
       "sha256": "3b3d2bdc01158b2647f603599d53cd7493ee6f4bd3c7d79eaa20160dba925b3d"
@@ -301,6 +309,14 @@
     "scripts/calibrated_trace.py": {
       "source": "scripts/calibrated_trace.py",
       "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025"
+    },
+    "scripts/calibrated_views.py": {
+      "source": "scripts/calibrated_views.py",
+      "sha256": "ca044793b00f8b3c7d7dc282b0ad4425b823f9eb9c80db22ecfaff0c3b484c46"
+    },
+    "scripts/camera_reconstruction.py": {
+      "source": "scripts/camera_reconstruction.py",
+      "sha256": "40ad6e7f8e532bc1fa1a21460731ab0621754eb835a605a79618d89cca575e48"
     },
     "scripts/catalogue_candidates.py": {
       "source": "scripts/catalogue_candidates.py",
@@ -366,6 +382,22 @@
       "source": "scripts/job_history_archive.py",
       "sha256": "3924a6b1e33990adf220c4a684f817a2937b2345d957fdd0627a23eb6207b961"
     },
+    "scripts/learned_cad_provider.py": {
+      "source": "scripts/learned_cad_provider.py",
+      "sha256": "4f8ff36c2fc96b37c1f285b2acd6c8aa7013f3cffb899b4e178ef3ca142c0f56"
+    },
+    "scripts/learned_cad_sequence.py": {
+      "source": "scripts/learned_cad_sequence.py",
+      "sha256": "19d9975ea5459a2703cb0f1208a0040b60f49e78e62c945f1c03f03812ce3fe9"
+    },
+    "scripts/learned_cad_solver.py": {
+      "source": "scripts/learned_cad_solver.py",
+      "sha256": "197b5a29112cb9d0b5de2c9fe0890816036390c14a7f67cfaace3b1a9237ee77"
+    },
+    "scripts/learned_cad_text2cad.py": {
+      "source": "scripts/learned_cad_text2cad.py",
+      "sha256": "a1dc156693c0695439ba8b676548d90881c50926e5659df744197ded5f76c1bb"
+    },
     "scripts/mesh_checks.py": {
       "source": "scripts/mesh_checks.py",
       "sha256": "5eaeb4e208a5308f61c6eb7a2aeade473ea2cb78c6a4efe1c679245b39a22889"
@@ -381,6 +413,10 @@
     "scripts/mounting_pattern.py": {
       "source": "scripts/mounting_pattern.py",
       "sha256": "64f360cc2a39f3dd8f0b0b37f66f04cbe58ca03163ea4589b69d2e70edb37b3c"
+    },
+    "scripts/multiview_part.py": {
+      "source": "scripts/multiview_part.py",
+      "sha256": "db7e4870819648e5717aab5b6fec67894fc32e08027253b3d001bb1fddbab50a"
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",
@@ -417,6 +453,10 @@
     "scripts/photo_constraints.py": {
       "source": "scripts/photo_constraints.py",
       "sha256": "26df839b008bcfa49c236631913846450e8545b8189512c8107dc2d6cf29b79f"
+    },
+    "scripts/photo_height.py": {
+      "source": "scripts/photo_height.py",
+      "sha256": "47aa163d8af85ca104c9fafcdb4ed5b6ad2eb33d0d64f041dcd77574a6a4da52"
     },
     "scripts/pillow_block.py": {
       "source": "scripts/pillow_block.py",
@@ -458,9 +498,17 @@
       "source": "scripts/rational_surface.py",
       "sha256": "8500688104fc5be843a503e3e640d5e8a5d6425a7b9fca148ceac8700742d018"
     },
+    "scripts/registered_stereo.py": {
+      "source": "scripts/registered_stereo.py",
+      "sha256": "80a51cfe063b57477ec7a5cfefad27577de90be593eb433913da5ca93802fb82"
+    },
     "scripts/retained_artifacts.py": {
       "source": "scripts/retained_artifacts.py",
       "sha256": "e3b3d2b392c49019b2031c3e3bcdd9ac818386998bd05706047abea9f9f4ec77"
+    },
+    "scripts/rgbd_surface.py": {
+      "source": "scripts/rgbd_surface.py",
+      "sha256": "01b329830cde221d0302834e281267e45b392518f133382d2cf2c2551c00b4d6"
     },
     "scripts/rounded_tube.py": {
       "source": "scripts/rounded_tube.py",
@@ -473,6 +521,18 @@
     "scripts/service_clearance.py": {
       "source": "scripts/service_clearance.py",
       "sha256": "58385175ea4d4b0992758afead9d483872e9b893ca269580da23832dda624c72"
+    },
+    "scripts/shape_match.py": {
+      "source": "scripts/shape_match.py",
+      "sha256": "2da13e2f5fedf58836f7b6956a53688336b1d8905d6e11e46da7ca2c6d13f2eb"
+    },
+    "scripts/shape_recover.py": {
+      "source": "scripts/shape_recover.py",
+      "sha256": "f8af6d60ac7488905944c0993c97e0d9e0f91e4e8a5d5ca734282a967db1e89e"
+    },
+    "scripts/shape_sketch.py": {
+      "source": "scripts/shape_sketch.py",
+      "sha256": "e3e702e9344e063d5e48610c64ba52f553d04402e9eb0a892bf6b12773081ddf"
     },
     "scripts/small_bms.py": {
       "source": "scripts/small_bms.py",
@@ -510,6 +570,10 @@
       "source": "scripts/spherical_seat_profile.py",
       "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450"
     },
+    "scripts/standard_screw.py": {
+      "source": "scripts/standard_screw.py",
+      "sha256": "e13245d9ccb325df9a2582f043d0f5107647dc96453c31ee63a7b01188fecac9"
+    },
     "scripts/step_entity_graph.py": {
       "source": "scripts/step_entity_graph.py",
       "sha256": "b3c421167e43708e5c7929105268daa3a3a2d28b7b7f8af5ed8592f7579feb0f"
@@ -525,6 +589,14 @@
     "scripts/toroidal_reference.py": {
       "source": "scripts/toroidal_reference.py",
       "sha256": "f6f0cb56e797731c76f4f11d293487d84215446bf74f384dfb5c8c3504c989ff"
+    },
+    "scripts/vision_provider.py": {
+      "source": "scripts/vision_provider.py",
+      "sha256": "9feec718875b3376a8e18f656b39d2fff853be7dbfa599f4e3ff3ad953e386a7"
+    },
+    "scripts/vision_provider_sam2.py": {
+      "source": "scripts/vision_provider_sam2.py",
+      "sha256": "b5d05be8b1ed3569b0396cbeaa7533faf8f17444544d4ea11ef5d70ad640672e"
     }
   }
 }

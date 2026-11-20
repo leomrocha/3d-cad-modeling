@@ -1,0 +1,56 @@
+# Run modeling operations from the installed skill
+
+Use the selected provider interpreter and a new job output path. The commands below reside in the installed scripts directory. Preserve source identities, controls, competing variants and any failed measurements with the job.
+
+## A missing standard fastener
+
+After indexed lookup and a compatible model's length parameter have been checked, run [standard_screw.py](../scripts/standard_screw.py) FASTENERCAD_TREE SPEC_JSON NEW_DIRECTORY with CadQuery and a caller-supplied FastenerCAD checkout. The checked family is a coarse ISO 4017 screw with cosmetic threads. Supply independent limits for the chosen edition, grade and size. Example input for a job selecting M6×30 from a checked table:
+
+```json
+{"standard":"ISO 4017","thread_series":"coarse","size":"M6","length_mm":30,"reference":{"source":"ISO 4017:2022 grade A M6 row","edition":"2022","lengths_mm":[20,30],"pitch_mm":1,"head_height_mm":[3.85,4.15],"across_flats_mm":[9.78,10],"min_across_corners_mm":11.05}}
+```
+
+The result includes a reopened STEP and its checks. Use the nominal outside thread envelope for clearance, retaining the cosmetic shaft diameter as a property of the generated representation.
+
+## Reuse from shape or mating features
+
+Run [shape_match.py](../scripts/shape_match.py) JOB_JSON NEW_RESULT with an Open3D interpreter. Supply candidate meshes from the parts index, their source hashes, the observed surface points and fit limits in mm. Retain all passing poses when a partial scan or repeating pattern is ambiguous. For an interface match include the shaft and socket datums, required clearance, side and axis direction. Inspect the returned transforms and witness errors before placement.
+
+Run [shape_recover.py](../scripts/shape_recover.py) INPUT_STL NEW_DIRECTORY --unit mm --axis z --tolerance-mm T for an extruded planar profile. Set the known extrusion axis, source unit and permitted fit error. Inspect feature identities in features.json, edit profile.scad, export the revision with OpenSCAD and measure both changed and retained features. Preserve the original mesh.
+
+## Camera and depth inputs
+
+1. For overlapping photographs of a rigid scene use [camera_reconstruction.py](../scripts/camera_reconstruction.py) JOB_JSON NEW_DIRECTORY with pycolmap. Supply image_directory, images (filenames within it), controls_m and checks_m (maps from disjoint filenames to camera centres in world metres), and check_tolerance_mm. Supply pinhole as [fx,fy,cx,cy] in COLMAP pixels for a known undistorted camera. Fit on at least three noncollinear controls. The tool reopens the aligned sparse model and measures each independent camera centre. Its optional --dense uses COLMAP PatchMatch and fusion on a CUDA-enabled deployment.
+2. For selected landmarks or CPU dense output, run [calibrated_views.py](../scripts/calibrated_views.py) ALIGNED_MODEL IMAGE_DIRECTORY JOB_JSON NEW_DIRECTORY with pycolmap, OpenCV and Open3D. Use undistorted pinhole input. A landmarks entry contains two views with image and pixel coordinates in the OpenCV pixel frame and pick_radius_px. The receipt gives the world position, reprojection error and displacement caused by perturbing each coordinate separately. For dense output set pairs to left/right filenames in objects, add voxel_mm, max_depth_m, num_disparities and block_size. The runner rectifies each horizontal-baseline pair, transforms sampled depth to world coordinates and reopens the combined PLY.
+3. For an already rectified pair, run [registered_stereo.py](../scripts/registered_stereo.py) JOB_JSON NEW_DIRECTORY in an OpenCV environment. Supply left, right, rectified=true, focal_px, baseline_m, num_disparities (a positive multiple of 16), block_size (odd and at least five), and methods (BM, SGBM or both). Depth arrays use metres. For comparison supply a reference NPZ with depth_m and labels in left-image coordinates, plus class_ids mapping numeric labels to readable materials or feature types. Coverage includes missing estimates. Error statistics use valid hits.
+4. With registered color/depth frames and measured poses use [rgbd_surface.py](../scripts/rgbd_surface.py) JOB_JSON NEW_DIRECTORY in an Open3D interpreter. Supply size_px, camera_matrix (3×3), depth_units_per_m, max_depth_m, voxel_mm and frames. Each frame supplies id, role (integrate or check), depth image and rigid 4×4 world_to_camera transform with translation in metres. Integration frames also supply color. A check frame may supply region_masks mapping a readable material or feature to a scalar mask file. Paths are relative to the manifest. The runner reopens surface-m.ply, evaluates it in the check views, and reports coverage and depth error per region.
+
+For a single perspective image, [photo_height.py](../scripts/photo_height.py) SPEC_JSON NEW_RECEIPT transfers a reference height from a known common base plane. Supply reference_base, reference_top, target_base and target_top in pixels. Supply the base_vanishing_line and vertical_vanishing_point in homogeneous image coordinates, reference_height_mm, max_line_error_px, plane_evidence and direction_evidence. The signed target height and vertical-line residuals refer only to those picks and the stated geometry.
+
+For any reconstructed geometry, use independently sourced controls for the intended operation. For transparent parts, the first visible material boundary and a textured surface behind it can have different depths. Check depth against the actual feature used for clearance.
+
+## Editable model output and solver feedback
+
+Use [learned_cad_sequence.py](../scripts/learned_cad_sequence.py) SEQUENCE_JSON NEW_DIRECTORY with CadQuery when a capable model reads a description or multiple views and emits named sketch and extrusion operations. Record input source IDs, model identity and the basis of each parameter. Reopen the STEP, change a named parameter and measure again. Use the [Text2CAD adapter](../scripts/learned_cad_text2cad.py) with the pinned upstream runtime and locally available authorized checkpoint for that model. Use the [sketch solver](../scripts/learned_cad_solver.py) to diagnose a constrained sketch, retain conflicting handles and measure corrected or unconstrained geometry. Read each command’s --help in its selected interpreter.
+
+For a calibrated plate family, [multiview_part.py](../scripts/multiview_part.py) provides a learned parameter estimate from registered top and front masks. Use its predicted sequence with the CAD sequence builder and measure the reopened features. Use [learned_cad_provider.py](../scripts/learned_cad_provider.py) to obtain an editable sequence from an explicitly selected chat-completions endpoint and preserve the original response beside the build. Use the selected model’s actual image-input and structured-output capabilities for multi-view jobs.
+
+For multi-view inference supply family=rectangular-prism-with-z-through-bores, width_agreement_mm, top and front. Each view names its path and sha256, scale_control and held_out_control (each with two pixels and a length_mm), and held_out_limit_mm. Use a white material mask on black with X to the right, Y up in top and Z up in front. Confirm the through-bore assumption from feature evidence. Run multiview_part.py VIEWS_JSON NEW_DIRECTORY, then learned_cad_sequence.py NEW_DIRECTORY/sequence.json NEW_SOLID --source job VIEWS_JSON --source top TOP_IMAGE --source front FRONT_IMAGE. Review predicted parameters and source evidence before using them for fabrication.
+
+For shape search specify world_check_points_mm, max_point_error_mm and candidates. Each candidate supplies id, path, sha256 and unit. Supply its known 4×4 poses or paired anchors, or supply registration with world_scan_mm, voxel_mm and integer seeds to recover candidate poses. Keep the check points independent of registration points. Carry the selected candidate's original catalogue identity into assembly placement.
+
+For text inference run learned_cad_provider.py ENDPOINT MODEL PROMPT_FILE NEW_DIRECTORY with optional --image and --key-env. Use the saved sequence and the original sources for the independent CAD build. For a solver job specify units=mm, named points with xy and optional fixed, and constraints with a distinct id, kind and pair of point names. A distance constraint also needs mm. The receipt identifies underconstraint, conflicting constraints and the solved point locations for successful revisions.
+
+## Compare the gain for one CAD decision
+
+Use the same source revision, required decision and independent reference for the baseline and each candidate. Record the two output revisions, units and frame, correct features and omissions, measured deviations and coverage, topology, requested edit and readback, operator corrections, hands-on time, compute time and service cost. Mark an unmeasured quantity explicitly. State the fit or decision tolerance in the job before comparing results.
+
+Choose net gain when a method saves total effort or resolves the required decision at a justified cost. Give a conditional gain when an identifiable condition changes the choice. Record no gain when the baseline already supplies the same decision at equal or lower cost. Use insufficient evidence when the comparison cannot distinguish the routes. For example, the indexed battery exterior supplied a display heading and polarity. Adding its originating photo produced the same placement. For the partial model, the same annotated photo supplied the missing polarity side. Both observations share the original image provenance.
+
+Calibrated surface extraction verifies the sparse model files and selected image hashes against the passing alignment receipt. A separately produced metric camera solution can supply the same receipt fields through --calibration-receipt. Its check must establish the world unit and an independent reference distance or position.
+
+## Supplier revisions and bearing suffixes
+
+Resolve the exact supplier designation against its own product and CAD-file records. Retain the original hash, revision, units, terms and supplier-to-file association. A matching filename can identify a derived model with a different revision. Open the selected original and measure the named interface against the separately identified product drawing.
+
+For a supported NSK single-row deep-groove bearing use [bearing_variant.py](../scripts/bearing_variant.py) CATALOGUE_RESULT --base 6205 --closure contact-seal --sides 2. Supply the existing catalogue_candidates result. The matcher preserves full designations and the manufacturer and family evidence. The tested row types distinguish one- and two-sided shields, contact seals and noncontact seals. Compound, contradictory or insufficiently identified designations retain a request for the specific missing evidence.

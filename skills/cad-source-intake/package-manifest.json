@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "65a5f520c3ada6cfdd25bad9a4a2f5e492235019c1fb407869c151d0943e53e2"
+      "sha256": "14d898c67618b46161123caf951156b81e31d4aa54a57986e6d5f21222bb26ad"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
@@ -49,6 +49,14 @@
     "scripts/source_intake.py": {
       "source": "scripts/source_intake.py",
       "sha256": "cc8bfae3ba3ecd630dffb09b58fc4b2e325a6b8bfefb876c83d4c5ab98a66f92"
+    },
+    "scripts/vision_provider.py": {
+      "source": "scripts/vision_provider.py",
+      "sha256": "9feec718875b3376a8e18f656b39d2fff853be7dbfa599f4e3ff3ad953e386a7"
+    },
+    "scripts/vision_provider_sam2.py": {
+      "source": "scripts/vision_provider_sam2.py",
+      "sha256": "b5d05be8b1ed3569b0396cbeaa7533faf8f17444544d4ea11ef5d70ad640672e"
     }
   }
 }

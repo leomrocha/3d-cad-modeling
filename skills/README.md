@@ -161,3 +161,5 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Hand-drawn concept sketches](cad-drawing-inspection/SKILL.md#hand-drawn-concept-sketch) links each part, relationship and dimension to its mark on the page. The [CAD handoff](cad-ocs-engineering/references/source-view-evidence.md#use-a-hand-drawn-concept-for-cad) uses those observations for catalogue lookup, approximate layout and dimensioned features.
 
 [Standard fastener variants](cad-ocs-engineering/references/source-variant-tables.md) covers generator checks and the represented diameter of cosmetic threads.
+
+[Installed modeling operations](cad-ocs-engineering/references/modeling-input-operations.md) gives runtime inputs and outputs for family generation, geometry retrieval, feature recovery, editable sequences and metric reconstruction.

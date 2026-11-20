@@ -170,3 +170,23 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [Local dimension text recognition](../scripts/raster_text.py) uses a supplied PaddleOCR model on a cropped text line and returns a source-linked receipt.
 
 - [Prompted SAM segmentation](../scripts/sam_mask.py) runs a local SAM checkpoint on one source image and returns a source-linked instance mask with the prompt and model hashes.
+
+## Modeling feature delivery
+
+- [Match a sourced NSK designation and closure](../scripts/bearing_variant.py)
+- [Generate and check an ISO 4017 screw](../scripts/standard_screw.py)
+- [Fuse registered RGB-D surface measurements](../scripts/rgbd_surface.py)
+- [Recover metric stereo depth and compare material regions](../scripts/registered_stereo.py)
+- [Reconstruct and align camera locations](../scripts/camera_reconstruction.py)
+- [Triangulate source landmarks and recover a dense surface](../scripts/calibrated_views.py)
+- [Transfer a reference height between vertical landmarks](../scripts/photo_height.py)
+- [Search partial meshes and mating interfaces](../scripts/shape_match.py)
+- [Recover editable prismatic profile features](../scripts/shape_recover.py)
+- [Vectorize freehand ink and propose sketch relations](../scripts/shape_sketch.py)
+- [Infer an editable prismatic part from calibrated masks](../scripts/multiview_part.py)
+- [Call and interpret deployed image providers](../scripts/vision_provider.py)
+- [Run local SAM 2 with point or box corrections](../scripts/vision_provider_sam2.py)
+- [Request an editable feature sequence from a selected model](../scripts/learned_cad_provider.py)
+- [Build and verify source-bound feature sequences](../scripts/learned_cad_sequence.py)
+- [Read native constraint conflicts and solve a corrected sketch](../scripts/learned_cad_solver.py)
+- [Invoke a supplied Text2CAD runtime and decode its operations](../scripts/learned_cad_text2cad.py)
