@@ -70,6 +70,10 @@ Inspect actual matching models and all manifest, work-record, input-sheet and CA
 
 Use [planar positions](references/planar-positions.md) and `python scripts/planar_positions.py REQUEST.json` to calculate ordered coordinates and optional tangents on an identified drawing edge, curve, polygon or circle, or in a bounded region with cutouts. Transfer the resulting position IDs, coordinates, unit and frame to the batch action.
 
+### Position and orient occurrences in 3D
+
+Use the [3D placement procedure](references/spatial-positions.md) and `python scripts/spatial_positions.py REQUEST.json` to calculate occurrence transforms in the parent and world frames from a measured prism, cylinder or sphere. Check the requested distances between positions. Apply the reviewed parent transform to each assigned occurrence and compare its reopened placement with the expected world transform.
+
 ### Resolve batch targets against measured geometry
 
 Use `selection` in place of `targets` in the batch request. Set `scope` to the native occurrence path of the owning drawing, part, face or assembly. An empty path selects the root. Select by `paths` (ordered lists of native IDs), by `named` (a saved selection name), or by `condition` (entity kind and inclusive distance range in model units). Values keyed by occurrence use slash-separated native IDs. `operation_reference` is the reference required by the selected write operation. For example, this selection measures circle centres from a directed edge within one inserted block.

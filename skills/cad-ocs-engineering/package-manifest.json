@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "309bfff824766755f49ed2627af3d3af31c391f68213a8b3e4483644e2f2390b"
+      "sha256": "bcf0c2bb9cb62cf02957b865a66a8b0f5cab83fbf8c933f1d22df9530adac281"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -217,6 +217,10 @@
     "references/sources-and-capabilities.md": {
       "source": "references/sources-and-capabilities.md",
       "sha256": "99185d7d65866fbac6d89a884cfd9fff0b1f48973549b1f4a8433ebf3d49271b"
+    },
+    "references/spatial-positions.md": {
+      "source": "references/spatial-positions.md",
+      "sha256": "743d3490b15c14d158df279b2ef8352df1d8a3eff13f9db127043c1fa45ca889"
     },
     "references/spherical-seat-profile.md": {
       "source": "references/spherical-seat-profile.md",
@@ -605,6 +609,10 @@
     "scripts/source_vector_paths.py": {
       "source": "scripts/source_vector_paths.py",
       "sha256": "cee935c8f421273a9cb343fa867242d30f7febff63cb859453bfcd52e615624a"
+    },
+    "scripts/spatial_positions.py": {
+      "source": "scripts/spatial_positions.py",
+      "sha256": "a4254b4a8f1eb9cdc05d9840f5bce6276f0e28d5c97e89b87c2d8b0c8db92e81"
     },
     "scripts/spherical_seat_profile.py": {
       "source": "scripts/spherical_seat_profile.py",
