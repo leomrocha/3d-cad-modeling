@@ -10,8 +10,8 @@ from orthographic_checks import compare_landmark
 
 class DrawingViews(unittest.TestCase):
     def test_saved_asymmetric_landmark_and_reversed_side(self):
-        receipt = ROOT / "execution/fargo3d-blueprint-fit/results.json"
-        sources = json.loads(receipt.read_text())["views"]
+        receipt = Path(__file__).resolve().parent / "fixtures/orthographic-checks/views.json"
+        sources = json.loads(receipt.read_text())
         views = {}
         for name, view in sources.items():
             point = view["measurement"]

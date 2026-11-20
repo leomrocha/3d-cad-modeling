@@ -1,0 +1,38 @@
+{
+  "units": "mm",
+  "points": {
+    "hinge": {
+      "xy": [
+        0,
+        0
+      ],
+      "fixed": true
+    },
+    "end": {
+      "xy": [
+        4,
+        1
+      ]
+    }
+  },
+  "constraints": [
+    {
+      "id": "same-height",
+      "kind": "horizontal",
+      "points": [
+        "hinge",
+        "end"
+      ]
+    },
+    {
+      "id": "nominal-span",
+      "kind": "distance",
+      "points": [
+        "hinge",
+        "end"
+      ],
+      "mm": 5
+    }
+  ],
+  "parent_sha256": "5d1f7ef852fc9e8a9d6860de0c589107e8eb30a62247a09bf874b1b7a23298ad"
+}

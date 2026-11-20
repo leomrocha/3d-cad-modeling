@@ -1,0 +1,66 @@
+{
+  "family": "rectangular-prism-with-z-through-bores",
+  "width_agreement_mm": 0.3,
+  "top": {
+    "path": "top.png",
+    "sha256": "d03565628f86a204dba57ecc43addca897bc0ee298fc2bb2befa08a301ddb858",
+    "scale_control": {
+      "pixels": [
+        [
+          2,
+          2
+        ],
+        [
+          22,
+          2
+        ]
+      ],
+      "length_mm": 7.005041194535776
+    },
+    "held_out_control": {
+      "pixels": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "length_mm": 3.502520597267888
+    },
+    "held_out_limit_mm": 0.001
+  },
+  "front": {
+    "path": "front.png",
+    "sha256": "6fa3d582077781db95c6fdcde0da8e97413fd302d23a9057f6556b12bae6f14f",
+    "scale_control": {
+      "pixels": [
+        [
+          2,
+          2
+        ],
+        [
+          22,
+          2
+        ]
+      ],
+      "length_mm": 9.07603110642637
+    },
+    "held_out_control": {
+      "pixels": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "length_mm": 4.538015553213185
+    },
+    "held_out_limit_mm": 0.001
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "sources": {
+    "fixture": {
+      "candidates": [
+        {
+          "id": "fixture-nsk-6205z",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205Z",
+              "base": "6205",
+              "closure": "shield",
+              "sides": 1
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6205zz",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205ZZ",
+              "base": "6205",
+              "closure": "shield",
+              "sides": 2
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6205du",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205DU",
+              "base": "6205",
+              "closure": "contact-seal",
+              "sides": 1
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6205ddu",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205DDU",
+              "base": "6205",
+              "closure": "contact-seal",
+              "sides": 2
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6205v",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205V",
+              "base": "6205",
+              "closure": "non-contact-seal",
+              "sides": 1
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6205vv",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205VV",
+              "base": "6205",
+              "closure": "non-contact-seal",
+              "sides": 2
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6205",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205"
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6205dduc3",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205DDUC3"
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-nsk-6305ddu",
+          "private_source": {
+            "variant": {
+              "manufacturer": "NSK",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6305DDU",
+              "base": "6305",
+              "closure": "contact-seal",
+              "sides": 2
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-other-6205-2rs",
+          "private_source": {
+            "variant": {
+              "manufacturer": "OTHER",
+              "family": "single-row-deep-groove-ball-bearing",
+              "designation": "6205-2RS",
+              "designation_evidence": {
+                "designation": "6205-2RS",
+                "base": "6205",
+                "closure": "contact-seal",
+                "sides": 2,
+                "source": "Synthetic exact part-number source"
+              }
+            },
+            "evidence": "Synthetic catalogue designation fixture"
+          }
+        },
+        {
+          "id": "fixture-no-manufacturer",
+          "private_source": {
+            "variant": {
+              "family": "single-row-deep-groove-ball-bearing",
+              "base": "6205",
+              "designation": "6205-K",
+              "closure": "contact-seal",
+              "sides": 2
+            },
+            "evidence": "Synthetic record without a manufacturer"
+          }
+        }
+      ]
+    }
+  }
+}

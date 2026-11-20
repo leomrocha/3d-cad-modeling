@@ -35,7 +35,7 @@ class ShapeChecks(unittest.TestCase):
         import hashlib
         import numpy as np
 
-        root = SCRIPTS.parent / "execution/fargo3d-blueprint-fit"
+        root = Path(__file__).resolve().parent / "fixtures/mesh-position"
         path = root / "plate-10.stl"
         identity = np.eye(4)
         points = [[0, 0, 0], [60, 0, 0], [0, 40, 0]]

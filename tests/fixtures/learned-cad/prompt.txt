@@ -1,0 +1,1 @@
+Make a plate centered on X=0 and Y=0 with the base at Z=0. Width 42 mm, length 25 mm, thickness 7 mm. Cut a centered 6 mm diameter through-hole. Keep the bore diameter editable.

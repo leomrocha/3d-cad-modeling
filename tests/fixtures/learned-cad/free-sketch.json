@@ -1,0 +1,28 @@
+{
+  "units": "mm",
+  "points": {
+    "hinge": {
+      "xy": [
+        0,
+        0
+      ],
+      "fixed": true
+    },
+    "end": {
+      "xy": [
+        4,
+        1
+      ]
+    }
+  },
+  "constraints": [
+    {
+      "id": "same-height",
+      "kind": "horizontal",
+      "points": [
+        "hinge",
+        "end"
+      ]
+    }
+  ]
+}

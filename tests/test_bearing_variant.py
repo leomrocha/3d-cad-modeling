@@ -12,7 +12,7 @@ from bearing_variant import evaluate, FAMILY
 
 class BearingVariantTests(unittest.TestCase):
     def setUp(self):
-        self.fixture = ROOT / "execution/modeling-capabilities/bearing-variant/catalogue-result.json"
+        self.fixture = Path(__file__).resolve().parent / "fixtures/bearing-selection/catalogue-result.json"
 
     def run_matcher(self, *args, closure="contact-seal", sides=2, check=True):
         return subprocess.run(

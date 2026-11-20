@@ -1,0 +1,89 @@
+{
+  "model": "Codex visual and text interpretation; serving identifier unavailable",
+  "units": "mm",
+  "sources": {
+    "prompt": {
+      "sha256": "bdf97367adbaad9abf19ddc4cc9682f211428fdb1f5f6f5dca25730ad152be54"
+    }
+  },
+  "parameters": {
+    "width": {
+      "value_mm": 42,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "height": {
+      "value_mm": 25,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "thickness": {
+      "value_mm": 7,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "diameter": {
+      "value_mm": 6,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "body_x": {
+      "value_mm": 0,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "body_y": {
+      "value_mm": 0,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "hole_x": {
+      "value_mm": 0,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "hole_y": {
+      "value_mm": 0,
+      "basis": "explicit",
+      "source": "prompt"
+    },
+    "zero": {
+      "value_mm": 0,
+      "basis": "explicit",
+      "source": "prompt"
+    }
+  },
+  "features": [
+    {
+      "id": "plate",
+      "plane": "XY",
+      "origin_xyz": [
+        "body_x",
+        "body_y",
+        "zero"
+      ],
+      "profile": {
+        "kind": "rectangle",
+        "width": "width",
+        "height": "height"
+      },
+      "depth": "thickness",
+      "operation": "add"
+    },
+    {
+      "id": "bore",
+      "plane": "XY",
+      "origin_xyz": [
+        "hole_x",
+        "hole_y",
+        "zero"
+      ],
+      "profile": {
+        "kind": "circle",
+        "diameter": "diameter"
+      },
+      "depth": "thickness",
+      "operation": "cut"
+    }
+  ]
+}

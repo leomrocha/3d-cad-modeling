@@ -13,7 +13,7 @@ import learned_cad_provider as provider
 import learned_cad_sequence as sequence
 import learned_cad_solver as solver
 
-FIXTURE = ROOT / "execution/modeling-capabilities/learned-completion"
+FIXTURE = Path(__file__).resolve().parent / "fixtures/learned-cad"
 
 
 class LearnedCadTest(unittest.TestCase):

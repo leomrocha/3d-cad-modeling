@@ -1,0 +1,143 @@
+{
+  "top": {
+    "axes": "XY",
+    "origin_px": [
+      28.0,
+      280.0
+    ],
+    "ruler_end_px": [
+      219.0,
+      280.0
+    ],
+    "calibration": {
+      "nominal_scale_mm_per_px": 0.15706806282722513,
+      "scale_interval_mm_per_px": [
+        0.15625,
+        0.15789473684210525
+      ],
+      "scale_uncertainty_mm_per_px": 0.0008266740148801244
+    },
+    "measurement": {
+      "source_pixel": [
+        136.0,
+        133.0
+      ],
+      "coordinates": [
+        16.963350785340314,
+        23.089005235602095
+      ],
+      "uncertainty_worst_case": [
+        0.2471755304491587,
+        0.27941581702948354
+      ],
+      "units": "mm"
+    },
+    "expected_mm": [
+      17,
+      23
+    ],
+    "abs_error_mm": [
+      0.03664921465968618,
+      0.0890052356020945
+    ]
+  },
+  "front": {
+    "axes": "XZ",
+    "origin_px": [
+      28.0,
+      280.0
+    ],
+    "ruler_end_px": [
+      219.0,
+      280.0
+    ],
+    "calibration": {
+      "nominal_scale_mm_per_px": 0.15706806282722513,
+      "scale_interval_mm_per_px": [
+        0.15625,
+        0.15789473684210525
+      ],
+      "scale_uncertainty_mm_per_px": 0.0008266740148801244
+    },
+    "measurement": {
+      "source_pixel": [
+        136.0,
+        248.0
+      ],
+      "coordinates": [
+        16.963350785340314,
+        5.026178010471204
+      ],
+      "uncertainty_worst_case": [
+        0.2471755304491587,
+        0.18434830531826923
+      ],
+      "units": "mm"
+    },
+    "expected_mm": [
+      17,
+      5
+    ],
+    "abs_error_mm": [
+      0.03664921465968618,
+      0.02617801047120416
+    ]
+  },
+  "side": {
+    "axes": "YZ",
+    "origin_px": [
+      28.0,
+      280.0
+    ],
+    "ruler_end_px": [
+      219.0,
+      280.0
+    ],
+    "calibration": {
+      "nominal_scale_mm_per_px": 0.15706806282722513,
+      "scale_interval_mm_per_px": [
+        0.15625,
+        0.15789473684210525
+      ],
+      "scale_uncertainty_mm_per_px": 0.0008266740148801244
+    },
+    "measurement": {
+      "source_pixel": [
+        175.0,
+        248.0
+      ],
+      "coordinates": [
+        23.089005235602095,
+        5.026178010471204
+      ],
+      "uncertainty_worst_case": [
+        0.27941581702948354,
+        0.18434830531826923
+      ],
+      "units": "mm"
+    },
+    "expected_mm": [
+      23,
+      5
+    ],
+    "abs_error_mm": [
+      0.0890052356020945,
+      0.02617801047120416
+    ],
+    "mirrored_feature": {
+      "source_pixel": [
+        135.66666666666663,
+        248.0
+      ],
+      "coordinates": [
+        16.9109947643979,
+        5.026178010471204
+      ],
+      "uncertainty_worst_case": [
+        0.24689997244419862,
+        0.18434830531826923
+      ],
+      "units": "mm"
+    }
+  }
+}

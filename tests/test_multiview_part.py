@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+VIEWS = Path(__file__).resolve().parent / "fixtures/multiview-part/views.json"
 sys.path.insert(0, str(ROOT / "scripts"))
 from multiview_part import infer  # noqa: E402
 
@@ -14,7 +15,7 @@ from multiview_part import infer  # noqa: E402
 @unittest.skipUnless(importlib.util.find_spec("cv2"), "optional OpenCV")
 class CalibratedMultiView(unittest.TestCase):
     def test_source_revision_wrong_scale_and_family(self):
-        source = ROOT / "execution/modeling-capabilities/multiview-part/views.json"
+        source = VIEWS
         fixture = json.loads(source.read_text())
         for name in ("top", "front"):
             fixture[name]["path"] = str(source.parent / fixture[name]["path"])
@@ -44,9 +45,7 @@ class CalibratedMultiView(unittest.TestCase):
                     infer(job)
 
     def test_held_out_layout_produces_editable_hole_sequence(self):
-        seq, result = infer(
-            ROOT / "execution/modeling-capabilities/multiview-part/views.json"
-        )
+        seq, result = infer(VIEWS)
         self.assertEqual(
             [f["operation"] for f in seq["features"]], ["add", "cut", "cut", "cut"]
         )
