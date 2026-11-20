@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "05981d428607180c3038ad9819facc65fb18f0c7b42ba55a06e62998661ded84"
+      "sha256": "309bfff824766755f49ed2627af3d3af31c391f68213a8b3e4483644e2f2390b"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -161,6 +161,10 @@
     "references/pixhawk.md": {
       "source": "references/pixhawk.md",
       "sha256": "d1cfb4257f7b1d01bd6698fe1bf19ee1359624bddeb3bbb9a3015b94cb8c45bb"
+    },
+    "references/planar-positions.md": {
+      "source": "references/planar-positions.md",
+      "sha256": "9cf57e9cc24ebd008cb8cf5132c2e6547ba43e7456b1f34dcb74672ad4fcc818"
     },
     "references/profile-reference.md": {
       "source": "references/profile-reference.md",
@@ -497,6 +501,10 @@
     "scripts/pixhawk.py": {
       "source": "scripts/pixhawk.py",
       "sha256": "dd4562c66215d508c128849d6b8c4d698b4be8b9c19babfa7cfe4c7af3a79ec4"
+    },
+    "scripts/planar_positions.py": {
+      "source": "scripts/planar_positions.py",
+      "sha256": "c2f98963408e5788057958e2241e1d1ac296a0c68f0a54f56f8228959a27171e"
     },
     "scripts/planar_profiles.py": {
       "source": "scripts/planar_profiles.py",

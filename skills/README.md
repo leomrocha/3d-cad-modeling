@@ -36,6 +36,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 4. [Non-geometric requirements](cad-ocs-engineering/references/non-geometric-requirements.md) — explicit source-pinned tasks whose scope requires no CAD geometry.
 5. [Prepare a batch of CAD operations](cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations) covers grouping targets by action, input entity and output, reviewing unit-normalized rows, and qualifying the selected catalogue operation with readback before applying those rows.
 6. [Resolve batch targets against measured geometry](cad-ocs-engineering/SKILL.md#resolve-batch-targets-against-measured-geometry) covers occurrence paths, named selections, distance conditions from measured references, DXF inventories, and target and reference checks after reopening.
+7. [Generate positions on a planar reference](cad-ocs-engineering/references/planar-positions.md) covers ordered coordinates, tangent directions, and transferring position IDs, units and frames to a batch action.
 
 ## Installed package references
 
