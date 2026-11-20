@@ -8,7 +8,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "a1124c2f79f1165ffd9f8661fc5b305b123779310539dcba913cb898ac60983a"
+      "sha256": "005951107508c4e55444b15b5bd0dcdd580e1127801f389175af999293c5671f"
     },
     "fixtures/inventory.json": {
       "source": "fixtures/inventory.json",
@@ -21,6 +21,10 @@
     "references/conversion.md": {
       "source": "references/conversion.md",
       "sha256": "374b3019ac6c9af3a28095604ff93ee6237144908002e7d9915eed7d45199c3b"
+    },
+    "references/modeling-operation-selection.md": {
+      "source": "references/modeling-operation-selection.md",
+      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
     },
     "requirements.txt": {
       "source": "requirements.txt",

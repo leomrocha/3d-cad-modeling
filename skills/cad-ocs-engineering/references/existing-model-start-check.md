@@ -7,3 +7,15 @@
 5. Distinguish 2D drawings, another component's reference model and matching 3D geometry. Preserve original source/representation labels. IGES may supply surfaces or solids; establish actual topology after inspection.
 6. For separately declared configurations pass an exact configuration selector. Other configurations retain their own paths/status; unscoped candidates require review. Reject duplicate/empty configuration names.
 7. A candidate_reviews entry identifies one exact candidate_path, lowercase SHA-256, different_component decision, concrete reason and evidence_locator. Apply it only when current path/hash match. Keep stale reviews and unresolved candidates visible. An attributed matching model retains its reuse action.
+
+## Retrieve reusable parts before constructing geometry
+
+Use the [operation selection procedure](modeling-operation-selection.md). Alongside the project reconciliation above, query the available CAD Models snapshot and every compatible user-supplied local parts snapshot. Reuse the trusted CAD Models search implementation. For example:
+
+```sh
+python "$SKILL_ROOT/scripts/catalogue_candidates.py" --search-cli "$CAD_MODELS_ROOT/scripts/search.py" --source catalogue "$CAD_MODELS_ROOT/data" --source shop "$SHOP_INDEX_ROOT" "ISO 4017"
+```
+
+Supply the configured sources for this job. Search full identifiers and variant-defining dimensions, then aliases or family terms as needed. A returned file path is relative to that source's data directory. Use the record and its companion to establish variant, geometry scope and mating interfaces. Keep uncovered sources, missing files and search-limit results visible. For a supplied unindexed folder, retain the existing project inventory and identify the folder for preparation with the CAD Models indexing method. An unavailable catalogue is not a verified miss.
+
+Inspect all relevant matches for an unchanged part before choosing a family derivative. An existing screw of a different length is eligible for a parameter edit only with evidence of a compatible editable family and length control. For a verified match, reuse the actual file. For a family edit, record parameter name and units, preserve the family source and check the derivative before recording DONE. For a different variant without a suitable parameter, record the mismatch and continue to the existing script or guided route.

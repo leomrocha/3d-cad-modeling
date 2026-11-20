@@ -80,6 +80,10 @@ After creating, changing or deleting reusable Python helpers, package dependenci
 8. Display an existing requested image directly using its absolute path. Do not regenerate, crop or replace it to answer a display request. Keep explanations in the chat and labels in the image.
 9. A file-format conversion needs explicit scope: source, target format, tool and information changes. Preserve the original and identify the derivative. Opening or showing an existing file does not authorize an unrelated conversion.
 
+## Select modeling operations by reuse priority
+
+For each modeling decision use the first suitable route in this order: reuse an existing component unchanged, modify an exposed parameter on a compatible existing model, run an existing script or automated service, use an existing guided skill or sub-skill, then perform the uncovered work. Check the CAD Models index and user-supplied local parts sources. Choose providers by the actual deployment's supported inputs and outputs. Within a level consider total effort and cost, including verification. Preserve local evidence from the first operation. Apply the [operation selection procedure](docs/modeling-operation-selection.md).
+
 ## Existing-model check before every component start
 
 Standing instruction from 13 November 2026:

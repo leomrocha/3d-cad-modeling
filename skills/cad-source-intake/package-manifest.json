@@ -12,7 +12,11 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "cdf95f076909b39480abcc02296f5ba96fa0fec550cc1408e9974947eb6f250c"
+      "sha256": "7bcf165b0f598855ae7c97cd7cc50661caea4f9d6249e8af912c1f91b2c36ef3"
+    },
+    "references/modeling-operation-selection.md": {
+      "source": "references/modeling-operation-selection.md",
+      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
     },
     "requirements.txt": {
       "source": "requirements.txt",

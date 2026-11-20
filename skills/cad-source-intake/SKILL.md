@@ -5,6 +5,8 @@ description: Record a new job's exact request, source identities, file hashes, c
 
 # Record source files, revisions and job scope
 
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+
 Use for **Preserve the input revision and state the job boundary (INTAKE-A01)**. Read the existing job record first. Reuse a completed intake whose request, source observations and scope match the current task. A changed source or instruction creates a new revision referring to the completed prior index.
 
 ## Package setup

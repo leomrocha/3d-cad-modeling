@@ -28,6 +28,8 @@ TRANSLATOR_SUITES = (
     'test_translator.py', 'test_translator_state.py', 'test_translator_bore.py',
     'test_translator_install.py', 'test_format_translation.py', 'test_format_install.py',
 )
+ROUTE_SOURCE = 'docs/modeling-operation-selection.md'
+ROUTE_REFERENCE = 'references/modeling-operation-selection.md'
 HOST_ONLY = {'scripts/build_skill_packages.py'}
 
 
@@ -177,6 +179,7 @@ def independent_expected(name, committed):
     sources = {asset: (package / asset).as_posix() for asset in assets}
     sources.update({'scripts/' + Path(path).name: path for path in inputs(name, committed)})
     sources['LICENSE'] = 'LICENSE'
+    sources[ROUTE_REFERENCE] = ROUTE_SOURCE
     result = {}
     for dest, source in sources.items():
         if not committed and (not (ROOT / source).is_file() or
@@ -206,6 +209,7 @@ def expected(name, committed=False):
     else:docs=[package/'SKILL.md']+list((package/'references').rglob('*.md'))+list((package/'agents').rglob('*.yaml'))
     for path in docs:
         if path.is_file():result[str(path.relative_to(package))]=source_bytes(str(path.relative_to(ROOT)),committed)
+    result[ROUTE_REFERENCE] = source_bytes(ROUTE_SOURCE, committed)
     return with_manifest(name, result)
 
 
@@ -248,6 +252,13 @@ def build(check=False, committed=False):
             if relative not in previous and relative not in files:
                 raise ValueError('Unassigned packaged script; register canonical source first: ' + name + '/' + relative)
         plans.append((name, target, files, previous))
+    # Navigation and repair are standalone skills without generated manifests.
+    for name in ('cad-model-navigation', 'cad-model-repair'):
+        target = ROOT / 'skills' / name
+        reference = target / ROUTE_REFERENCE
+        if not reference.resolve().is_relative_to(target.resolve()):
+            raise ValueError('Shared reference outside skill: ' + name)
+        plans.append((name, target, {ROUTE_REFERENCE: source_bytes(ROUTE_SOURCE, committed)}, {}))
     for name, target, files, previous in plans:
         for stale in sorted(set(previous) - set(files)):
             if check:

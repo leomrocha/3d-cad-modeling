@@ -5,6 +5,8 @@ description: Create, inspect and revise native engineering geometry in OpenCADSt
 
 # CAD OCS Engineering
 
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+
 Use the bundled native-control, geometry and verification helpers. Supply component inputs and output locations through the caller's job. Keep detailed solids, reconstructed shapes and clearance envelopes explicitly labeled.
 
 ## First response for a modeling job

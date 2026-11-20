@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "d9f956f46a2f11d8bd2549d2bfeccacce6adf0a2201ee7182637d65e093c57ae"
+      "sha256": "2f8279d4f1861c0686bcf94de2b9c5d756f6bec06999eb476c0ac5943eb9da12"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -100,7 +100,7 @@
     },
     "references/existing-model-start-check.md": {
       "source": "references/existing-model-start-check.md",
-      "sha256": "bd80199d1a993a18eafde83f63b0ade29fb4a07db7b256cc2fb2b5c7e9a938a5"
+      "sha256": "ca3801da179dcda136d720db91075cfdfeeeaa90eaf7561ab071b26b8c88a844"
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
@@ -129,6 +129,10 @@
     "references/model-contract.md": {
       "source": "references/model-contract.md",
       "sha256": "1d52c3c8104d8abb9643030d2432cec06ea1e5ee28a428f8dae49c033103c76e"
+    },
+    "references/modeling-operation-selection.md": {
+      "source": "references/modeling-operation-selection.md",
+      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
     },
     "references/non-geometric-requirements.md": {
       "source": "references/non-geometric-requirements.md",
@@ -297,6 +301,10 @@
     "scripts/calibrated_trace.py": {
       "source": "scripts/calibrated_trace.py",
       "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025"
+    },
+    "scripts/catalogue_candidates.py": {
+      "source": "scripts/catalogue_candidates.py",
+      "sha256": "a03e027c4006abc2c065a2daed05676cd6f6adcd9fa99dad08e9d358614130cb"
     },
     "scripts/check_contract.py": {
       "source": "scripts/check_contract.py",

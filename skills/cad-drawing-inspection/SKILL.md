@@ -5,6 +5,8 @@ description: Inspect a DXF drawing's original entities, declared units, spaces, 
 
 # Inspect a DXF drawing before selecting a profile
 
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+
 Implements the DXF branch of **Inspect source entities, units and drawing contexts (CAD-08-A01)**. Read the existing inspection for the same source hash, space, layer selection and options before executing another inspection.
 
 ## Package setup

@@ -32,6 +32,7 @@ class PackageLifecycle(unittest.TestCase):
         self.patch.start()
         self.addCleanup(self.patch.stop)
         for relative, content in {
+            'docs/modeling-operation-selection.md': 'Fixture routing procedure\n',
             'LICENSE': 'Fixture license\n',
             'requirements-native.txt': 'ezdxf==1.4.5\n',
             'scripts/cadtools/NOTICE.md': 'Fixture attribution\n',

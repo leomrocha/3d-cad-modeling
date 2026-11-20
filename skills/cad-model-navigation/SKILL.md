@@ -5,6 +5,8 @@ description: Create CAD parts and assemblies that users can find by name, role o
 
 # Create navigable CAD models
 
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+
 1. Tell the user that reusable scripts, assignments, model revisions and evidence stay in the local project. They may opt to contribute generic improvements later. Reconcile existing models and source evidence before building anything.
 2. Establish a definition ID for each distinct part and an occurrence ID for each installation. Give retained items readable labels, roles, parents, native layers or groups and useful tags. Two copies of one fastener share a definition and have separate occurrences. Bind a finish, display colour and physical material individually to the source and scope (definition, instance or face). Keep unknown material empty. If sources do not identify the owner of an assignment, ask before writing it.
 3. Use the chosen CAD application. Discover native label, layer, group, selection, visibility and custom property operations on that connection. In OCS inspect the actual entity/common properties and layer table. Use entity selection and native properties for navigation; an operation journal label or an XDATA string alone does not create a selectable layer. In Blender use collections for isolation and stable custom properties for identities. In FreeCAD distinguish internal Name from editable Label and inspect group membership. Record any required function the application cannot perform before proceeding.

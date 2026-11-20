@@ -160,3 +160,5 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [STEP entity graph](../scripts/step_entity_graph.py) fingerprints simple STEP instance graphs and renumbers original simple or complex assignment payloads for a caller-owned wrapper.
 
 [Orthographic landmark checks](../scripts/orthographic_checks.py) compare shared world coordinates and their worst-case uncertainty bounds across named drawing views.
+
+[Catalogue candidate lookup](../scripts/catalogue_candidates.py) uses the CAD Models CLI across named local snapshots and resolves candidate IDs to hashed assets.

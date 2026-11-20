@@ -6,7 +6,7 @@ import sys
 
 
 REQUIRED = {
-    'SKILL.md', 'references/operations.md', 'references/contributing.md',
+    'SKILL.md', 'references/modeling-operation-selection.md', 'references/operations.md', 'references/contributing.md',
     'mappings/openscad.json', 'mappings/freecad.json', 'mappings/fusion.json',
     'fixtures/plate.scad', 'scripts/translator.py', 'scripts/state.py',
     'scripts/bore_check.py', 'scripts/package_check.py', 'requirements.txt', 'LICENSE',
