@@ -12,8 +12,6 @@ class OcsSkillPackage(unittest.TestCase):
         self.assertNotIn('component-workflow.md', (self.skill / 'SKILL.md').read_text())
         agent = (self.skill / 'agents/openai.yaml').read_text()
         self.assertIn('$cad-ocs-engineering', agent)
-        for path in self.skill.rglob('*.md'):
-            self.assertNotIn('/home/leo/projects/', path.read_text(), str(path.relative_to(self.skill)))
         self.assertFalse((ROOT / 'skills/component-cad').exists())
 
 

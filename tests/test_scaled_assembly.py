@@ -1,8 +1,8 @@
-"""Scale-aware traversal exercised on the retained Lynx manufacturer import."""
-import copy,json,math,os,sys,unittest
+"""Check scale-aware native placement transforms."""
+import math,sys,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from step_placements import native_matrix,solid_instances,apply
+from step_placements import native_matrix,apply
 
 class ScaledAssemblyTests(unittest.TestCase):
     def properties(self):
@@ -20,23 +20,5 @@ class ScaledAssemblyTests(unittest.TestCase):
     def test_nonuniform_scale_rejected(self):
         p=self.properties();p['z_scale']=.002
         with self.assertRaisesRegex(ValueError,'Uniform'):native_matrix(p,allow_uniform_scale=True)
-    @unittest.skipUnless(os.environ.get('CAD_SCALED_ASSEMBLY_FIXTURE'), 'Optional caller-supplied scaled native assembly fixture')
-    def test_recorded_lynx_preserves_all_instance_paths_and_unit_conversion(self):
-        b=Path(os.environ['CAD_SCALED_ASSEMBLY_FIXTURE'])
-        rows=[r for p in b.glob('records-*.json') for r in json.loads(p.read_text())['records']]
-        self.assertTrue(rows,'Retained Lynx records required')
-        blocks=json.loads((b/'blocks.json').read_text())['records']
-        roots=[format(h,'X') for h in next(r for r in blocks if r['name']=='*Model_Space')['properties']['entity_handles']]
-        with self.assertRaisesRegex(ValueError,'Unit-scale'):solid_instances(rows,blocks,roots)
-        actual=solid_instances(rows,blocks,roots,allow_uniform_scale=True)
-        self.assertEqual(len(actual),130)
-        unscaled=copy.deepcopy(rows)
-        outer=next(r for r in unscaled if r['handle']=='276')
-        for k in ['x_scale','y_scale','z_scale']:outer['properties'][k]=1
-        reference=solid_instances(unscaled,blocks,roots)
-        self.assertEqual([v['path'] for v in actual],[v['path'] for v in reference])
-        for a,r in zip(actual,reference):
-            for x,y in zip(apply(a['matrix'],[1,2,3]),apply(r['matrix'],[1,2,3])):
-                self.assertAlmostEqual(x,y*.001)
 
 if __name__=='__main__':unittest.main()

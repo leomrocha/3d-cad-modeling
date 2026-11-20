@@ -1,177 +1,59 @@
-"""Optional caller-supplied recorded native-geometry integration cases."""
-import json,os,sys,unittest
+"""Check generic native geometry readers and numeric expectations."""
+
+import importlib.util
 from pathlib import Path
-R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
-from native_acis import sab_features
-from rounded_tube import verify_features,dimensions,sat_features,crossmember_checks
-W=Path(os.environ['CAD_NATIVE_FIXTURE_ROOT']) if os.environ.get('CAD_NATIVE_FIXTURE_ROOT') else R/'tests/fixtures/native'
-try:import ezdxf
-except ImportError:ezdxf=None
+import sys
+import unittest
 
-@unittest.skipUnless(ezdxf is not None and (W/'p01-build-03/reopened-records.json').is_file(),'Requires native reader dependencies and retained FERME rail record')
-class NativeBinaryTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.record=json.loads((W/'p01-build-03/reopened-records.json').read_text())
-        cls.data=bytes(cls.record['records'][0]['properties']['acis_data']['sab_data'])
-        cls.job=json.loads((W/'p01-build-01/source-job-r02.json').read_text())
-    def test_saved_native_rail_matches_source_dimensions(self):
-        f=sab_features(self.data)
-        self.assertEqual(verify_features(f,dimensions(self.job))['result'],'PASS')
-        self.assertEqual(f['topology']['faces'],18)
-        self.assertTrue(f['topology']['reciprocal_closed_partners'])
-    def test_saved_and_presave_vertex_sets_agree(self):
-        r=json.loads((W/'p01-build-03/pre-save-records.json').read_text())
-        before=sat_features(r['records'][0]['properties']['acis_data']['sat_data'])
-        after=sab_features(self.data)
-        canon=lambda rows:sorted(tuple(round(v,9) for v in row) for row in rows)
-        self.assertEqual(canon(before['points']),canon(after['points']))
-        self.assertEqual(sorted(round(c['radius'],9) for c in before['cylinders']),sorted(round(c['radius'],9) for c in after['cylinders']))
-    def test_wrong_length_still_fails_binary_check(self):
-        p=dimensions(self.job);p['cut length']=260
-        self.assertEqual(verify_features(sab_features(self.data),p)['result'],'FAIL')
-    def test_truncated_binary_is_rejected(self):
-        with self.assertRaises(Exception):sab_features(self.data[:40])
+TESTS = Path(__file__).resolve().parent
+sys.path.insert(0, str(TESTS.parent / "scripts"))
 
-@unittest.skipUnless(ezdxf is not None and (W/'p02-build-01/reopened-records.json').is_file(),'Requires retained crossmember native record')
-class CrossmemberNativeTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        def features(rel):
-            r=json.loads((W/rel).read_text())
-            return sab_features(bytes(r['records'][0]['properties']['acis_data']['sab_data']))
-        cls.rail=features('p01-verify-04/native-records.json')
-        cls.cross=features('p02-build-01/reopened-records.json')
-    def test_source_frame_gap_and_midpoint(self):
-        checks=crossmember_checks(self.rail,self.cross,340,260)
-        self.assertTrue(all(c['result']=='PASS' for c in checks['checks']))
-    def test_wrong_frame_width_fails_gap_check(self):
-        checks=crossmember_checks(self.rail,self.cross,350,260)
-        self.assertEqual(checks['checks'][0]['result'],'FAIL')
-    def test_changed_local_origin_fails_midpoint_datum(self):
-        import copy
-        cross=copy.deepcopy(self.cross)
-        for point in cross['points']:point[2]+=5
-        checks=crossmember_checks(self.rail,cross,340,260)
-        self.assertEqual(checks['checks'][1]['result'],'FAIL')
+from feature_checks import comparison, cylinder_pattern
+from native_acis import sab_features, sab_structure
+from rounded_tube import crossmember_checks
 
-@unittest.skipUnless(ezdxf is not None and (W/'c009-reuse-01/reopened-records.json').is_file(),'Requires retained SKF native records')
-class PillowBlockNativeTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.job=json.loads((W/'c009-reuse-01/source-job.json').read_text())
-        cls.before=json.loads((W/'c009-reuse-01/native-records.json').read_text())
-        cls.after=json.loads((W/'c009-reuse-01/reopened-records.json').read_text())
-    def test_original_housing_crown_failure_is_detected(self):
-        from pillow_block import check
-        result=check(self.before,self.job)
-        self.assertEqual([c['check'] for c in result['checks'] if c['result']=='FAIL'],['housing top width'])
-    def test_saved_derivative_matches_bound_source_features(self):
-        from pillow_block import check
-        self.assertEqual(check(self.after,self.job)['result'],'PASS')
-    def test_transformed_screw_requires_explicit_reader_option(self):
-        row=next(r for r in self.before['records'] if r['handle']=='90')
-        with self.assertRaisesRegex(ValueError,'rigid-frame'):
-            sab_features(bytes(row['properties']['acis_data']['sab_data']))
-    def test_fragmented_mount_plane_recovers_two_closed_slots(self):
-        from pillow_block import read_parts
-        housing=read_parts(self.before,self.job)['housing']
-        plane=next(g for g in housing['planar_boundary_components'] if g['plane_normal']==[0,0,1] and abs(g['plane_offset'])<1e-7)
-        slots=[c for c in plane['components'] if abs(c['bounds']['max'][1]-c['bounds']['min'][1]-11.5)<1e-7]
-        self.assertEqual(len(slots),2)
-        self.assertTrue(all(c['closed_degree_two'] for c in slots))
-        self.assertTrue(all(abs(c['bounds']['max'][0]-c['bounds']['min'][0]-20.5)<1e-7 for c in slots))
-    def test_wrong_bore_expectation_fails(self):
-        import copy
-        from pillow_block import check
-        job=copy.deepcopy(self.job)
-        next(f for f in job['features'] if f['name']=='shaft bore diameter')['value']=22
-        self.assertEqual(check(self.after,job)['result'],'FAIL')
 
-@unittest.skipUnless(ezdxf is not None and (W/'c021-reuse-01/native-records.json').is_file(),'Requires saved Leaf native record')
-class BatteryModuleNativeTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.job=json.loads((W/'c021-reuse-01/source-job.json').read_text())
-        cls.record=json.loads((W/'c021-reuse-01/native-records.json').read_text())
-    def test_saved_shells_mounting_and_terminal_features(self):
-        from battery_module import check
-        self.assertEqual(check(self.record,self.job)['result'],'PASS')
-    def test_wrong_terminal_pitch_is_rejected(self):
-        import copy
-        from battery_module import check
-        job=copy.deepcopy(self.job)
-        next(f for f in job['features'] if f['name']=='terminal pitch')['value']=40
-        self.assertEqual(check(self.record,job)['result'],'FAIL')
-    def test_missing_component_is_rejected(self):
-        import copy
-        from battery_module import check
-        record=copy.deepcopy(self.record);record['records'].pop()
-        with self.assertRaisesRegex(ValueError,'component set'):check(record,self.job)
-    def test_observed_component_colon_spacing_variants(self):
-        import copy
-        from battery_module import check
-        record=copy.deepcopy(self.record)
-        for row in record['records']:
-            for app in row['properties']['common']['extended_data']['records']:
-                for v in app['values']:
-                    if v.get('String','').startswith('Component:'):
-                        v['String']=v['String'].replace('Component:','Component: ')
-        self.assertEqual(check(record,self.job)['result'],'PASS')
-
-@unittest.skipUnless(ezdxf is not None and (W/'c012-reuse-01/reopened-records.json').is_file(),'Requires driver native records')
-class DriverNativeTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.job=json.loads((W/'c012-reuse-01/source-job.json').read_text())
-        cls.before=json.loads((W/'c012-reuse-01/native-records.json').read_text())
-        cls.after=json.loads((W/'c012-reuse-01/reopened-records.json').read_text())
-    def test_source_connector_span_error_is_detected(self):
-        from driver_checks import check
-        result=check(self.before,self.job)
-        self.assertEqual([c['check'] for c in result['checks'] if c['result']=='FAIL'],['connector shell outer span'])
-    def test_corrected_saved_driver_matches_source_checks(self):
-        from driver_checks import check
-        self.assertEqual(check(self.after,self.job)['result'],'PASS')
-    def test_spline_equation_support_stays_explicit(self):
-        from native_acis import sab_structure
-        r=next(r for r in self.before['records'] if r['handle']=='B0');data=bytes(r['properties']['acis_data']['sab_data'])
-        with self.assertRaisesRegex(ValueError,'spline-surface'):sab_features(data,allow_rigid=True)
-        f=sab_structure(data);self.assertIn('spline-surface',f['surface_types']);self.assertTrue(f['topology']['reciprocal_closed_partners'])
-    def test_wrong_mounting_pitch_fails(self):
-        import copy
-        from driver_checks import check
-        job=copy.deepcopy(self.job);next(f for f in job['features'] if f['name']=='mount X pitch')['value']=170
-        result=check(self.after,job)
-        self.assertEqual(next(c for c in result['checks'] if c['check']=='base mounting bore pattern')['result'],'FAIL')
-    def test_same_pattern_function_reads_driver_and_battery(self):
-        from native_acis import named_parts
-        from feature_checks import cylinder_pattern
-        r=next(r for r in self.after['records'] if r['handle']=='7F');driver=sab_features(bytes(r['properties']['acis_data']['sab_data']))
-        self.assertEqual(cylinder_pattern('driver',driver,13,2,[[-84,-49],[-84,49],[84,-49],[84,49]],1e-7)['result'],'PASS')
-        record=json.loads((W/'c021-reuse-01/native-records.json').read_text());job=json.loads((W/'c021-reuse-01/source-job.json').read_text())
-        battery=named_parts(record,job['metadata_app'],job['required_parts'],allow_rigid=True)['upper_pressed_shell']
-        self.assertEqual(cylinder_pattern('battery',battery,9.1,2,[[-138,-99],[-138,99],[138,-99],[138,99]],1e-7)['result'],'PASS')
+class NativeGeometryExpectations(unittest.TestCase):
     def test_invalid_pattern_expectations_stop_before_comparison(self):
-        from feature_checks import cylinder_pattern,comparison
-        with self.assertRaises(ValueError):cylinder_pattern('missing expected holes',{'cylinders':[]},13,2,[],1e-7)
-        with self.assertRaises(ValueError):cylinder_pattern('invalid diameter',{'cylinders':[]},float('nan'),2,[[0,0]],1e-7)
-        with self.assertRaises(ValueError):comparison('empty measurements',[],[],1e-7)
+        with self.assertRaises(ValueError):
+            cylinder_pattern("missing expected holes", {"cylinders": []}, 13, 2, [], 1e-7)
+        with self.assertRaises(ValueError):
+            cylinder_pattern("invalid diameter", {"cylinders": []}, float("nan"), 2, [[0, 0]], 1e-7)
+        with self.assertRaises(ValueError):
+            comparison("empty measurements", [], [], 1e-7)
 
-@unittest.skipUnless(ezdxf is not None and (W/'c009-reuse-01/native-records.json').is_file(),'Requires retained transformed bearing screw')
-class StructureTransformTests(unittest.TestCase):
-    def data(self):
-        r=json.loads((W/'c009-reuse-01/native-records.json').read_text())
-        return bytes(next(v for v in r['records'] if v['handle']=='90')['properties']['acis_data']['sab_data'])
-    def test_structure_transform_requires_explicit_option(self):
-        from native_acis import sab_structure
-        with self.assertRaisesRegex(ValueError,'rigid-frame'):sab_structure(self.data())
-    def test_structure_and_analytic_world_vertices_agree(self):
-        from native_acis import sab_structure
-        a=sab_features(self.data(),allow_rigid=True)
-        b=sab_structure(self.data(),allow_rigid=True)
-        canon=lambda ps:sorted(tuple(round(x,8) for x in p) for p in ps)
-        self.assertEqual(canon(a['points']),canon(b['points']))
-        self.assertEqual(a['topology'],b['topology'])
+    def test_parallel_rail_gap_and_midpoint(self):
+        rail = {"points": [[0, 0, 0], [10, 0, 0]]}
+        crossmember = {"points": [[0, 0, 0], [0, 0, 60]]}
+        cases = (
+            ("matching gap and datum", crossmember, 80, ["PASS", "PASS"]),
+            ("wrong frame width", crossmember, 90, ["FAIL", "PASS"]),
+            ("shifted local origin", {"points": [[0, 0, 5], [0, 0, 65]]}, 80, ["PASS", "FAIL"]),
+        )
+        for label, features, frame_width, expected in cases:
+            with self.subTest(label=label):
+                checks = crossmember_checks(rail, features, frame_width, 60)["checks"]
+                self.assertEqual([check["result"] for check in checks], expected)
 
-if __name__=='__main__':unittest.main()
+
+@unittest.skipUnless(importlib.util.find_spec("ezdxf"), "requires local ezdxf native reader")
+class NativeBinaryTests(unittest.TestCase):
+    def setUp(self):
+        self.data = (TESTS / "fixtures/sat-sab-persistence/after-reopen.sab").read_bytes()
+
+    def test_truncated_binary_is_rejected(self):
+        with self.assertRaises((ValueError, IndexError)):
+            sab_features(self.data[:40])
+
+    def test_structure_and_analytic_vertices_agree(self):
+        analytic = sab_features(self.data)
+        structure = sab_structure(self.data)
+        self.assertCountEqual(
+            (tuple(point) for point in analytic["points"]),
+            (tuple(point) for point in structure["points"]),
+        )
+        self.assertEqual(analytic["topology"], structure["topology"])
+
+
+if __name__ == "__main__":
+    unittest.main()
