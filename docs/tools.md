@@ -162,3 +162,9 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 [Orthographic landmark checks](../scripts/orthographic_checks.py) compare shared world coordinates and their worst-case uncertainty bounds across named drawing views.
 
 [Catalogue candidate lookup](../scripts/catalogue_candidates.py) uses the CAD Models CLI across named local snapshots and resolves candidate IDs to hashed assets.
+
+- [OpenCV probe and isolated setup](../skills/cad-opencv-setup/scripts/opencv_env.py) checks a named image operation and prepares a separate interpreter on request.
+- [Private catalogue preparation](../scripts/private_catalogue.py) runs the CAD Models builder against supplied assets.
+- [Raster feature extraction](../scripts/raster_features.py) returns pixel loops, ellipse candidates, an overlay and optional controlled plane coordinates.
+- [Image observations](../scripts/image_observations.py) maps decoded instance masks and points into the original frame and finds leader endpoint candidates.
+- [Local dimension text recognition](../scripts/raster_text.py) uses a supplied PaddleOCR model on a cropped text line and returns a source-linked receipt.

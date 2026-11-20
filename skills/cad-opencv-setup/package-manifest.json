@@ -1,0 +1,26 @@
+{
+  "skill": "cad-opencv-setup",
+  "generated_by": "self-contained skill distribution",
+  "files": {
+    "LICENSE": {
+      "source": "LICENSE",
+      "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc"
+    },
+    "SKILL.md": {
+      "source": "SKILL.md",
+      "sha256": "ee79c397b451c9e15db21c2103b024973d78b31e6b0590c0bef31657c06b8830"
+    },
+    "references/modeling-operation-selection.md": {
+      "source": "references/modeling-operation-selection.md",
+      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
+    },
+    "requirements.txt": {
+      "source": "requirements.txt",
+      "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
+    },
+    "scripts/opencv_env.py": {
+      "source": "scripts/opencv_env.py",
+      "sha256": "edc6c8da32ff87d18276b93e69e081b8338d6f3576303c27164eed71ba6b76c4"
+    }
+  }
+}

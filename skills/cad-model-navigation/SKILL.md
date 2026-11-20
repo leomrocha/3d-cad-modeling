@@ -16,3 +16,7 @@ Use the [operation selection procedure](references/modeling-operation-selection.
 7. Find an occurrence from its readable role, select it, isolate its group, inspect its properties, verify an unaffected sibling and restore visibility. Capture full, interface and fixed-camera isolated views. Before exchange identify destination property support. Reject an incompatible required handoff until the user chooses a different format or accepts a documented loss. Repeat the lookup on the reopened exported file. Offer a contribution preview only after local validation.
 
 For nested assemblies, cut joints, catalogue handoffs and recorded layer demonstrations, use the [saved assembly checks](references/assembly-validation.md).
+
+## Indexed assembly occurrences
+
+Carry the snapshot and source hash on the shared part definition. Give each installation a stable occurrence ID, parent, independent role, source feature ID and full assembly transform. Reopen, select each occurrence independently, compare both transforms and check the visible siblings after isolating and restoring each role.

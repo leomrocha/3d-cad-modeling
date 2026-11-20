@@ -8,13 +8,22 @@ from source_metadata import compare_source_metadata
 from step_placements import native_matrix,near,classify_hand
 
 
-def insert_component(client,label,path,*,point=(0,0,0),yscale=1,source_locator):
+def insert_component(client,label,path,*,point=(0,0,0),yscale=1,source_locator,previous=None):
     path=Path(path);vector(point)
     if yscale not in (-1,1) or isinstance(yscale,bool):raise ValueError('Unit placement or mirror required')
     if not path.is_file() or not isinstance(source_locator,str) or not source_locator:raise ValueError('Source model and portable locator required')
     digest=hashlib.sha256(path.read_bytes()).hexdigest()
+    block_input = str(path)
+    if previous is not None:
+        if previous['source_sha256'] != digest or previous['source'] != source_locator:
+            raise CadError('Previous occurrence references another source revision')
+        original, _ = read_stable_entity(client, previous['handle'])
+        evidence = compare_source_metadata(original, previous['handle'], 'CADTOOLS_SOURCE', previous['metadata'])
+        if original['type'] != 'Insert' or evidence['result'] != 'PASS':
+            raise CadError('Previous occurrence source metadata differs')
+        block_input = original['properties']['block_name']
     client.mutate(label+'-start','start',cmd='-INSERT',allow_wait=True)
-    steps=[('file','block name',dict(kind='token',text=str(path))),('point','insertion point',dict(kind='point',point=list(point),space='wcs')),('xscale','X scale factor',dict(kind='token',text='1')),('yscale','Y scale factor',dict(kind='token',text=str(yscale))),('rotation','rotation angle',dict(kind='token',text='0'))]
+    steps=[('file','block name',dict(kind='token',text=block_input)),('point','insertion point',dict(kind='point',point=list(point),space='wcs')),('xscale','X scale factor',dict(kind='token',text='1')),('yscale','Y scale factor',dict(kind='token',text=str(yscale))),('rotation','rotation angle',dict(kind='token',text='0'))]
     for suffix,prompt,fields in steps:
         state=client.read('state');command=state.get('command') or {}
         if state.get('document_id')!=client.document_id or prompt not in command.get('prompt','') or command.get('name') not in ('INSERT','-INSERT'):
@@ -25,6 +34,8 @@ def insert_component(client,label,path,*,point=(0,0,0),yscale=1,source_locator):
     lines=['Source model '+source_locator,'Source DWG SHA256 '+digest,'Placement mm '+str(list(point))+'; Y scale '+str(yscale)]
     Geometry(client).metadata(label+'-provenance',[handle],lines)
     row,_=read_stable_entity(client,handle)
+    if previous is not None and row['properties']['block_name'] != block_input:
+        raise CadError('Second occurrence references another block definition')
     metadata=compare_source_metadata(row,handle,'CADTOOLS_SOURCE',lines)
     if metadata['result']!='PASS':raise CadError('Inserted source metadata differs')
     matrix=native_matrix(row['properties'],allow_unit_reflection=True)

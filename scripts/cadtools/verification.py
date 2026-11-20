@@ -108,7 +108,7 @@ def save_reopen(client,path,expected_counts):
     target = Path(path)
     if not target.is_absolute() or target.suffix.lower()!=".dwg" or target.exists():
         raise CadError("A new absolute .dwg destination is required")
-    before = owned_audit(client)
+    before = owned_audit(client, target_path=target)
     manifest = require_audit(before)
     if manifest.get("by_type")!=expected_counts:
         raise CadError("Unexpected entity types/counts before save")

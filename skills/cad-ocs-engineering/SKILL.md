@@ -95,3 +95,11 @@ After reporting the completed job, name its reusable improvement and ask, “Wou
 For recovered source assemblies, use [assembly evidence](references/assembly-evidence.md) to bind occurrences, photo constraints, mounting patterns, finite interference and source trims to their measured representations.
 
 Archive raw CAD JSON, JSONL and debug history for every job revision using the [job history archive procedure](references/job-history-archive.md).
+
+## Private parts and image-derived profiles
+
+Use [private_catalogue.py](scripts/private_catalogue.py) SOURCE DESTINATION CAD_MODELS_BUILD_PY with an external --python that can run the trusted CAD Models builder. Supply --metadata JSON keyed by relative filename for confirmed id, designation, role, units, aliases, standards or dimensions. Query the returned directory as a named source with catalogue_candidates.py. Check source-relative path, content hash, model role, thread or seal suffix and mating geometry. For an exact field check, supply variant and evidence in the private metadata, then pass --variant REQUIREMENTS_JSON to catalogue_candidates.py. Inspect mating geometry after a field match. Pin the snapshot with the occurrence.
+
+For an image-only part, use cad-source-intake and cad-drawing-inspection, optionally cad-opencv-setup. Receive the original hash, oriented planar loops, controls and residuals. Confirm nominal features, datum, inner loops and depth before passing them into plate_reference.build_plate. Reopen and inspect independent vertices and cylindrical surfaces. Keep the nominal parameter and original pixel estimates separate. For multiview or RGB-D input require camera intrinsics, pose, metric scale, visibility and independent checks for the affected features.
+
+For a second occurrence of an imported DWG, pass the checked first occurrence as the previous argument to insert_component. This uses its native block name. Verify one source definition and two transforms after reopen. Set INSUNITS to 4 for an explicitly millimetre fixture and read it again in the receiving file.

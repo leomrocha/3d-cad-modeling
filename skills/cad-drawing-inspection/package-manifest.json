@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "bf7af6d4e4df8584a8cde6335096ae99361087aee1a18927b88b1d6c406274e9"
+      "sha256": "4617a4ac16126f67bda9502603aa9f6125aa8173cc69387df9aa6d405671b4e8"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
@@ -30,6 +30,10 @@
       "source": "scripts/dxf_inspect.py",
       "sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e"
     },
+    "scripts/image_observations.py": {
+      "source": "scripts/image_observations.py",
+      "sha256": "4aa7723609536c5d5210bacf99ae2ff243e5f05d04b19564592f46b664ad2492"
+    },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
       "sha256": "ee353ceefa62bd1939a64ebd3bdffb52294137488610a6bcc9c7d51c76d9cc2a"
@@ -37,6 +41,14 @@
     "scripts/part_index.py": {
       "source": "scripts/part_index.py",
       "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb"
+    },
+    "scripts/raster_features.py": {
+      "source": "scripts/raster_features.py",
+      "sha256": "e5653ac4561b28a7d2ea7963972503d7d1a1cf36fdfe88c761a0dda692161f24"
+    },
+    "scripts/raster_text.py": {
+      "source": "scripts/raster_text.py",
+      "sha256": "9696663df4b16121c56623220ba510a02599a8774ff022764785044102228658"
     }
   }
 }

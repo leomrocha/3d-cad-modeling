@@ -17,3 +17,7 @@ python3 "$SKILL_ROOT/scripts/translator.py" --application freecad --bridge yonos
 ```
 
 5. Report the evidence level: documented, schema observed, offline verified, or live verified for a named operation and binding. Offer [optional contribution](references/contributing.md) after a checked improvement. Completion of a translator operation has its own evidence receipt.
+
+## Checked model revisions
+
+Map the selected deployment’s actual profile, parameter, constraint diagnostic and readback fields separately. Record schema revision, units and source feature IDs. If a solve fails, retain conflicting feature IDs and request the missing relation. After the bounded edit, read back its changed dimension and an independent fixed datum before resuming dependent placements.

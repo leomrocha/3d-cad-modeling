@@ -209,7 +209,9 @@ python3.12 --version
 
 #### Install an individual skill into a project
 
-Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), `cad-source-intake` (source capture and revisions), `cad-mcp-translator` (adapt a procedure to another CAD endpoint), and `cad-format-translator` (convert a model or editable program).
+Optional raster jobs can use [cad-opencv-setup](skills/cad-opencv-setup/SKILL.md) to test an interpreter or prepare an isolated OpenCV environment.
+
+Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), `cad-source-intake` (source capture and revisions), `cad-mcp-translator` (adapt a procedure to another CAD endpoint), `cad-format-translator` (convert a model or editable program), `cad-model-navigation` (find and isolate occurrences), `cad-model-repair` (repair model navigation), and `cad-opencv-setup` (optional image processing environment).
 
 This example installs for Claude Code. Run it from the project directory where you want the skill available. Choose `cad-ocs-engineering`, `cad-drawing-inspection`, `cad-source-intake`, `cad-mcp-translator` or `cad-format-translator` as `SKILL_NAME`.
 

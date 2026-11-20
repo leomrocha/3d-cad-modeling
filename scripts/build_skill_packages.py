@@ -17,7 +17,7 @@ TRANSLATOR = 'cad-mcp-translator'
 FORMAT = 'cad-format-translator'
 FORMAT_MODULES = ('blend_exchange.py', 'convert.py', 'routes.py', 'scad_source.py')
 FORMAT_ASSETS = ('SKILL.md', 'references/conversion.md', 'fixtures/plate.scad', 'fixtures/inventory.json')
-SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake', TRANSLATOR, FORMAT)
+SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake', TRANSLATOR, FORMAT, 'cad-opencv-setup')
 TRANSLATOR_MODULES = ('translator.py', 'state.py', 'bore_check.py', 'package_check.py')
 TRANSLATOR_ASSETS = (
     'SKILL.md', 'references/operations.md', 'references/contributing.md',
@@ -26,7 +26,7 @@ TRANSLATOR_ASSETS = (
 )
 TRANSLATOR_SUITES = (
     'test_translator.py', 'test_translator_state.py', 'test_translator_bore.py',
-    'test_translator_install.py', 'test_format_translation.py', 'test_format_install.py',
+    'test_translator_install.py', 'test_opencv_install.py', 'test_format_translation.py', 'test_format_install.py',
 )
 ROUTE_SOURCE = 'docs/modeling-operation-selection.md'
 ROUTE_REFERENCE = 'references/modeling-operation-selection.md'
@@ -153,14 +153,16 @@ def inputs(name, committed=False):
         raise ValueError('Unknown skill package: ' + name)
     paths = source_paths(committed)
     common = ['scripts/component_records.py', 'scripts/part_index.py', 'scripts/package_check.py']
+    if name == 'cad-opencv-setup':
+        return []
     if name == FORMAT:
         return ['format_translation/' + module for module in FORMAT_MODULES] + ['scripts/package_check.py']
     if name == TRANSLATOR:
         return ['translator/' + module for module in TRANSLATOR_MODULES]
     if name == 'cad-source-intake':
-        return dependency_closure(common + ['scripts/source_intake.py'], paths, committed)
+        return dependency_closure(common + ['scripts/source_intake.py', 'scripts/image_observations.py'], paths, committed)
     if name == 'cad-drawing-inspection':
-        return dependency_closure(common + ['scripts/dxf_inspect.py'], paths, committed)
+        return dependency_closure(common + ['scripts/dxf_inspect.py', 'scripts/raster_features.py', 'scripts/image_observations.py', 'scripts/raster_text.py'], paths, committed)
     # All reusable scripts have a default owner: the complete CAD runtime.
     # The builder itself belongs to the repository's build tooling.
     return dependency_closure([p for p in paths if p not in HOST_ONLY], paths, committed)
@@ -176,6 +178,8 @@ def independent_expected(name, committed):
     """The translator owns a separate, closed distribution and has no CAD dependencies."""
     package = Path('skills') / name
     assets = TRANSLATOR_ASSETS if name == TRANSLATOR else FORMAT_ASSETS
+    if name == 'cad-opencv-setup':
+        assets = ('SKILL.md', 'scripts/opencv_env.py')
     sources = {asset: (package / asset).as_posix() for asset in assets}
     sources.update({'scripts/' + Path(path).name: path for path in inputs(name, committed)})
     sources['LICENSE'] = 'LICENSE'
@@ -191,7 +195,7 @@ def independent_expected(name, committed):
 
 
 def expected(name, committed=False):
-    if name in (TRANSLATOR, FORMAT):
+    if name in (TRANSLATOR, FORMAT, 'cad-opencv-setup'):
         return independent_expected(name, committed)
     files = {str(Path(p).relative_to('scripts')): p for p in inputs(name, committed)}
     result = {'scripts/' + target: source_bytes(source, committed) for target, source in files.items()}
@@ -229,7 +233,7 @@ def build(check=False, committed=False):
     for name in SKILLS:
         target = ROOT / 'skills' / name
         files = expected(name, committed)
-        if name in (TRANSLATOR, FORMAT):
+        if name in (TRANSLATOR, FORMAT, 'cad-opencv-setup'):
             for path in target.rglob('*'):
                 if path.is_symlink():
                     raise ValueError('Redirected translator asset: ' + str(path.relative_to(target)))

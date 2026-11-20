@@ -13,3 +13,9 @@ Use the [operation selection procedure](references/modeling-operation-selection.
    For a Blender file (`.blend`) in either direction, follow the [Blender unit and reference procedure](references/conversion.md#blender-native-files-blend). Ask for the intended units and physical scale or a reference-model dimension whenever scale is ambiguous.
 4. Run the selected route only within the authorized workspace. Reopen the staged derivative and compare the specified features. Capture tool versions, arguments, hashes, units, information changes and results. Retain qualified routes locally with their binding and invalidate them when the bridge, documentation, schemas or settings change.
 5. After qualifying a reusable script or route, ask if the user wants a local contribution preview. Include only shareable code, mappings and fixtures. Show the final diff, commit, destination and branch. Push and open the PR only after separate explicit approval of that exact revision and destination.
+
+## Source-bound delivery checks
+
+For a controlled profile retain the feature IDs and editable parent revision alongside the exchange file. Reopen in the selected reader and measure bore center, diameter and an independent datum. For a mesh record units, tessellation and whether the diameter spans opposite vertices or faces. For assembly exchange compare definition counts, occurrence identities and full transforms against the native revision.
+
+Read the receiving DXF header and check geometry in the same physical units. If the writer reports dangling handles, retain the failing derivative, use a qualified alternate writer on the original revision and inspect its audit, block definitions, roles and placements.

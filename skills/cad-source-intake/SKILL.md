@@ -49,3 +49,9 @@ python3 ${SKILL_ROOT}/scripts/source_intake.py \
 ## Verification
 
 Run the bundled `scripts/package_check.py` to check package hashes and imports. After intake, call `source_intake.verify_revision()` on the completed source index to check the published index and scope against their receipt. Preserve source conflicts, corrections and interrupted publication as explicit results.
+
+## Image observations
+
+Record image kind, stored pixel size, page, orientation, crop, resize and padding in the source revision. Keep the original file and any decoded response with their hashes. Select the required output (text, point, box, polygon or instance mask). Inspect a supplied endpoint's deployed schema and model, run a labeled case, and record the actual response, latency, cost and corrections. Keep service credentials outside the record.
+
+For a decoded response, run the tested image interpreter with [image_observations.py](scripts/image_observations.py) SOURCE RECEIPT NEW_OUTPUT. Supply source_sha256, provider, provider_size_px, a 3 × 3 source_from_provider pixel-center matrix and instances. Each instance has an id and kind. A mask carries a 0/1 array in provider coordinates. A point, polygon, box or text region carries points (four ordered corners for a box or text). Text also carries its string. Convert normalized or box-relative coordinates according to the deployed schema first. Inspect the overlay and retain the instance ID, parent response hash and correction prompt across revisions. Return to catalogue lookup when a designation becomes legible. Use the optional cad-opencv-setup skill when this local operation needs a qualified interpreter.

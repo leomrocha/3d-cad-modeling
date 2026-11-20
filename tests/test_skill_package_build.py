@@ -42,6 +42,11 @@ class PackageLifecycle(unittest.TestCase):
             'scripts/package_check.py': 'VALUE = 1\n',
             'scripts/source_intake.py': 'VALUE = 1\n',
             'scripts/dxf_inspect.py': 'VALUE = 1\n',
+            'scripts/raster_text.py': 'VALUE = 1\n',
+            'scripts/raster_features.py': 'VALUE = 1\n',
+            'scripts/image_observations.py': 'VALUE = 1\n',
+            'skills/cad-opencv-setup/SKILL.md': 'fixture\n',
+            'skills/cad-opencv-setup/scripts/opencv_env.py': 'pass\n',
         }.items():
             self.write(relative, content)
         for name in builder.TRANSLATOR_MODULES:

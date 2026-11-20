@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "2f8279d4f1861c0686bcf94de2b9c5d756f6bec06999eb476c0ac5943eb9da12"
+      "sha256": "7e38ef36b0ec7b9222a2be3b8fca30647c815514c4de04ed4e8b01d98fa14a22"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -244,7 +244,7 @@
     },
     "scripts/assembly_build.py": {
       "source": "scripts/assembly_build.py",
-      "sha256": "1b0d67c3b6a1985703021140707b758bc921ef955dac3dbef5f4ebda6f9cac08"
+      "sha256": "29a3b1360c9ce69f7d46b21ecd6c3671559716d3c8e39401d6387c7789b672e1"
     },
     "scripts/assembly_occurrences.py": {
       "source": "scripts/assembly_occurrences.py",
@@ -296,7 +296,7 @@
     },
     "scripts/cadtools/verification.py": {
       "source": "scripts/cadtools/verification.py",
-      "sha256": "77f9a8ca2c187899df08a08d263d8725be00ddb8cad5f97fca8f401acfe1e724"
+      "sha256": "4134efe65c91eab1d0d92ad0543f38789d1e308443e8c576e95d21a5a4c3407d"
     },
     "scripts/calibrated_trace.py": {
       "source": "scripts/calibrated_trace.py",
@@ -304,7 +304,7 @@
     },
     "scripts/catalogue_candidates.py": {
       "source": "scripts/catalogue_candidates.py",
-      "sha256": "a03e027c4006abc2c065a2daed05676cd6f6adcd9fa99dad08e9d358614130cb"
+      "sha256": "fa9a3d8bb80c145c2779c31dcdda5a8034497c40c9f49961933e994ffbfabe0a"
     },
     "scripts/check_contract.py": {
       "source": "scripts/check_contract.py",
@@ -353,6 +353,10 @@
     "scripts/hexagonal_reference.py": {
       "source": "scripts/hexagonal_reference.py",
       "sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61"
+    },
+    "scripts/image_observations.py": {
+      "source": "scripts/image_observations.py",
+      "sha256": "4aa7723609536c5d5210bacf99ae2ff243e5f05d04b19564592f46b664ad2492"
     },
     "scripts/insert_recovery.py": {
       "source": "scripts/insert_recovery.py",
@@ -430,6 +434,10 @@
       "source": "scripts/plate_reference.py",
       "sha256": "1d04e771027ab7c208e39952771d02615e5d60b362c3b04aaa95f066d9b8e57c"
     },
+    "scripts/private_catalogue.py": {
+      "source": "scripts/private_catalogue.py",
+      "sha256": "72c906e15679e951499757f2f0e882573e3bf3f2113dd5f530ba0c2d6ac9ea31"
+    },
     "scripts/profile_conditioning.py": {
       "source": "scripts/profile_conditioning.py",
       "sha256": "5732eb9358ae68249f3d865b0f04be70aae626a154d580218e8e733222ccbb0e"
@@ -437,6 +445,14 @@
     "scripts/profile_reference.py": {
       "source": "scripts/profile_reference.py",
       "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0"
+    },
+    "scripts/raster_features.py": {
+      "source": "scripts/raster_features.py",
+      "sha256": "e5653ac4561b28a7d2ea7963972503d7d1a1cf36fdfe88c761a0dda692161f24"
+    },
+    "scripts/raster_text.py": {
+      "source": "scripts/raster_text.py",
+      "sha256": "9696663df4b16121c56623220ba510a02599a8774ff022764785044102228658"
     },
     "scripts/rational_surface.py": {
       "source": "scripts/rational_surface.py",

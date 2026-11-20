@@ -151,3 +151,5 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Photo and multi-view blueprint handoff](cad-ocs-engineering/references/source-view-evidence.md#ruler-photographs-and-multi-view-blueprints) covers independent photo controls and orthographic landmark agreement. [Mating-interface evaluation](cad-ocs-engineering/references/assembly-evidence.md#judge-a-mating-interface) applies the job’s stated fit to measured geometry.
 
 [Modeling operation selection](cad-ocs-engineering/references/modeling-operation-selection.md) specifies component reuse, family edits, scripted and guided providers and job evidence. Each skill includes the procedure.
+
+[Optional OpenCV setup](cad-opencv-setup/SKILL.md) qualifies a selected interpreter for the image operations in drawing inspection and source intake.

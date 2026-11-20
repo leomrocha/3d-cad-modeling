@@ -42,6 +42,11 @@ def lookup(search_cli, data, query):
             item['file'] = 'packages/' + locator
             if path.is_file() and path.stat().st_size:
                 item['sha256'] = digest(path)
+        origin = row.get('private_source')
+        if origin is not None:
+            if not item.get('sha256') or item['sha256'] != origin['sha256']:
+                raise ValueError('Private asset differs from snapshot: ' + row['id'])
+            item['private_source'] = origin
         candidates.append(item)
     catalogue_hash = hashlib.sha256(raw).hexdigest()
     if index_hash != digest(index) or catalogue_hash != digest(catalogue):
@@ -50,22 +55,47 @@ def lookup(search_cli, data, query):
                 reached_search_limit=len(hits) == 1000, candidates=candidates)
 
 
+def variant_check(candidate, requirements):
+    """Compare exact job-supplied variant fields to the private source evidence."""
+    source = candidate.get("private_source") or {}
+    fields = source.get("variant") or {}
+    evidence = source.get("evidence")
+    mismatches = {key: fields[key] for key, value in requirements.items()
+                  if key in fields and fields[key] != value}
+    missing = [key for key in requirements if key not in fields or fields[key] is None]
+    if mismatches:
+        status = "different-variant"
+    elif not requirements or missing or not evidence:
+        status = "needs-evidence"
+    else:
+        status = "fields-match"
+    return dict(status=status, required=requirements, mismatches=mismatches,
+                missing=missing, evidence=evidence)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--search-cli', required=True, type=Path,
                         help='Trusted cad-models scripts/search.py')
     parser.add_argument('--source', nargs=2, action='append', required=True,
                         metavar=('NAME', 'DATA_DIRECTORY'))
+    parser.add_argument('--variant', type=Path, help='JSON object of required variant fields and values')
     parser.add_argument('query')
     args = parser.parse_args()
     if not args.query.strip():
         parser.error('Supply a part identifier, designation or search term')
+    required = json.loads(args.variant.read_text()) if args.variant else None
+    if required is not None and (not isinstance(required, dict) or any(v is None for v in required.values())):
+        parser.error("Supply named variant fields with known values")
     results = {}
     for name, directory in args.source:
         if name in results:
             parser.error('Duplicate source name: ' + name)
         try:
             results[name] = lookup(args.search_cli, Path(directory), args.query)
+            if required is not None:
+                for candidate in results[name]['candidates']:
+                    candidate['variant_check'] = variant_check(candidate, required)
         except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as error:
             results[name] = dict(error=str(error))
     print(json.dumps(dict(query=args.query, sources=results), indent=2))

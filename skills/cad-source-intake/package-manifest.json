@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "7bcf165b0f598855ae7c97cd7cc50661caea4f9d6249e8af912c1f91b2c36ef3"
+      "sha256": "09327b7fe39329f49d949783faa402af764da1d5f49da707d50891f1ef517682"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
@@ -26,6 +26,10 @@
       "source": "scripts/component_records.py",
       "sha256": "53d828bf9e60554816022e58cebb77af86b04113548466ecb51be6e1a9f74e0b"
     },
+    "scripts/image_observations.py": {
+      "source": "scripts/image_observations.py",
+      "sha256": "4aa7723609536c5d5210bacf99ae2ff243e5f05d04b19564592f46b664ad2492"
+    },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
       "sha256": "ee353ceefa62bd1939a64ebd3bdffb52294137488610a6bcc9c7d51c76d9cc2a"
@@ -33,6 +37,10 @@
     "scripts/part_index.py": {
       "source": "scripts/part_index.py",
       "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb"
+    },
+    "scripts/raster_features.py": {
+      "source": "scripts/raster_features.py",
+      "sha256": "e5653ac4561b28a7d2ea7963972503d7d1a1cf36fdfe88c761a0dda692161f24"
     },
     "scripts/source_intake.py": {
       "source": "scripts/source_intake.py",
