@@ -132,6 +132,14 @@ def execute(request, directory):
         from batch_xcaf_bars import modify_bars
 
         suffix, writer = "xbf", modify_bars
+    elif spec["operation"] == "replace occurrence":
+        from batch_replacement import replace
+
+        asset = spec["replacement"]
+        asset["model"] = str((request.parent / asset["model"]).resolve())
+        for key in ("search_cli", "data"):
+            asset["part"][key] = str((request.parent / asset["part"][key]).resolve())
+        suffix, writer = "xbf", replace
     elif spec["operation"] == "occurrence name":
         from batch_xcaf_bars import rename_occurrences
 

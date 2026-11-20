@@ -22,8 +22,9 @@
 18. [batch_dxf_frames.py](../scripts/batch_dxf_frames.py) measures the block-base position and axes of rigid DXF INSERT entities and verifies saved placements, entity identities, block definitions and independent geometry.
 
 19. [batch_creation.py](../scripts/batch_creation.py) creates and verifies oriented DXF circles, STEP through-holes and blind bores, and XCAF assemblies of catalogue-selected STEP solids. [Batch creation procedure](../skills/cad-ocs-engineering/references/batch-creation.md).
-20. [batch_modification.py](../scripts/batch_modification.py) enlarges selected STEP bores and applies reviewed XCAF bar length and occurrence name changes. [Batch modification procedure](../skills/cad-ocs-engineering/references/batch-modification.md).
+20. [batch_modification.py](../scripts/batch_modification.py) enlarges selected STEP bores, applies reviewed XCAF bar length and occurrence name changes, and runs the `replace occurrence` action. [Batch modification procedure](../skills/cad-ocs-engineering/references/batch-modification.md).
 21. [batch_xcaf_bars.py](../scripts/batch_xcaf_bars.py) isolates selected XCAF occurrence paths, resizes plain rectangular bars about a fixed anchor and edits occurrence names.
+22. [batch_replacement.py](../scripts/batch_replacement.py) replaces selected XCAF leaf definitions with a catalogue-selected STEP solid and aligns measured rectangular keyed seats. [Batch replacement procedure](../skills/cad-ocs-engineering/references/batch-replacement.md).
 
 The [reusable integration procedure](../skills/cad-ocs-engineering/references/generic-integration.md) defines inputs, outputs, units, representation limits and recovery conditions. Component data remains caller supplied.
 

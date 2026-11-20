@@ -2,6 +2,7 @@
 
 import importlib.util
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
@@ -91,13 +92,17 @@ class BatchModificationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Published"):
             execute(self.request, self.job)
 
-    def shared_parent(self):
+    def shared_parent(self, with_partner=False):
         import cadquery as cq
 
         rack = cq.Assembly(name="rack")
         bar = cq.Solid.makeBox(20, 3, 4)
         for name, y in (("inner", 0), ("outer", 8)):
             rack.add(bar, name=name, loc=cq.Location((0, y, 0)))
+        if with_partner:
+            rack.add(
+                cq.Solid.makeBox(20, 3, 2), name="mount", loc=cq.Location((0, 0, 4))
+            )
         scratch = self.root / "seed.xbf"
         cq.Assembly(name="frame").add(rack).export(str(scratch))
         app, doc, tool, root = open_document(scratch)
@@ -110,6 +115,138 @@ class BatchModificationTests(unittest.TestCase):
         source = self.root / "shared.xbf"
         save_document(app, doc, tool, source)
         return source
+
+    def test_catalogue_replacement_and_lost_reply(self):
+        import cadquery as cq
+        from private_catalogue import prepare as index_parts
+
+        cli = os.environ.get("CAD_MODELS_SEARCH_CLI")
+        if not cli:
+            self.skipTest(
+                "set CAD_MODELS_SEARCH_CLI to the installed catalogue search.py"
+            )
+        cli = Path(cli).resolve()
+        source = self.shared_parent(with_partner=True)
+        assets = self.root / "assets"
+        assets.mkdir()
+        replacement = assets / "keyed.step"
+        # Old seat is the +Z face. Catalogue seat is the +X face at a different origin.
+        part = cq.Solid.makeBox(7, 20, 3, cq.Vector(7, 10, 15))
+        cq.exporters.export(part, str(replacement))
+        data = index_parts(
+            assets,
+            self.root / "snapshots",
+            cli.with_name("build.py"),
+            os.environ.get("CAD_CATALOGUE_PYTHON", sys.executable),
+            {"keyed.step": {"id": "keyed", "units": "mm"}},
+        )
+        selected = json.loads((data / "catalogue.json").read_text())[0]
+        asset = dict(
+            model=str(data / "packages" / selected["file"]),
+            revision=file_digest(replacement),
+            part=dict(id="keyed", data=str(data), search_cli=str(cli), query="keyed"),
+            corners=[[14, 10, 15], [14, 30, 15], [14, 10, 18]],
+        )
+        targets = [
+            dict(id=key, corners=[[0, 0, 4], [20, 0, 4], [0, 3, 4]])
+            for key in ("1/1", "2/1")
+        ]
+        for target in targets:
+            target["partner"] = dict(
+                id=target["id"].split("/")[0] + "/3",
+                corners=[[0, 3, 0], [20, 3, 0], [0, 0, 0]],
+            )
+        self.request_for(
+            source,
+            "replace occurrence",
+            targets,
+            replacement=asset,
+            mates=["fixed keyed seat"],
+        )
+
+        def lost_reply(path):
+            if self.job.exists():
+                raise InterruptedError("lost reply")
+            sync_path(path)
+
+        with patch("batch_modification.sync_path", side_effect=lost_reply):
+            with self.assertRaises(InterruptedError):
+                execute(self.request, self.job)
+        report = execute(self.request, self.job)
+        fresh = execute(self.request, self.root / "fresh")
+        self.assertEqual(report["elements"], fresh["elements"])
+        self.assertEqual(fresh, execute(self.request, self.root / "fresh"))
+        self.assertEqual([r["id"] for r in report["elements"]], ["1/1", "2/1"])
+        self.assertTrue(
+            all(
+                r["occupants"] == 1 and r["interface_mm"] == [20, 3]
+                for r in report["elements"]
+            )
+        )
+        self.assertEqual(len({r["saved_definition"] for r in report["elements"]}), 1)
+        asset["corners"][1] = [14, 29, 15]
+        self.request_for(
+            source,
+            "replace occurrence",
+            targets,
+            replacement=asset,
+            mates=["fixed keyed seat"],
+        )
+        with self.assertRaisesRegex(ValueError, "seating face"):
+            execute(self.request, self.root / "invalid")
+
+    def test_contact_regions_and_interference(self):
+        import cadquery as cq
+        from batch_replacement import (
+            check_interference,
+            check_partner,
+            interface,
+            occupants,
+        )
+
+        identity = cq.Location()
+
+        def entry(shape):
+            return 1, identity, shape
+
+        block = cq.Solid.makeBox(20, 3, 4)
+        corners = [[0, 0, 4], [20, 0, 4], [0, 3, 4]]
+        seat, dims, face = interface(block, corners)
+        offset = block.translate((1, 0, 0))
+        _, _, overlap = interface(offset, [[1, 0, 4], [21, 0, 4], [1, 3, 4]])
+        self.assertAlmostEqual(face.intersect(overlap).Area(), 57)
+        centre = cq.Vector(10, 1.5, 0)
+        ring = cq.Solid.makeCylinder(15, 4, centre).cut(
+            cq.Solid.makeCylinder(12, 4, centre)
+        )
+        self.assertEqual(
+            occupants(
+                {
+                    "target": entry(block),
+                    "overlap": entry(offset),
+                    "annulus": entry(ring),
+                },
+                face,
+            ),
+            ["target", "overlap"],
+        )
+        tiny = cq.Solid.makeBox(2, 1, 2, cq.Vector(9, 1, 4))
+        with self.assertRaisesRegex(ValueError, "Partner interface dimensions"):
+            check_partner(
+                entry(tiny),
+                [[9, 2, 4], [11, 2, 4], [9, 1, 4]],
+                cq.Location((0, 0, 0), (1, 0, 0), 180),
+                seat,
+                dims,
+                "target",
+            )
+        neighbour = cq.Solid.makeBox(5, 2, 1, cq.Vector(0, 0, -1))
+        taller = cq.Solid.makeBox(20, 3, 5, cq.Vector(0, 0, -1))
+        initial = {"target": entry(block), "neighbour": entry(neighbour)}
+        final = dict(initial, target=entry(taller))
+        for selected in (["target"], ["target", "neighbour"]):
+            with self.assertRaisesRegex(ValueError, "10 mm³"):
+                check_interference(initial, final, selected)
 
     def test_shared_assembly_and_seats(self):
         source = self.shared_parent()

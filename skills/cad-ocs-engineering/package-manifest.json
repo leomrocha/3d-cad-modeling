@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "70c74a1ceba8923f3945413708de2032c820bbc782824808d96ab49ca296d830"
+      "sha256": "fb2f17fb08bb78fa2e41f3ec08f3d87aaaf3ca4e2b5dcfbe756185e9e111176e"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -45,6 +45,10 @@
     "references/batch-modification.md": {
       "source": "references/batch-modification.md",
       "sha256": "bb124a01555a4eb73a08bdb779fdfc1c64f44654a417359d4a9312a764a7f575"
+    },
+    "references/batch-replacement.md": {
+      "source": "references/batch-replacement.md",
+      "sha256": "92ed92cf97220fb4e236b2df1b1b4c45cdb38d634d8d37a6918ebf6225618cb2"
     },
     "references/calibrated-trace.md": {
       "source": "references/calibrated-trace.md",
@@ -320,7 +324,11 @@
     },
     "scripts/batch_modification.py": {
       "source": "scripts/batch_modification.py",
-      "sha256": "ee4553cd013c1e81391a2c2e22872f26117f7a3dadd88cab13816210a19fe152"
+      "sha256": "4307d6b52720deeb283fb166a3e26e8544bb0b989cc33334de2806d6fb9933fb"
+    },
+    "scripts/batch_replacement.py": {
+      "source": "scripts/batch_replacement.py",
+      "sha256": "a61584cc918a4f0606e8ea690f81713748716081fd3393a0b05301e83d307226"
     },
     "scripts/batch_request.py": {
       "source": "scripts/batch_request.py",

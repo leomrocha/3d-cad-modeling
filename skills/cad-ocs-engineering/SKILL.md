@@ -86,6 +86,10 @@ Use the [batch creation procedure](references/batch-creation.md) for drawing ent
 
 Use the [batch modification procedure](references/batch-modification.md) to identify the driving field and its dependents. Apply shared or per-target values, isolate selected children of repeated assemblies and read the fixed anchor and an unselected occurrence after reopening.
 
+### Replace selected occurrences or features
+
+Use the [batch replacement procedure](references/batch-replacement.md) to select the existing occurrence and catalogue solid, measure both keyed seats and review the replacement placement. After reopening, compare the saved seat coordinates and orientation with the recorded measurements.
+
 ### Place existing occurrences at reviewed destinations
 
 Use the [existing occurrence placement procedure](references/existing-batch-placement.md) to assign measured positions to existing DXF INSERT entities and review each requested world block-base frame. Move the selected occurrences in the job copy, then verify the reopened frames and retained geometry. Use the original request IDs when resuming an interrupted job.

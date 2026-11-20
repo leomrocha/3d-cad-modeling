@@ -43,6 +43,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 
 11. [Create a group of elements](cad-ocs-engineering/references/batch-creation.md) covers drawing circles, holes in a selected solid and shared part occurrences.
 12. [Modify selected dimensions and properties](cad-ocs-engineering/references/batch-modification.md) covers driving sketch dimensions, STEP bore enlargement and changes to selected XCAF bar lengths and occurrence names.
+13. [Replace selected occurrences or features](cad-ocs-engineering/references/batch-replacement.md) covers the `replace occurrence` action, catalogue part selection, measured keyed seats and placement readback.
 
 ## Installed package references
 
