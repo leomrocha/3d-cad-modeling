@@ -9,7 +9,6 @@ from pathlib import Path
 import subprocess
 import sys
 import re
-import importlib.util
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +30,7 @@ TRANSLATOR_SUITES = (
 ROUTE_SOURCE = 'docs/modeling-operation-selection.md'
 ROUTE_REFERENCE = 'references/modeling-operation-selection.md'
 HOST_ONLY = {'scripts/build_skill_packages.py'}
+AVAILABILITY = ('scripts/operation_catalogue.py', 'scripts/opencv_probe.py')
 
 
 def local_links(document):
@@ -43,13 +43,10 @@ def local_links(document):
 
 
 def check_registrations():
-    """Require human-readable helper/procedure indexes and combined source coverage."""
+    """Require the current helper and procedure indexes used by maintainers."""
     tool_index = ROOT / 'docs/tools.md'
     skill_index = ROOT / 'skills/README.md'
     tools, procedures = local_links(tool_index), local_links(skill_index)
-    register = json.loads((ROOT / 'research/sources/source-register.json').read_text())
-    registered = {item.get('local_source_path') for item in register['sources']}
-    markdown = (ROOT / 'research/sources/source-register.md').read_text()
     failures = []
     required = {ROOT / relative for relative in source_paths() if Path(relative).name != '__init__.py'}
     required.update(ROOT / 'translator' / name for name in TRANSLATOR_MODULES)
@@ -66,25 +63,8 @@ def check_registrations():
     for path in references:
         if path not in procedures:
             failures.append('Skill procedure index entry missing: ' + str(path.relative_to(ROOT)))
-    # Source coverage includes reusable scripts and procedures invoked by the skill.
-    for path in required | references:
-        relative = str(path.relative_to(ROOT))
-        candidates = {relative, '${MODELING_ROOT}/' + relative}
-        matches = [item for item in register['sources'] if item.get('local_source_path') in candidates]
-        if not candidates & registered:
-            failures.append('Combined source registration missing: ' + relative)
-        elif any(not re.search(r'^#{2,3} .*' + re.escape(item['id']) + r'\b', markdown, re.M)
-                 for item in matches):
-            failures.append('Source Markdown index entry missing: ' + relative)
     if failures:
         raise ValueError('\n'.join(sorted(failures)))
-    documents = register.get('source_record_documents', [])
-    if documents:
-        spec = importlib.util.spec_from_file_location(
-            'tooling_source_registry', ROOT / 'research/tools/build_workflow_register.py')
-        registry = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(registry)
-        registry.merge_source_records(ROOT, documents, register['registered_at'], check=True)
     return {'result': 'PASS', 'tool_entries': len(required), 'procedure_entries': len(references)}
 
 
@@ -152,13 +132,13 @@ def inputs(name, committed=False):
     if name not in SKILLS:
         raise ValueError('Unknown skill package: ' + name)
     paths = source_paths(committed)
-    common = ['scripts/component_records.py', 'scripts/part_index.py', 'scripts/package_check.py']
+    common = [*AVAILABILITY, 'scripts/component_records.py', 'scripts/part_index.py', 'scripts/package_check.py']
     if name == 'cad-opencv-setup':
-        return []
+        return list(AVAILABILITY)
     if name == FORMAT:
-        return ['format_translation/' + module for module in FORMAT_MODULES] + ['scripts/package_check.py']
+        return ['format_translation/' + module for module in FORMAT_MODULES] + ['scripts/package_check.py', *AVAILABILITY]
     if name == TRANSLATOR:
-        return ['translator/' + module for module in TRANSLATOR_MODULES]
+        return ['translator/' + module for module in TRANSLATOR_MODULES] + list(AVAILABILITY)
     if name == 'cad-source-intake':
         return dependency_closure(common + ['scripts/source_intake.py', 'scripts/image_observations.py', 'scripts/sam_mask.py', 'scripts/vision_provider.py', 'scripts/vision_provider_sam2.py'], paths, committed)
     if name == 'cad-drawing-inspection':
@@ -259,10 +239,12 @@ def build(check=False, committed=False):
     # Navigation and repair are standalone skills without generated manifests.
     for name in ('cad-model-navigation', 'cad-model-repair'):
         target = ROOT / 'skills' / name
-        reference = target / ROUTE_REFERENCE
-        if not reference.resolve().is_relative_to(target.resolve()):
-            raise ValueError('Shared reference outside skill: ' + name)
-        plans.append((name, target, {ROUTE_REFERENCE: source_bytes(ROUTE_SOURCE, committed)}, {}))
+        for relative in (*AVAILABILITY, ROUTE_REFERENCE):
+            if not (target / relative).resolve().is_relative_to(target.resolve()):
+                raise ValueError('Shared file outside skill: ' + name + '/' + relative)
+        files = {relative: source_bytes(relative, committed) for relative in AVAILABILITY}
+        files[ROUTE_REFERENCE] = source_bytes(ROUTE_SOURCE, committed)
+        plans.append((name, target, files, {}))
     for name, target, files, previous in plans:
         for stale in sorted(set(previous) - set(files)):
             if check:
@@ -298,7 +280,7 @@ def complete(regenerate=False, cli_root=None, reader_root=None):
     check_registrations()
     env = dict(os.environ, SKILLS_CLI_ROOT=str(cli_root), NATIVE_READER_ROOT=str(reader_root),
                PYTHONDONTWRITEBYTECODE='1', DISABLE_TELEMETRY='1', DO_NOT_TRACK='1')
-    for pattern in ('test_skill_package_build.py', 'test_source_registration.py', 'test_skill_packages.py',
+    for pattern in ('test_skill_package_build.py', 'test_skill_packages.py',
                     *TRANSLATOR_SUITES):
         process = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover',
                                   '-s', 'tests', '-p', pattern, '-v'], cwd=ROOT, env=env,

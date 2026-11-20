@@ -90,11 +90,11 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Component CAD iterations](cad-ocs-engineering/SKILL.md) uses the external project's existing part index/dictionary, checks source readiness, records individual action occurrences and requires an applied verified skill/script improvement per completed CAD design. [Python part-index access](../scripts/part_index.py) and [component source/action records](../scripts/component_records.py) operate on explicit data paths; FERME retains its parts data, CAD and component evidence.
 # Implemented source intake
 
-1. [Record source files, revisions and job scope](cad-source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. [Execution evidence](../execution/source-intake.md).
+1. [Record source files, revisions and job scope](cad-source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. Execution evidence (`git show 957691b:execution/source-intake.md`).
 
 ## Implemented DXF inspection
 
-1. [Inspect a DXF drawing before selecting a profile](cad-drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. [Execution evidence](../execution/dxf-inspection.md).
+1. [Inspect a DXF drawing before selecting a profile](cad-drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. Execution evidence (`git show 957691b:execution/dxf-inspection.md`).
 
 ## Continuing iterations and repository ownership
 
@@ -150,7 +150,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 
 [Photo and multi-view blueprint handoff](cad-ocs-engineering/references/source-view-evidence.md#ruler-photographs-and-multi-view-blueprints) covers independent photo controls and orthographic landmark agreement. [Mating-interface evaluation](cad-ocs-engineering/references/assembly-evidence.md#judge-a-mating-interface) applies the job’s stated fit to measured geometry.
 
-[Modeling operation selection](cad-ocs-engineering/references/modeling-operation-selection.md) specifies component reuse, family edits, scripted and guided providers and job evidence. Each skill includes the procedure.
+[Modeling operation selection](cad-ocs-engineering/references/modeling-operation-selection.md) specifies component reuse, family edits, scripted and guided providers and job evidence. Each skill includes the procedure, local operation catalogue and OpenCV operation probes. Setup and refresh record user-confirmed resources and checked outputs.
 
 [Optional OpenCV setup](cad-opencv-setup/SKILL.md) qualifies a selected interpreter for the image operations in drawing inspection and source intake.
 
@@ -161,5 +161,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Hand-drawn concept sketches](cad-drawing-inspection/SKILL.md#hand-drawn-concept-sketch) links each part, relationship and dimension to its mark on the page. The [CAD handoff](cad-ocs-engineering/references/source-view-evidence.md#use-a-hand-drawn-concept-for-cad) uses those observations for catalogue lookup, approximate layout and dimensioned features.
 
 [Standard fastener variants](cad-ocs-engineering/references/source-variant-tables.md) covers generator checks and the represented diameter of cosmetic threads.
+
+Model workflows require existing local files or a user-supplied service with the model already loaded. Skill installation and execution must never fetch models.
 
 [Installed modeling operations](cad-ocs-engineering/references/modeling-input-operations.md) gives runtime inputs and outputs for family generation, geometry retrieval, feature recovery, editable sequences and metric reconstruction.

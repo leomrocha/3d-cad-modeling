@@ -5,7 +5,7 @@ description: Convert CAD files, generate a model from trusted CAD source, or tra
 
 # Translate CAD files and editable programs
 
-Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation. Open the local operation catalogue on first use and after a request to refresh available skills.
 
 1. Tell the user that source files, derivatives, verification evidence and any new conversion scripts stay in the local job. Ask before contributing improvements.
 2. Identify the source representation and requested deliverable: file conversion, generation from trusted code, or editable source translation. Record units, coordinate frame, source/dependency hashes, destination and properties the user requires. Inspect scripts as text before execution. Preserve originals.

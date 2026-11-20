@@ -187,6 +187,10 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [Call and interpret deployed image providers](../scripts/vision_provider.py)
 - [Run local SAM 2 with point or box corrections](../scripts/vision_provider_sam2.py)
 - [Request an editable feature sequence from a selected model](../scripts/learned_cad_provider.py)
+- [local_model_runtime.py](../scripts/local_model_runtime.py) applies offline model-library settings and validates user-supplied HTTP(S) inference addresses.
 - [Build and verify source-bound feature sequences](../scripts/learned_cad_sequence.py)
 - [Read native constraint conflicts and solve a corrected sketch](../scripts/learned_cad_solver.py)
 - [Invoke a supplied Text2CAD runtime and decode its operations](../scripts/learned_cad_text2cad.py)
+
+- [operation_catalogue.py](../scripts/operation_catalogue.py) checks approved modeling operations, lists available outputs and records method failures in the user’s local catalogue.
+- [opencv_probe.py](../scripts/opencv_probe.py) exercises contours, four-point calibration and skeleton thinning in a selected interpreter.

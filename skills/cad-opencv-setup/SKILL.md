@@ -5,9 +5,11 @@ description: Probe a selected Python interpreter for contour extraction, planar 
 
 # Optional OpenCV setup
 
+Use the [operation selection procedure](references/modeling-operation-selection.md) for initial resource selection and catalogue refresh. A routine check runs only the probe.
+
 Run the selected Python executable with `-I scripts/opencv_env.py probe contours` from this skill directory. Replace `contours` with `plane` for four-point homography or `thinning` for contrib skeletonization. Return the JSON and use the tested interpreter for this operation. A shared cv2 namespace records all installed wheel families.
 
-For a setup request on a POSIX host, run `python -I scripts/opencv_env.py setup contours --root "$JOB_ROOT/image-tools"`. Pass `--wheelhouse DIRECTORY` for offline resolution and exact versions with `--version VERSION --numpy-version VERSION`. Core file processing selects opencv-python-headless. Thinning selects contrib-headless. Use `--gui` only when the job separately requires native windows. The operation fixture qualifies file processing. Window/display support needs its own display check.
+When the user requests installation, tell them **“This operation needs OpenCV. This installer will install OpenCV.”** Wait for a single message containing `EXECUTE` requesting only the OpenCV installation, such as `EXECUTE the OpenCV installation.` Run that installation alone. Evaluate the meaning of the complete user message. Pass the CLI action token `EXECUTE-OPENCV-INSTALL` only after the message meets those conditions. On a POSIX host, run `python -I scripts/opencv_env.py setup contours --authorization EXECUTE-OPENCV-INSTALL --root "$JOB_ROOT/image-tools"`. Pass `--wheelhouse DIRECTORY` for offline resolution and exact versions with `--version VERSION --numpy-version VERSION`. Core file processing selects opencv-python-headless. Thinning selects contrib-headless. Use `--gui` only when the job separately requires native windows. The operation fixture qualifies file processing. Window/display support needs its own display check.
 
 Resolve the returned interpreter relative to the supplied tools root. Each successful receipt points to a versioned environment with a single wheel family, wheel hashes and a passed fixture. Retry an interrupted request with the same arguments. Select the previous successful receipt until a replacement passes. Keep receipts and failed attempts with the job. Record local interpreter paths using the job's root map when exporting receipts.
 

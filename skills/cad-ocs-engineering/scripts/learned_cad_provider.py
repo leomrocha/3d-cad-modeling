@@ -8,7 +8,7 @@ import json
 import math
 import os
 from pathlib import Path
-from urllib.parse import urlsplit
+from local_model_runtime import inference_endpoint
 
 SYSTEM = """Translate the user's engineering description into geometry. Return a JSON array of extrusion operations in order. Begin by adding the body, then cut holes. Units are millimetres. Use exactly these keys and formats:
 rectangle: {"op":"add","shape":"rectangle","center":[x,y,z],"width":number,"height":number,"depth":number}
@@ -21,24 +21,9 @@ def sha(raw):
 
 
 def chat(endpoint, request, key, timeout):
-    url = urlsplit(endpoint)
-    if (
-        url.scheme not in ("http", "https")
-        or not url.hostname
-        or url.username
-        or url.password
-        or url.query
-        or url.fragment
-    ):
-        raise ValueError(
-            "Supply a full HTTP(S) chat-completions URL without credentials, query or fragment"
-        )
-    if (
-        key
-        and url.scheme != "https"
-        and url.hostname not in ("localhost", "127.0.0.1", "::1")
-    ):
-        raise ValueError("A bearer token requires HTTPS or a loopback address")
+    url = inference_endpoint(endpoint)
+    if url.query:
+        raise ValueError("Supply a chat-completions URL without a query")
     cls = (
         http.client.HTTPSConnection
         if url.scheme == "https"

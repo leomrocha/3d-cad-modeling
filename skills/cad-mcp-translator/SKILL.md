@@ -5,7 +5,7 @@ description: Adapt a CAD operation to an explicitly selected non-OCS application
 
 # CAD MCP translator
 
-Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation. Open the local operation catalogue on first use and after a request to refresh available skills.
 
 1. At the start tell the user: “I’ll keep the mappings, scripts and checks in your local project so you can reuse them. If an improvement works, you can review it later and decide whether to share it on GitHub.”
 2. Identify the existing procedure, the requested operation, the chosen application, bridge and connection. Resolve an ambiguous destination before contacting a server. Use the configured client. Save working files in a caller-owned job folder. Treat installed files as read-only. Cloud saves require an identified destination and permission.

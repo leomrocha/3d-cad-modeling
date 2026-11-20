@@ -1,5 +1,7 @@
 """Run a local SAM 2 image checkpoint with box/point prompts and optional prior logits."""
 
+from local_model_runtime import offline_model_libraries
+
 import argparse
 import base64
 import hashlib
@@ -48,6 +50,7 @@ def grounded_prompt(prompt, observations, source_hash, width, height):
 
 
 def predict(source, model_dir, prompt, parent=None, threads=2, grounding=None):
+    offline_model_libraries()
     import numpy as np
     from PIL import Image
     import torch

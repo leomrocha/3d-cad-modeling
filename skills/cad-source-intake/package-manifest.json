@@ -12,11 +12,11 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "14d898c67618b46161123caf951156b81e31d4aa54a57986e6d5f21222bb26ad"
+      "sha256": "e0e7980408028e5478897958393bbb2530c7660077e27071e8fc63b217413e40"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
-      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
+      "sha256": "f13d82a1959f2e1dc570523a0bbc9c17e437f8274192dd1e00328a2d4802ab14"
     },
     "requirements.txt": {
       "source": "requirements.txt",
@@ -28,7 +28,19 @@
     },
     "scripts/image_observations.py": {
       "source": "scripts/image_observations.py",
-      "sha256": "4aa7723609536c5d5210bacf99ae2ff243e5f05d04b19564592f46b664ad2492"
+      "sha256": "020d32b4d93267ff35360b25ef8eb5ab052e283db54fa8beb6b62847d7432f4d"
+    },
+    "scripts/local_model_runtime.py": {
+      "source": "scripts/local_model_runtime.py",
+      "sha256": "cefa25e168b86bf6f5fbfaf8358ddf5ef7b0fcba991eae62202c6093f3d681c7"
+    },
+    "scripts/opencv_probe.py": {
+      "source": "scripts/opencv_probe.py",
+      "sha256": "9364fee09afb0a60ab15c46be5a9abca65b052f81b54b0907a48d2f7d95d8cd1"
+    },
+    "scripts/operation_catalogue.py": {
+      "source": "scripts/operation_catalogue.py",
+      "sha256": "ac4b418e5bc1bb65fa7ff2024d42aac8380354569339f85eab341c2d2dd0632a"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
@@ -44,7 +56,7 @@
     },
     "scripts/sam_mask.py": {
       "source": "scripts/sam_mask.py",
-      "sha256": "d7821efc1fe959cd7add6ba8e0bfb9874acb9bb77ff79b96036a47983a25c319"
+      "sha256": "783a18ec58ba9f67ba42eb18b6813cca8ea3af351967ccb50d7f61b29fafbe79"
     },
     "scripts/source_intake.py": {
       "source": "scripts/source_intake.py",
@@ -52,11 +64,11 @@
     },
     "scripts/vision_provider.py": {
       "source": "scripts/vision_provider.py",
-      "sha256": "9feec718875b3376a8e18f656b39d2fff853be7dbfa599f4e3ff3ad953e386a7"
+      "sha256": "f426382694d3a214d9a8e94d3ae0303bf31dedb0ec75418f92b37b171c8dfdcc"
     },
     "scripts/vision_provider_sam2.py": {
       "source": "scripts/vision_provider_sam2.py",
-      "sha256": "b5d05be8b1ed3569b0396cbeaa7533faf8f17444544d4ea11ef5d70ad640672e"
+      "sha256": "1ed5c88f169a96d0524ca04d168f6910f9f28d62287bb26a2f461eb0f9732df7"
     }
   }
 }

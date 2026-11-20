@@ -12,11 +12,11 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "9ec9cd9a61459a03775267dbf9791d6a2e6465615f7a38707734c872d08a408b"
+      "sha256": "de377e1a0f8f4c86b9d6883180dc178ffd66d60fb6f63eb741c342ac081baa25"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
-      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
+      "sha256": "f13d82a1959f2e1dc570523a0bbc9c17e437f8274192dd1e00328a2d4802ab14"
     },
     "requirements.txt": {
       "source": "requirements.txt",
@@ -32,7 +32,19 @@
     },
     "scripts/image_observations.py": {
       "source": "scripts/image_observations.py",
-      "sha256": "4aa7723609536c5d5210bacf99ae2ff243e5f05d04b19564592f46b664ad2492"
+      "sha256": "020d32b4d93267ff35360b25ef8eb5ab052e283db54fa8beb6b62847d7432f4d"
+    },
+    "scripts/local_model_runtime.py": {
+      "source": "scripts/local_model_runtime.py",
+      "sha256": "cefa25e168b86bf6f5fbfaf8358ddf5ef7b0fcba991eae62202c6093f3d681c7"
+    },
+    "scripts/opencv_probe.py": {
+      "source": "scripts/opencv_probe.py",
+      "sha256": "9364fee09afb0a60ab15c46be5a9abca65b052f81b54b0907a48d2f7d95d8cd1"
+    },
+    "scripts/operation_catalogue.py": {
+      "source": "scripts/operation_catalogue.py",
+      "sha256": "ac4b418e5bc1bb65fa7ff2024d42aac8380354569339f85eab341c2d2dd0632a"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
@@ -48,7 +60,7 @@
     },
     "scripts/raster_text.py": {
       "source": "scripts/raster_text.py",
-      "sha256": "9696663df4b16121c56623220ba510a02599a8774ff022764785044102228658"
+      "sha256": "5cf85bed28e5aaa01b329c7a40c4ca354f37275d4d4fc9af9559d41f4670b9eb"
     },
     "scripts/shape_sketch.py": {
       "source": "scripts/shape_sketch.py",

@@ -1,5 +1,7 @@
 """Read one source-linked dimension crop with caller-supplied local PaddleOCR weights."""
 
+from local_model_runtime import offline_model_libraries
+
 import argparse
 import hashlib
 from importlib.metadata import version
@@ -9,14 +11,16 @@ import time
 
 
 def recognize(raw, bounds, model_dir):
+    offline_model_libraries()
     import cv2
     import numpy as np
-    from paddleocr import TextRecognition
 
     model_dir = Path(model_dir).resolve(strict=True)
     weights = model_dir / "inference.pdiparams"
     with weights.open("rb") as stream:
         model_hash = hashlib.file_digest(stream, "sha256").hexdigest()
+    from paddleocr import TextRecognition
+
     image = cv2.imdecode(
         np.frombuffer(raw, dtype=np.uint8),
         cv2.IMREAD_COLOR | cv2.IMREAD_IGNORE_ORIENTATION,

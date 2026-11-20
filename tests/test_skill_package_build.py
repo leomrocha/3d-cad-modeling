@@ -19,7 +19,7 @@ class CurrentPackages(unittest.TestCase):
         # Runs in ordinary final unittest discovery, without optional CLI inputs.
         self.assertEqual(builder.build(check=True)['result'], 'PASS')
 
-    def test_catalogues_and_source_register_cover_current_tools(self):
+    def test_catalogues_cover_current_tools(self):
         self.assertEqual(builder.check_registrations()['result'], 'PASS')
 
 
@@ -40,6 +40,8 @@ class PackageLifecycle(unittest.TestCase):
             'scripts/component_records.py': 'VALUE = 1\n',
             'scripts/part_index.py': 'VALUE = 1\n',
             'scripts/package_check.py': 'VALUE = 1\n',
+            'scripts/operation_catalogue.py': 'VALUE = 1\n',
+            'scripts/opencv_probe.py': 'VALUE = 1\n',
             'scripts/source_intake.py': 'VALUE = 1\n',
             'scripts/dxf_inspect.py': 'VALUE = 1\n',
             'scripts/raster_text.py': 'VALUE = 1\n',
@@ -81,12 +83,7 @@ class PackageLifecycle(unittest.TestCase):
                 if asset.startswith('references/')]
         refs.append('skills/' + builder.FORMAT + '/references/conversion.md')
         self.write('skills/README.md', '\n'.join('[ref](../' + p + ')' for p in refs))
-        paths += refs
         self.write('skills/cad-ocs-engineering/SKILL.md', '# Fixture skill\n')
-        records = [{'id': 'fixture-' + Path(p).stem, 'local_source_path': p} for p in paths]
-        self.write('research/sources/source-register.json', json.dumps({'sources': records}))
-        self.write('research/sources/source-register.md', '\n'.join(
-            '<a id="' + r['id'] + '"></a>\n\n## ' + r['id'] + ' — Fixture source' for r in records))
 
     def test_translator_owns_new_sources_and_closed_assets(self):
         builder.build()
@@ -205,14 +202,14 @@ class PackageLifecycle(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'differs from canonical'):
                 builder.complete(regenerate=True, cli_root=self.cli, reader_root=self.reader)
 
-    def test_missing_catalogue_and_source_entries_are_reported(self):
+    def test_catalogue_requires_tool_entry_without_a_historical_register(self):
         self.register_fixture()
         self.write('scripts/new_helper.py', 'VALUE = 1\n')
         with self.assertRaisesRegex(ValueError, 'Tool catalogue entry missing'):
             builder.check_registrations()
         self.write('docs/tools.md', (self.root / 'docs/tools.md').read_text() + '\n[new](../scripts/new_helper.py)\n')
-        with self.assertRaisesRegex(ValueError, 'Combined source registration missing'):
-            builder.check_registrations()
+        self.assertEqual(builder.check_registrations()['result'], 'PASS')
+        self.assertFalse((self.root / 'research').exists())
 
     def test_missing_procedure_index_entry_is_reported(self):
         self.register_fixture()

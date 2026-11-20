@@ -5,7 +5,7 @@ description: Inspect DXF entities, raster profiles and dimension leaders, or int
 
 # Inspect drawings and hand-drawn concepts for CAD
 
-Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation. Open the local operation catalogue on first use and after a request to refresh available skills.
 
 Implements the DXF branch of **Inspect source entities, units and drawing contexts (CAD-08-A01)**. Read the existing inspection for the same source hash, space, layer selection and options before executing another inspection.
 
@@ -22,16 +22,13 @@ Hand modeling a part list, relationships, and per-feature dimensions, each citin
 Set `SKILL_ROOT` to this installed skill directory and `SOURCE_ROOT` to the caller-owned drawing directory. Use Python 3.12 on Linux or macOS:
 
 ```sh
-python3 -m venv "$SOURCE_ROOT/drawing-env"
-. "$SOURCE_ROOT/drawing-env/bin/activate"
-python -m pip install -r "$SKILL_ROOT/requirements.txt"
-python "$SKILL_ROOT/scripts/package_check.py"
+"$SELECTED_PYTHON" "$SKILL_ROOT/scripts/package_check.py"
 ```
 
 ## Inputs and command
 
 1. Preserve the exact original DXF path and source identity. Select the required layout explicitly; `Model` is the default. Select layers when the job identifies them. The inspection returns all encountered occurrence IDs with an explicit selection flag.
-2. Use the pinned [native-reader dependencies](requirements.txt), including ezdxf1.4.5. Install them in the selected Python environment. The tool uses ezdxf directly and the existing `component_records.observe_file` helper.
+2. Use the pinned [native-reader dependencies](requirements.txt), including ezdxf1.4.5. Select an existing environment with these modules. The tool uses ezdxf directly and the existing `component_records.observe_file` helper.
 
 ```sh
 python3 \
@@ -61,7 +58,7 @@ python3 \
 
 ## Raster profiles and dimension leaders
 
-Use the original DXF entities for a vector profile. For a raster or mask, select an interpreter using the optional cad-opencv-setup contours probe. Run [raster_features.py](scripts/raster_features.py) SOURCE NEW_OUTPUT --threshold N. Add --dark for dark foreground. Inspect the numbered overlay and hierarchy at source resolution. A stroke has two edges. An occlusion or crossing annotation can join regions or open a hole. Preserve affected samples and request a corrected mask or original vector. Use fit_samples on picked pixels for an open arc or straight edge. Compare line RMS error in pixels against pick uncertainty. The ellipse candidate includes sampled angular span and normalized radial error. Verify residuals, visibility and design evidence before naming a bore.
+Use the original DXF entities for a vector profile. For a raster or mask, select an existing interpreter that passed the contours operation in the local catalogue. Run [raster_features.py](scripts/raster_features.py) SOURCE NEW_OUTPUT --threshold N. Add --dark for dark foreground. Inspect the numbered overlay and hierarchy at source resolution. A stroke has two edges. An occlusion or crossing annotation can join regions or open a hole. Preserve affected samples and request a corrected mask or original vector. Use fit_samples on picked pixels for an open arc or straight edge. Compare line RMS error in pixels against pick uncertainty. The ellipse candidate includes sampled angular span and normalized radial error. Verify residuals, visibility and design evidence before naming a bore.
 
 For one evidenced plane add --controls JSON with source_sha256, pixels, plane_mm, held_pixels, held_mm and limit_mm. Keep a signed part frame, source hash and separately identified control points. Check that held-out points cover the work region. Inspect hole orientation and nominal dimensions against the source. For OCR keep the text region, view and leader endpoint. Use leader_candidates in [image_observations.py](scripts/image_observations.py) with the endpoint and pick tolerance in pixels. Resolve multiple or wrong candidates against the dimension extension lines and name the selected feature in the revision.
 

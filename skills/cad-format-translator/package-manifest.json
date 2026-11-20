@@ -8,7 +8,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "04fde6efa262d37bfae6f9307a3f3c93b2cc741eaf7074274d2d1c99daae1f9b"
+      "sha256": "81e2d90220a2c7e731406985ec6af0de1c071ad923eba682257a9a03c57eb021"
     },
     "fixtures/inventory.json": {
       "source": "fixtures/inventory.json",
@@ -24,7 +24,7 @@
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
-      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
+      "sha256": "f13d82a1959f2e1dc570523a0bbc9c17e437f8274192dd1e00328a2d4802ab14"
     },
     "requirements.txt": {
       "source": "requirements.txt",
@@ -37,6 +37,14 @@
     "scripts/convert.py": {
       "source": "scripts/convert.py",
       "sha256": "3188796a1f15aeec1d07b19ac9159337e828e24a0052f5cc9a09e8318fcfa0cd"
+    },
+    "scripts/opencv_probe.py": {
+      "source": "scripts/opencv_probe.py",
+      "sha256": "9364fee09afb0a60ab15c46be5a9abca65b052f81b54b0907a48d2f7d95d8cd1"
+    },
+    "scripts/operation_catalogue.py": {
+      "source": "scripts/operation_catalogue.py",
+      "sha256": "ac4b418e5bc1bb65fa7ff2024d42aac8380354569339f85eab341c2d2dd0632a"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",

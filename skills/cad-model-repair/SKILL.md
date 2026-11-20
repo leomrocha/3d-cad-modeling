@@ -5,7 +5,7 @@ description: Repair an existing CAD model with generic or duplicate labels, miss
 
 # Repair an existing model's navigation
 
-Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation. Open the local operation catalogue on first use and after a request to refresh available skills.
 
 1. Tell the user that scripts, native derivatives, receipts and before/after views stay in the owning project. Contributions are optional. Hash the original and its dependencies. Record the specific failing user action and capture its starting view. Obtain an unused output path in that same project.
 2. Inspect the actual document, bodies, instances, transforms and native hierarchy. Build a mapping with one row per target occurrence, original native locator, proposed stable identity, parent, readable name, role, layer/group, source and fields to change. Include untouched objects in the baseline. If two equal bodies have no distinguishable source binding, return the two candidates and ask which occurrence gets which assignment. Keep both unchanged until resolved.

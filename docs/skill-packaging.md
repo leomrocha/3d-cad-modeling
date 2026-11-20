@@ -10,7 +10,7 @@ Each skill directory is its installation unit. The skills CLI copies the selecte
 
 5. **CAD format translator:** owns `format_translation/`, its directional inventory example and source fixture. The installed planner runs independently. OpenSCAD and CadQuery are optional conversion runtimes. [User guide](cad-format-translator.md).
 
-The [installation examples](../README.md#installing) select an agent and project/global scope, assign `SKILL_ROOT` to the installed directory, create a Python 3.12 environment and execute the package checker. The skills CLI requires Node.js >=22.20 and npm/npx. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
+The [installation examples](../README.md#installing) select an agent and project/global scope, assign `SKILL_ROOT` to the installed directory, use a selected Python environment and check available operations. The skills CLI requires Node.js >=22.20 and npm/npx. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
 
 ## Maintain the packages
 
@@ -20,11 +20,10 @@ The [installation examples](../README.md#installing) select an agent and project
 4. The [isolated package checks](../tests/test_skill_packages.py) copy dependencies into a temporary Python environment, install skills individually into temporary projects, check local references/imports/commands and exercise source-intake and DXF fixtures. Telemetry is disabled. Set a caller-selected `OCS_DESCRIPTOR` for the additional read-only OCS state check. Completion always requires the isolated package checks; live state access is conditional on that descriptor.
 5. Commit canonical changes and generated copies/manifests in the same authorized batch, preserving unrelated work. `--check` remains a lightweight synchronisation check. For a historical comparison, `--committed --check` reads both the script inventory and bytes from local Git HEAD. Completion modes validate current sources and reject `--committed`.
 
-### Required catalogue and source registration
+### Tool index and attribution
 
-1. Add a readable helper entry to [docs/tools.md](tools.md), and index each procedure referenced by the CAD skill in [skills/README.md](../skills/README.md).
-2. Record original source locators, titles, summaries, dates, evidence status, hashes and referring documents in an attributed JSON file under `research/sources/`. Merge that file into both combined source indexes using `python3 research/tools/build_workflow_register.py --date YYYY-MM-DD --source-record research/sources/RECORD.json`. The merge preserves existing source IDs and observations; repeated merges are idempotent. Pass the actual client date explicitly.
-3. The combined register retains the input-document list. Future full register builds replay those documents. `--finalize` and `--verify` check helper catalogue coverage, procedure-index coverage, source coverage and whether both combined source indexes include the latest observations from those documents. Register omissions fail completion.
+1. Add each helper to [docs/tools.md](tools.md) and each main CAD procedure to [skills/README.md](../skills/README.md).
+2. Keep required licences, notices and source links with the distributed code. Runtime availability belongs in the user’s local catalogue. Git preserves implementation history.
 
 ## Runtime ownership
 
@@ -36,16 +35,16 @@ Package and dependency checks establish software execution and retained bytes. C
 
 1. `drawing-inspection` is now `cad-drawing-inspection`; `source-intake` is now `cad-source-intake`. Installation commands use the CAD-prefixed names.
 2. An existing old-name installation remains its own local copy. Install the new skill by its current name; review and remove an old local copy separately when migrating that environment.
-3. Historical source locators retain their original values. Added current locators and the [rename record](../execution/skill-renaming-2026-11-13.md) identify the moved packages.
+3. Historical source locators retain their original values. Added current locators and the rename record (`git show 957691b:execution/skill-renaming-2026-11-13.md`) identify the moved packages.
 
 ## Complete OCS engineering merge
 
 1. `cad-ocs-engineering` combines the full original OCS engineering skill and this repository’s component workflow. Both workflows are merged directly into its main `SKILL.md`.
 2. The package retains the component procedures, generic helpers, tests and source checks developed here. It also includes the original OCS control, computational-engineering and capability references and adapted agent metadata.
-3. The former `component-cad` package is now `cad-ocs-engineering`. [Merge inventory and verification](../execution/cad-ocs-engineering-merge-2026-11-13.md).
+3. The former `component-cad` package is now `cad-ocs-engineering`. Merge inventory and verification (`git show 957691b:execution/cad-ocs-engineering-merge-2026-11-13.md`).
 
 The dated merge comparison can be rechecked with `VERIFY_OCS_MERGE_SNAPSHOT=1 python -m unittest discover -s tests -p test_ocs_skill_merge.py`. It validates the retained snapshot; ordinary component improvements keep their own current checks and evidence.
 
 ## Translator ownership
 
-Canonical translator-only helpers live in `translator/`. The builder explicitly includes each module and bundled asset in the fourth package. Register an added module in the builder, installed checker, tools catalogue and source indexes. Validate in an empty Python environment; the package checks modified, missing and unexpected assets. Existing OCS, drawing inspection and intake distributions keep their original contents.
+Canonical translator-only helpers live in `translator/`. The builder explicitly includes each module and bundled asset in the fourth package. Register an added module in the builder, installed checker, tools catalogue and any applicable distribution notices. Validate in an empty Python environment; the package checks modified, missing and unexpected assets. Existing OCS, drawing inspection and intake distributions keep their original contents.

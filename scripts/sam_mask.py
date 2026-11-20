@@ -1,5 +1,7 @@
 """Run a local Transformers SAM checkpoint for one prompted source-image instance."""
 
+from local_model_runtime import offline_model_libraries
+
 import argparse
 import hashlib
 import io
@@ -14,6 +16,7 @@ def digest(raw):
 
 
 def predict(source, model_dir, prompt, parent=None, threads=2):
+    offline_model_libraries()
     import torch
     import transformers
     from PIL import Image

@@ -2,32 +2,59 @@
 
 import argparse
 import hashlib
+import io
 import json
 from pathlib import Path
 
 
+def _warp_mask_numpy(mask, h, width, height):
+    """Nearest-neighbour sampling in source pixel coordinates, with zero background."""
+    import numpy as np
+
+    inverse = np.linalg.inv(h)
+    mapped = np.zeros((height, width), dtype=np.uint8)
+    xs = np.arange(width)
+    for top in range(0, height, 128):
+        ys = np.arange(top, min(top + 128, height))[:, None]
+        w = inverse[2, 0] * xs + inverse[2, 1] * ys + inverse[2, 2]
+        with np.errstate(divide="ignore", invalid="ignore"):
+            mx = np.rint((inverse[0, 0] * xs + inverse[0, 1] * ys + inverse[0, 2]) / w)
+            my = np.rint((inverse[1, 0] * xs + inverse[1, 1] * ys + inverse[1, 2]) / w)
+        inside = (mx >= 0) & (my >= 0) & (mx < mask.shape[1]) & (my < mask.shape[0])
+        mapped[top:top + len(ys)][inside] = mask[my[inside].astype(int), mx[inside].astype(int)]
+    return mapped
+
+
 def normalize(raw, receipt):
-    import cv2
+    try:
+        import cv2
+    except (ImportError, OSError):
+        cv2 = None
+        from PIL import Image, ImageDraw
+
     import numpy as np
     from raster_features import projection
 
     sha = hashlib.sha256(raw).hexdigest()
     if receipt["source_sha256"] != sha:
         raise ValueError("Response references another image revision")
-    gray = cv2.imdecode(
-        np.frombuffer(raw, np.uint8),
-        cv2.IMREAD_GRAYSCALE | cv2.IMREAD_IGNORE_ORIENTATION,
-    )
-    if gray is None:
-        raise ValueError("Invalid original image")
+    if cv2 is None:
+        with Image.open(io.BytesIO(raw)) as image:
+            overlay = image.convert("L").convert("RGB")
+        width, height = overlay.size
+    else:
+        gray = cv2.imdecode(np.frombuffer(raw, np.uint8),
+                            cv2.IMREAD_GRAYSCALE | cv2.IMREAD_IGNORE_ORIENTATION)
+        if gray is None:
+            raise ValueError("Invalid original image")
+        height, width = gray.shape
+        overlay = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
     h = np.array(receipt["source_from_provider"], dtype=float)
     if h.shape != (3, 3) or not np.isfinite(h).all() or np.linalg.matrix_rank(h) != 3:
         raise ValueError("Invalid provider frame")
     size = receipt["provider_size_px"]
     if len(size) != 2 or any(type(i) != int or i < 1 for i in size):
         raise ValueError("Invalid provider size")
-    height, width = gray.shape
-    overlay = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
     items, ids = [], set()
     for instance in receipt["instances"]:
         key, kind = instance["id"], instance["kind"]
@@ -39,11 +66,15 @@ def normalize(raw, receipt):
             mask = np.asarray(instance["mask"])
             if mask.shape != tuple(reversed(size)) or not np.isin(mask, [0, 1]).all():
                 raise ValueError("Expected binary mask in declared provider frame")
-            mapped = cv2.warpPerspective(
-                mask.astype(np.uint8), h, (width, height), flags=cv2.INTER_NEAREST
-            )
+            if cv2 is None:
+                mapped = _warp_mask_numpy(mask, h, width, height)
+                overlay.paste((0, 170, 0), mask=Image.fromarray(mapped * 255))
+            else:
+                mapped = cv2.warpPerspective(
+                    mask.astype(np.uint8), h, (width, height), flags=cv2.INTER_NEAREST
+                )
+                overlay[mapped != 0] = (0, 170, 0)
             row["mask"] = mapped.tolist()
-            overlay[mapped != 0] = (0, 170, 0)
         elif kind in ("box", "polygon", "point", "text"):
             points = np.asarray(instance["points"], dtype=float)
             if (
@@ -58,13 +89,25 @@ def normalize(raw, receipt):
             row["points_px"] = mapped.tolist()
             if kind == "text":
                 row["text"] = instance["text"]
-            cv2.polylines(
-                overlay, [np.int32(np.rint(mapped))], kind != "point", (0, 0, 255), 1
-            )
-            cv2.circle(overlay, tuple(np.int32(np.rint(mapped[0]))), 1, (255, 0, 0), -1)
+            pixels = np.int32(np.rint(mapped))
+            if cv2 is None:
+                draw = ImageDraw.Draw(overlay)
+                points = [tuple(point) for point in pixels.tolist()]
+                if kind != "point":
+                    draw.line([*points, points[0]], fill=(255, 0, 0))
+                draw.point(points[0], fill=(0, 0, 255))
+            else:
+                cv2.polylines(overlay, [pixels], kind != "point", (0, 0, 255), 1)
+                cv2.circle(overlay, tuple(pixels[0]), 1, (255, 0, 0), -1)
         else:
             raise ValueError("Unsupported observation: " + kind)
         items.append(row)
+    if cv2 is None:
+        stream = io.BytesIO()
+        overlay.save(stream, format="PNG")
+        overlay_bytes = stream.getvalue()
+    else:
+        overlay_bytes = cv2.imencode(".png", overlay)[1].tobytes()
     return dict(
         source_sha256=sha,
         size_px=[width, height],
@@ -72,7 +115,7 @@ def normalize(raw, receipt):
         provider=receipt["provider"],
         source_from_provider=h.tolist(),
         parent_response_sha256=receipt.get("parent_response_sha256"),
-    ), cv2.imencode(".png", overlay)[1].tobytes()
+    ), overlay_bytes
 
 
 def leader_candidates(end_px, features, tolerance_px):

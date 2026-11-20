@@ -8,7 +8,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "075496e528a0b1de346422e6b3f9c46de4ec2781fc8a0d0399324db60d2eeacc"
+      "sha256": "305e823f63ddd4f5a700fe865854edd6f93a58568d267646a135d7c17ce69ae3"
     },
     "fixtures/plate.scad": {
       "source": "fixtures/plate.scad",
@@ -32,7 +32,7 @@
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
-      "sha256": "e10acd349c90369bc51fa11c09f2ec4a67b561450a4ad9a15661be66c1171fc8"
+      "sha256": "f13d82a1959f2e1dc570523a0bbc9c17e437f8274192dd1e00328a2d4802ab14"
     },
     "references/operations.md": {
       "source": "references/operations.md",
@@ -46,9 +46,17 @@
       "source": "scripts/bore_check.py",
       "sha256": "4dd55bae43623fac53f61a2f04c171e4a88faf2ea667364ea27523afa74e8db8"
     },
+    "scripts/opencv_probe.py": {
+      "source": "scripts/opencv_probe.py",
+      "sha256": "9364fee09afb0a60ab15c46be5a9abca65b052f81b54b0907a48d2f7d95d8cd1"
+    },
+    "scripts/operation_catalogue.py": {
+      "source": "scripts/operation_catalogue.py",
+      "sha256": "ac4b418e5bc1bb65fa7ff2024d42aac8380354569339f85eab341c2d2dd0632a"
+    },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
-      "sha256": "9cd4848977d4a0d9b3a3de8ec3c36c7adf8d69b3ac7907acf3886c2a229fef1b"
+      "sha256": "b495aab0546aafb3dbbb1f11ea4c6119e3aafc42d443e13f83def84e8b6b7281"
     },
     "scripts/state.py": {
       "source": "scripts/state.py",

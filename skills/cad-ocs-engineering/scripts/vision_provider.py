@@ -11,8 +11,9 @@ from pathlib import Path
 import re
 import time
 from urllib.error import HTTPError
-from urllib.parse import urlencode, urlsplit, urlunsplit
-from urllib.request import HTTPRedirectHandler, Request, build_opener
+from urllib.parse import urlencode, urlunsplit
+from urllib.request import HTTPRedirectHandler, ProxyHandler, Request, build_opener
+from local_model_runtime import inference_endpoint, offline_model_libraries
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 IDENTITY = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
@@ -228,9 +229,37 @@ class _NoRedirect(HTTPRedirectHandler):
         raise ValueError("Use the selected deployment's final endpoint URL")
 
 
+def local_yolo_response(source, checkpoint):
+    """Run an existing Ultralytics checkpoint and use the same rows as a YOLO server."""
+    checkpoint = Path(checkpoint).resolve(strict=True)
+    if not checkpoint.is_file() or checkpoint.suffix.lower() != ".pt":
+        raise ValueError("Select an existing local YOLO .pt checkpoint")
+    offline_model_libraries()
+    os.environ.update(YOLO_OFFLINE="true", YOLO_AUTOINSTALL="false")
+    from PIL import Image
+    from ultralytics import YOLO
+    from ultralytics.utils.checks import check_yolov5u_filename
+
+    selected = check_yolov5u_filename(str(checkpoint), verbose=False)
+    if selected != str(checkpoint):
+        raise ValueError(
+            "The YOLO runtime maps this filename to a different checkpoint"
+        )
+    model = YOLO(str(checkpoint))
+    if model.task not in ("detect", "segment"):
+        raise ValueError("Select a YOLO detection or segmentation checkpoint")
+    with Image.open(source) as image:
+        (result,) = model.predict(image.convert("RGB"), device="cpu", verbose=False)
+    return json.dumps(result.summary(normalize=False, decimals=4)).encode()
+
+
 def run(source, config, output, saved=None, timeout=120):
+    import numpy  # Source-frame normalization uses NumPy.
     from PIL import Image
     from image_observations import normalize
+
+    if config.get("format") == "moondream":
+        import cairosvg
 
     if output.exists():
         raise FileExistsError(output)
@@ -247,21 +276,24 @@ def run(source, config, output, saved=None, timeout=120):
         output.mkdir(parents=True, exist_ok=False)
         original = saved.read_bytes()
         elapsed = None
+    elif "local_checkpoint" in config:
+        if (
+            config.get("url")
+            or config.get("format") != "yolo"
+            or config.get("coordinate_units") != "pixels"
+        ):
+            raise ValueError("Local YOLO requires format yolo and pixel coordinates")
+        if config.get("source_sha256", source_hash) != source_hash:
+            raise ValueError("The configured image revision has changed")
+        start = time.monotonic()
+        original = local_yolo_response(io.BytesIO(raw), config["local_checkpoint"])
+        elapsed = time.monotonic() - start
+        output.mkdir(parents=True, exist_ok=False)
     else:
         if config.get("source_sha256", source_hash) != source_hash:
             raise ValueError("The configured image revision has changed")
-        url = config["url"]
-        parsed = urlsplit(url)
-        if (
-            parsed.scheme not in ("http", "https")
-            or not parsed.hostname
-            or parsed.username is not None
-            or parsed.password is not None
-            or parsed.fragment
-        ):
-            raise ValueError(
-                "Provide an HTTP(S) endpoint without userinfo or a fragment"
-            )
+        parsed = inference_endpoint(config["url"])
+        url = urlunsplit(parsed)
         headers = {"Content-Type": "application/json", "Accept": "application/json"}
         if "auth" in config:
             auth = config["auth"]
@@ -287,7 +319,9 @@ def run(source, config, output, saved=None, timeout=120):
         output.mkdir(parents=True, exist_ok=False)
         start = time.monotonic()
         try:
-            with build_opener(_NoRedirect).open(request, timeout=timeout) as connection:
+            with build_opener(ProxyHandler({}), _NoRedirect).open(
+                request, timeout=timeout
+            ) as connection:
                 original = connection.read(64 * 1024 * 1024 + 1)
         except HTTPError as error:
             raise ValueError(f"Vision endpoint returned HTTP {error.code}") from None
@@ -313,6 +347,8 @@ def run(source, config, output, saved=None, timeout=120):
     receipt["response_sha256"] = hashlib.sha256(original).hexdigest()
     receipt["request_seconds"] = elapsed
     receipt["mode"] = "response file" if saved else "HTTP POST"
+    if not saved and "local_checkpoint" in config:
+        receipt["mode"] = "local YOLO"
     receipt["format"] = config["format"]
     receipt["response_path"] = config.get("response_path", [])
     normalized["response_sha256"] = receipt["response_sha256"]

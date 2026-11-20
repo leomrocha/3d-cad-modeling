@@ -5,7 +5,7 @@ description: Create, inspect and revise native engineering geometry in OpenCADSt
 
 # CAD OCS Engineering
 
-Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation. Open the local operation catalogue on first use and after a request to refresh available skills.
 
 Use the bundled native-control, geometry and verification helpers. Supply component inputs and output locations through the caller's job. Keep detailed solids, reconstructed shapes and clearance envelopes explicitly labeled.
 
@@ -22,10 +22,7 @@ Proceed with the authorized modeling work. Ask about participation at completion
 Use Python 3.12 on Linux or macOS, the pinned requirements.txt dependencies and an already-running OpenCADStudio native-control session. SKILL_ROOT identifies this installed directory. All helper and procedure links resolve within this package.
 
 ```sh
-python3 -m venv "$JOB_ROOT/cad-env"
-. "$JOB_ROOT/cad-env/bin/activate"
-python -m pip install -r "$SKILL_ROOT/requirements.txt"
-python "$SKILL_ROOT/scripts/package_check.py"
+"$SELECTED_PYTHON" "$SKILL_ROOT/scripts/package_check.py"
 ```
 
 Select the existing session explicitly with --session SESSION or --descriptor DESCRIPTOR_JSON where supported. Read [runtime and recovery](references/ocs-runtime.md), [native control](references/ocs-control.md) and [caller paths](references/paths.md) before connection. Keep session credentials private.

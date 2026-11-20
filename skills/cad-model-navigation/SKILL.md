@@ -5,7 +5,7 @@ description: Create CAD parts and assemblies that users can find by name, role o
 
 # Create navigable CAD models
 
-Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
+Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation. Open the local operation catalogue on first use and after a request to refresh available skills.
 
 1. Tell the user that reusable scripts, assignments, model revisions and evidence stay in the local project. They may opt to contribute generic improvements later. Reconcile existing models and source evidence before building anything.
 2. Establish a definition ID for each distinct part and an occurrence ID for each installation. Give retained items readable labels, roles, parents, native layers or groups and useful tags. Two copies of one fastener share a definition and have separate occurrences. Bind a finish, display colour and physical material individually to the source and scope (definition, instance or face). Keep unknown material empty. If sources do not identify the owner of an assignment, ask before writing it.

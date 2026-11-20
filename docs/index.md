@@ -191,7 +191,7 @@ I would directly ASK the AI agent you are using to install this and make it avai
 
 For example:
 
-> Install the skills from leomrocha/3d-cad-modeling for this project, set up their Python dependencies and run the package checks. Use the installed skills for my modeling requests.
+> Install the skills from leomrocha/3d-cad-modeling for this project, ask which installed tools and services to use, and check which operations they support. Use the installed skills for my modeling requests.
 
 #### Use the skills with your agent
 
@@ -205,7 +205,7 @@ For example:
 #### Prerequisites
 
 1. Node.js **22.20 or later**, with npm and npx, for the [skills CLI](https://github.com/vercel-labs/skills).
-2. Python **3.12** on Linux or macOS, including the `venv` module and pip, for the packaged helpers.
+2. Python **3.12** on Linux or macOS, with the existing dependencies for the selected operation.
 3. A running [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) session for CAD operations.
 
 Check the command versions:
@@ -256,16 +256,12 @@ test -f "$SKILL_ROOT/SKILL.md"
 
 #### Set up and check the selected package
 
-Continue in the same shell after one of the installation examples, retaining its `SKILL_NAME` and `SKILL_ROOT` assignments. Each package carries its scripts, instructions, dependency file and license. This creates a separate Python environment for the selected skill:
+Keep `SKILL_ROOT` set to the installed directory. Use an existing Python environment.
 
-```sh
-python3.12 -m venv "$HOME/.venvs/3d-cad-modeling/$SKILL_NAME"
-. "$HOME/.venvs/3d-cad-modeling/$SKILL_NAME/bin/activate"
-python -m pip install -r "$SKILL_ROOT/requirements.txt"
-python "$SKILL_ROOT/scripts/package_check.py"
-```
-
-The checker prints JSON with `"result": "PASS"` after checking the packaged file hashes, imports and declared dependency versions. Source intake uses the Python standard library; drawing inspection and CAD use pinned dependencies. Repeat the installation and setup with another `SKILL_NAME` to install another package.
+1. Ask the user which interpreters, tools, local models, parts sources and configured servers the agent may use. Check the operations during setup or on first use.
+2. Show the saved availability catalogue with `python "$SKILL_ROOT/scripts/operation_catalogue.py" show`. Follow the skill’s setup procedure to check the approved resources. If an optional tool is missing, choose another method that produces the requested output.
+3. After changing the available software, ask the agent to **refresh the available skills**. The refresh checks resources without installing software.
+4. OpenCV installation is a separate action. The setup skill explains what it will install and requires a standalone user message explicitly requesting that installation with `EXECUTE`.
 
 Give the agent your source files, job location and output paths. The `cad-ocs-engineering` package includes the OCS engineering workflow, component procedures, OCS control transport, geometry adapter and save/reopen helpers.
 

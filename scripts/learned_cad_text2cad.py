@@ -3,7 +3,7 @@
 import argparse
 import hashlib
 import json
-import os
+from local_model_runtime import offline_model_libraries
 from pathlib import Path
 import subprocess
 import sys
@@ -40,7 +40,6 @@ def infer(args, root):
         raise ValueError(
             "Supply the local google-bert/bert-large-uncased tokenizer and model directory"
         )
-    os.environ.update(HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1")
     import torch
     import yaml
 
@@ -91,6 +90,7 @@ def infer(args, root):
 
 
 def run(args):
+    offline_model_libraries()
     root = checkout(args.checkout)
     if args.mode == "infer":
         record = infer(args, root)
