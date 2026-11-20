@@ -14,7 +14,7 @@ def check(record,job,tolerance=1e-7):
     for name,handle in mapping.items():
         data=bytes(rows[handle]['properties']['acis_data']['sab_data'])
         # The loft has a separate, explicit vertex/topology route. All other
-        # source parts require the strict analytic route exercised previously.
+        # source parts require the strict analytic route.
         if name in job['structure_only_parts']:
             parts[name]=sab_structure(data);methods[name]='body graph and vertices; source-outline visual comparison'
         else:

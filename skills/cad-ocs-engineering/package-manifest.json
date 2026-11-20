@@ -336,7 +336,7 @@
     },
     "scripts/driver_checks.py": {
       "source": "scripts/driver_checks.py",
-      "sha256": "f1c8ec5b6075031048c0724c6eb40b9b69b94343a5f744e6f6000a9d5ef4adcd"
+      "sha256": "4f80b3200a8037512940b204631644fc4e7775f117bf4963cc986d14db9610aa"
     },
     "scripts/dxf_inspect.py": {
       "source": "scripts/dxf_inspect.py",
