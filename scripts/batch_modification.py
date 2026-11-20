@@ -44,6 +44,39 @@ def solid_difference(a, b):
     return a.cut(b).Volume() + b.cut(a).Volume()
 
 
+def retained_bores(source, saved, selected):
+    """Measure full cylindrical bores outside the selected wall set on both STEP solids."""
+    peers = []
+    for face in source.Faces():
+        if face.geomType() != "CYLINDER":
+            continue
+        rings = [e for e in face.Edges() if e.geomType() == "CIRCLE" and e.IsClosed()]
+        if len(rings) != 2:
+            continue
+        a, b = sorted((r.arcCenter() for r in rings), key=lambda v: v.toTuple())
+        if any(min(math.dist(p, a.toTuple()), math.dist(p, b.toTuple())) < TOL for p in selected):
+            continue
+        found = None
+        for start, finish in ((a, b), (b, a)):
+            delta = finish - start
+            axis = delta.normalized()
+            for end in ("blind", "through"):
+                row = dict(id=f"peer-{len(peers)+1}", xyz=list(start.toTuple()),
+                           value=dict(diameter=2*rings[0].radius(), depth=delta.Length, end=end))
+                try:
+                    before = measure_cut(source, row, axis)
+                except ValueError:
+                    continue
+                # Once a source bore is identified, its saved geometry must match.
+                after = measure_cut(saved, row, axis)
+                found = dict(before=before, after=after)
+                break
+            if found:
+                peers.append(found)
+                break
+    return peers
+
+
 def modify_bores(spec, output):
     import cadquery as cq
 
@@ -112,14 +145,15 @@ def modify_bores(spec, output):
     saved = load_solid(output)
     if solid_difference(saved, shape) > TOL:
         raise ValueError("Reopened host material differs from the reviewed cuts")
+    peers = retained_bores(source, saved, [r["xyz"] for r, _, _ in checked])
     return [
-        dict(before=before, after=measure_cut(saved, row, axis), anchor="entry centre")
+        dict(id=row["id"], before=before, after=measure_cut(saved, row, axis), anchor="entry centre", unselected=peers)
         for row, axis, before in checked
     ]
 
 
-def execute(request, directory):
-    request_bytes = request.read_bytes()
+def execute(request, directory, *, reviewed_bytes=None):
+    request_bytes = request.read_bytes() if reviewed_bytes is None else reviewed_bytes
     contract = sha256(request_bytes).hexdigest()
     spec = json.loads(request_bytes)
     source = (request.parent / spec["model"]).resolve()

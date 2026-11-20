@@ -46,6 +46,35 @@ class ExistingPlacementTests(unittest.TestCase):
         refresh(self.catalogue, self.resources)
         return placement.review(self.request, self.positions, load(self.catalogue))
 
+    def test_delivery_resumes_owning_method_before_an_alternative(self):
+        from batch_delivery import deliver
+        sample = self.directory / "sample"
+        placement.start(self.prepare(), sample, "local-dxf", sample=True)
+        placement.resume(sample)
+        self.method["readback_file"] = "sample/evidence.json"
+        preview = self.prepare()
+        job = self.directory / "job"
+        placement.start(preview, job, "local-dxf", self.catalogue)
+        data = load(self.catalogue)
+        data["resources"].insert(0, dict(data["resources"][0], id="other"))
+        data["operations"].insert(0, dict(data["operations"][0], resource="other"))
+        self.catalogue.write_text(json.dumps(data))
+        request = self.directory / "review.json"
+        request.write_text(preview.document)
+        result = deliver(request, self.catalogue, job)
+        self.assertEqual(result["remaining"], [])
+        self.assertEqual([row["resource"] for row in result["attempts"]], ["local-dxf"])
+
+    def test_thick_line_rejected_for_projected_edges(self):
+        from batch_delivery import measure_row
+        doc = ezdxf.readfile(self.source)
+        edge = doc.modelspace().add_line((0,0),(100,0))
+        list(doc.blocks["Bar"])[0].dxf.thickness = 3
+        spec = self.prepare().read()
+        spec["row_check"] = {"line": edge.dxf.handle}
+        with self.assertRaisesRegex(ValueError, "Row edge offsets"):
+            measure_row(spec, doc, planned=True)
+
     def test_nested_row_resume_without_repeated_move(self):
         sample = self.directory / "sample"
         placement.start(self.prepare(), sample, "local-dxf", sample=True)

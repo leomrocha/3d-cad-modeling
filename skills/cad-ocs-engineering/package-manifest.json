@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "fb2f17fb08bb78fa2e41f3ec08f3d87aaaf3ca4e2b5dcfbe756185e9e111176e"
+      "sha256": "e112a3e11f68e30e7ce2a747f33e67223be4ecc933c21ae5ec33eb30847a18e0"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -41,6 +41,10 @@
     "references/batch-creation.md": {
       "source": "references/batch-creation.md",
       "sha256": "c28768590d33784f6f39d87623ce4b8b2662632cd461b3bbb6bb8832e96d099b"
+    },
+    "references/batch-delivery.md": {
+      "source": "references/batch-delivery.md",
+      "sha256": "effec2814c00eb876b5446deccffede3f74b3f479f25367d8b47bb64f0acaef3"
     },
     "references/batch-modification.md": {
       "source": "references/batch-modification.md",
@@ -300,7 +304,11 @@
     },
     "scripts/batch_creation.py": {
       "source": "scripts/batch_creation.py",
-      "sha256": "97205b7184f4ad36e88e21f8a0e7f9a93c021f471eb341c48bd6b4238c08d80b"
+      "sha256": "8e363a2ee031700de73f5c7af0a10a86836d8e590e5e7424c503eebc503f2d79"
+    },
+    "scripts/batch_delivery.py": {
+      "source": "scripts/batch_delivery.py",
+      "sha256": "22a2f73119c0a64a528e8d4c1516abbad0d7fdeeff5541080691769366253818"
     },
     "scripts/batch_dxf_frames.py": {
       "source": "scripts/batch_dxf_frames.py",
@@ -312,11 +320,11 @@
     },
     "scripts/batch_dxf_lines.py": {
       "source": "scripts/batch_dxf_lines.py",
-      "sha256": "c03a00644ea54fcc8aff0c604daa5be735f7cbf5b6050f648cf1defd5d50b1a3"
+      "sha256": "cabcc001e11b7bcdc99890e0b140ac1da275fa0213b4f2b8a31ad6948782c652"
     },
     "scripts/batch_dxf_placement.py": {
       "source": "scripts/batch_dxf_placement.py",
-      "sha256": "ef5600268fa821f1f038a3700ac2d2b9900988431369b9e9b02b3a70cbbc4591"
+      "sha256": "c47c2d7674ac78465ea418c3ffa2a1e910d265a46e74540b8a3624125da2ac82"
     },
     "scripts/batch_insert_recovery.py": {
       "source": "scripts/batch_insert_recovery.py",
@@ -324,7 +332,7 @@
     },
     "scripts/batch_modification.py": {
       "source": "scripts/batch_modification.py",
-      "sha256": "4307d6b52720deeb283fb166a3e26e8544bb0b989cc33334de2806d6fb9933fb"
+      "sha256": "3aff4a97bfe0d517348cf5871d49f6682d81ce6e33eeed407981dffd9dacb6c1"
     },
     "scripts/batch_replacement.py": {
       "source": "scripts/batch_replacement.py",
@@ -332,7 +340,11 @@
     },
     "scripts/batch_request.py": {
       "source": "scripts/batch_request.py",
-      "sha256": "f243c11b4db3703a23d69d181eee829043cae1781263916dd3be5b7d19f3d624"
+      "sha256": "95acc688d82a360fe8fddbf7dbcef1b1a0a278c827bd3388eb5c42fb0a0f11bd"
+    },
+    "scripts/batch_sample_readback.py": {
+      "source": "scripts/batch_sample_readback.py",
+      "sha256": "aaa46a27db24543ec08bb9777fff1db9c47a590fd31c21874ed8d22dec26c448"
     },
     "scripts/batch_selection.py": {
       "source": "scripts/batch_selection.py",
@@ -524,7 +536,7 @@
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "caffdf049941a737042e00d0c0e479598194ad07a19e2b79625d5ab2cba0475a"
+      "sha256": "7cbd08c79dabf138ad80eb0111d0d673be89a316738b242e3834fe65973e42cc"
     },
     "scripts/orthographic_checks.py": {
       "source": "scripts/orthographic_checks.py",

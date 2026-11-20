@@ -65,6 +65,10 @@ def review(request, positions, catalogue):
             raise ValueError(f"Position and frame origins differ for {position_id}")
         values[target] = {"world_frame": matrix}
     data = prepare(dict(request, values=values), catalogue).read()
+    if "row_check" in request:
+        data["row_check"] = request["row_check"]
+    if "relationship" in request:
+        data["relationship"] = request["relationship"]
     if "order_by" in request:
         data["order_by"] = request["order_by"]
     for row in data["rows"]:
@@ -102,6 +106,8 @@ def start(preview, directory, resource, catalogue=None, *, sample=False):
     data = preview.read()
     if (data["action"], data["entity"], data["output"]) != ("place", INPUT, OUTPUT):
         raise ValueError("Expected an existing-occurrence placement review")
+    if data.get("relationship", "individual") != "individual":
+        raise ValueError("Select a native editable pattern provider")
     source = Path(data["model"]).resolve()
     if file_digest(source) != data["revision"]:
         raise ValueError("Source revision changed")
@@ -134,6 +140,8 @@ def start(preview, directory, resource, catalogue=None, *, sample=False):
                                      request_id=namespace + ":" + r["target"]) for r in rows}
         plan = dict(source=str(source), source_sha256=data["revision"], unit=unit, version=doc.dxfversion, job_id=namespace,
                     sample=sample, resource=resource, expected=targets)
+        if "row_check" in data:
+            plan["row_check"] = data["row_check"]
         atomic_json(job / "plan.json", plan)
         atomic_json(job / "review.json", {"plan_sha256": file_digest(job / "plan.json")})
         atomic_json(job / "results.json", {k: {"status": "pending"} for k in targets})

@@ -26,6 +26,10 @@
 21. [batch_xcaf_bars.py](../scripts/batch_xcaf_bars.py) isolates selected XCAF occurrence paths, resizes plain rectangular bars about a fixed anchor and edits occurrence names.
 22. [batch_replacement.py](../scripts/batch_replacement.py) replaces selected XCAF leaf definitions with a catalogue-selected STEP solid and aligns measured rectangular keyed seats. [Batch replacement procedure](../skills/cad-ocs-engineering/references/batch-replacement.md).
 
+23. [batch_delivery.py](../scripts/batch_delivery.py) runs qualified batch writers and reports measured results and remaining targets. [Batch delivery procedure](../skills/cad-ocs-engineering/references/batch-delivery.md).
+
+24. [batch_sample_readback.py](../scripts/batch_sample_readback.py) reopens the source and saved CAD sample to verify the registered method changed the requested geometry or property.
+
 The [reusable integration procedure](../skills/cad-ocs-engineering/references/generic-integration.md) defines inputs, outputs, units, representation limits and recovery conditions. Component data remains caller supplied.
 
 ## Software

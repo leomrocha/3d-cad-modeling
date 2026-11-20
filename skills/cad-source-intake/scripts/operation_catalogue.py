@@ -243,7 +243,7 @@ def bound_path(base, record, field):
     return path
 
 
-def verify_receipts(row, resource, path):
+def verify_receipts(row, resource, path, *, require_change=True):
     """Validate the actual writer and independent readback records for one sample."""
     evidence = receipt_object(read(path), "evidence")
     base = path.parent
@@ -267,7 +267,7 @@ def verify_receipts(row, resource, path):
         raise ValueError("Specify a separate readback ID")
     source = bound_path(writer_path.parent, writer, "source")
     result = bound_path(writer_path.parent, writer, "result")
-    if writer["source_sha256"] == writer["result_sha256"]:
+    if require_change and writer["source_sha256"] == writer["result_sha256"]:
         raise ValueError("Sample edit must change the source revision")
     if bound_path(reader_path.parent, reader, "result") != result:
         raise ValueError("Readback belongs to another model")
@@ -281,7 +281,7 @@ def verify_receipts(row, resource, path):
         raise ValueError("Readback target set differs from the operation")
     if writer["backend"].startswith("ezdxf/") and row["input"] == "DXF LINE":
         from batch_dxf_lines import verify_sample
-        verify_sample(source, result, writer, expected)
+        verify_sample(source, result, writer, expected, require_change=require_change)
         from batch_dxf_lines import drawing, line, measured
         saved = drawing(result, writer["unit"])
         for target, props in observed.items():
@@ -291,12 +291,38 @@ def verify_receipts(row, resource, path):
                 raise ValueError("Readback differs from saved DXF geometry")
     elif writer["backend"].startswith("ezdxf/") and row["input"] == "DXF INSERT":
         from batch_dxf_frames import verify_result
-        actual = verify_result(source, result, writer, require_change=True)
+        actual = verify_result(source, result, writer, require_change=require_change)
         if actual != observed:
             raise ValueError("Readback differs from reopened occurrence frames")
     else:
         raise ValueError("No backend artifact verification for this operation")
     return file_digest(path)
+
+
+def verify_method(row, resource, evidence_path, *, replay=False):
+    method = next(m for m in resource["methods"] if m["name"] == row["name"])
+    if method.get("sample_request"):
+        # An approved engineering installation owns this verifier and its CAD dependencies.
+        location = require_path(resource["location"], file=True)
+        expected_writer = "batch_creation.py" if row["action"] == "create" else "batch_modification.py"
+        if not location.is_absolute() or location.name != expected_writer:
+            raise ValueError("Specify the absolute installed engineering writer")
+        helper = selected_script({"scripts": str(location.resolve().parent)}, "batch_delivery.py")
+        interpreter = require_path(resource.get("python", sys.executable), file=True)
+        if not interpreter.is_absolute() or helper.resolve().parent != location.resolve().parent:
+            raise ValueError("Specify the approved local interpreter and writer installation")
+        result = subprocess.run(
+            [str(interpreter), "-E", "-s", "-B", str(helper), "verify-sample"],
+            input=json.dumps([row, resource, str(evidence_path)]), text=True, capture_output=True,
+            env=dict(os.environ, PYTHONNOUSERSITE="1", PIP_NO_INDEX="1", HF_HUB_OFFLINE="1"),
+        )
+        if result.returncode:
+            raise ValueError(result.stderr.strip() or "Engineering sample verification failed")
+        digest = json.loads(result.stdout)["sha256"]
+        if digest != file_digest(evidence_path):
+            raise ValueError("Sample manifest changed during qualification")
+        return digest
+    return verify_receipts(row, resource, evidence_path)
 
 
 def refresh(path, resources, *, resource_base=None):
@@ -349,7 +375,9 @@ def refresh(path, resources, *, resource_base=None):
                     if not method.get("readback_file"):
                         raise ValueError("Operation needs sample execution and readback")
                     evidence_path = Path(method["readback_file"])
-                    digest = verify_receipts(row, resource, evidence_path)
+                    if method.get("sample_request"):
+                        method["sample_request"] = str(((resource_base or path.parent) / method["sample_request"]).resolve())
+                    digest = verify_method(row, resource, evidence_path, replay=True)
                     row.update(readback_verified=True, readback_file=str(evidence_path), evidence_sha256=digest, backend=resource["backend"])
                 row["usable"] = True
             except (OSError, ValueError, KeyError, TypeError, ImportError, subprocess.SubprocessError) as exc:

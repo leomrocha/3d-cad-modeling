@@ -1,0 +1,22 @@
+# Deliver a batch using local methods
+
+1. Resolve the action, selected native entities, model revision, output and required relationships. Use the action procedures to review the source geometry and prepare the request. For existing occurrences, use the placement preview. For creation, modification or replacement, use the reviewed writer request. Keep its SHA-256.
+2. Read the saved local operation catalogue. For the creation and modification helpers, qualify a method on an owned sample using the same operation as the job. Set the method’s `sample_request` to the original sample request and `readback_file` to its published `manifest.json`. Use `probe: guided`, the installed helper as the resource location, and the installed backend version (ezdxf for circles, CadQuery for the solid and assembly helpers). Set the resource’s `python` to the approved local CAD interpreter. Refresh runs the engineering verifier beside the registered writer. It reopens the saved source and result, measures the affected properties and checks the sample manifest. Existing DXF placement uses its separate operation and readback receipts.
+3. Use the following catalogue fields. The optional method field `reuse` orders candidates as `unchanged`, `parameter`, `script`, then `guided`. Register a method only for the entity and output it exercises.
+
+| Operation | Action | Input | Output |
+|---|---|---|---|
+| move-existing-insert | place | DXF INSERT | existing occurrence world base frame |
+| resize-line | modify | DXF LINE | line length from fixed start |
+| circle | create | planar positions | DXF circles |
+| cut | create | solid host | STEP cylindrical cuts |
+| occurrence | create | catalogue part | XCAF shared occurrences |
+| bar length | modify | rectangular XCAF bar | anchored bar length |
+| bore diameter | modify | reviewed cylindrical bore | anchored bore diameter |
+| occurrence name | modify | XCAF occurrence | occurrence name |
+| replace occurrence | replace | keyed XCAF occurrence | seated catalogue occurrence |
+
+4. Run `python scripts/batch_delivery.py REQUEST.json JOB --catalogue OPERATIONS.json --request-sha256 DIGEST`. Use one owned job directory. The result reports each attempted method, completed and remaining target IDs and the saved measurements. The individual move adapter preserves the existing occurrence handles. Creation of shared occurrences uses the indexed definition. The bore adapter verifies its supported source and feature contract before changing geometry.
+5. For a row of straight-edged DXF profiles, include `row_check` in the placement request. Set `line` to the modelspace LINE handle running from the first limit to the last limit. Set `first_offset` and `last_offset` to the edge margins projected on that line, in drawing units. Supply `pitches` for adjacent block-base projections and `clear_gaps` for adjacent profile edge projections, in position order. The helper checks the reviewed frames before writing and measures the reopened frames and projected profile edges. The edge reader supports LINE and straight zero-width LWPOLYLINE geometry in the selected block.
+6. After an interrupted move, rerun the reviewed request in the original job directory. The move journal binds each target to its request ID. Read the saved frame and reconcile the last attempted move before changing each remaining occurrence. For unpublished creation, modification and replacement outputs the atomic writer can try another qualified method. A published result requires reconciliation with its request and readback.
+7. When a required native relationship has no installed writer, inspect the selected native editor and its saved catalogue sample. For an editable array, select the indexed definition or the indicated existing occurrences as the request requires, define the native pattern axis, count, first station and spacing rule, and save an owned copy. Reopen, inspect the pattern driver, measure member count, positions, axes and gaps, then change the driver on an owned sample and verify that the members follow. For a dimension, identify the writable driving parameter and constrained anchor, apply the requested value and reopen to measure the selected feature and a retained feature. Record the actual provider, native entity IDs, affected targets and measured results. If the selected editor has no qualified method, report the remaining IDs and the exact unavailable operation.

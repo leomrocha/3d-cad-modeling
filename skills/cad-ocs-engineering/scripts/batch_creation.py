@@ -357,8 +357,8 @@ def occurrences(spec, rows, normal, path):
     return results
 
 
-def execute(request, directory):
-    request_bytes = request.read_bytes()
+def execute(request, directory, *, reviewed_bytes=None):
+    request_bytes = request.read_bytes() if reviewed_bytes is None else reviewed_bytes
     contract = sha256(request_bytes).hexdigest()
     spec = json.loads(request_bytes)
     source = (request.parent / spec["model"]).resolve()

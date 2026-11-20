@@ -88,6 +88,45 @@ class BatchModificationTests(unittest.TestCase):
             if e.geomType() == "CIRCLE" and abs(e.arcCenter().z - 5) < 1e-6
         )
         self.assertEqual(radii, [(5, 2), (15, 2), (25, 1)])
+        for row in receipt["elements"]:
+            self.assertEqual(len(row["unselected"]), 1)
+            peer = row["unselected"][0]
+            self.assertEqual(peer["before"], peer["after"])
+            self.assertEqual(peer["after"]["diameter"], 2)
+            self.assertEqual(peer["after"]["entry"][0], 25)
+        import batch_modification
+        from batch_delivery import CONTRACTS, provider, verify_job_sample
+        from operation_catalogue import verify_method
+        action, entity, output = CONTRACTS["bore diameter"]
+        method = dict(name="resize", sample_request=str(self.request))
+        resource = dict(location=batch_modification.__file__, backend=provider("bore diameter"),
+                        methods=[method], python=sys.executable)
+        row = dict(name="resize", action=action, input=entity, output=output)
+        self.assertEqual(verify_method(row,resource,self.job/"manifest.json"),
+                         file_digest(self.job/"manifest.json"))
+        # The standalone catalogue can verify through the approved CAD interpreter without importing the engineering package.
+        import subprocess
+        import shutil
+        import operation_catalogue
+        isolated = self.root / "standalone"
+        isolated.mkdir()
+        shutil.copyfile(operation_catalogue.__file__, isolated / "operation_catalogue.py")
+        probe = isolated / "verify.py"
+        probe.write_text("import sys,json;from pathlib import Path;from operation_catalogue import verify_method;"
+                         "row,resource,sample=json.load(sys.stdin);print(verify_method(row,resource,Path(sample)))")
+        outcome = subprocess.run([sys.executable, "-E", "-s", str(probe)],
+                                 input=json.dumps([row,resource,str(self.job/"manifest.json")]),
+                                 capture_output=True,text=True,check=True)
+        self.assertEqual(outcome.stdout.strip(),file_digest(self.job/"manifest.json"))
+        noop = self.root/"noop"
+        resource["methods"][0]["sample_request"]=str(self.root/"noop-request.json")
+        noop_request=self.root/"noop-request.json"
+        original=json.loads(self.request.read_bytes())
+        original["value"]["diameter"]={"unit":"mm","value":2}
+        noop_request.write_text(json.dumps(original))
+        execute(noop_request,noop)
+        with self.assertRaisesRegex(ValueError,"did not change"):
+            verify_job_sample(row,resource,noop/"manifest.json",replay=False)
         (self.job / "readback.json").write_text("{}")
         with self.assertRaisesRegex(ValueError, "Published"):
             execute(self.request, self.job)

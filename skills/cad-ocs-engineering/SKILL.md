@@ -42,6 +42,10 @@ For ruler photographs or parts dimensioned across several views, follow the [pho
 
 Inspect actual matching models and all manifest, work-record, input-sheet and CAD-index references, including NOT_STARTED entries. Mark matching completed components DONE with their readable names, actual model paths and recorded checks. Reuse that geometry and those checks, then select an unfinished item. Construction starts only after reconciliation establishes that the required matching model is absent. Follow [model inventory](references/existing-model-start-check.md).
 
+### Deliver a batch using local methods
+
+Use the [batch delivery procedure](references/batch-delivery.md) to select qualified placement, creation, modification and replacement methods, recover an interrupted move and measure the reopened row.
+
 ### Prepare a batch of CAD operations
 
 1. Identify the source drawing or model, its revision and model length unit. Specify one action (`create`, `modify`, `replace`, or `place`), entity type and requested output. Use one request per action, entity and output combination. List targets in execution order. Give each element or pattern position its ID, reference (including its host or frame), and current value or placement for existing elements.

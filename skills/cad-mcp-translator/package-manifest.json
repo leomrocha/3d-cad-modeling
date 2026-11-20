@@ -52,11 +52,11 @@
     },
     "scripts/batch_dxf_lines.py": {
       "source": "scripts/batch_dxf_lines.py",
-      "sha256": "c03a00644ea54fcc8aff0c604daa5be735f7cbf5b6050f648cf1defd5d50b1a3"
+      "sha256": "cabcc001e11b7bcdc99890e0b140ac1da275fa0213b4f2b8a31ad6948782c652"
     },
     "scripts/batch_request.py": {
       "source": "scripts/batch_request.py",
-      "sha256": "f243c11b4db3703a23d69d181eee829043cae1781263916dd3be5b7d19f3d624"
+      "sha256": "95acc688d82a360fe8fddbf7dbcef1b1a0a278c827bd3388eb5c42fb0a0f11bd"
     },
     "scripts/batch_selection.py": {
       "source": "scripts/batch_selection.py",
@@ -72,7 +72,7 @@
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "caffdf049941a737042e00d0c0e479598194ad07a19e2b79625d5ab2cba0475a"
+      "sha256": "7cbd08c79dabf138ad80eb0111d0d673be89a316738b242e3834fe65973e42cc"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",

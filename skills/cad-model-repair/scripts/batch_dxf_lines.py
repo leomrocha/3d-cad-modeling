@@ -1,4 +1,5 @@
 """Apply reviewed DXF LINE lengths to a new drawing, preserving each selected start and direction."""
+import hashlib
 import json
 import math
 import ctypes
@@ -139,18 +140,18 @@ def apply(preview, directory, *, resource, catalogue_path=None, sample=False):
     with tempfile.TemporaryDirectory(dir=directory.parent, prefix=".batch-lines-") as temp:
         staged = Path(temp) / "job"
         staged.mkdir()
-        save_result(doc, staged, source, data["revision"], unit, resource, expected, sample)
+        save_result(doc, staged, source, data["revision"], unit, resource, expected, sample, hashlib.sha256(preview.document.encode()).hexdigest())
         publish_directory(staged, directory)
     return directory / "evidence.json"
 
 
-def save_result(doc, directory, source, source_revision, unit, resource, expected, sample):
+def save_result(doc, directory, source, source_revision, unit, resource, expected, sample, preview_sha256):
     result = directory / "result.dxf"
     doc.saveas(result)
     context = dict(resource=resource, name=METHOD, input=INPUT, output=OUTPUT, action="modify",
                    backend=backend(), status="completed", operation_id=uuid4().hex,
                    result=result.name, result_sha256=file_digest(result))
-    writer = dict(**context, source=str(source), source_sha256=source_revision, unit=unit, expected=expected)
+    writer = dict(**context, preview_sha256=preview_sha256, source=str(source), source_sha256=source_revision, unit=unit, expected=expected)
     reopened = drawing(result, unit)
     observed = {}
     for handle, properties in expected.items():

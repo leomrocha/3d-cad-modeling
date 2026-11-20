@@ -36,11 +36,15 @@ class SelectionTests(unittest.TestCase):
                        selection=dict(scope=[], named="outer-lines", operation_reference=dxf.REFERENCE),
                        value=dict(value=13, unit="mm"))
             paths = [[line.dxf.handle] for line in (lines[2], lines[0])]
+            saved_group = ezdxf.readfile(model).groups.get("outer-lines")
+            saved_paths = [[handle] for handle in saved_group.handles()]
+            self.assertCountEqual(saved_paths, paths)
             for selector in ({"named": "outer-lines"}, {"paths": paths}):
                 with self.subTest(selector=selector):
                     selection = dict(selector, scope=[], measurement=None, operation_reference=dxf.REFERENCE)
                     preview = prepare(dict(req, selection=selection), {"operations": []})
-                    self.assertEqual(verify_reopened(preview, read_inventory(str(model), "mm")), paths)
+                    expected = saved_paths if "named" in selector else paths
+                    self.assertEqual(verify_reopened(preview, read_inventory(str(model), "mm")), expected)
             fake = read_inventory(str(model), "mm")
             fake["named"]["outer-lines"] = [[lines[1].dxf.handle]]
             with self.assertRaisesRegex(ValueError, "saved drawing"):

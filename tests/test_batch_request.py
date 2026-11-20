@@ -99,6 +99,21 @@ class BatchRequestTests(unittest.TestCase):
             refresh(path, resources)
             preview = prepare(req, load(path))
             evidence = dxf.apply(preview, root / "job", resource="local", catalogue_path=path)
+            from batch_delivery import deliver
+            reviewed = root / "reviewed.json"
+            reviewed.write_text(preview.document)
+            self.assertFalse(deliver(reviewed, path, root / "job")["remaining"])
+            for field, replacement in (("reference", "fixed LINE end"), ("current", {"value": 999, "unit": "mm"})):
+                revised = preview.read()
+                revised["rows"][0][field] = replacement
+                reviewed.write_text(json.dumps(revised))
+                self.assertIn("blocker", deliver(reviewed, path, root / "job"))
+            reviewed.write_text(preview.document)
+            reader = root / "job/readback.json"
+            original = reader.read_bytes()
+            reader.write_text("{}")
+            self.assertIn("blocker", deliver(reviewed, path, root / "job"))
+            reader.write_bytes(original)
             op = json.loads((evidence.parent / "operation.json").read_text())
             self.assertEqual([item["length"] for item in op["expected"].values()],
                              [item["requested"]["value"] for item in preview.read()["rows"]])

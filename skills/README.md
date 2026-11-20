@@ -27,6 +27,8 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 
 ## OCS engineering procedures
 
+[Deliver a batch using local methods](cad-ocs-engineering/references/batch-delivery.md) covers catalogue-based method selection, recovery and saved-model verification.
+
 [Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, sidewall cuts, insertion, quantities and native solid and straight polyline boundary views with caller-supplied inputs.
 
 1. [OCS control](cad-ocs-engineering/references/ocs-control.md) — session discovery, installed schemas and guarded requests.

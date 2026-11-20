@@ -6,7 +6,7 @@ import json
 import math
 from pathlib import Path
 
-from operation_catalogue import ACTIONS, load, location, read, verify_receipts
+from operation_catalogue import ACTIONS, load, location, read, verify_method
 
 LENGTH_MM = {"mm": 1, "cm": 10, "m": 1000, "in": 25.4, "ft": 304.8}
 
@@ -150,7 +150,7 @@ def execution_rows(preview, resource, method, *, catalogue_path, read_revision, 
             continue
         if row["usable"] and row.get("readback_verified") is True and row.get("evidence_sha256"):
             definition = next(r for r in catalogue["resources"] if r["id"] == resource)
-            if verify_receipts(row, definition, Path(row["readback_file"])) != row["evidence_sha256"]:
+            if verify_method(row, definition, Path(row["readback_file"])) != row["evidence_sha256"]:
                 raise ValueError("Qualification evidence changed after review")
             actual = read_revision(data["model"])
             if type(actual) is not type(data["revision"]) or actual != data["revision"]:
