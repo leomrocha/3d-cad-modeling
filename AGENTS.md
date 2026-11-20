@@ -105,7 +105,7 @@ Instruction date: 13 November 2026.
 1. Store repository-relative paths and page-relative Markdown links for this checkout.
 2. Keep machine-specific workspace locations out of committed text and captured metadata. Normalize paths before registering new job records or examples.
 3. Preserve registered source IDs, original-source hashes and numerical results. Mark normalized copies as derivatives with their own hashes.
-4. Runtime-derived absolute paths may be used to open files.
+4. Each skill finds its bundled files from its installation directory. When the user selects a parts folder during setup or catalogue refresh, save that choice locally and use it for later jobs.
 
 ## Close completed 3D model documents
 
