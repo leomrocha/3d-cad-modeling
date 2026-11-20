@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "373e272f209c47c1d2be7331116924a7061c913cd0a92f8a6b24bd2e4d73573f"
+      "sha256": "bc56736c039d3850b46c27fa54eadc00974f98565128716aa2280affff3d12e4"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -172,7 +172,7 @@
     },
     "references/service-clearance.md": {
       "source": "references/service-clearance.md",
-      "sha256": "faa557047eb3058fb50521d0e4f25b5b15ebe2bad93c57d31d85c27dafcad714"
+      "sha256": "e9740d41dc8b3eb79583b0d72bdc8fb6353a7c2f4f9dfd8052d72b9c2522a584"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
