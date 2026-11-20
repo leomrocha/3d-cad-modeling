@@ -43,6 +43,7 @@ class PackageLifecycle(unittest.TestCase):
             'scripts/source_intake.py': 'VALUE = 1\n',
             'scripts/dxf_inspect.py': 'VALUE = 1\n',
             'scripts/raster_text.py': 'VALUE = 1\n',
+            'scripts/sam_mask.py': 'VALUE = 1\n',
             'scripts/raster_features.py': 'VALUE = 1\n',
             'scripts/image_observations.py': 'VALUE = 1\n',
             'skills/cad-opencv-setup/SKILL.md': 'fixture\n',

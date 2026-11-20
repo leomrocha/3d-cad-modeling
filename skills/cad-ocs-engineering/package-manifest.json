@@ -466,6 +466,10 @@
       "source": "scripts/rounded_tube.py",
       "sha256": "3c79015c2f78216f89a30e455bf134b0f854e755e588a4fd36ffb48060b7a388"
     },
+    "scripts/sam_mask.py": {
+      "source": "scripts/sam_mask.py",
+      "sha256": "d7821efc1fe959cd7add6ba8e0bfb9874acb9bb77ff79b96036a47983a25c319"
+    },
     "scripts/service_clearance.py": {
       "source": "scripts/service_clearance.py",
       "sha256": "58385175ea4d4b0992758afead9d483872e9b893ca269580da23832dda624c72"

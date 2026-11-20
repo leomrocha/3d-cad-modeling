@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "09327b7fe39329f49d949783faa402af764da1d5f49da707d50891f1ef517682"
+      "sha256": "8bd748761d565c0577f041fa3d979f104d792b1c7b9cff9bb5fa073092e66844"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
@@ -41,6 +41,10 @@
     "scripts/raster_features.py": {
       "source": "scripts/raster_features.py",
       "sha256": "e5653ac4561b28a7d2ea7963972503d7d1a1cf36fdfe88c761a0dda692161f24"
+    },
+    "scripts/sam_mask.py": {
+      "source": "scripts/sam_mask.py",
+      "sha256": "d7821efc1fe959cd7add6ba8e0bfb9874acb9bb77ff79b96036a47983a25c319"
     },
     "scripts/source_intake.py": {
       "source": "scripts/source_intake.py",

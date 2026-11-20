@@ -153,3 +153,5 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Modeling operation selection](cad-ocs-engineering/references/modeling-operation-selection.md) specifies component reuse, family edits, scripted and guided providers and job evidence. Each skill includes the procedure.
 
 [Optional OpenCV setup](cad-opencv-setup/SKILL.md) qualifies a selected interpreter for the image operations in drawing inspection and source intake.
+
+[Source intake](cad-source-intake/SKILL.md) can run a supplied local SAM checkpoint with box or point prompts and preserve the earlier mask when correcting an instance.

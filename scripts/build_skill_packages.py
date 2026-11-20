@@ -160,7 +160,7 @@ def inputs(name, committed=False):
     if name == TRANSLATOR:
         return ['translator/' + module for module in TRANSLATOR_MODULES]
     if name == 'cad-source-intake':
-        return dependency_closure(common + ['scripts/source_intake.py', 'scripts/image_observations.py'], paths, committed)
+        return dependency_closure(common + ['scripts/source_intake.py', 'scripts/image_observations.py', 'scripts/sam_mask.py'], paths, committed)
     if name == 'cad-drawing-inspection':
         return dependency_closure(common + ['scripts/dxf_inspect.py', 'scripts/raster_features.py', 'scripts/image_observations.py', 'scripts/raster_text.py'], paths, committed)
     # All reusable scripts have a default owner: the complete CAD runtime.

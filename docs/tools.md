@@ -168,3 +168,5 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [Raster feature extraction](../scripts/raster_features.py) returns pixel loops, ellipse candidates, an overlay and optional controlled plane coordinates.
 - [Image observations](../scripts/image_observations.py) maps decoded instance masks and points into the original frame and finds leader endpoint candidates.
 - [Local dimension text recognition](../scripts/raster_text.py) uses a supplied PaddleOCR model on a cropped text line and returns a source-linked receipt.
+
+- [Prompted SAM segmentation](../scripts/sam_mask.py) runs a local SAM checkpoint on one source image and returns a source-linked instance mask with the prompt and model hashes.
