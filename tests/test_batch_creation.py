@@ -45,6 +45,53 @@ class CreationTests(unittest.TestCase):
         self.request.write_text(json.dumps(spec))
         return spec
 
+    @unittest.skipUnless(importlib.util.find_spec("ezdxf"), "requires a locally installed CAD provider")
+    def test_dependency_free_launcher_uses_selected_interpreter(self):
+        import ezdxf
+        import venv
+        import batch_creation
+        from batch_delivery import CONTRACTS, provider
+
+        source = self.root / "drawing.dxf"
+        ezdxf.new("R2010", units=4).saveas(source)
+        spec = self.prepare(source, "circle", value={"diameter": 3})
+        spec["model"] = source.name
+        self.request.write_text(json.dumps(spec))
+        sample = self.root / "sample"
+        execute(self.request, sample)
+        venv.EnvBuilder(with_pip=False).create(self.root / "launcher")
+        launcher = self.root / "launcher/bin/python"
+        subprocess.run([launcher, "-I", "-c", "import importlib.util; assert importlib.util.find_spec('ezdxf') is None"], check=True)
+        action, entity, output = CONTRACTS["circle"]
+        method = dict(name="circle", probe="guided", action=action, input=entity, output=output,
+                      sample_request=str(self.request), readback_file=str(sample/"manifest.json"))
+        resource = dict(id="cad", location=batch_creation.__file__, python=sys.executable,
+                        kind="guided", backend=provider("circle"), methods=[method])
+        resources = self.root / "resources.json"
+        resources.write_text(json.dumps([resource]))
+        catalogue = self.root / "catalogue.json"
+        subprocess.run([launcher, "-E", "-s", ROOT/"scripts/operation_catalogue.py", "--catalogue", catalogue,
+                        "refresh", "--resources", resources], check=True, capture_output=True)
+        self.assertTrue(json.loads(catalogue.read_bytes())["operations"][0]["usable"])
+        command = [launcher,"-E","-s", ROOT/"scripts/batch_delivery.py", self.request,self.job,"--catalogue",catalogue,
+                   "--request-sha256",file_digest(self.request)]
+        for _ in range(2):
+            result = subprocess.run(command, cwd="/", capture_output=True, text=True)
+            self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+            self.assertEqual(json.loads(result.stdout)["completed"], ["H1","H2"])
+        self.assertEqual(len(ezdxf.readfile(self.job/"result.dxf").modelspace().query("CIRCLE")),2)
+        # A previously published result cannot stand in for a different reviewed pattern.
+        from batch_delivery import published_readback
+        wrong = json.loads(self.request.read_bytes())
+        wrong["pattern"]["positions"][0]["id"] = "other"
+        self.request.write_text(json.dumps(wrong))
+        with self.assertRaisesRegex(ValueError,"reviewed request or targets"):
+            published_readback(self.job,self.request,wrong,file_digest(self.request),["other","H2"],{})
+        (self.job/"result.dxf").write_bytes(b"changed")
+        with self.assertRaisesRegex(ValueError,"reviewed request or targets"):
+            published_readback(self.job,self.request,spec,file_digest(self.job/"request.json"),["H1","H2"],{})
+
+
     @unittest.skipUnless(importlib.util.find_spec("ezdxf"), "requires local ezdxf")
     def test_oriented_drawing_publication_and_retry(self):
         import ezdxf

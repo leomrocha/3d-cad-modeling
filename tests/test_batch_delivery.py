@@ -91,6 +91,92 @@ class DeliveryTests(unittest.TestCase):
             self.assertIn("nonempty reviewed target IDs", p.stderr)
             self.assertFalse(self.job.exists())
 
+    def test_worker_response_requires_job_and_target_evidence(self):
+        data = json.loads(self.catalogue.read_bytes())
+        pattern = dict(
+            kind="explicit",
+            unit="mm",
+            reference="plate",
+            tolerance=0.001,
+            frame=dict(origin=[0, 0, 0], x=[1, 0, 0], y=[0, 1, 0]),
+            positions=[dict(id="A", xy=[0, 0])],
+        )
+        self.spec = dict(
+            operation="circle",
+            relationship="individual",
+            pattern=pattern,
+            model="source.dxf",
+            revision="original",
+        )
+        self.request.write_text(json.dumps(self.spec))
+        action, entity, out = delivery.CONTRACTS["circle"]
+        data["operations"][0].update(action=action, input=entity, output=out)
+        self.catalogue.write_text(json.dumps(data))
+        for completed, record in (
+            (["A"], "garbage"),
+            (["wrong"], {"elements": [{"id": "wrong"}]}),
+            (["A"], {"elements": [{"id": "A"}]}),
+        ):
+            response = dict(completed=completed, remaining=[], readback=record)
+            with (
+                patch.object(
+                    delivery, "provider_python", return_value=Path("/other/python")
+                ),
+                patch.object(delivery, "provider_call", return_value=response),
+            ):
+                result = delivery.deliver(self.request, self.catalogue, self.job)
+            self.assertIn("blocker", result)
+            self.assertEqual(result["completed"], [])
+            self.assertEqual(result["remaining"], ["A"])
+            self.assertFalse(self.job.exists())
+
+    def test_no_provider_retains_pending_pattern_and_diagnostic(self):
+        data = json.loads(self.catalogue.read_bytes())
+        data["resources"][0]["methods"][0].update(name="circle")
+        action, entity, out = delivery.CONTRACTS["circle"]
+        data["operations"][0].update(
+            name="circle",
+            action=action,
+            input=entity,
+            output=out,
+            usable=False,
+            reason="configured writer missing",
+        )
+        self.catalogue.write_text(json.dumps(data))
+        pattern = dict(
+            kind="interior",
+            unit="mm",
+            reference="plate",
+            tolerance=0.001,
+            frame=dict(origin=[0, 0, 0], x=[1, 0, 0], y=[0, 1, 0]),
+        )
+        for unit, diagnostic in (("mm", "Shapely"), ("bad", "Unsupported length unit")):
+            pattern["unit"] = unit
+            self.request.write_text(
+                json.dumps(dict(operation="circle", pattern=pattern))
+            )
+            cmd = [
+                sys.executable,
+                "-E",
+                "-S",
+                delivery.__file__,
+                str(self.request),
+                str(self.job),
+                "--catalogue",
+                str(self.catalogue),
+                "--request-sha256",
+                delivery.file_digest(self.request),
+            ]
+            proc = subprocess.run(cmd, capture_output=True, text=True)
+            self.assertEqual(proc.returncode, 2, proc.stderr)
+            result = json.loads(proc.stdout)
+            self.assertEqual(
+                result["attempts"][0]["outcome"], "configured writer missing"
+            )
+            self.assertEqual(result["unresolved_pattern"], pattern)
+            self.assertIn(diagnostic, result["target_error"])
+            self.assertIn("configured writer missing", result["blocker"])
+
     def test_package_catalogue_excludes_engineering_adapter(self):
         import build_skill_packages as pkg
 

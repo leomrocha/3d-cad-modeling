@@ -192,7 +192,7 @@ def effect(current, row, intent):
     return "not_applied" if original else "unknown"
 
 
-def resume(directory, *, after_save=None):
+def resume(directory, *, after_save=None, read_row=None):
     directory = Path(directory)
     from ezdxf.lldxf.const import DXFError
     with writer_interval(directory):
@@ -290,6 +290,8 @@ def resume(directory, *, after_save=None):
             if file_digest(result) != receipt["result_sha256"] or file_digest(source) != plan["source_sha256"]:
                 raise ValueError("Placement drawing changed during final readback")
             reader = dict(receipt, observed=observed, readback_id=plan["job_id"] + ":reopen")
+            if read_row is not None:
+                reader["row_measurements"] = read_row(checked(result))
             evidence = {}
             for name, record in (("operation", writer), ("readback", reader)):
                 path = directory / (name + ".json")

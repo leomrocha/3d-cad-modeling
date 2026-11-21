@@ -299,30 +299,55 @@ def verify_receipts(row, resource, path, *, require_change=True):
     return file_digest(path)
 
 
+def provider_python(resource):
+    interpreter = require_path(resource.get("python", sys.executable), file=True)
+    if not interpreter.is_absolute():
+        raise ValueError("Specify the absolute approved local interpreter")
+    # Retain a virtual environment's executable path even when it is a symlink.
+    return interpreter
+
+
+def provider_call(resource, helper, mode, payload):
+    result = subprocess.run(
+        [str(provider_python(resource)), "-E", "-s", "-B", str(helper), mode],
+        input=json.dumps(payload), text=True, capture_output=True,
+        env=dict(os.environ, PYTHONNOUSERSITE="1", PIP_NO_INDEX="1", HF_HUB_OFFLINE="1"),
+    )
+    if result.returncode:
+        raise ValueError(result.stderr.strip() or f"{mode} exited {result.returncode}")
+    lines = result.stdout.strip().splitlines()
+    if not lines:
+        raise ValueError(result.stderr.strip() or f"{mode} returned no result")
+    try:
+        response = json.loads(lines[-1])
+    except ValueError as exc:
+        raise ValueError(result.stderr.strip() or f"{mode} returned an invalid result") from exc
+    if not isinstance(response, dict):
+        raise ValueError(f"{mode} returned an invalid result")
+    return response
+
+
 def verify_method(row, resource, evidence_path, *, replay=False):
     method = next(m for m in resource["methods"] if m["name"] == row["name"])
     if method.get("sample_request"):
-        # An approved engineering installation owns this verifier and its CAD dependencies.
         location = require_path(resource["location"], file=True)
         expected_writer = "batch_creation.py" if row["action"] == "create" else "batch_modification.py"
         if not location.is_absolute() or location.name != expected_writer:
             raise ValueError("Specify the absolute installed engineering writer")
         helper = selected_script({"scripts": str(location.resolve().parent)}, "batch_delivery.py")
-        interpreter = require_path(resource.get("python", sys.executable), file=True)
-        if not interpreter.is_absolute() or helper.resolve().parent != location.resolve().parent:
-            raise ValueError("Specify the approved local interpreter and writer installation")
-        result = subprocess.run(
-            [str(interpreter), "-E", "-s", "-B", str(helper), "verify-sample"],
-            input=json.dumps([row, resource, str(evidence_path)]), text=True, capture_output=True,
-            env=dict(os.environ, PYTHONNOUSERSITE="1", PIP_NO_INDEX="1", HF_HUB_OFFLINE="1"),
-        )
-        if result.returncode:
-            raise ValueError(result.stderr.strip() or "Engineering sample verification failed")
-        digest = json.loads(result.stdout)["sha256"]
-        if digest != file_digest(evidence_path):
-            raise ValueError("Sample manifest changed during qualification")
-        return digest
-    return verify_receipts(row, resource, evidence_path)
+        if helper.resolve().parent != location.resolve().parent:
+            raise ValueError("Specify the approved writer installation")
+        mode = "verify-sample"
+    elif provider_python(resource) != Path(sys.executable):
+        helper = Path(__file__).resolve()
+        mode = "verify-receipts"
+    else:
+        return verify_receipts(row, resource, evidence_path)
+    result = provider_call(resource, helper, mode, [row, resource, str(evidence_path)])
+    digest = result["sha256"]
+    if digest != file_digest(evidence_path):
+        raise ValueError("Sample manifest changed during qualification")
+    return digest
 
 
 def refresh(path, resources, *, resource_base=None):
@@ -461,4 +486,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if sys.argv[1:] == ["verify-receipts"]:
+        try:
+            row, resource, evidence = json.load(sys.stdin)
+            print(json.dumps({"sha256": verify_receipts(row, resource, Path(evidence))}))
+        except (OSError, ValueError, TypeError, KeyError, ImportError) as exc:
+            sys.exit(str(exc))
+    else:
+        main()

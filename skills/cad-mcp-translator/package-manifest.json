@@ -72,7 +72,7 @@
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "7cbd08c79dabf138ad80eb0111d0d673be89a316738b242e3834fe65973e42cc"
+      "sha256": "3d8b3852c5814289b0766b5cf66c144e1bebe3a1dc12beb3011973ef2b15a440"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",

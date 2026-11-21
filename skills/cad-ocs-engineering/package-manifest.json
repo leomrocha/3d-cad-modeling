@@ -44,7 +44,7 @@
     },
     "references/batch-delivery.md": {
       "source": "references/batch-delivery.md",
-      "sha256": "effec2814c00eb876b5446deccffede3f74b3f479f25367d8b47bb64f0acaef3"
+      "sha256": "52b2ed6938b5123727ac2855ca6c431948aa587bc4148df09e2c5fd5f8241d84"
     },
     "references/batch-modification.md": {
       "source": "references/batch-modification.md",
@@ -308,7 +308,7 @@
     },
     "scripts/batch_delivery.py": {
       "source": "scripts/batch_delivery.py",
-      "sha256": "22a2f73119c0a64a528e8d4c1516abbad0d7fdeeff5541080691769366253818"
+      "sha256": "744cd06ac4133dc89a62d249cb132e560f76c31c5146d9dc377d2e8929e47b55"
     },
     "scripts/batch_dxf_frames.py": {
       "source": "scripts/batch_dxf_frames.py",
@@ -324,7 +324,7 @@
     },
     "scripts/batch_dxf_placement.py": {
       "source": "scripts/batch_dxf_placement.py",
-      "sha256": "c47c2d7674ac78465ea418c3ffa2a1e910d265a46e74540b8a3624125da2ac82"
+      "sha256": "c623fc2f41c9605fc8905fc73f375d76a8b69a5552ed44a6ff4724967d42f4c0"
     },
     "scripts/batch_insert_recovery.py": {
       "source": "scripts/batch_insert_recovery.py",
@@ -536,7 +536,7 @@
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "7cbd08c79dabf138ad80eb0111d0d673be89a316738b242e3834fe65973e42cc"
+      "sha256": "3d8b3852c5814289b0766b5cf66c144e1bebe3a1dc12beb3011973ef2b15a440"
     },
     "scripts/orthographic_checks.py": {
       "source": "scripts/orthographic_checks.py",

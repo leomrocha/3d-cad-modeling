@@ -10,7 +10,7 @@ import hashlib
 from batch_sample_readback import target_ids, measured_ids, verify_native
 import subprocess
 
-from operation_catalogue import file_digest, load, read
+from operation_catalogue import file_digest, load, read, provider_call, provider_python
 
 
 # Each tuple identifies the action, native input and saved result the writer verifies.
@@ -192,20 +192,21 @@ def place_existing(
             raise ValueError("Existing placement job differs from the reviewed targets")
     else:
         start(preview, directory, resource["id"], catalogue)
-    results = resume(directory)
+    if "row_check" in spec:
+        results = resume(
+            directory, read_row=lambda doc: measure_row(spec, doc, planned=False)
+        )
+    else:
+        results = resume(directory)
     if set(results) != set(targets):
         raise ValueError("Placement result identities differ from the reviewed targets")
-    if "row_check" in spec and all(
-        r["status"] == "completed" for r in results.values()
-    ):
-        report["row_measurements"] = measure_row(
-            spec, drawing(directory / "result.dxf", spec["model_unit"]), planned=False
-        )
     report["readback"] = (
         read(directory / "readback.json")
         if (directory / "readback.json").is_file()
         else None
     )
+    if "row_check" in spec and report["readback"]:
+        report["row_measurements"] = report["readback"]["row_measurements"]
     report["completed"] = [k for k, v in results.items() if v["status"] == "completed"]
     report["remaining"] = [k for k in targets if k not in report["completed"]]
     if report["remaining"]:
@@ -215,8 +216,155 @@ def place_existing(
         )
 
 
-def deliver(request, catalogue, directory, *, request_sha256=None):
-    payload = request.read_bytes()
+def provider_runner(resource, row, method):
+    """Use the approved writer installation; standalone DXF packages share the same writer source."""
+    here = Path(__file__).resolve()
+    if "location" not in resource:
+        return here
+    location = Path(resource["location"])
+    if method.get("sample_request"):
+        filename = (
+            "batch_creation.py"
+            if row["action"] == "create"
+            else "batch_modification.py"
+        )
+    elif row["action"] == "place":
+        filename = "batch_dxf_placement.py"
+    else:
+        filename = "batch_dxf_lines.py"
+    if (
+        not location.is_absolute()
+        or location.name != filename
+        or not location.is_file()
+    ):
+        raise ValueError("Selected resource must identify its installed batch writer")
+    destination = location.resolve().parent / here.name
+    if (
+        destination.is_file()
+        and destination.resolve().parent == location.resolve().parent
+    ):
+        return destination
+    if not method.get("sample_request") and file_digest(location) == file_digest(
+        here.with_name(filename)
+    ):
+        return here
+    raise ValueError("Selected writer installation lacks the matching batch runner")
+
+
+def published_readback(directory, request, spec, digest, targets, row):
+    """Check the worker's result and receipt against the job actually published."""
+    receipt = read(directory / "readback.json")
+    if not isinstance(receipt, dict) or not receipt:
+        raise ValueError("Published readback must contain measured target properties")
+    source = (
+        (request.parent / spec["model"]).resolve()
+        if "operation" in spec
+        else Path(spec["model"]).resolve()
+    )
+    if file_digest(source) != spec["revision"]:
+        raise ValueError("Published batch source revision differs")
+    if "operation" in spec:
+        operation = spec["operation"]
+        suffix = {"circle": "dxf", "cut": "step", "bore diameter": "step"}.get(
+            operation, "xbf"
+        )
+        result = directory / ("result." + suffix)
+        manifest = read(directory / "manifest.json")
+        expected = {
+            name: file_digest(directory / name)
+            for name in ("request.json", "readback.json", result.name)
+        }
+        if (
+            manifest != expected
+            or manifest["request.json"] != digest
+            or receipt["request_sha256"] != digest
+            or receipt["operation"] != operation
+            or receipt["source_sha256"] != spec["revision"]
+            or receipt["result_sha256"] != manifest[result.name]
+            or set(measured_ids(receipt["elements"])) != set(targets)
+        ):
+            raise ValueError(
+                "Published batch artifacts differ from the reviewed request or targets"
+            )
+    else:
+        evidence = read(directory / "evidence.json")
+        for key in ("operation", "readback"):
+            name = key + ".json"
+            if evidence[key] != name or evidence[key + "_sha256"] != file_digest(
+                directory / name
+            ):
+                raise ValueError("Published DXF evidence differs from its receipts")
+        operation = read(directory / "operation.json")
+        for item in (receipt, operation):
+            if (
+                item["status"] != "completed"
+                or item["result"] != "result.dxf"
+                or item["result_sha256"] != file_digest(directory / "result.dxf")
+                or any(
+                    item[k] != row[k]
+                    for k in (
+                        "resource",
+                        "name",
+                        "action",
+                        "input",
+                        "output",
+                        "backend",
+                    )
+                )
+            ):
+                raise ValueError(
+                    "Published DXF result differs from its selected method or model"
+                )
+        if (
+            receipt["operation_id"] != operation["operation_id"]
+            or operation["source_sha256"] != spec["revision"]
+            or Path(operation["source"]).resolve() != source
+            or set(receipt["observed"]) != set(targets)
+            or set(operation["expected"]) != set(targets)
+        ):
+            raise ValueError("Published DXF receipts differ from the reviewed targets")
+        if spec["action"] == "place":
+            plan = read(directory / "plan.json")
+            if (
+                read(directory / "review.json")["plan_sha256"]
+                != file_digest(directory / "plan.json")
+                or plan["job_id"] != operation["operation_id"]
+                or plan["expected"] != operation["expected"]
+                or plan["resource"] != row["resource"]
+                or plan["sample"]
+                or plan.get("row_check") != spec.get("row_check")
+                or plan["unit"] != spec["model_unit"]
+            ):
+                raise ValueError(
+                    "Published placement plan differs from reviewed ownership or layout"
+                )
+            for r in spec["rows"]:
+                dest = plan["expected"][r["target"]]
+                if (
+                    dest["before"] != r["current"]["world_frame"]
+                    or dest["world_frame"] != r["requested"]["world_frame"]
+                    or any(
+                        dest[k] != r[k]
+                        for k in ("reference", "position_id", "position_index")
+                    )
+                ):
+                    raise ValueError(
+                        "Published placement differs from the reviewed destination"
+                    )
+        elif operation.get("preview_sha256") != digest:
+            raise ValueError("Published LINE job differs from its reviewed preview")
+    return receipt
+
+
+def lacks_dependency(error):
+    return isinstance(error, ImportError) or isinstance(error.__cause__, ImportError)
+
+
+def deliver(
+    request, catalogue, directory, *, request_sha256=None, payload=None, selected=None
+):
+    if payload is None:
+        payload = request.read_bytes()
     digest = hashlib.sha256(payload).hexdigest()
     if request_sha256 is not None and digest != request_sha256:
         raise ValueError("Reviewed request digest differs")
@@ -224,14 +372,15 @@ def deliver(request, catalogue, directory, *, request_sha256=None):
     spec = preview.read()
     data = load(catalogue)
     placement = spec.get("action") == "place"
-    targets = target_ids(spec)
+    # Pattern target enumeration can require the provider's geometry libraries.
+    targets = None if "pattern" in spec else target_ids(spec)
     if "rows" in spec:
         contract = (spec["action"], spec["entity"], spec["output"])
     else:
         operation = spec["operation"]
         contract = CONTRACTS[operation]
     attempts = []
-    report = dict(attempts=attempts, completed=[], remaining=targets)
+    report = dict(attempts=attempts, completed=[], remaining=targets or [])
     # Registration order breaks ties within the user's reuse preference.
     order = {"unchanged": 0, "parameter": 1, "script": 2, "guided": 3}
     resources = {resource["id"]: resource for resource in data["resources"]}
@@ -250,6 +399,17 @@ def deliver(request, catalogue, directory, *, request_sha256=None):
                 f"Existing placement job needs its owning resource {owner}"
             )
             return report
+    if selected is not None:
+        row, approved = selected
+        if (
+            resources.get(row["resource"]) != approved
+            or row not in candidates
+            or provider_python(approved) != Path(sys.executable)
+        ):
+            raise ValueError(
+                "Selected resource or interpreter changed before batch execution"
+            )
+        candidates = [row]
     for row in candidates:
         if (row.get("action"), row["input"], row["output"]) != contract:
             continue
@@ -263,6 +423,91 @@ def deliver(request, catalogue, directory, *, request_sha256=None):
                 raise ValueError(row.get("reason", "Method lacks a verified sample"))
             resource = next(r for r in data["resources"] if r["id"] == row["resource"])
             method = next(m for m in resource["methods"] if m["name"] == row["name"])
+            runner = provider_runner(resource, row, method)
+            if selected is None and (
+                provider_python(resource) != Path(sys.executable)
+                or runner != Path(__file__).resolve()
+            ):
+                owns_result = True
+                response = provider_call(
+                    resource,
+                    runner,
+                    "execute-method",
+                    dict(
+                        request=str(request.absolute()),
+                        catalogue=str(catalogue.absolute()),
+                        directory=str(directory.absolute()),
+                        payload=preview.document,
+                        digest=digest,
+                        selected=[row, resource],
+                    ),
+                )
+                completed = response.get("completed")
+                remaining = response.get("remaining")
+                if not isinstance(completed, list) or not isinstance(remaining, list):
+                    raise ValueError("Provider returned no batch target readback")
+                returned = completed + remaining
+                if (
+                    any(not isinstance(k, str) or not k for k in returned)
+                    or len(set(returned)) != len(returned)
+                    or (targets is not None and set(returned) != set(targets))
+                ):
+                    raise ValueError("Provider returned inconsistent target IDs")
+                if "blocker" in response:
+                    if placement and (directory / "results.json").is_file():
+                        effects = read(directory / "results.json")
+                        if set(effects) == set(targets):
+                            report["completed"] = [
+                                k
+                                for k in targets
+                                if effects[k]["status"] == "completed"
+                            ]
+                            report["remaining"] = [
+                                k for k in targets if k not in report["completed"]
+                            ]
+                    raise ValueError(response["blocker"])
+                record = response.get("readback")
+                if (
+                    remaining
+                    or not completed
+                    or not isinstance(record, dict)
+                    or not record
+                ):
+                    raise ValueError("Provider returned no completed batch readback")
+                if targets is None:
+                    try:
+                        targets = target_ids(spec)
+                    except (ImportError, ValueError) as exc:
+                        if not lacks_dependency(exc):
+                            raise
+                        identity = provider_call(
+                            resource, runner, "pattern-targets", spec
+                        )
+                        targets = identity["targets"]
+                        if (
+                            not isinstance(targets, list)
+                            or not targets
+                            or any(not isinstance(k, str) or not k for k in targets)
+                            or len(set(targets)) != len(targets)
+                        ):
+                            raise ValueError(
+                                "Provider could not identify reviewed pattern members"
+                            )
+                    report["remaining"] = targets
+                if set(completed) != set(targets) or record != published_readback(
+                    directory, request, spec, digest, targets, row
+                ):
+                    raise ValueError(
+                        "Provider readback differs from its published job or reviewed targets"
+                    )
+                report.update(completed=completed, remaining=[], readback=record)
+                if "row_check" in spec:
+                    report["row_measurements"] = record["row_measurements"]
+                entry["outcome"] = "completed"
+                return report
+            if targets is None:
+                targets = target_ids(spec)
+                report["remaining"] = targets
             if placement:
                 owns_result = True
                 place_existing(
@@ -360,10 +605,45 @@ def deliver(request, catalogue, directory, *, request_sha256=None):
         if attempts
         else "No catalogue method matches " + ", ".join(contract)
     )
+    if targets is None and not report["remaining"]:
+        try:
+            report["remaining"] = target_ids(spec)
+        except (ImportError, ValueError, KeyError, TypeError, RuntimeError) as exc:
+            report["target_error"] = str(exc)
+            report["unresolved_pattern"] = spec["pattern"]
+            report["blocker"] += f"; target enumeration: {exc}"
     return report
 
 
 if __name__ == "__main__":
+    if sys.argv[1:] == ["pattern-targets"]:
+        try:
+            print(json.dumps({"targets": target_ids(json.load(sys.stdin))}))
+        except (ImportError, ValueError, TypeError, KeyError) as error:
+            sys.exit(str(error))
+        sys.exit(0)
+    if sys.argv[1:] == ["execute-method"]:
+        try:
+            job = json.load(sys.stdin)
+            result = deliver(
+                Path(job["request"]),
+                Path(job["catalogue"]),
+                Path(job["directory"]),
+                request_sha256=job["digest"],
+                payload=job["payload"].encode(),
+                selected=job["selected"],
+            )
+            print(json.dumps(result))
+        except (
+            KeyError,
+            ValueError,
+            TypeError,
+            OSError,
+            ImportError,
+            RuntimeError,
+        ) as error:
+            sys.exit(str(error))
+        sys.exit(0)
     if sys.argv[1:] == ["verify-sample"]:
         try:
             row, resource, path = json.load(sys.stdin)
