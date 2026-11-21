@@ -18,7 +18,7 @@ Pass a conservative moving box, one point on the fixed hinge axis, the Cartesian
 
 ## Check a saved pose
 
-Use `static_box_gap(first_bounds, second_bounds)` for two XYZ boxes in the same frame. It reports exact rational axis gaps and squared Euclidean distance for the supplied coordinates. Take the square root to display a length. Overlap or contact remains a candidate for the represented bodies. A positive result from sampled boundary boxes describes the samples. Use conservative enclosures to bound solid clearance.
+Use `static_box_gap(first_bounds, second_bounds)` for two XYZ boxes in the same frame. It returns exact rational strings for the axis gaps and squared Euclidean distance. Parse a squared distance with `Fraction(result["squared_gap"])` before ranking candidates or comparing it with a squared threshold. For a display length, use `math.sqrt(float(distance_squared))`. Overlap or contact remains a candidate for the represented bodies. A positive result from sampled boundary boxes describes the samples. Use conservative enclosures to bound solid clearance.
 
 Use `static_box_contact_dimension` on saved boxes in that same frame when exact boundary contact needs a separate classification. The intersection dimensions zero, one, two and three indicate point, line, face and volume candidates. A negative signed span separates the boxes. For enclosed solids, assess actual trims and material sides before using a candidate as a seating or interference result.
 
