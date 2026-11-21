@@ -15,7 +15,7 @@ from cadtools.runtime import CadError
 from catalogue_candidates import lookup
 from operation_catalogue import file_digest, read
 from hashlib import sha256
-from planar_positions import generate
+from planar_positions import generate, region_boundary
 from spatial_positions import frame
 from step_placements import cross
 
@@ -60,6 +60,66 @@ def check_centre(spec, centre, row):
     if abs(radial - pattern["radius"]) > TOL:
         raise ValueError(f"Pitch radius differs at {row['id']}")
     return {"axis_reference": pattern["reference"], "pitch_radius": radial}
+
+
+def needs_disk_clearances(spec):
+    pattern = spec["pattern"]
+    if pattern["kind"] != "interior" or pattern["containment"] != "footprint":
+        return False
+    if spec["operation"] == "occurrence":
+        raise ValueError(
+            "Occurrence footprint containment requires a provider that verifies the projected part outline"
+        )
+    return True
+
+
+def needs_supplement(spec, elements):
+    return needs_disk_clearances(spec) and any(
+        "outer_clearance" not in e
+        or (spec["pattern"].get("cutouts") and "minimum_cutout_clearance" not in e)
+        for e in elements
+    )
+
+
+def measure_disk_clearances(pattern, elements, centre_key):
+    """Measure actual circles in the selected plane against its outer and inner boundaries."""
+    from shapely.geometry import Point
+
+    outer, radius = region_boundary(pattern["outer"])
+    cutouts = [region_boundary(shape) for shape in pattern.get("cutouts", [])]
+    plane = pattern["frame"]
+    required = pattern["clearance"]
+    for element in elements:
+        relative = [a - b for a, b in zip(element[centre_key], plane["origin"])]
+        point = Point(
+            [math.fsum(a * b for a, b in zip(relative, plane[k])) for k in ("x", "y")]
+        )
+        disk = element["diameter"] / 2
+        if radius is None:
+            distance = outer.boundary.distance(point)
+            outer_gap = (distance if outer.covers(point) else -distance) - disk
+        else:
+            outer_gap = radius - outer.distance(point) - disk
+        gaps = [outer_gap]
+        for hole, hole_radius in cutouts:
+            if hole_radius is None:
+                distance = hole.boundary.distance(point)
+                gap = (-distance if hole.contains(point) else distance) - disk
+            else:
+                gap = hole.distance(point) - hole_radius - disk
+            gaps.append(gap)
+        for index, gap in enumerate(gaps):
+            # Allow roundoff at tangency; geometry-model tolerances must not hide overlaps.
+            roundoff = 8 * math.ulp(max(abs(required), disk, abs(gap)))
+            if gap + roundoff < required:
+                name = "outer border" if index == 0 else f"cutout {index}"
+                raise ValueError(
+                    f"{element['id']} disk clearance to {name} is {gap:g} "
+                    f"{pattern['unit']}, requires {required:g} {pattern['unit']}"
+                )
+        element["outer_clearance"] = outer_gap
+        if cutouts:
+            element["minimum_cutout_clearance"] = min(gaps[1:])
 
 
 def circles(spec, rows, normal, path):
@@ -409,6 +469,18 @@ def execute(request, directory, *, reviewed_bytes=None):
                     raise ValueError(f"Expected a length for {field}")
                 value = value["value"]
             row["value"][field] = required_number(value)
+    pattern = spec["pattern"]
+    check_footprint = needs_disk_clearances(spec)
+    if check_footprint:
+        measure_disk_clearances(
+            pattern,
+            [
+                dict(id=r["id"], centre=r["xyz"], diameter=r["value"]["diameter"])
+                for r in rows
+            ],
+            "centre",
+        )
+    centre_key = "entry" if kind == "cut" else "centre"
     name = "result." + suffix
     if directory.exists():
         manifest = read(directory / "manifest.json")
@@ -424,12 +496,22 @@ def execute(request, directory, *, reviewed_bytes=None):
             or receipt["result_sha256"] != file_digest(directory / name)
         ):
             raise ValueError("Existing result differs from this request")
+        if check_footprint:
+            from batch_sample_readback import verify_creation
+
+            measured = verify_creation(
+                spec, source, directory / name, receipt["elements"]
+            )
+            if needs_supplement(spec, receipt["elements"]):
+                return dict(receipt, footprint_verification=measured)
         return receipt
     with tempfile.TemporaryDirectory(dir=directory.parent) as tmp:
         job = Path(tmp) / "job"
         job.mkdir()
         path = job / name
         result = writer(spec, rows, normal, path)
+        if check_footprint:
+            measure_disk_clearances(pattern, result, centre_key)
         if contract != file_digest(request) or spec["revision"] != file_digest(source):
             raise ValueError("Request or source changed during creation")
         receipt = dict(

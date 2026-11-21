@@ -251,6 +251,25 @@ def provider_runner(resource, row, method):
     raise ValueError("Selected writer installation lacks the matching batch runner")
 
 
+def legacy_footprint_verification(directory, request):
+    from batch_creation import needs_disk_clearances
+    from batch_sample_readback import verify_creation
+
+    spec = read(request)
+    if not needs_disk_clearances(spec):
+        raise ValueError(
+            "Supplemental footprint verification requires an interior creation request"
+        )
+    source = request.parent / spec["model"]
+    suffix = {"circle": "dxf", "cut": "step"}[spec["operation"]]
+    return verify_creation(
+        spec,
+        source,
+        directory / ("result." + suffix),
+        read(directory / "readback.json")["elements"],
+    )
+
+
 def published_readback(directory, request, spec, digest, targets, row):
     """Check the worker's result and receipt against the job actually published."""
     receipt = read(directory / "readback.json")
@@ -500,6 +519,29 @@ def deliver(
                     raise ValueError(
                         "Provider readback differs from its published job or reviewed targets"
                     )
+                from batch_creation import needs_supplement
+
+                legacy = "pattern" in spec and needs_supplement(
+                    spec, record["elements"]
+                )
+                if legacy != ("footprint_verification" in response):
+                    raise ValueError(
+                        "Provider supplemental footprint verification differs from the published receipt"
+                    )
+                if legacy:
+                    verified = provider_call(
+                        resource,
+                        runner,
+                        "verify-footprints",
+                        [str(directory.resolve()), str(request.resolve())],
+                    )
+                    if response["footprint_verification"] != verified or set(
+                        verified
+                    ) != set(targets):
+                        raise ValueError(
+                            "Supplemental footprint measurements differ from the published CAD result"
+                        )
+                    report["footprint_verification"] = verified
                 report.update(completed=completed, remaining=[], readback=record)
                 if "row_check" in spec:
                     report["row_measurements"] = record["row_measurements"]
@@ -585,6 +627,10 @@ def deliver(
                     raise ValueError(
                         "Readback target IDs differ from the reviewed targets"
                     )
+                if "footprint_verification" in receipt:
+                    report["footprint_verification"] = receipt.pop(
+                        "footprint_verification"
+                    )
                 report.update(completed=targets, remaining=[], readback=receipt)
             entry["outcome"] = "completed"
             return report
@@ -616,6 +662,20 @@ def deliver(
 
 
 if __name__ == "__main__":
+    if sys.argv[1:] == ["verify-footprints"]:
+        try:
+            directory, request = map(Path, json.load(sys.stdin))
+            print(json.dumps(legacy_footprint_verification(directory, request)))
+        except (
+            ImportError,
+            ValueError,
+            TypeError,
+            KeyError,
+            OSError,
+            RuntimeError,
+        ) as error:
+            sys.exit(str(error))
+        sys.exit(0)
     if sys.argv[1:] == ["pattern-targets"]:
         try:
             print(json.dumps({"targets": target_ids(json.load(sys.stdin))}))

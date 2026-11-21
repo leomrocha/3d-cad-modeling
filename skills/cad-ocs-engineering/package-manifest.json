@@ -40,7 +40,7 @@
     },
     "references/batch-creation.md": {
       "source": "references/batch-creation.md",
-      "sha256": "c28768590d33784f6f39d87623ce4b8b2662632cd461b3bbb6bb8832e96d099b"
+      "sha256": "125a55bf7290b204a5dc5467e09e8aad54db6b115efac7848d00db9119b9ea73"
     },
     "references/batch-delivery.md": {
       "source": "references/batch-delivery.md",
@@ -304,11 +304,11 @@
     },
     "scripts/batch_creation.py": {
       "source": "scripts/batch_creation.py",
-      "sha256": "8e363a2ee031700de73f5c7af0a10a86836d8e590e5e7424c503eebc503f2d79"
+      "sha256": "428f027799beb4fdd7f0e4229088e13feb6151ea36c912369dc5471213067ecc"
     },
     "scripts/batch_delivery.py": {
       "source": "scripts/batch_delivery.py",
-      "sha256": "744cd06ac4133dc89a62d249cb132e560f76c31c5146d9dc377d2e8929e47b55"
+      "sha256": "221888dbf407567ec1f310f449d0495bf0e4bfc7953da254a3b5f1649f776df6"
     },
     "scripts/batch_dxf_frames.py": {
       "source": "scripts/batch_dxf_frames.py",
@@ -344,7 +344,7 @@
     },
     "scripts/batch_sample_readback.py": {
       "source": "scripts/batch_sample_readback.py",
-      "sha256": "aaa46a27db24543ec08bb9777fff1db9c47a590fd31c21874ed8d22dec26c448"
+      "sha256": "64bc5bfbfc69cd2fa67f980b506575dc8e2e712b44e935b58174c49d2014f915"
     },
     "scripts/batch_selection.py": {
       "source": "scripts/batch_selection.py",

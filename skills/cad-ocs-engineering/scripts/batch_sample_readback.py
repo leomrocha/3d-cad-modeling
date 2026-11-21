@@ -2,7 +2,14 @@
 
 import math
 
-from batch_creation import TOL, load_solid, measure_cut, patterns
+from batch_creation import (
+    TOL,
+    load_solid,
+    measure_cut,
+    patterns,
+    needs_disk_clearances,
+    measure_disk_clearances,
+)
 from operation_catalogue import file_digest
 
 
@@ -65,9 +72,28 @@ def value(spec, key, field):
     return item
 
 
+def verified_clearances(pattern, actual, recorded):
+    measure_disk_clearances(pattern, actual, "centre")
+    result = {}
+    for row, receipt in zip(actual, recorded, strict=True):
+        fields = {
+            k: row[k]
+            for k in ("outer_clearance", "minimum_cutout_clearance")
+            if k in row
+        }
+        for key, measured in fields.items():
+            if key in receipt:
+                require(receipt[key], measured, key)
+        result[row["id"]] = fields
+    return result
+
+
 def verify_creation(spec, source, output, elements):
     operation = spec["operation"]
     _, rows, normal = patterns(spec)
+    footprint = needs_disk_clearances(spec)
+    disks = []
+    require(measured_ids(elements), [r["id"] for r in rows], "target order")
     if operation == "circle":
         from batch_dxf_lines import drawing
         from batch_insert_recovery import baseline
@@ -88,6 +114,7 @@ def verify_creation(spec, source, output, elements):
             ):
                 raise ValueError("Expected a new sample circle")
             centre = list(item.ocs().to_wcs(item.dxf.center))
+            disks.append(dict(id=r["id"], centre=centre, diameter=item.dxf.radius * 2))
             for actual, expected, label in [
                 (centre, r["xyz"], "centre"),
                 (centre, e["centre"], "recorded centre"),
@@ -97,7 +124,9 @@ def verify_creation(spec, source, output, elements):
                 (list(item.dxf.extrusion), e["normal"], "recorded normal"),
             ]:
                 require(actual, expected, label)
-        return
+        return (
+            verified_clearances(spec["pattern"], disks, elements) if footprint else None
+        )
     import cadquery as cq
 
     shape = load_solid(source)
@@ -110,11 +139,16 @@ def verify_creation(spec, source, output, elements):
                 k: value(spec, r["id"], k) for k in ("diameter", "depth", "end")
             }
             actual = measure_cut(saved, r, axis)
+            disks.append(
+                dict(id=r["id"], centre=actual["entry"], diameter=actual["diameter"])
+            )
             for k, v in actual.items():
                 require(e[k], v, k)
             removed += math.pi * (r["value"]["diameter"] / 2) ** 2 * r["value"]["depth"]
         require(shape.Volume() - saved.Volume(), removed, "cut volume")
-        return
+        return (
+            verified_clearances(spec["pattern"], disks, elements) if footprint else None
+        )
     from batch_modification import solid_difference
 
     assembly = cq.Assembly.load(str(output))

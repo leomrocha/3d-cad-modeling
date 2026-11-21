@@ -45,6 +45,138 @@ class CreationTests(unittest.TestCase):
         self.request.write_text(json.dumps(spec))
         return spec
 
+    def interior(self):
+        self.pattern.update(
+            kind="interior", layout="rows", origin=[2,5], pitch_xy=[4,20],
+            outer=dict(kind="polygon",vertices=[[0,0],[10,0],[10,10],[0,10]]),
+            cutouts=[dict(kind="circle",centre=[8.75,5],radius=0.5)],
+            containment="footprint", footprint=dict(kind="circle",centre=[0,0],radius=1),
+            clearance=1)
+        self.pattern.pop("positions")
+
+    @unittest.skipUnless(all(importlib.util.find_spec(pkg) for pkg in ("ezdxf","cadquery","shapely")),
+                         "requires local DXF and STEP providers")
+    def test_qualification_and_delivery_of_legacy_footprint_jobs(self):
+        import cadquery as cq
+        import ezdxf
+        import venv
+        import batch_creation
+        from batch_delivery import CONTRACTS, provider, verify_job_sample
+        from batch_sample_readback import verify_creation
+        venv.EnvBuilder(with_pip=False).create(self.root / "router")
+        launcher = self.root / "router/bin/python"
+        self.interior()
+        self.pattern["frame"]["origin"] = [10,10,10]
+        self.pattern["pitch_xy"] = [50,50]
+        for op in ("circle","cut"):
+            if op == "circle":
+                source = self.root/"drawing.dxf"
+                ezdxf.new("R2010",units=4).saveas(source)
+                extra = {}
+            else:
+                source = self.root/"block.step"
+                cq.exporters.export(cq.Solid.makeBox(30,30,10),str(source))
+                extra = {"direction":"-normal"}
+            for diameter in (2,8):
+                job = self.root/f"{op}-{diameter}"
+                self.request = self.root/(job.name+".json")
+                value = {"diameter":diameter}
+                if op == "cut":
+                    value.update(depth=10,end="through")
+                spec = self.prepare(source,op,value=value,**extra)
+                # Exercise the former writer contract with native geometry and its complete manifest.
+                with patch("batch_creation.measure_disk_clearances", return_value=None):
+                    stored = execute(self.request,job)
+                hashes = {p.name:file_digest(p) for p in job.iterdir()}
+                action,entity,output = CONTRACTS[op]
+                row = dict(name=op,action=action,input=entity,output=output)
+                method = dict(**row,probe="guided",sample_request=str(self.request),readback_file=str(job/"manifest.json"))
+                resource = dict(id="cad",location=batch_creation.__file__,python=sys.executable,
+                                kind="guided",backend=provider(op),methods=[method])
+                if diameter == 8:
+                    with self.assertRaisesRegex(ValueError,r"P1 disk clearance to outer border is -2 mm"):
+                        verify_job_sample(row,resource,job/"manifest.json",replay=False)
+                else:
+                    self.assertEqual(verify_job_sample(row,resource,job/"manifest.json",replay=False),
+                                     hashes["manifest.json"])
+                    newer = execute(self.request,job)
+                    self.assertEqual(newer.pop("footprint_verification")["P1"]["outer_clearance"],1)
+                    self.assertEqual(newer,stored)
+                    resources = self.root/(op+"-resources.json")
+                    catalogue = self.root/(op+"-catalogue.json")
+                    resources.write_text(json.dumps([resource]))
+                    subprocess.run([sys.executable,ROOT/"scripts/operation_catalogue.py","--catalogue",catalogue,
+                                    "refresh","--resources",resources],check=True,capture_output=True)
+                    result=subprocess.run([launcher,ROOT/"scripts/batch_delivery.py",self.request,job,
+                                           "--catalogue",catalogue,"--request-sha256",file_digest(self.request)],
+                                          check=True,capture_output=True,text=True)
+                    report=json.loads(result.stdout)
+                    self.assertEqual(report["readback"],stored)
+                    self.assertEqual(report["footprint_verification"]["P1"]["outer_clearance"],1)
+                self.assertEqual({p.name:file_digest(p) for p in job.iterdir()},hashes)
+        with self.assertRaisesRegex(ValueError,"projected part outline"):
+            verify_creation(dict(spec,operation="occurrence"),source,job,stored["elements"])
+
+    @unittest.skipUnless(importlib.util.find_spec("ezdxf") and importlib.util.find_spec("shapely"),
+                         "requires local ezdxf and Shapely")
+    def test_interior_actual_circle_footprints(self):
+        import ezdxf
+        from batch_creation import circles
+        self.interior()
+        self.pattern["frame"] = dict(origin=[12,20,7],x=[0,0,1],y=[-1,0,0])
+        source = self.root / "plane.dxf"
+        ezdxf.new("R2010",units=4).saveas(source)
+        values = {"P1":{"diameter":{"value":0.2,"unit":"cm"}},
+                  "P2":{"diameter":{"value":0.25,"unit":"cm"}}}
+        for key, diameter, boundary in (("P1",0.8,"outer border"),("P2",0.4,"cutout 1")):
+            oversized = {**values,key:{"diameter":{"value":diameter,"unit":"cm"}}}
+            self.prepare(source,"circle",values=oversized)
+            with patch("batch_creation.circles",side_effect=AssertionError("writer called before clearance validation")):
+                with self.assertRaisesRegex(ValueError, f"{key} disk clearance to {boundary}"):
+                    execute(self.request,self.job)
+            self.assertFalse(self.job.exists())
+        self.prepare(source,"circle",values=values)
+        def wrong_readback(*args):
+            result = circles(*args)
+            result[0]["centre"][2] -= 1
+            return result
+        with patch("batch_creation.circles",side_effect=wrong_readback):
+            with self.assertRaisesRegex(ValueError,"P1 disk clearance to outer border"):
+                execute(self.request,self.job)
+        self.assertFalse(self.job.exists())
+        receipt = execute(self.request,self.job)
+        self.assertEqual([e["id"] for e in receipt["elements"]],["P1","P2"])
+        saved = ezdxf.readfile(self.job/"result.dxf")
+        for element, expected in zip(receipt["elements"],[2,2.5]):
+            entity = saved.entitydb[element["handle"]]
+            self.assertEqual(entity.dxf.radius*2,expected)
+            self.assertEqual(list(entity.ocs().to_wcs(entity.dxf.center)),element["centre"])
+        self.assertEqual(receipt["elements"][0]["outer_clearance"],1)
+        self.assertEqual(receipt["elements"][1]["minimum_cutout_clearance"],1)
+        self.assertEqual(execute(self.request,self.job),receipt)
+
+    @unittest.skipUnless(importlib.util.find_spec("cadquery") and importlib.util.find_spec("shapely"),
+                         "requires local CadQuery and Shapely")
+    def test_interior_bore_disk_and_polygon_cutout(self):
+        import cadquery as cq
+        self.interior()
+        self.pattern["outer"] = dict(kind="circle",centre=[5,5],radius=5)
+        self.pattern["cutouts"] = [dict(kind="polygon",vertices=[[8.25,4],[9,4],[9,6],[8.25,6]])]
+        source = self.root/"host.step"
+        cq.exporters.export(cq.Solid.makeBox(15,15,10),str(source))
+        values = {"P1":dict(diameter=2,end="blind",depth=2),
+                  "P2":dict(diameter=4,end="through",depth=10)}
+        self.prepare(source,"cut",direction="-normal",values=values)
+        with self.assertRaisesRegex(ValueError,"P2 disk clearance to cutout 1"):
+            execute(self.request,self.job)
+        self.assertFalse(self.job.exists())
+        values["P2"]["diameter"] = 2.5
+        self.prepare(source,"cut",direction="-normal",values=values)
+        a,b = execute(self.request,self.job)["elements"]
+        self.assertEqual((a["outer_clearance"],b["minimum_cutout_clearance"]),(1,1))
+        self.assertEqual((a["bottom"],b["exit"]),([2,5,8],[6,5,0]))
+        self.assertTrue(load_solid(self.job/"result.step").isValid())
+
     @unittest.skipUnless(importlib.util.find_spec("ezdxf"), "requires a locally installed CAD provider")
     def test_dependency_free_launcher_uses_selected_interpreter(self):
         import ezdxf
