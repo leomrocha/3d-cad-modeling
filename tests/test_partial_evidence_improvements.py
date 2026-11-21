@@ -40,7 +40,8 @@ class SourcePinMerge(unittest.TestCase):
     def test_repeated_receipt_merges_without_changing_order_or_inputs(self):
         receipt={'path':'output:part/final.json','sha256':'0'*64}
         model={'path':'output:part/final.dwg','sha256':'1'*64}
-        merged=merge_source_pins([receipt], [dict(receipt), model])
+        repeated=dict(receipt,path=Path(receipt['path']))
+        merged=merge_source_pins([receipt], [repeated, model])
         self.assertEqual(merged,[receipt,model])
         self.assertIsNot(merged[0],receipt)
 

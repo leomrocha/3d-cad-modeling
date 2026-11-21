@@ -372,7 +372,7 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "3dee69888d50792b6b14f8a80b6d5d2a446b91424e5073a32bcd0bd3b9c09508"
+      "sha256": "c6e5e7782b2f5ad56bb84e004f252c5e6160930de3b57efc94ef9bf93e525423"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",

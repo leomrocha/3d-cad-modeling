@@ -133,7 +133,7 @@ def _checkpoint_locator(locator,roots,base=None):
 def _source_pin_path(pin):
     import re
     if (not isinstance(pin,dict) or set(pin)!={'path','sha256'}
-            or not isinstance(pin['path'],str) or not pin['path']
+            or not isinstance(pin['path'],(str,Path)) or not str(pin['path']).strip()
             or not re.fullmatch('[a-f0-9]{64}',str(pin['sha256']))):
         raise CadError('Source pins require exact path and SHA-256')
     return pin['path']
@@ -148,9 +148,9 @@ def merge_source_pins(*groups):
     merged={}
     for group in groups:
         for pin in group:
-            path=_source_pin_path(pin)
+            path=str(_source_pin_path(pin))
             previous=merged.setdefault(path,dict(pin))
-            if previous!=pin:
+            if previous['sha256']!=pin['sha256']:
                 raise CadError('Conflicting source revisions for '+path)
     return list(merged.values())
 
