@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from service_clearance import shared_definition_coincidence, translation_box_window
+from service_clearance import axial_stack_witness, bounded_axial_section_clearance, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
 def placement(x=0, y=0, z=0):
@@ -13,6 +13,150 @@ def placement(x=0, y=0, z=0):
 
 class ServiceClearance(unittest.TestCase):
     box = [[0, 0, 0], [1, 1, 1]]
+
+    def test_axial_section_resolves_only_fully_covered_box_candidates(self):
+        full = [[-3,-1,-3],[3,9,3]]
+        shank = [[-1,0,-1],[1,9,1]]
+        obstacle = [[2,2,-1],[4,4,1]]
+        self.assertEqual(bounded_axial_section_clearance(full,shank,obstacle,axis=1),
+                         dict(result='DISJOINT_SECTION_BOUNDS', axial_overlap=['2','4'], transverse_axis_gap='1'))
+        head_overlap = [[2,-.5,-1],[4,4,1]]
+        self.assertEqual(bounded_axial_section_clearance(full,shank,head_overlap,axis=1)['result'],
+                         'SECTION_DOES_NOT_COVER_OVERLAP')
+        tangent = [[1,2,-1],[4,4,1]]
+        self.assertEqual(bounded_axial_section_clearance(full,shank,tangent,axis=1)['result'],
+                         'SECTION_CONTACT_CANDIDATE')
+        disjoint = [[4,2,-1],[5,4,1]]
+        self.assertEqual(bounded_axial_section_clearance(full,shank,disjoint,axis=1)['result'],
+                         'DISJOINT_FULL_BOUNDS')
+
+    def test_orthogonal_sleeves_find_material_witness_and_separation(self):
+        vertical = dict(axis=2, centre=[0, 1, 0], span=[-6, 7], radii=[1, 3])
+        transverse = dict(axis=1, centre=[6, 0, 2], span=[-4, 4], radii=[2, 4])
+        self.assertEqual(orthogonal_sleeve_clearance(vertical, transverse),
+                         dict(result='STRICT_MATERIAL_INTERSECTION', normal_axis=0,
+                              signed_outer_gap='-1', witness=['5/2', '1', '2']))
+        self.assertEqual(orthogonal_sleeve_clearance(transverse, vertical)['witness'], ['5/2', '1', '2'])
+        shifted = dict(transverse, centre=[8, 0, 2])
+        self.assertEqual(orthogonal_sleeve_clearance(vertical, shifted)['result'], 'DISJOINT_OUTER_CYLINDERS')
+
+    def test_orthogonal_sleeves_hold_endpoints_and_tangency(self):
+        vertical = dict(axis=2, centre=[0, 0, 0], span=[1, 7], radii=[1, 3])
+        transverse = dict(axis=1, centre=[6, 0, 1], span=[-4, 4], radii=[2, 4])
+        tangent = dict(transverse, centre=[7, 0, 2])
+        for sleeve in (transverse, tangent):
+            self.assertEqual(orthogonal_sleeve_clearance(vertical, sleeve)['result'], 'NEEDS_FINITE_SOLID_CHECK')
+        with self.assertRaises(ValueError):
+            orthogonal_sleeve_clearance(vertical, dict(transverse, axis=2))
+
+    def test_rectangle_radial_bounds_report_nearest_edge_and_farthest_corner(self):
+        self.assertEqual(rectangle_radial_bounds([[1,-2],[3,1]],[0,0]),
+                         dict(min_radius_squared="1",max_radius_squared="13"))
+        self.assertEqual(rectangle_radial_bounds([[0,0],[2,2]],[1,1]),
+                         dict(min_radius_squared="0",max_radius_squared="2"))
+
+    def test_rectangle_radial_bounds_reject_inverted_or_nonfinite_input(self):
+        for bounds in ([[2,0],[1,1]], [[0,0],[float("inf"),1]]):
+            with self.assertRaises(ValueError):
+                rectangle_radial_bounds(bounds,[0,0])
+
+    def test_box_group_margin_verifies_a_translated_pose_and_ties(self):
+        a = [[0,0,0],[1,1,1]]
+        b = [[5,0,0],[6,1,1]]
+        c = [[2,3,0],[3,4,1]]
+        proof=translated_box_group_margin([a], [b,c], [2,0,0])
+        self.assertEqual(proof["minimum_axis_margin"], "2")
+        self.assertEqual(proof["pair_count"], 2)
+        self.assertEqual(proof["limiting_pairs"], [
+            dict(moving_index=0,fixed_index=0,axes=[0]),
+            dict(moving_index=0,fixed_index=1,axes=[1]),
+        ])
+
+    def test_box_group_margin_separates_touching_and_overlap_cases(self):
+        a = [[0,0,0],[1,1,1]]
+        b = [[1,0,0],[2,1,1]]
+        for dx,expected in ((0,"0"),(.25,"-1/4")):
+            self.assertEqual(translated_box_group_margin([a],[b],[dx,0,0])
+                             ["minimum_axis_margin"], expected)
+        with self.assertRaises(ValueError):
+            translated_box_group_margin([], [b], [0,0,0])
+
+    def test_axial_stack_witness_preserves_contacts_and_nominal_reach(self):
+        expected = dict(seat_gap="0", interface_gaps=["0", "0"],
+                        last_layer_overlap="6", tip_past_stack="1/2")
+        self.assertEqual(axial_stack_witness([0, 10], [(0, 2), (2, 3.5), (3.5, 9.5)]), expected)
+        self.assertEqual(axial_stack_witness([5, 15], [(5, 7), (7, 8.5), (8.5, 14.5)]), expected)
+
+    def test_axial_stack_exact_decimal_stations_in_tenths(self):
+        witness = axial_stack_witness([42, 151], [(114, 151), (78, 114), (21, 78)], axis_sign=-1)
+        self.assertEqual(witness, dict(seat_gap="0", interface_gaps=["0", "0"],
+                                      last_layer_overlap="36", tip_past_stack="-21"))
+
+    def test_axial_stack_uses_signed_world_axis_and_preserves_layer_order(self):
+        upward = axial_stack_witness([0,11], [(0,2),(2,5),(5,9)])
+        downward = axial_stack_witness([89,100], [(98,100),(95,98),(91,95)], axis_sign=-1)
+        self.assertEqual(downward, upward)
+        self.assertEqual(downward["tip_past_stack"], "2")
+        for direction in (0, 2, True):
+            with self.assertRaises(ValueError):
+                axial_stack_witness([89,100], [(98,100)], axis_sign=direction)
+
+    def test_axial_stack_witness_detects_axial_gaps_overlap_and_insufficient_reach(self):
+        witness = axial_stack_witness([0, 3], [(0.25, 1), (1.5, 2.5), (2, 4)])
+        self.assertEqual(witness, dict(seat_gap="1/4", interface_gaps=["1/2", "-1/2"],
+                                      last_layer_overlap="1", tip_past_stack="-1"))
+        self.assertEqual(axial_stack_witness([0, 2], [(3, 4)])["last_layer_overlap"], "0")
+        for shaft, layers in [([1, 0], [(1, 2)]), ([0, 2], []), ([0, 2], [(1, 1)])]:
+            with self.assertRaises(ValueError):
+                axial_stack_witness(shaft, layers)
+
+    def test_oblique_plane_separates_overlapping_aabbs_without_scaling_the_gap(self):
+        bounds = [[0, -6, 10], [1, -4, 11]]
+        for normal, offset in (([0,-1,1],12),([0,-3,3],36)):
+            proof = static_box_halfspace_gap(bounds,normal=normal,offset=offset)
+            self.assertEqual((proof['result'],proof['gap_squared']),('DISJOINT_BOUNDS','2'))
+        self.assertEqual(static_box_halfspace_gap(bounds,normal=[0,-1,1],offset=14)['result'],'CANDIDATE')
+        with self.assertRaisesRegex(ValueError,'Nonzero'):
+            static_box_halfspace_gap(bounds,normal=[0,0,0],offset=14)
+
+    def test_quarter_turn_encloses_intermediate_poses_for_each_axis_and_sign(self):
+        import itertools
+        import math
+        for axis, direction in itertools.product(range(3), (-1, 1)):
+            pivot = [2, -3, 4]
+            bounds = [[-2, -1, -3], [4, 3, 2]]
+            box = quarter_turn_box(bounds,pivot=pivot,axis=axis,direction=direction)
+            u,v = (axis+1)%3,(axis+2)%3
+            for theta in (0,math.pi/8,math.pi/4,3*math.pi/8,math.pi/2):
+                for corner in itertools.product(*zip(*bounds,strict=True)):
+                    a,b=corner[u]-pivot[u],corner[v]-pivot[v]
+                    angle=theta*direction
+                    result=list(corner)
+                    result[u]=pivot[u]+a*math.cos(angle)-b*math.sin(angle)
+                    result[v]=pivot[v]+a*math.sin(angle)+b*math.cos(angle)
+                    for i,x in enumerate(result):
+                        self.assertLessEqual(box[0][i],x+1e-12)
+                        self.assertGreaterEqual(box[1][i],x-1e-12)
+            self.assertEqual([bound[axis] for bound in box],[bound[axis] for bound in bounds])
+
+    def test_quarter_turn_rejects_invalid_axis_or_direction(self):
+        with self.assertRaises(ValueError):
+            quarter_turn_box(self.box,pivot=[0,0,0],axis=-1,direction=1)
+        with self.assertRaises(ValueError):
+            quarter_turn_box(self.box,pivot=[0,0,0],axis=2,direction=0)
+
+    def test_planar_translation_keeps_endpoint_and_nonparallel_edges(self):
+        ring = [(0,0),(2,0),(2,2),(1,1),(0,2)]
+        pieces = planar_translation_pieces(ring+ring[:1], [0,-3])
+        self.assertEqual(pieces[0],tuple(ring))
+        self.assertEqual(pieces[1],((0,-3),(2,-3),(2,-1),(1,-2),(0,-1)))
+        self.assertEqual(len(pieces),5)
+        self.assertIn(((2,2),(1,1),(1,-2),(2,-1)),pieces)
+
+    def test_planar_translation_rejects_invalid_vertices(self):
+        with self.assertRaises(ValueError):
+            planar_translation_pieces([(0,0),(0,0),(2,2)], [1,1])
+        self.assertEqual(len(planar_translation_pieces([(0,0),(1,0),(0,1)], [0,0])),1)
 
     def test_between_pose_candidate_for_both_travel_signs(self):
         upper = [[0, 0, 2], [1, 1, 3]]
@@ -37,6 +181,28 @@ class ServiceClearance(unittest.TestCase):
                                     ([[0, 0, 4], [1, 1, 5]], [0, 0, 2])]:
             self.assertEqual(translation_box_window(self.box, fixed, displacement)["result"],
                              "DISJOINT_BOUNDS")
+
+    def test_static_box_gap_preserves_diagonal_distance_and_sign_symmetry(self):
+        fixed = [[4, 5, 0], [6, 7, 1]]
+        expected = dict(result='DISJOINT_BOUNDS', axis_gaps=['3','4','0'], squared_gap='25')
+        self.assertEqual(static_box_gap(self.box, fixed), expected)
+        self.assertEqual(static_box_gap(fixed, self.box), expected)
+
+    def test_static_box_gap_leaves_touching_boxes_as_candidates(self):
+        fixed = [[1, 0, 0], [2, 1, 1]]
+        for candidate in (self.box, fixed):
+            self.assertEqual(static_box_gap(self.box, candidate)['result'], 'CANDIDATE')
+        with self.assertRaises(ValueError):
+            static_box_gap(self.box[::-1], self.box)
+
+    def test_static_box_contact_dimension_covers_touch_overlap_and_separation(self):
+        for corner, dimension in [([1,1,1],0),([1,1,0],1),([1,0,0],2),([0,0,0],3),([2,0,0],None)]:
+            with self.subTest(corner=corner):
+                other = [corner,[n+1 for n in corner]]
+                self.assertEqual(static_box_contact_dimension(self.box,other)['dimension'],dimension)
+                self.assertEqual(static_box_contact_dimension(other,self.box)['dimension'],dimension)
+        self.assertEqual(static_box_contact_dimension(self.box,[[1,0,0],[2,1,1]])['signed_axis_spans'],
+                         ['0','1','1'])
 
     def test_static_overlap_covers_full_interval(self):
         self.assertEqual(translation_box_window(self.box, self.box, [0, 0, 0])["candidate_fraction"],

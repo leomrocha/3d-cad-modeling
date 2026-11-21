@@ -6,6 +6,30 @@
 4. Use `shared_definition_coincidence(moving_matrix, fixed_matrix, displacement)` only after verifying both occurrences reference the same nonempty geometry definition. Supply nonsingular affine 4×4 matrices in the same world frame. Identical linear transforms and a matching translation within the finite path give a `COINCIDENCE_WITNESS`. Record the witness travel and both occurrences. For a solid with positive volume, coincidence proves interference at that pose. `NO_COINCIDENCE_WITNESS` leaves the collision question open.
 5. Run a supported 3D test for remaining candidates. A positive-volume intersection at one sampled pose proves interference there. Clear samples cover their tested poses. A continuous clear result requires a validated swept-volume or continuous collision method for the whole motion and all in-scope geometry. Keep unknown bodies, invalid input solids and untested clearances visible in the result. A path with rotation, bending or staged motion needs its own supported method.
 
+## Project a straight motion through an existing wall opening
+
+1. Bind the moving clearance silhouette to the actual wall slab and keep the full through-cut outline from the saved model. Express both in one wall-plane frame. For travel parallel to that plane, express the silhouette displacement in the wall frame. When the wall moves, use the opposite of its travel for the stationary silhouette.
+2. Call `planar_translation_pieces(vertices, displacement)` from the service clearance helper. Validate the input as a simple filled polygon without holes using the selected geometry provider. Union the endpoint polygons and the swept boundary quadrilaterals with that provider. Clip to the wall face before checking containment by the through-cut outline. Portions omitted below a wall edge are safe to omit only if they remain outside the wall throughout the motion.
+3. Compute the distance from the retained swept region to the remaining wall material. Keep that numerical reserve separate from any allowance already built into the silhouette. Preserve the continuous travel interval, geometry revisions, failed regions and extrusion direction. This check covers the wall slab and represented silhouette. Check other walls, attached connectors and released fasteners separately.
+
+## Screen external space for a quarter-turn hinge motion
+
+Pass a conservative moving box, one point on the fixed hinge axis, the Cartesian axis and signed rotation direction to `quarter_turn_box`. Screen the returned envelope against the stationary boxes. Include latch and cover hardware in the moving extent. For multiple plausible hinge datums, run and label each candidate independently. The envelope encloses all angles through 90° and can overstate the volume reached. Positive overlap candidates require a narrower motion check. Keep source hinge identification, cover-to-hinge contact and external-space clearance as different results.
+
+## Check a saved pose
+
+Use `static_box_gap(first_bounds, second_bounds)` for two XYZ boxes in the same frame. It reports exact rational axis gaps and squared Euclidean distance for the supplied coordinates. Take the square root to display a length. Overlap or contact remains a candidate for the represented bodies. A positive result from sampled boundary boxes describes the samples. Use conservative enclosures to bound solid clearance.
+
+Use `static_box_contact_dimension` on saved boxes in that same frame when exact boundary contact needs a separate classification. The intersection dimensions zero, one, two and three indicate point, line, face and volume candidates. A negative signed span separates the boxes. For enclosed solids, assess actual trims and material sides before using a candidate as a seating or interference result.
+
+For a chamfer or another verified plane that contains one complete relevant part on one side, call `static_box_halfspace_gap(box, normal=..., offset=...)`. The part must fit inside `normal · point <= offset` in the same frame as the box. A positive exact gap squared separates the box from the entire material half-space. Supply an enclosing box to prove solid separation. If the box comes from boundary samples, report the sample scope. A candidate still needs a narrower check.
+
+For one translated pose of a multi-part group, pass the moving and fixed box arrays and displacement to `translated_box_group_margin`. It returns the minimum over all pairs of each pair's largest signed axis separation and all limiting pairs. Use the exact fractional result to confirm the margin of a candidate found by an approximate layout search. Check the same pose against each required obstacle revision. A positive margin applies to the provided enclosures at that pose. Check the travel and the actual mounting parts separately.
+
+## Resolve a box candidate inside a bend
+
+Split the bent part into its measured straight regions and annular bend regions. Check the straight regions separately. For a candidate overlapping one bend box, intersect the two enclosures, project the intersection onto the bend section plane and give its rectangle and measured bend centre to `rectangle_radial_bounds`. If the maximum squared radius is strictly below the squared inside radius, the intersection lies entirely in the bend void. If the minimum squared radius is strictly above the squared outside radius, the intersection lies outside the bend. Use the caller's verified conservative radii and bounds when tolerances matter. Equality and intermediate results need a separate finite surface or solid check.
+
 ## Axial withdrawal through a bore
 
 1. Bind the moving shaft and each fixed obstacle to source solid IDs, occurrence matrices and hashes. Record the initial overlap or gap, the release set, signed travel interval, straight axis and invariant orientation. Match finite cylindrical face centres and axes, diameters and trimmed axial spans at each attachment station. An adjacent hardware solid is a separate pair, even when its axis coincides with the bore.
@@ -24,3 +48,18 @@ Use this check for a straight +Z lift from the assembled seat after the listed r
 ## Saved service endpoints
 
 Prepare a separate occurrence list for each endpoint. Give every moving, fixed and released occurrence a source identity and an explicit pose in the common frame. Bind the displacement and release set to the service calculation, including fixed obstacles that are omitted from a display subset. After import or save, expand the actual hierarchy and compare transformed vertices, finite face counts and closed-shell evidence at that endpoint. Use `match_world_vertices(..., require_unique_source=True)` in [assembly_verification.py](../scripts/assembly_verification.py) when assigning source identities from geometry. For indistinguishable bodies use independent occurrence bindings. Check root metadata, image inputs and the saved file hash separately. The endpoint checks cover the represented poses. Continuous path evidence belongs to the underlying motion interval and its full obstacle set.
+
+
+## Check a coaxial mounting stack
+
+Read the actual shoulder, tip and layer-end stations in a common model axis. Give each interval as increasing coordinates and list the layers in shoulder-to-tip order. When the shaft points along the decreasing model coordinate, set `axis_sign=-1` on `axial_stack_witness` in [service_clearance.py](../scripts/service_clearance.py). The signed seat and interface gaps expose a placement offset, an air gap or axial overlap that summing thicknesses would miss. Tip protrusion is positive beyond the last exit and negative for a recessed tip. Last-layer overlap measures geometric reach. Evaluate bore profiles, thread engagement, compressible layers and installation access separately. If a compliant layer has only a free-state thickness, report the uncompressed nominal result and keep measured or limit states separate.
+
+For exact comparisons of nominal decimal dimensions, pass integer stations in one common finer unit. For example, use tenths of a millimetre for stations stated to 0.1 mm. Record the station unit alongside the result and convert the returned gaps and overlap back to model units. Floating-point coordinates produce exact ratios for their stored binary values. For measured coordinates compare the converted results against the declared measurement tolerance.
+
+### Perpendicular sleeves in one cavity
+
+Measure each sleeve body and each fastener as separate occurrences. A shank radius cannot establish sleeve-wall clearance. For two square-ended sleeves parallel to distinct world axes, pass `orthogonal_sleeve_clearance(first, second)` a dictionary per sleeve with `axis` (0, 1 or 2), `centre` (XYZ), `span` (increasing axis-end stations), and `radii` (inner and outer). A positive signed outer gap separates the supplied cylinders. `STRICT_MATERIAL_INTERSECTION` returns a point inside both annular walls and both axial spans. `NEEDS_FINITE_SOLID_CHECK` leaves the pair unresolved and requires an exact solid test or another bound. Retain source scope and measured or assumed tolerances beside the nominal result.
+
+### Bound a fastener section inside a confined joint
+
+An enlarged head can produce a whole-fastener box candidate even when the other part only reaches the shank. Confirm the installed axis, bearing plane and tip against the actual model. Bind a conservative shank bound to the measured axial stations and the exact source revision. Include any washer face, fillet, step or thread major diameter that can enter those stations. Pass both the full box and the verified section box with the obstacle box to `bounded_axial_section_clearance(..., axis=...)`. A section may resolve only an overlap it covers completely. `DISJOINT_SECTION_BOUNDS` proves transverse separation for that overlap. A contact candidate or uncovered overlap requires a wider certified section or a finite-solid check.

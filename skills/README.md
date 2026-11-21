@@ -18,9 +18,9 @@ Install these skills using the [README instructions](../README.md#installing). T
 2. **Model reuse:** [existing-model checks and configuration selection](cad-ocs-engineering/references/existing-model-start-check.md).
 3. **Source interpretation:** [drawing features](cad-ocs-engineering/references/drawing-feature-checks.md), [limits, datums, drawing scale and dual units](cad-ocs-engineering/references/dimension-limits-and-datums.md), [source-image inspection and retrieval routes](cad-ocs-engineering/references/source-view-evidence.md), [variant tables and fastener standard editions](cad-ocs-engineering/references/source-variant-tables.md).
 4. **Traced geometry:** [calibrated coordinates](cad-ocs-engineering/references/calibrated-trace.md), [source-vector perimeter chains](cad-ocs-engineering/references/source-perimeter-chains.md), [profile extrusion](cad-ocs-engineering/references/profile-reference.md).
-5. **Construction:** [rounded hollow sections](cad-ocs-engineering/references/source-first-and-tube.md), [axial motors](cad-ocs-engineering/references/axial-motor.md), [rectangular envelopes](cad-ocs-engineering/references/envelope-reference.md), [guarded envelope runner](cad-ocs-engineering/references/envelope-job-runner.md), [Pixhawk clearance geometry](cad-ocs-engineering/references/pixhawk.md), [annular references](cad-ocs-engineering/references/annular-reference.md), [guarded annular job runner](cad-ocs-engineering/references/annular-job-runner.md), [hexagonal references](cad-ocs-engineering/references/hexagonal-reference.md), [toroidal references](cad-ocs-engineering/references/toroidal-reference.md), [spherical-seat profiles](cad-ocs-engineering/references/spherical-seat-profile.md), [conical-washer profiles](cad-ocs-engineering/references/conical-washer-profile.md).
+5. **Construction:** [rounded hollow sections](cad-ocs-engineering/references/source-first-and-tube.md), [axial motors, finite drill points and round-ended keyways](cad-ocs-engineering/references/axial-motor.md), [rectangular envelopes](cad-ocs-engineering/references/envelope-reference.md), [guarded envelope runner](cad-ocs-engineering/references/envelope-job-runner.md), [Pixhawk clearance geometry](cad-ocs-engineering/references/pixhawk.md), [annular references](cad-ocs-engineering/references/annular-reference.md), [guarded annular job runner](cad-ocs-engineering/references/annular-job-runner.md), [hexagonal references](cad-ocs-engineering/references/hexagonal-reference.md), [toroidal references](cad-ocs-engineering/references/toroidal-reference.md), [spherical-seat profiles](cad-ocs-engineering/references/spherical-seat-profile.md), [conical-washer profiles](cad-ocs-engineering/references/conical-washer-profile.md).
 6. **Component checks:** [bearing geometry](cad-ocs-engineering/references/existing-bearing.md), [battery shells and terminals](cad-ocs-engineering/references/existing-battery.md), [tabbed battery cases](cad-ocs-engineering/references/tabbed-battery.md), [smallBMS saved geometry](cad-ocs-engineering/references/small-bms.md), [shared feature comparisons](cad-ocs-engineering/references/shared-feature-checks.md).
-7. **Assemblies:** [manufacturer placements](cad-ocs-engineering/references/manufacturer-assembly.md), [scaled imports](cad-ocs-engineering/references/scaled-assemblies.md), [root unit-change plans](cad-ocs-engineering/references/assembly-units.md), [STEP solid inventories](cad-ocs-engineering/references/step-solid-inventory.md).
+7. **Assemblies:** [manufacturer placements](cad-ocs-engineering/references/manufacturer-assembly.md), [scaled imports](cad-ocs-engineering/references/scaled-assemblies.md), [root unit-change plans](cad-ocs-engineering/references/assembly-units.md), [STEP solid inventories](cad-ocs-engineering/references/step-solid-inventory.md), [annular seat contact checks](cad-ocs-engineering/references/assembly-evidence.md#interfaces-installation-and-contact), [equal-angle countersunk fit](cad-ocs-engineering/references/assembly-evidence.md#equal-angle-countersunk-fit).
 8. **Completion:** [saved source metadata](cad-ocs-engineering/references/source-metadata.md), [retained-file manifests](cad-ocs-engineering/references/retained-artifact-checks.md), [owned-document cleanup](cad-ocs-engineering/references/document-cleanup.md), [required package completion and registration](cad-ocs-engineering/references/package-completion.md).
 
 The [tools page](../docs/tools.md) lists the packaged helper implementations and their source-bound geometry roles.
@@ -73,6 +73,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 ## Source-bound screw construction
 
 1. [Hex-head and cylindrical-shaft reference](cad-ocs-engineering/references/hex-screw-reference.md) — source pins, explicit frame, joined solid and native feature checks.
+2. [Shorten a retained nominal shaft](cad-ocs-engineering/references/hex-screw-reference.md#shorten-a-retained-nominal-shaft) — checked source copy, bounded tip cut and head preservation.
 
 ## Exact source and partial-work procedures
 
@@ -85,8 +86,9 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 
 ## Insertion recovery and verified resume
 
-1. [Insertion, resume and assembly verification](cad-ocs-engineering/references/insertion-resume-verification.md) — verified defaults, point-only correction, pinned checkpoints, repeated-instance matching and preserved source anomalies.
+1. [Insertion, resume and assembly verification](cad-ocs-engineering/references/insertion-resume-verification.md) — verified defaults, point-only correction, pinned checkpoints, repeated-instance matching and preserved source anomalies, and separate storage and installed occurrence checks.
 2. [Recover a batch of DXF block insertions](cad-ocs-engineering/references/insertion-resume-verification.md#recover-a-batch-of-dxf-block-insertions) covers request journals, saved DXF readback and dependent writes after interruption.
+3. [Replace individually addressed nested inserts](cad-ocs-engineering/references/insertion-resume-verification.md#replace-individually-addressed-nested-inserts) covers occurrence uniqueness, exact handle erasure and retained geometry comparisons.
 
 ## Surface and mesh recovery
 
@@ -108,9 +110,9 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 
 ## Service clearance
 
-1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, seated lifts, nested bore guards, source-attributed endpoints and interference witnesses.
+1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, seated lifts, nested bore guards, source-attributed endpoints and interference witnesses. It includes static box separation at a saved pose.
 
-- [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, fit and contact witnesses, source trims, source-preserving STEP wrappers and shell orientation.
+- [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, fit and contact witnesses, source trims, source-preserving STEP wrappers and shell orientation. [Fit datums over retained solids](cad-ocs-engineering/references/assembly-evidence.md#fit-datums-over-retained-solids) checks layout lines on an existing assembly.
 - [Job history archives](cad-ocs-engineering/references/job-history-archive.md) preserve and verify raw receipts and debug histories for each revision.
 
 [Photo and multi-view blueprint handoff](cad-ocs-engineering/references/source-view-evidence.md#ruler-photographs-and-multi-view-blueprints) covers independent photo controls and orthographic landmark agreement. [Mating-interface evaluation](cad-ocs-engineering/references/assembly-evidence.md#judge-a-mating-interface) applies the job’s stated fit to measured geometry.

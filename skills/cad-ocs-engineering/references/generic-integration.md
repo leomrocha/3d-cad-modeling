@@ -43,4 +43,24 @@ For a countersink above a cleared bore, use `countersink_tool_profile` to derive
 
 Use `bounded_wall_in_empty_document` when the owned hollow-section build requires incremental saves. Its callback receives the profiles, new hollow solid with any retained profiles, and finally the solid after owned profile cleanup. Verify each checkpoint before the helper proceeds. The caller owns units, final placement, source checking and closure.
 
+### Build a constant-thickness quarter bend
+
+Use `quarter_bend_section` in [planar_profiles.py](../scripts/planar_profiles.py) for a finished sheet section with concentric 90° inner and outer arcs. Supply the bend centre, inside radius, thickness and both tangent-to-end straight lengths. It returns a lower-left quarter bend with one upright leg and one rightward leg. Extrude the section along the part's longitudinal axis. Verify the native arc radii and centre, both ends of each straight leg and the installed bearing planes before cutting holes. Sheet development uses the selected process allowance and has separate inputs.
+
+Use `reframe_planar_profile` to map a closed outline into another cardinal section frame before extrusion. Supply the new origin and the signed direction of each source axis. A proper rotation preserves arc bulge signs. A reflection reverses the signs while preserving the vertex and edge order. Check the corresponding native tangent endpoints and radii in the destination frame. A later proper rotation of the full solid, such as reusing the opposite installation of one angle, preserves its definition and uses a separate occurrence transform.
+
+For an offset bracket with two opposing quarter bends, use `offset_bend_section`. Supply the lower bend centre, one common inside radius and thickness, the tangent-to-tangent web length, and each straight leg length. The vertical offset between bend centres is the sum of the inner and outer radii. Compare both pairs of cylindrical bend surfaces and all tangent stations. If the equal formed section receives opposing hole offsets, record separate drilled variants and verify each mating pattern.
+
+### Form a perforated web before joining its flanges
+
+Use this route when a native Boolean refuses to cut an otherwise valid formed section. Verify that the failed request changed no handles or geometry revision. Preserve its checkpoint and use a new operation identity for the alternative construction.
+
+1. Identify a planar web with constant thickness and source-defined openings that leave the flange joins intact. Place each join inside unperforated web material and specify a positive overlap. Keep both members within the intended material on the overlap.
+2. Form the web with `bounded_extrusion` from its outer profile and all opening loops. Use an explicit material pick point. For round-ended openings, reuse `round_ended_slot_profile` and preserve the bulge signs under proper planar rotations. Save the checked web before adding flanges.
+3. Extrude each flange from the source section with its bend arcs and a small overlap into the web. Save after extrusion and after placing it in the common frame. Unite the solids using `Geometry.combine`. Save and read back the result as one closed, connected lump. Compare both section ends, the cylindrical bend radii, and the two rims and arc centres of every opening to the source-bound recipe. Preserve the intermediate solids if the union or any readback fails.
+
+### Recover a flat plate with mixed round bores and slots
+
+When a solid subtraction rejects a round-ended slot, verify the failed request changed no geometry and pin the latest checkpoint before removing the owned trial solids. Form the plate from its outer loop and slot loops with `bounded_extrusion`, using a pick point in known retained material. Round through-bores can be included as verified closed loops or added using separately qualified cylinder cuts. Checkpoint each completed stage. After placement, compare the distinct slot-end cylinder axes and radii against the input. Use `round_ended_slot_tangents` in [feature_checks.py](../scripts/feature_checks.py) to match the two native straight connecting edges on each sheet face. It takes the boundary records, axis, two planar end centres, radius, face stations and tolerance. An arc with matching endpoints supplies only endpoint evidence. For split collinear edges, review continuous coverage independently. Verify both face stations and the closed final solid.
+
 Pass the verified first occurrence as `previous` to `insert_component` to reuse the same native block definition. Compare the pinned source hash, locator and metadata. Pass the same first occurrence to `recover_insert_component` when the repeated insertion response needs recovery, so the original block token and request identity are checked.

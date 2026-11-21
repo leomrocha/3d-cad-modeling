@@ -6,6 +6,7 @@ Imports and offline planning never connect to OCS. Journals contain no descripto
 
 import importlib.util
 import fcntl
+from hashlib import sha256
 import json
 import math
 import os
@@ -20,6 +21,18 @@ class CadError(RuntimeError):
 
 class Uncertain(CadError):
     """Completion is unknown; recover the original request, never replay it."""
+
+
+def bounded_request_namespace(label):
+    """Fit a planned request namespace to the OCS 64-byte UTF-8 limit."""
+    if not isinstance(label, str) or not label:
+        raise CadError('Request namespace label must be nonempty text')
+    encoded = label.encode('utf-8')
+    if len(encoded) <= 64:
+        return label
+    suffix = '-' + sha256(encoded).hexdigest()[:16]
+    prefix = encoded[:64-len(suffix)].decode('utf-8', errors='ignore')
+    return prefix + suffix
 
 
 def redact(value):
@@ -255,7 +268,8 @@ def owned_document(client,label,operation='new',**fields):
             raise CadError('Owned document request differs from recorded intent')
         if context.get('session_id')!=client.descriptor['session_id']:raise CadError('Session differs from ownership')
         original=Client(client.helper,client.descriptor,context['document_id'],client.namespace,client.journal,
-                        timeout=client.timeout,max_queries=client.max_queries)
+                        timeout=client.timeout,max_queries=client.max_queries,
+                        poll_interval=client.poll_interval,recovery_deadline=client.recovery_deadline)
         response=original.recover(key)
         previous=context['document_id']
     else:

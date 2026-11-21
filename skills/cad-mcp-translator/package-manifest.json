@@ -84,7 +84,7 @@
     },
     "scripts/step_placements.py": {
       "source": "scripts/step_placements.py",
-      "sha256": "ae70a2c208a124d5691eaf9e1bdac09b67dd9a4b6509a87876fe3b5cf9646691"
+      "sha256": "c0fc0803a7e778ff9b8da0efff2c6404c262e130dc0c141577ef265c7b3ff5e0"
     },
     "scripts/translator.py": {
       "source": "scripts/translator.py",

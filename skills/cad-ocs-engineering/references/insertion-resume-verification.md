@@ -12,6 +12,16 @@ Save the created owned document immediately, after each meaningful construction 
 
 For interrupted same-document mutations that complete at an idle boundary, call `recover_idle_mutation` in [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py). Supply the original label, operation and complete operands from the intended job. The helper checks the journal and exact live revision against the original completion. Read back the affected geometry and save a checkpoint before issuing a dependent mutation. Document opens and unfinished command prompts use their respective recovery procedures.
 
+For a completed EXTRUDE or REVOLVE that consumes a checkpointed profile, call `consumed_profile_transition` in [cadtools/records.py](../scripts/cadtools/records.py). Supply the owned document, first command token, original intent and completion, and profile and resulting solid handles from the job. It binds the operation's exact removal and addition. Check the resulting solid and live inventory separately. An empty change list leaves the source profile available for recovery.
+
+## Verify storage and installed occurrences independently
+
+1. Compare the checkpoint and live `manifest.by_type` values for stored entity counts at the same document revision. The native audit can count a shared definition once and include definitions with no live Model Space reference.
+2. Count installed solid occurrences by traversing the verified live roots with [solid_instances](../scripts/step_placements.py). Each nested handle path and its composed matrix identify one occurrence. Enable `allow_unit_reflection=True` only after the input job identifies and checks the intentional unit mirror transforms. Check the count and required transforms against the independent assembly record.
+3. For a group replacement, verify the old source occurrence count before deletion. After the checked replacement, reconcile erased root handles against the completed native request, traverse again, and verify the retained transforms and the new occurrence count. Keep the native save audit and installed occurrence results as separate evidence fields.
+
+For circular mating axes in a saved nested assembly, use `placed_circular_cylinders` in [native_geometry.py](../scripts/native_geometry.py). Supply the decoded supports and the verified composed unit placement from the native occurrence. It maps the origin as a point and the axis as a direction. Use `cylinder_pattern` for the independent expected centres and retain separate native trim checks for axial depths and seating planes.
+
 ## Finish after a final-check interruption
 
 Use `verify_finish_checkpoint` in [checkpoints.py](../scripts/cadtools/checkpoints.py) when all planned occurrences were saved after placement and labelling, and final verification was interrupted. Supply the expected save request from the job recipe and journal, the complete role list from the plan, and the independently read live root handles. Verify the same idle document, geometry epoch, source hashes and checkpoint bytes. The result `FINAL_VERIFICATION_PENDING` authorizes the caller's checks only. Read back each occurrence's source identity, native layer and full matrix, then run the final geometry checks and save the definitive file. Keep the last verified checkpoint until that save passes.
@@ -62,9 +72,26 @@ When the native record inventory supplies handles without role labels, pass the 
 
 When a completed native deletion leaves erased handles in the Model Space block list, use `model_space_live_handles` from [records.py](../scripts/cadtools/records.py). Supply the stable Model Space and full entity inventories from one current idle epoch, the named expected root handles and the original same-document delete intent and completed response. Only explicitly erased handles absent from the live inventory can be excluded. Keep the original block list and journal, pass the result's live handles to the resume check and filter only those proven erased references in a local traversal copy. The helper rejects unknown dangling references, still-live deleted handles, missing expected roots and omitted completion evidence.
 
+### Recover reports after a completed final save
+
+If the final model save completed and a report, render or downstream check failed, read the final receipt and compare its exact request ID, owned document, geometry revision, path, file hash, source pins and expected occurrence handles. Use `verify_finish_checkpoint` with the final save request ID as the expected construction save. Remeasure the live saved revision and generate the missing evidence from that revision. Use the persisted final receipt when linking the reports and closing the document. Preserve uncertainties about pending native operations and recover their original requests before proceeding. Reject a resume that would replay an edit or write a second final save.
+
+### Replace individually addressed nested inserts
+
+In a job-owned copy, enumerate reachable leaf paths and count how many times each selected insert handle occurs. Normalize handles to the reader's native hex form before comparing entity and block inventories. Confirm each selected handle resolves to one intended path. A selection under a repeated ancestor can change every occurrence of that ancestor. Use a separately verified definition-isolation operation for that case.
+
+Pin each selected path by its role, transformed geometry and joint station. Save the source-copy checkpoint before erasing anything. Erase the selected inserts as one guarded operation only when the provider supports deletion by exact handle. Compare the before and after reachable inventories, require the selected inserts to be absent, and verify that survivor paths, transforms and entity properties match. If the provider leaves erased handles in a membership list, omit only handles proven erased by the completed request and the independent entity readback.
+
+Save the reduced assembly before inserting replacements. Prepare each target's full transform and signed scale before its insertion. Verify the replacements against independent mating datums and repeat the survivor comparison after the final placement. Retain the pre-edit inventory and removal intent so a resumed job can verify the same source population without repeating the erase.
+
 ### Place a rotated occurrence with an existing mirror
 
 Use `assembly_repair.apply_source_placements(..., allow_unit_reflection=True)` when the named Insert already has X and Z scale +1 and signed unit Y scale. Supply its observed matrix and an independently derived target with the same handedness. Calculate the placement fields with `native_fields`. The helper preserves all scales, checks the target before mutation and verifies the full reflected matrix after the write. Save the insertion before placement and save each successfully placed occurrence.
+
+
+### Compare measured axial occurrences between layouts
+
+Use `compare_axial_occurrences` in [assembly_verification.py](../scripts/assembly_verification.py) when a support revision must preserve the position of named Z-aligned hardware. Supply independently measured before and after records with `occurrence`, `role`, `axis_xy_mm` and `span_z_mm` in the same installation frame. The comparison checks one record per name, exact roles, and the distances between axis centres and between the two-endpoint spans. Coaxial items can have the same numerical measurements and separate names. Use placement matrices or native feature checks for orientation, diameter, and seating geometry.
 
 ## Recover a batch of DXF block insertions
 

@@ -6,7 +6,7 @@ import tempfile
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from retained_artifacts import verify_manifest
+from retained_artifacts import verify_manifest, verify_revision_package
 
 
 class RetainedArtifactsTests(unittest.TestCase):
@@ -24,6 +24,23 @@ class RetainedArtifactsTests(unittest.TestCase):
     def verify(self, files):
         self.manifest.write_text(json.dumps({'files': files}))
         return verify_manifest(self.manifest, {'PROJECT_ROOT': self.root})
+
+    def test_revision_packages_require_names_and_distinct_pinned_geometry(self):
+        replacement = self.root / 'revision'
+        replacement.mkdir()
+        revised_file = replacement / self.artifact.name
+        revised_file.write_text('{"result":"REVISED"}')
+        revised_digest = hashlib.sha256(revised_file.read_bytes()).hexdigest()
+        def verify(previous_hash=self.digest):
+            return verify_revision_package(self.package, replacement, [self.artifact.name],
+                                           model_name=self.artifact.name, old_sha256=previous_hash,
+                                           new_sha256=revised_digest)
+        self.assertEqual(verify()['replacement_sha256'], {self.artifact.name: revised_digest})
+        with self.assertRaisesRegex(ValueError, 'hash differs'):
+            verify(revised_digest)
+        (replacement / 'stale.png').touch()
+        with self.assertRaisesRegex(ValueError, 'inventory differs'):
+            verify()
 
     def test_verifies_portable_paths_and_current_derivative_hash(self):
         for locator in ['check.json', '${PROJECT_ROOT}/packet/check.json', 'PROJECT_ROOT/packet/check.json']:

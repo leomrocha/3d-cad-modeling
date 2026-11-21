@@ -71,7 +71,14 @@ def sample(edge,*,points_per_revolution=128,endpoint_tolerance=1e-5,max_points=1
     if edge['curve_type']!='ellipse-curve':return edge['endpoints'],True
     e=edge['ellipse'];c=e['center'];major=e['major_axis'];n=e['normal'];ratio=e['minor_to_major_ratio']
     minor=[(n[(i+1)%3]*major[(i+2)%3]-n[(i+2)%3]*major[(i+1)%3])*ratio for i in range(3)]
-    start,end=edge['start_parameter'],edge['end_parameter'];count=max(3,math.ceil(abs(end-start)/(2*math.pi)*points_per_revolution)+1)
+    start,end=edge['start_parameter'],edge['end_parameter']
+    intervals=abs(end-start)/math.tau*points_per_revolution
+    if not math.isfinite(intervals):
+        raise ValueError('Curve sample interval must be finite')
+    nearest=round(intervals)
+    if abs(intervals-nearest)<=4*math.ulp(intervals):
+        intervals=nearest
+    count=max(3,math.ceil(intervals)+1)
     if count>max_points:raise ValueError('Curve sample bound exceeded')
     points=[[c[i]+math.cos(t)*major[i]+math.sin(t)*minor[i] for i in range(3)] for t in [start+(end-start)*k/(count-1) for k in range(count)]]
     if max(min(math.dist(p,q) for q in edge['endpoints']) for p in (points[0],points[-1]))>endpoint_tolerance:return edge['endpoints'],True

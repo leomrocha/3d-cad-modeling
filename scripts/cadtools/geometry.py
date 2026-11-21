@@ -112,6 +112,13 @@ class Geometry:
         positive(height)
         return added(self.run(label, f"CYLINDER {x},{y},{z} {radius} {height}"))
 
+    def cone(self, label, base_centre, radius, height) -> str:
+        """Create a right circular cone with its apex along +Z from the base."""
+        x, y, z = vector(base_centre)
+        positive(radius)
+        positive(height)
+        return added(self.run(label, f"CONE {x},{y},{z} {radius} {height}"))
+
     def sphere(self, label, centre, radius) -> str:
         x, y, z = vector(centre)
         positive(radius)

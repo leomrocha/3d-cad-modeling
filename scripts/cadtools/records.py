@@ -82,29 +82,38 @@ def model_space_live_handles(model_space, entity_records, expected_handles, *, d
 def model_space_after_revolve(model_space, entity_records, expected_handles, *, document_id,
                               profile_handle, solid_handle, revolve_intent, revolve_response):
     """Resolve a consumed profile using the completed native REVOLVE change list."""
-    request_id = revolve_intent.get('request_id')
-    command = revolve_intent.get('cmd', '').split()
-    if (type(document_id) is not int or document_id < 1
-            or profile_handle == solid_handle
-            or revolve_intent.get('op') != 'run' or command[:1] != ['REVOLVE']
-            or revolve_intent.get('document_id') != document_id
-            or revolve_response.get('state', {}).get('document_id') != document_id
-            or not request_id or request_id != revolve_response.get('request_id')
-            or revolve_response.get('ok') is not True
-            or revolve_response.get('status') != 'completed'):
-        raise CadError('Completed same-request revolve for the owned document required')
-    changes = revolve_response.get('changes')
+    consumed = consumed_profile_transition(document_id=document_id, command='REVOLVE',
+        profile_handle=profile_handle, solid_handle=solid_handle, intent=revolve_intent,
+        response=revolve_response)
+    rows = list(entity_records)
+    if not any(r.get('handle') == solid_handle and r.get('type') == 'Solid3D' for r in rows):
+        raise CadError('Expected generated solid in live inventory')
+    return _reconcile_model_space(model_space, rows, expected_handles, [consumed['profile_handle']])
+
+
+def consumed_profile_transition(*, document_id, command, profile_handle, solid_handle, intent, response):
+    """Identify the removed profile and added solid in an owned command receipt."""
+    request_id = intent.get('request_id')
+    tokens = intent.get('cmd', '').split()
+    if (command not in ('EXTRUDE','REVOLVE') or type(document_id) is not int or document_id < 1
+            or not isinstance(profile_handle,str) or not profile_handle
+            or not isinstance(solid_handle,str) or not solid_handle or profile_handle == solid_handle
+            or intent.get('op') != 'run' or tokens[:1] != [command]
+            or intent.get('document_id') != document_id
+            or response.get('state', {}).get('document_id') != document_id
+            or not request_id or request_id != response.get('request_id')
+            or response.get('ok') is not True
+            or response.get('status') != 'completed'):
+        raise CadError('Completed same-request profile construction for the owned document required')
+    changes = response.get('changes')
     if (not isinstance(changes, list) or len(changes) != 2
             or not all(isinstance(change, dict) for change in changes)
             or not any(change.get('kind') == 'Removed' and change.get('handle') == profile_handle
                        for change in changes)
             or not any(change.get('kind') == 'Added' and change.get('handle') == solid_handle
                        for change in changes)):
-        raise CadError('Expected one consumed profile and one new solid in revolve changes')
-    rows = list(entity_records)
-    if not any(r.get('handle') == solid_handle and r.get('type') == 'Solid3D' for r in rows):
-        raise CadError('Expected generated solid in live inventory')
-    return _reconcile_model_space(model_space, rows, expected_handles, [profile_handle])
+        raise CadError('Expected one consumed profile and one new solid in profile construction changes')
+    return dict(request_id=request_id, profile_handle=profile_handle, solid_handle=solid_handle)
 
 
 def _reconcile_model_space(model_space, entity_records, expected_handles, erased):

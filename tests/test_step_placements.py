@@ -40,6 +40,16 @@ class PlacementTests(unittest.TestCase):
         self.p['x_scale']=2
         with self.assertRaises(ValueError):native_matrix(self.p)
 
+    def test_source_frame_transfer_preserves_nested_local_matrix(self):
+        root = [[0,-1,0,20],[1,0,0,1],[0,0,1,3],[0,0,0,1]]
+        local = [[1,0,0,5],[0,0,-1,7],[0,1,0,2],[0,0,0,1]]
+        target = [[0,0,1,11],[1,0,0,13],[0,1,0,17],[0,0,0,1]]
+        fitted_root = root_for_leaf_placement(root,multiply(root,local),target)
+        self.assertTrue(near(multiply(fitted_root,local),target))
+        self.assertEqual(apply(multiply(fitted_root,local),[1,2,3]),[14,14,19])
+        with self.assertRaisesRegex(ValueError,'Proper unit-rigid'):
+            root_for_leaf_placement(root,multiply(root,local),[[-1,0,0,0],*eye()[1:]])
+
 class AssemblyTests(unittest.TestCase):
     def fixture(self):
         def insert(h,name,x,y,angle=0):

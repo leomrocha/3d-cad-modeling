@@ -69,6 +69,22 @@ def countersink_tool_profile(*, bore, mouth, angle_degrees, inner_radius, overru
     ])
 
 
+def matching_countersink_fit(*, seat_bore, seat_mouth, head_shank, head_outer, angle_degrees):
+    """Return ideal axial setback and overlap for two coaxial, equal-angle cones."""
+    for value in (seat_bore, seat_mouth, head_shank, head_outer):
+        positive(value)
+    angle = finite(angle_degrees)
+    if seat_mouth <= seat_bore or head_outer <= head_shank or not 0 < angle < 180:
+        raise ValueError('Two nonempty cones and an included angle in (0, 180) are required')
+    shared_small = max(seat_bore, head_shank)
+    shared_large = min(seat_mouth, head_outer)
+    if shared_small >= shared_large:
+        raise ValueError('Conical diameter ranges must overlap')
+    diameter_slope = 2 * math.tan(math.radians(angle / 2))
+    return dict(head_setback_mm=(seat_mouth - head_outer) / diameter_slope,
+                facing_cone_axial_span_mm=(shared_large - shared_small) / diameter_slope)
+
+
 def build_plate(client,spec,*,label='plate'):
     """Consume a caller recipe; return body and owned handles. Run no save/cleanup."""
     bounds=spec['sketch_bounds'];points=spec['outline'];bulges=spec.get('bulges',{})

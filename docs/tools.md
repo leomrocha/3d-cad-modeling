@@ -4,12 +4,12 @@
 
 1. [Stable record pagination](../scripts/cadtools/records.py) — bounded page-size recovery and native document/revision binding.
 2. [Durable progress checkpoints](../scripts/cadtools/checkpoints.py) — ordered stage evidence and verified IN_PROGRESS saves that audit the intended DWG path.
-3. [Plate operations](../scripts/plate_reference.py) — supplied outlines, bulges, holes, transforms and actual sidewall checks.
-4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion, analytic equal-radius opening clipping and projected overlap of selected rectangular faces and end-perimeter verification for rectangular hollow sections.
+3. [Plate operations](../scripts/plate_reference.py) — supplied outlines, bulges, holes, transforms, actual sidewall checks and ideal equal-angle countersunk fit.
+4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion, analytic circular opening clipping, rectangular-face overlap, hollow-section end perimeters, two-circle tangent hulls and round-ended slots. Includes concentric quarter-bend and offset Z sections, signed cardinal profile reframing, annular seat area interrupted by a radial slot and an ellipse chord error bound for sampled trims. The two-circle band test checks a projected box against the inner opening and the outer boundary.
 5. [Component insertion](../scripts/assembly_build.py) — source hashes, exact interactive prompts, native metadata and saved placements.
 6. [Assembly occurrences](../scripts/assembly_occurrences.py) — nested part quantities, revision-pinned catalogue BOMs, mirrored hands and original insertion-journal recovery.
 7. [Native views](../scripts/native_views.py) — native SAT/SAB boundary samples, native lines and straight polyline centrelines, nested placements and hashed SVG/PNG orthographic/isometric views. PNG rendering batches edge paths and endpoint markers into separate collections without joining paths.
-8. [Encoding-aware native geometry](../scripts/native_geometry.py) — stable SAT/SAB readback, OCS points, straight polyline segments and placed vertex extrema.
+8. [Encoding-aware native geometry](../scripts/native_geometry.py) — stable SAT/SAB readback, OCS points, straight polyline segments, placed vertex extrema and circular cylinder supports in assembly coordinates.
 9. [Source vector paths](../scripts/source_vector_paths.py) — bounded SVG segment grammar, affine frames and explicit unit conversion.
 10. [batch_request.py](../scripts/batch_request.py) prepares ordered CAD operation rows from shared or per-target values, normalizes lengths and angles, and supplies execution rows for an operation with verified readback. [CAD batch procedure](../skills/cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations).
 11. [batch_dxf_lines.py](../scripts/batch_dxf_lines.py) applies reviewed lengths to modelspace DXF LINE entities with ezdxf. It preserves each start and direction, writes a new DXF, and reopens it to measure the selected lines. [CAD batch procedure](../skills/cad-ocs-engineering/SKILL.md#prepare-a-batch-of-cad-operations).
@@ -56,7 +56,7 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 5. [source_metadata.py](../scripts/source_metadata.py) — compares expected source labels with the strings stored on a CAD entity.
 6. [source_variant_table.py](../scripts/source_variant_table.py) — selects a value from a reviewed table for the specified product variant. The [source procedure](../skills/cad-ocs-engineering/references/source-variant-tables.md) also binds fastener dimensions to the exact standard edition, grade, row and drawing symbol.
 
-7. [retained_artifacts.py](../scripts/retained_artifacts.py) — verifies retained-file hashes, JSON/JSONL syntax and manifest paths using caller-supplied roots. [Manifest procedure](../skills/cad-ocs-engineering/references/retained-artifact-checks.md).
+7. [retained_artifacts.py](../scripts/retained_artifacts.py) — verifies retained-file hashes, JSON/JSONL syntax, manifest paths and same-name asset sets for model package revisions. [Manifest procedure](../skills/cad-ocs-engineering/references/retained-artifact-checks.md).
 
 ## Drawings and construction
 
@@ -89,14 +89,15 @@ Some of these are specialized tools for particular geometries. I still have work
 
 1. [native_acis.py](../scripts/native_acis.py) — reads ACIS700 SAT topology and trimmed edge samples, plus SAB analytic surfaces and optional [circular boundary curves and adjacent faces](../skills/cad-ocs-engineering/references/circular-boundary-checks.md).
 2. [step_solid_inventory.py](../scripts/step_solid_inventory.py) — inventories STEP solid definitions without counting nested shells as additional solids.
-3. [step_placements.py](../scripts/step_placements.py) — reads supported STEP/native placement matrices and compares component positions.
+3. [step_placements.py](../scripts/step_placements.py) — reads supported STEP/native placement matrices, compares component positions and derives a root pose from a verified nested target frame.
 4. [assembly_units.py](../scripts/assembly_units.py) — prepares a unit-change plan for specified assembly root inserts, preserving internal geometry.
 5. [assembly_repair.py](../scripts/assembly_repair.py) — applies a reviewed component-placement correction through the guarded CAD client.
-6. [feature_checks.py](../scripts/feature_checks.py) — compares measured boundaries, cylinders and other native features with supplied expectations.
+6. [feature_checks.py](../scripts/feature_checks.py) — compares measured boundaries, cylinders and other native features with supplied expectations. The round-ended slot check matches the native straight tangents on each requested face.
 7. [small_bms.py](../scripts/small_bms.py) — compares supported solid points and assembly instances before and after saving.
 8. [pillow_block.py](../scripts/pillow_block.py) — checks the supported bearing housing, rings, mounting slots and associated parts.
 9. [battery_module.py](../scripts/battery_module.py) — checks the supported battery shells, terminals and tabbed-case patterns.
 10. [driver_checks.py](../scripts/driver_checks.py) — checks the supported Sumitomo driver exterior and component features.
+11. [cadtools/geometry.py](../scripts/cadtools/geometry.py) — native geometry adapter with guarded cylindrical and conical tools.
 
 ## CAD document cleanup
 
@@ -160,13 +161,15 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 3. [SCAD source translator](../format_translation/scad_source.py) translates supported source constructs to editable CadQuery Python and reports unsupported source locations.
 4. [Blender mesh exchange](../format_translation/blend_exchange.py) reads and writes native Blender scenes and STL meshes with explicit units or a measured reference.
 
-[Native feature comparisons](../scripts/feature_checks.py) include `feature_vertices(name, observed, expected, tolerance)`. Supply corners from one reopened solid and distinct source corners in the same millimetre frame. The result records each nearest vertex and its distance. Missing corners, a shared nearest vertex and out-of-tolerance matches fail the check.
+[Native feature comparisons](../scripts/feature_checks.py) include `axial_datum_chain` for independently checked distances between consecutive axial datums and `feature_vertices(name, observed, expected, tolerance)`. Supply corners from one reopened solid and distinct source corners in the same millimetre frame. The result records each nearest vertex and its distance. Missing corners, a shared nearest vertex and out-of-tolerance matches fail the check.
 
 [Recording checker](../skills/cad-model-navigation/scripts/check_recording.py) checks constant-rate video timing, chapter bounds and decoding using the installed ffprobe and ffmpeg commands.
 
+[Native record readback](../scripts/cadtools/records.py) binds consumed EXTRUDE and REVOLVE profiles to completed command receipts.
+
 ## Service clearance
 
-1. [service_clearance.py](../scripts/service_clearance.py) checks continuous box overlap and axial source-section coverage and supplies exact coincidence witnesses for verified shared definitions.
+1. [service_clearance.py](../scripts/service_clearance.py) checks static box and half-space separation, candidate contact dimension, rectangular radial extrema for bend clearance, translated box-group margins, continuous box overlap and axial source-section coverage and supplies exact coincidence witnesses for verified shared definitions. Includes planar translation pieces for checking a projected swept region against a saved wall opening and continuous axis-aligned quarter-turn hinge envelopes. The coaxial stack witness accepts either shaft direction and reports signed seat and interface gaps, final-layer reach and tip protrusion. The orthogonal sleeve check uses measured outer and inner radii and finite axial spans to prove separation or find a point inside both sleeve walls. The axial section clearance check refines a whole-part box candidate with a verified enclosure covering the full axial overlap.
 
 ## Source assembly recovery and evidence
 

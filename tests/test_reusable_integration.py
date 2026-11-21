@@ -12,22 +12,239 @@ from unittest.mock import Mock,patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 
 from cadtools.geometry import Geometry, added
-from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_document,RecoveringClient
+from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_document,owned_document,RecoveringClient,bounded_request_namespace
 from cadtools.records import iter_records,read_stable_entity
 from cadtools.checkpoints import write_stage_checkpoint,save_checkpoint
-from feature_checks import cylinder_pattern,cylinder_wall_checks
+from feature_checks import circular_trim_stations,cylinder_pattern,cylinder_wall_checks,axial_datum_chain,circular_opening_edge_land,round_ended_slot_tangents
+from feature_checks import concentric_through_keyway_section
 from step_placements import native_matrix,classify_hand,eye,apply
 from assembly_occurrences import expand_occurrences,recover_insert_sequence,write_occurrence_tables
-from planar_profiles import clip_circular_openings,bounded_extrusion,conservative_tool_polygon
-from plate_reference import build_plate,countersink_tool_profile,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline
+from planar_profiles import annular_seat_with_radial_slot,round_ended_slot_profile,clip_circular_openings,bounded_extrusion,conservative_tool_polygon,two_circle_tangent_hull,two_circle_band_box_clearance
+from plate_reference import build_plate,countersink_tool_profile,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline,matching_countersink_fit
 from native_views import sample,render_views,boundary_curves,placed_boundaries,xy_polyline_view_curves
 from source_vector_paths import parse_path,page_point,local_point,cubic_point
-from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments,sat_structure
+from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments,sat_structure,placed_circular_cylinders
 from ocs_document_cleanup import cleanup_owned_documents
 from retained_artifacts import verify_manifest
+from assembly_verification import compare_axial_occurrences,directed_axial_span
+
+
+class RoundEndedSlotTangents(unittest.TestCase):
+    def test_both_faces_require_continuous_straight_tangents(self):
+        edges = [dict(curve_type='straight-curve', points=[[x,10,z],[x,0,z]])
+                 for z in (0,2) for x in (-3,3)]
+        options = dict(axis=2,centres=[[0,0],[0,10]],radius=3,stations=[0,2],tolerance=.001)
+        self.assertEqual(round_ended_slot_tangents('slot',edges,**options)['result'],'PASS')
+        edges[-1]['curve_type'] = 'ellipse-curve'
+        proof = round_ended_slot_tangents('slot',edges,**options)
+        self.assertEqual(proof['result'],'FAIL')
+        self.assertEqual(sum(line['passed'] for line in proof['tangents']),3)
+
+
+class TwoCircleTangentHull(unittest.TestCase):
+    def test_tangent_and_arc_endpoints_for_unequal_and_equal_radii(self):
+        a, b = (4, -3), (10, 5)
+        for ra, rb in ((5, 2), (2, 5), (4, 4)):
+            with self.subTest(radii=(ra, rb)):
+                points, bulges = two_circle_tangent_hull(a, b, ra, rb)
+                self.assertEqual(set(bulges), {1, 2, 4, 5})
+                self.assertAlmostEqual(8 * (math.atan(bulges[1]) + math.atan(bulges[4])), 2 * math.pi)
+                for ia, ib in ((0, 1), (4, 3)):
+                    pa, pb = points[ia], points[ib]
+                    self.assertAlmostEqual(math.dist(a, pa), ra)
+                    self.assertAlmostEqual(math.dist(b, pb), rb)
+                    tangent = [v - u for u, v in zip(pa, pb, strict=True)]
+                    for p, c in ((pa, a), (pb, b)):
+                        self.assertAlmostEqual(sum(t * (x - y) for t, x, y in zip(tangent, p, c, strict=True)), 0)
+
+    def test_rejects_nested_and_coincident_circles(self):
+        for other in ((0, 0), (3, 0), (2, 0)):
+            with self.subTest(other=other), self.assertRaises(ValueError):
+                two_circle_tangent_hull((0, 0), other, 5, 2)
+
+    def test_band_certifies_inner_and_outer_separation_only(self):
+        args = (((0,0),(10,0)), (3,2), (4,3))
+        inner = two_circle_band_box_clearance(((-1,-1),(1,1)),*args)
+        self.assertEqual(inner['result'],'INSIDE_INNER_HULL')
+        self.assertAlmostEqual(inner['gap_lower_bound'],3-math.sqrt(2))
+        outside = two_circle_band_box_clearance(((13.5,-.25),(14,.25)),*args)
+        self.assertEqual(outside,dict(result='OUTSIDE_OUTER_HULL',gap_lower_bound=.5))
+        crossing = two_circle_band_box_clearance(((-.2,2.9),(.2,3.2)),*args)
+        self.assertEqual(crossing,dict(result='CANDIDATE',gap_lower_bound=None))
+        tangent = two_circle_band_box_clearance(((13,0),(14,0)),*args)
+        self.assertEqual(tangent['result'],'CANDIDATE')
+
+
+class ConcentricThroughKeyway(unittest.TestCase):
+    def test_section_uses_bore_intersection_and_farthest_floor_corner(self):
+        section = concentric_through_keyway_section(10, 20, 6, 2)
+        self.assertEqual(section['half_width'], 3)
+        self.assertEqual(section['mouth_from_axis'], 4)
+        self.assertEqual(section['floor_from_axis'], 7)
+        self.assertAlmostEqual(section['minimum_radial_wall'], 10-math.sqrt(58))
+
+    def test_signed_remaining_wall_distinguishes_tangency_from_breakout(self):
+        self.assertEqual(concentric_through_keyway_section(7, 10, 6, 0.5)['minimum_radial_wall'], 0)
+        self.assertLess(concentric_through_keyway_section(8, 10, 6, 0.5)['minimum_radial_wall'], 0)
+
+    def test_rejects_invalid_opening_dimensions(self):
+        for inputs in ((10, 20, 10, 1), (10, 10, 5, 1), (10, 20, 5, -1),
+                       (True, 20, 5, 1), (10, math.inf, 5, 1)):
+            with self.subTest(dimensions=inputs), self.assertRaises(ValueError):
+                concentric_through_keyway_section(*inputs)
+
+
+class BoundedRequestNamespace(unittest.TestCase):
+    def test_preserves_valid_existing_namespace(self):
+        self.assertEqual(bounded_request_namespace('a'*64), 'a'*64)
+        with self.assertRaises(CadError):
+            bounded_request_namespace('')
+
+    def test_shortens_utf8_without_cutting_a_character(self):
+        original='fixture-'+'ø'*40
+        namespace=bounded_request_namespace(original)
+        self.assertLessEqual(len(namespace.encode('utf-8')),64)
+        self.assertEqual(namespace,bounded_request_namespace(original))
+        self.assertNotEqual(namespace,bounded_request_namespace(original+'-close'))
+
+    def test_shared_prefix_keeps_distinct_request_namespaces(self):
+        label='assembly-'*12
+        self.assertNotEqual(bounded_request_namespace(label+'-save'),bounded_request_namespace(label+'-close'))
+
+
+class DirectedAxialSpan(unittest.TestCase):
+    def test_opposite_hands_share_outward_span(self):
+        origin = [2,3,4]
+        left = [[2,8,5],[2,13,5]]
+        right = [[2,-2,5],[2,-7,5]]
+        self.assertEqual(directed_axial_span(left,origin=origin,direction=[0,1,0]),[5,10])
+        self.assertEqual(directed_axial_span(right,origin=origin,direction=[0,-1,0]),[5,10])
+
+    def test_oblique_unit_and_negative_station(self):
+        actual = directed_axial_span([[1,1,0],[-2,-2,0]],origin=[0,0,0],
+                                     direction=[math.sqrt(.5),math.sqrt(.5),0])
+        self.assertAlmostEqual(actual[0],-2*math.sqrt(2))
+        self.assertAlmostEqual(actual[1],math.sqrt(2))
+
+    def test_requires_observations_and_explicit_unit_direction(self):
+        with self.assertRaises(ValueError):
+            directed_axial_span([],origin=[0,0,0],direction=[1,0,0])
+        with self.assertRaises(ValueError):
+            directed_axial_span([[1,0,0]],origin=[0,0,0],direction=[2,0,0])
+
+
+class AxialOccurrenceComparison(unittest.TestCase):
+    def setUp(self):
+        self.baseline = [
+            dict(occurrence='first', role='spacer', axis_xy_mm=[10, 20], span_z_mm=[5, 9]),
+            dict(occurrence='second', role='spacer', axis_xy_mm=[10, 20], span_z_mm=[5, 9]),
+        ]
+
+    def test_distinct_occurrences_can_share_an_axis(self):
+        result = compare_axial_occurrences(self.baseline, list(reversed(self.baseline)), length_tolerance=.001)
+        self.assertEqual(result['result'], 'PASS')
+        self.assertEqual(len(result['checks']), 2)
+
+    def test_reports_identity_role_axis_and_span_changes(self):
+        updated = [
+            dict(occurrence='first', role='washer', axis_xy_mm=[10, 22], span_z_mm=[6, 9]),
+            dict(occurrence='third', role='spacer', axis_xy_mm=[10, 20], span_z_mm=[5, 9]),
+        ]
+        result = compare_axial_occurrences(self.baseline, updated, length_tolerance=.001)
+        self.assertEqual(result['result'], 'FAIL')
+        self.assertEqual(result['missing_occurrences'], ['second'])
+        self.assertEqual(result['added_occurrences'], ['third'])
+        self.assertEqual(result['checks'], [dict(occurrence='first', axis_error_mm=2.0,
+                                                  span_error_mm=1.0, role_matches=False, passed=False)])
+
+    def test_duplicate_occurrence_names_are_invalid(self):
+        with self.assertRaises(ValueError):
+            compare_axial_occurrences(self.baseline, self.baseline[:1]*2, length_tolerance=.001)
+
+
+class CircularOpeningEdgeLand(unittest.TestCase):
+    def test_keeps_signed_near_and_far_lands_after_asymmetric_resize(self):
+        self.assertEqual(circular_opening_edge_land(3, 2, (-2, 6)),
+                         dict(low=3, high=1, minimum=1))
+        self.assertEqual(circular_opening_edge_land(103, 2, (98, 106)),
+                         dict(low=3, high=1, minimum=1))
+
+    def test_retains_tangency_and_breakout(self):
+        self.assertEqual(circular_opening_edge_land(3, 3, (-2, 6))['minimum'], 0)
+        self.assertEqual(circular_opening_edge_land(3, 4, (-2, 6))['minimum'], -1)
+
+    def test_rejects_invalid_geometry(self):
+        for inputs in ((3, 0, (-2, 6)), (3, 1, (6, -2)), (math.nan, 1, (-2, 6)),
+                       (3, True, (-2, 6)), (3, 1, (6,))):
+            with self.subTest(inputs=inputs), self.assertRaises(ValueError):
+                circular_opening_edge_land(*inputs)
+
+
+class AnnularSeatWithRadialSlot(unittest.TestCase):
+    def test_retained_seat_matches_independent_midpoint_quadrature(self):
+        result=annular_seat_with_radial_slot(10,20,4,12)
+        dx=4/2000
+        clipped=sum((12-math.sqrt(100-(-2+(i+.5)*dx)**2))*dx for i in range(2000))
+        self.assertAlmostEqual(result['removed_area_mm2'],clipped,places=6)
+        self.assertAlmostEqual(result['projected_overlap_mm2'],300*math.pi-clipped,places=6)
+        for bad in ((10,20,4,9),(10,20,4,20),(10,20,20,12)):
+            with self.subTest(parameters=bad),self.assertRaises(ValueError):
+                annular_seat_with_radial_slot(*bad)
+
+
+class RoundEndedSlotProfile(unittest.TestCase):
+    def test_slot_ends_are_semicircles_inside_supplied_span(self):
+        from ezdxf.math import bulge_to_arc
+
+        points, bulges = round_ended_slot_profile(6, 10, 31)
+        self.assertEqual(set(bulges),{0,2})
+        bottom, start, end, low_radius = bulge_to_arc(points[0],points[1],bulges[0])
+        top, a, b, high_radius = bulge_to_arc(points[2],points[3],bulges[2])
+        self.assertAlmostEqual(bottom.y-low_radius,10)
+        self.assertAlmostEqual(top.y+high_radius,31)
+        self.assertAlmostEqual(low_radius,3)
+        self.assertAlmostEqual(high_radius,3)
+        self.assertEqual([p[0] for p in points],[-3,3,3,-3])
+        for end_station in (10,16):
+            with self.subTest(end=end_station), self.assertRaises(ValueError):
+                round_ended_slot_profile(6,10,end_station)
+
+
+class AxialDatumChain(unittest.TestCase):
+    def test_source_lengths_bind_to_independent_axial_steps(self):
+        result = axial_datum_chain('step and tip',[9,12,20],[3,8],.001)
+        self.assertEqual(result['result'],'PASS')
+        self.assertEqual(result['observed'],[3,8])
+        self.assertEqual(axial_datum_chain('opposite hand',[-9,-12,-20],[-3,-8],.001)['result'],'PASS')
+        self.assertEqual(axial_datum_chain('wrong tip datum',[9,12,17],[3,8],.001)['result'],'FAIL')
+        with self.assertRaises(ValueError):
+            axial_datum_chain('missing datum',[9,20],[3,8],.001)
+
+
+class CircularTrimStations(unittest.TestCase):
+    def test_entry_and_end_pass_only_with_distributed_native_samples(self):
+        def ring(y):
+            return [(4*math.cos(i*math.tau/16),y,4*math.sin(i*math.tau/16)) for i in range(16)]
+        options = dict(axis=1,centres=[(0,0)],radius=4,stations=[0,8],tolerance=1e-6)
+        entry, bottom = ring(0), ring(8)
+        self.assertEqual(circular_trim_stations('Ring pair',entry+bottom,**options)['result'],'PASS')
+        for short in (entry, entry+bottom[:8], entry+[bottom[0]]*16, entry+ring(9)):
+            with self.subTest(points=len(short)):
+                self.assertEqual(circular_trim_stations('Short ring',short,**options)['result'],'FAIL')
 
 
 class GeometryAdapterContract(unittest.TestCase):
+    def test_cone_binds_base_radius_height_and_returns_native_handle(self):
+        client = Mock()
+        client.mutate.return_value = {'changes':[{'kind':'Added','handle':'C1'}]}
+        geom = Geometry(client)
+        self.assertEqual(geom.cone('point tool',[0,0,5],2.5,3.0),'C1')
+        client.mutate.assert_called_once_with('point tool','run',cmd='CONE 0,0,5 2.5 3.0')
+        with self.assertRaisesRegex(CadError,'Positive dimension required'):
+            geom.cone('invalid',[0,0,5],2.5,0)
+        self.assertEqual(client.mutate.call_count,1)
+
+
     def test_cylinder_handle_and_raw_command_response_have_distinct_types(self):
         response = {'changes': [{'kind': 'Added', 'handle': 'A2'}]}
         client = Mock()
@@ -135,6 +352,29 @@ class Ownership(unittest.TestCase):
             new_owned_document(restart)
             self.assertEqual(h.execute_checked.call_count,1)
             self.assertEqual([x.args[1]['document_id'] for x in h.request.call_args_list if x.args[1]['op']=='operation'],[1])
+    def test_pending_open_recovery_preserves_poll_interval_and_deadline(self):
+        with tempfile.TemporaryDirectory() as tmp, patch('cadtools.runtime.time.sleep') as wait:
+            helper = Mock()
+            journal = Journal(Path(tmp) / 'journal')
+            source = str(Path(tmp) / 'assembly.dwg')
+            key = 'job:open-model'
+            journal.intent(dict(op='open', path=source, request_id=key, document_id=1, revision=0),
+                           dict(session_id='s', document_id=1))
+            helper.request.side_effect = [
+                dict(ok=True, status='running'),
+                dict(ok=True, status='completed', state=dict(document_id=2)),
+                dict(ok=True, document_id=2, geometry_revision=3, documents=[dict(id=2, path=source)]),
+            ]
+            client = Client(helper, {'session_id':'s'}, 1, 'job', journal, allow_write=True,
+                            timeout=60, max_queries=2, poll_interval=.75, recovery_deadline=5)
+            owned_document(client, 'open-model', 'open', path=source)
+            wait.assert_called_once_with(.75)
+            self.assertEqual(client.document_id, 2)
+            self.assertLessEqual(helper.request.call_args_list[1].args[2], 5)
+            self.assertEqual([call.args[1]['request_id'] for call in helper.request.call_args_list[:2]],
+                             [key,key])
+            helper.execute_checked.assert_not_called()
+
     def test_new_response_never_adopts_foreign_active_document(self):
         c=Mock();c.namespace='job';c.document_id=1;c.journal.requests={};c.timeout=1
         c.mutate.return_value=dict(ok=True,status='completed',state=dict(document_id=2))
@@ -301,6 +541,27 @@ class Profiles(unittest.TestCase):
         g.subtract.assert_not_called()
 
 
+class PlacedCircularCylinders(unittest.TestCase):
+    def test_unit_rotation_preserves_radius_and_transforms_axis_as_direction(self):
+        fixture = dict(origin=[2,3,4], axis=[2,0,0], radius=3.25)
+        transform = [[0,0,1,200],[0,1,0,20],[-1,0,0,40],[0,0,0,1]]
+        checked = placed_circular_cylinders([fixture], transform)
+        self.assertEqual(checked,[dict(origin=[204,23,38],axis=[0,0,-1],radius=3.25)])
+        self.assertEqual(fixture['axis'],[2,0,0])
+
+    def test_declared_reflection_and_scale_rejection(self):
+        fixture = dict(origin=[0,150,0],axis=[0,1,0],radius=3)
+        reflection = [[1,0,0,0],[0,-1,0,0],[0,0,1,0],[0,0,0,1]]
+        with self.assertRaisesRegex(ValueError,'Explicit unit reflection'):
+            placed_circular_cylinders([fixture],reflection)
+        [observed] = placed_circular_cylinders([fixture],reflection,allow_unit_reflection=True)
+        self.assertEqual(observed['origin'],[0,-150,0])
+        self.assertEqual(observed['axis'],[0,-1,0])
+        reflection[0][0] = 2
+        with self.assertRaisesRegex(ValueError,'Orthonormal unit'):
+            placed_circular_cylinders([fixture],reflection,allow_unit_reflection=True)
+
+
 class ViewsAndVectors(unittest.TestCase):
     def test_mirrored_nested_display_matrices(self):
         props=dict(normal=dict(x=0,y=0,z=1),rotation=0,insert_point=dict(x=0,y=3,z=0),x_scale=1,y_scale=-1,z_scale=1,block_name='block')
@@ -341,6 +602,18 @@ class ViewsAndVectors(unittest.TestCase):
         edge['endpoints']=[[1,0,0],[1,0,0]];self.assertTrue(sample(edge)[1])
         edge['end_parameter']=1e10
         with self.assertRaises(ValueError):sample(edge)
+    def test_native_arc_density_ignores_roundoff_at_integral_interval_count(self):
+        arc=dict(curve_type='ellipse-curve',endpoints=[[2,0,0],[0,2,0]],
+                 ellipse=dict(center=[0,0,0],normal=[0,0,1],major_axis=[2,0,0],minor_to_major_ratio=1),
+                 start_parameter=0,end_parameter=math.pi/2)
+        rounded_up=dict(arc,end_parameter=math.nextafter(math.pi/2, math.inf))
+        for edge in (arc,rounded_up):
+            points,fallback=sample(edge)
+            self.assertEqual(len(points),33)
+            self.assertFalse(fallback)
+        longer=dict(arc,end_parameter=math.pi/2+1e-8)
+        self.assertEqual(len(sample(longer)[0]),34)
+
     def test_svg_projections_and_existing_file_protection(self):
         with tempfile.TemporaryDirectory() as tmp:
             out=render_views([dict(points=[[0,0,0],[4,5,6]],endpoints_only=False),dict(points=[[1,2,3]],endpoints_only=True)],tmp,stem='model',title='Synthetic <native>')
@@ -432,6 +705,17 @@ class ViewsAndVectors(unittest.TestCase):
                 self.assertAlmostEqual(value,target)
         with self.assertRaisesRegex(ValueError,'clear the inner radius'):
             countersink_tool_profile(bore=8,mouth=18,angle_degrees=90,inner_radius=3.9,overrun=.5)
+
+    def test_matching_countersinks_check_signed_setback_and_face_overlap(self):
+        nominal = dict(seat_bore=5,seat_mouth=10,head_shank=4,head_outer=8,angle_degrees=90)
+        fit = matching_countersink_fit(**nominal)
+        self.assertAlmostEqual(fit['head_setback_mm'],1)
+        self.assertAlmostEqual(fit['facing_cone_axial_span_mm'],1.5)
+        fit = matching_countersink_fit(**dict(nominal,head_outer=12,angle_degrees=60))
+        self.assertAlmostEqual(fit['head_setback_mm'],-3**.5)
+        self.assertAlmostEqual(fit['facing_cone_axial_span_mm'],2.5*3**.5)
+        with self.assertRaisesRegex(ValueError,'ranges must overlap'):
+            matching_countersink_fit(**dict(nominal,head_outer=5))
 
     def test_xy_bulges_preserve_arc_direction_and_elevation(self):
         row = self.polyline(False)

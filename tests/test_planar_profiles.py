@@ -1,10 +1,75 @@
+import math
 import sys
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
-from planar_profiles import bounded_extrusion, revolve_profile_y
+from planar_profiles import bounded_extrusion, ellipse_arc_chord_error_bound, offset_bend_section, quarter_bend_section, reframe_planar_profile, revolve_profile_y
+from cadtools.runtime import CadError
+
+
+class QuarterBendSectionTests(unittest.TestCase):
+    def test_tangent_stations_and_opposed_quarter_arcs(self):
+        points, bulges = quarter_bend_section([10,20],2,1,7,9)
+        self.assertEqual([list(point) for point in points],
+            [[7,27],[7,20],[10,17],[19,17],[19,18],[10,18],[8,20],[8,27]])
+        self.assertEqual(set(bulges), {1, 5})
+        self.assertAlmostEqual(4 * math.atan(bulges[1]), math.pi / 2)
+        self.assertAlmostEqual(4 * math.atan(bulges[5]), -math.pi / 2)
+
+    def test_rejects_zero_length_and_collapsed_coordinates(self):
+        for args in (([0,0],1,1,0,2), ([1e20,0],1,1,2,2)):
+            with self.assertRaises(CadError):
+                quarter_bend_section(*args)
+
+
+class ReframedPlanarProfileTests(unittest.TestCase):
+    def test_rotation_preserves_arc_signs_and_reflection_reverses_them(self):
+        points, bulges = quarter_bend_section([0,0],2,1,7,9)
+        moved, turns = reframe_planar_profile(points, bulges, origin=[12,20],
+                                                u_axis=[-1,0], v_axis=[0,-1])
+        flipped, signs = reframe_planar_profile(points, bulges, origin=[12,20],
+                                                u_axis=[-1,0], v_axis=[0,1])
+        self.assertEqual([list(p) for p in moved], [[12-u,20-v] for u,v in points])
+        self.assertEqual([list(p) for p in flipped], [[12-u,20+v] for u,v in points])
+        self.assertEqual(turns, bulges)
+        self.assertEqual(signs, {index:-b for index,b in bulges.items()})
+
+    def test_invalid_axes_and_collapsed_result_are_rejected(self):
+        for origin, u_axis, v_axis in (([0,0],[1,0],[1,0]), ([0,0],[2,0],[0,1]),
+                                       ([1e20,1e20],[1,0],[0,1])):
+            with self.assertRaises((CadError, ValueError)):
+                reframe_planar_profile([[0,0],[2,0],[2,2],[0,2]], {},
+                                      origin=origin, u_axis=u_axis, v_axis=v_axis)
+
+
+class OffsetBendSectionTests(unittest.TestCase):
+    def test_tangent_legs_web_and_arc_order(self):
+        vertices, arcs = offset_bend_section([10,20],2,1,7,5,8)
+        self.assertEqual([list(point) for point in vertices],
+                         [[7,15],[8,15],[8,20],[10,22],[17,22],[20,25],
+                          [20,33],[19,33],[19,25],[17,23],[10,23],[7,20]])
+        self.assertEqual(set(arcs), {2,4,8,10})
+        for index, sign in ((2,-1),(4,1),(8,-1),(10,1)):
+            self.assertAlmostEqual(4*math.atan(arcs[index]),sign*math.pi/2)
+
+    def test_invalid_or_unrepresentable_straights_are_rejected(self):
+        for args in (([0,0],1,1,0,2,2), ([1e20,1e20],1,1,2,2,2)):
+            with self.assertRaises(CadError):
+                offset_bend_section(*args)
+
+
+class ArcChordErrorTests(unittest.TestCase):
+    def test_radius_and_step_give_the_circle_sagitta(self):
+        self.assertAlmostEqual(ellipse_arc_chord_error_bound(2, math.pi/2),
+                               2 - math.sqrt(2))
+        self.assertGreater(ellipse_arc_chord_error_bound(5,1e-8),0)
+
+    def test_bound_requires_a_positive_short_interval(self):
+        for step in (0, -0.01, math.pi + 0.01, float('inf')):
+            with self.assertRaises(CadError):
+                ellipse_arc_chord_error_bound(10,step)
 
 
 class NativeDrawing:

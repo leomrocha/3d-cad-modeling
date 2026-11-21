@@ -1,6 +1,7 @@
 """Analytic equal-radius circular clipping and bounded native extrusion (mm)."""
 import math
-from cadtools.geometry import Geometry,added,positive,vector
+from cadtools.geometry import Geometry,added,finite,positive,vector
+from cadtools.runtime import CadError
 from rounded_tube import SelectionCheckedClient
 from plate_reference import validate_outline
 from profile_reference import validate_profile
@@ -36,6 +37,201 @@ def circles(c,d,r,tolerance):
     if distance>2*r+tolerance:return []
     middle=scale(add(c,d),.5);height=math.sqrt(max(0,r*r-distance*distance/4));normal=[-delta[1]/distance,delta[0]/distance]
     return [add(middle,scale(normal,height)),add(middle,scale(normal,-height))]
+
+
+def round_ended_slot_profile(width, first, last):
+    """Return a closed XY slot with exact semicircle bulges, centred on X = 0."""
+    half = positive(width) / 2
+    first, last = finite(first), finite(last)
+    lower_centre, upper_centre = first + half, last - half
+    if lower_centre >= upper_centre:
+        raise ValueError('Round-ended slot length must exceed its width')
+    points = [[-half,lower_centre], [half,lower_centre],
+              [half,upper_centre], [-half,upper_centre]]
+    return points, {0:1, 2:1}
+
+
+def _two_circle_frame(first, second, r0, r1):
+    x0, y0 = first
+    x1, y1 = second
+    dx, dy = x1 - x0, y1 - y0
+    distance = math.hypot(dx, dy)
+    if not math.isfinite(distance) or distance <= abs(r0 - r1):
+        raise ValueError('Two distinct external tangents require separated centres and non-contained circles')
+    axis = (dx / distance, dy / distance)
+    transverse = (-axis[1], axis[0])
+    axial = (r0 - r1) / distance
+    lateral = math.sqrt((1 - axial) * (1 + axial))
+    low = tuple(axial * u - lateral * v for u, v in zip(axis, transverse, strict=True))
+    high = tuple(axial * u + lateral * v for u, v in zip(axis, transverse, strict=True))
+    return axis, axial, low, high
+
+
+def two_circle_tangent_hull(first, second, first_radius, second_radius):
+    """Return a counterclockwise exact bulged hull of two planar circles."""
+    a, b = (tuple(finite(value) for value in centre) for centre in (first, second))
+    r0, r1 = positive(first_radius), positive(second_radius)
+    axis, axial, low, high = _two_circle_frame(a, b, r0, r1)
+
+    def point(centre, radius, direction):
+        return [value + radius * component for value, component in zip(centre, direction, strict=True)]
+
+    points = [point(a, r0, low), point(b, r1, low), point(b, r1, axis),
+              point(b, r1, high), point(a, r0, high), point(a, r0, tuple(-v for v in axis))]
+    second_half_angle = math.acos(axial)
+    first_bulge = math.tan((math.pi - second_half_angle) / 4)
+    second_bulge = math.tan(second_half_angle / 4)
+    return validate_outline(points, {1:second_bulge, 2:second_bulge, 4:first_bulge, 5:first_bulge})
+
+
+def two_circle_band_box_clearance(bounds, centres, inner_radii, outer_radii, *, tolerance=1e-6):
+    """Screen a planar box against nested two-circle tangent hulls.
+
+    Bounds and both hulls share one Cartesian frame and length unit. A
+    positive result proves separation for the supplied box representation.
+    No separation certificate means a candidate, including possible contact.
+    """
+    points = tuple(tuple(finite(value) for value in c) for c in centres)
+    inners = tuple(positive(r) for r in inner_radii)
+    outers = tuple(positive(r) for r in outer_radii)
+    if any(a >= b for a,b in zip(inners,outers,strict=True)):
+        raise ValueError('The outer radius must exceed the inner radius at each centre')
+    (x0,y0),(x1,y1) = (tuple(finite(value) for value in corner) for corner in bounds)
+    if x0 > x1 or y0 > y1:
+        raise ValueError('Expected increasing planar box bounds')
+    tolerance = positive(tolerance)
+    corners = [(x,y) for x in (x0,x1) for y in (y0,y1)]
+    axis, axial, *inner_normals = _two_circle_frame(*points,*inners)
+    _, _, *outer_normals = _two_circle_frame(*points,*outers)
+
+    def dot(a,b):
+        return a[0]*b[0] + a[1]*b[1]
+
+    def support(normal, radii):
+        return max(dot(normal,centre) + radius for centre,radius in zip(points,radii,strict=True))
+
+    def inner_violation(point):
+        # Each circle provides the support on one angular interval delimited
+        # by the common tangents. Its unconstrained radial maximum may lie
+        # inside that interval, otherwise an endpoint supplies the maximum.
+        values = [dot(n,point)-support(n,inners) for n in inner_normals]
+        for i,(centre,radius) in enumerate(zip(points,inners,strict=True)):
+            delta = (point[0]-centre[0], point[1]-centre[1])
+            length = math.hypot(*delta)
+            projection = dot(delta,axis) - axial*length
+            if (i == 0 and projection <= 0) or (i == 1 and projection >= 0):
+                values.append(length-radius)
+        return max(values)
+
+    inner_gap = -max(map(inner_violation,corners))
+    if inner_gap > tolerance:
+        return dict(result='INSIDE_INNER_HULL',gap_lower_bound=inner_gap)
+
+    outer_normals.extend(((1,0),(-1,0),(0,1),(0,-1)))
+    for x,y in points:
+        nearest = (min(max(x,x0),x1),min(max(y,y0),y1))
+        for a,b in (*corners,nearest):
+            length = math.hypot(a-x,b-y)
+            if length:
+                outer_normals.append(((a-x)/length,(b-y)/length))
+    outer_gap = max(min(dot(n,p) for p in corners)-support(n,outers) for n in outer_normals)
+    if outer_gap > tolerance:
+        return dict(result='OUTSIDE_OUTER_HULL',gap_lower_bound=outer_gap)
+    return dict(result='CANDIDATE',gap_lower_bound=None)
+
+
+def reframe_planar_profile(points, bulges, *, origin, u_axis, v_axis):
+    """Map a closed bulged outline between perpendicular cardinal frames."""
+    x0, y0 = (finite(value) for value in origin)
+    ux, uy = (finite(value) for value in u_axis)
+    vx, vy = (finite(value) for value in v_axis)
+    if (any(value not in (-1, 0, 1) for value in (ux, uy, vx, vy))
+            or abs(ux) + abs(uy) != 1 or abs(vx) + abs(vy) != 1
+            or ux * vx + uy * vy != 0):
+        raise CadError("Planar frame axes must be perpendicular signed cardinal axes")
+    source, curves = validate_outline(points, bulges)
+    determinant = ux * vy - uy * vx
+    mapped = [[x0 + ux * u + vx * v, y0 + uy * u + vy * v] for u, v in source]
+    return validate_outline(mapped, {index: determinant * b for index, b in curves.items()})
+
+
+def quarter_bend_section(centre, inside_radius, thickness, upright_length, floor_length):
+    """Return a lower-left quarter bend with tangent legs up and to the right.
+
+    The lengths exclude the bend and are measured from their respective
+    tangent stations. The closed result uses two exact quarter-circle bulges.
+    """
+    x, y = (finite(value) for value in centre)
+    inner = positive(inside_radius)
+    wall = positive(thickness)
+    upright = positive(upright_length)
+    floor = positive(floor_length)
+    outer = inner + wall
+    if not x - outer < x - inner < x < x + floor or not y - outer < y - inner < y < y + upright:
+        raise CadError("Quarter bend dimensions collapse in the supplied coordinates")
+    coordinates = [
+        [x - outer, y + upright],
+        [x - outer, y],
+        [x, y - outer],
+        [x + floor, y - outer],
+        [x + floor, y - inner],
+        [x, y - inner],
+        [x - inner, y],
+        [x - inner, y + upright],
+    ]
+    quarter = math.tan(math.pi / 8)
+    return validate_outline(coordinates, {1: quarter, 5: -quarter})
+
+
+def offset_bend_section(lower_centre, inside_radius, thickness, bridge_length,
+                        lower_leg_length, upper_leg_length):
+    """Return a Z section with two opposing 90-degree bends.
+
+    The lower straight leg extends downward, the web runs right, and the
+    upper straight leg extends upward. Straight lengths start at tangencies.
+    """
+    x0, y0 = (finite(value) for value in lower_centre)
+    inner = positive(inside_radius)
+    wall = positive(thickness)
+    bridge = positive(bridge_length)
+    lower = positive(lower_leg_length)
+    upper = positive(upper_leg_length)
+    outer = inner + wall
+    x1, y1 = x0 + bridge, y0 + inner + outer
+    if (not x0 - outer < x0 - inner < x0 < x1 < x1 + inner < x1 + outer
+            or not y0 - lower < y0 < y0 + inner < y0 + outer < y1 < y1 + upper):
+        raise CadError("Offset bend dimensions collapse in the supplied coordinates")
+    outline = [
+        [x0 - outer, y0 - lower], [x0 - inner, y0 - lower],
+        [x0 - inner, y0], [x0, y0 + inner],
+        [x1, y0 + inner], [x1 + outer, y1],
+        [x1 + outer, y1 + upper], [x1 + inner, y1 + upper],
+        [x1 + inner, y1], [x1, y0 + outer],
+        [x0, y0 + outer], [x0 - outer, y0],
+    ]
+    quarter = math.tan(math.pi / 8)
+    return validate_outline(outline, {2: -quarter, 4: quarter, 8: -quarter, 10: quarter})
+
+
+def ellipse_arc_chord_error_bound(major_radius, parameter_step_radians):
+    """Bound the planar deviation between an ellipse arc and its sample chord."""
+    radius = positive(major_radius)
+    step = positive(parameter_step_radians)
+    if step > math.pi:
+        raise CadError('Sample parameter step must be at most pi radians')
+    return radius * (2 * math.sin(step/4)**2)
+
+
+def annular_seat_with_radial_slot(inner_radius, outer_radius, slot_width, slot_radial_end):
+    """Projected annulus left by one centred radial slot reaching from the inner bore."""
+    r, outer, half = positive(inner_radius), positive(outer_radius), positive(slot_width)/2
+    end = positive(slot_radial_end)
+    if not half < r <= end or math.hypot(half,end) > outer:
+        raise ValueError('Slot must cross the inner arc and end inside the outer circle')
+    annulus = math.pi*(outer**2-r**2)
+    inner_arc_area = half*math.sqrt(r**2-half**2)+r**2*math.asin(half/r)
+    removed = 2*half*end-inner_arc_area
+    return dict(annulus_area_mm2=annulus,removed_area_mm2=removed,projected_overlap_mm2=annulus-removed)
 
 
 def rectangular_face_overlap(first, second, *, normal_axis, tolerance):

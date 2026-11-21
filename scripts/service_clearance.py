@@ -27,6 +27,168 @@ def _bounds(bounds):
     return low, high
 
 
+def static_box_gap(first_bounds, second_bounds):
+    """Return exact squared separation for two axis-aligned boxes in one frame.
+
+    Zero means the boxes touch or overlap. A positive gap between conservative
+    enclosures bounds the separation of their enclosed geometry from below.
+    """
+    first_low, first_high = _bounds(first_bounds)
+    second_low, second_high = _bounds(second_bounds)
+    axis_gaps = tuple(max(a-d, c-b, Fraction(0))
+                      for a,b,c,d in zip(first_low,first_high,second_low,second_high))
+    squared_gap = sum(gap*gap for gap in axis_gaps)
+    return dict(result='DISJOINT_BOUNDS' if squared_gap else 'CANDIDATE',
+                axis_gaps=[str(gap) for gap in axis_gaps], squared_gap=str(squared_gap))
+
+
+def static_box_contact_dimension(first_bounds, second_bounds):
+    """Return the contact dimension of two closed XYZ boxes, or None if disjoint.
+
+    Dimensions 0, 1, 2, and 3 mean a point, line, face, and volume respectively.
+    For boxes enclosing solids, a result supplies a candidate for the geometry.
+    """
+    first_low, first_high = _bounds(first_bounds)
+    second_low, second_high = _bounds(second_bounds)
+    spans = [min(b,d)-max(a,c) for a,b,c,d in
+             zip(first_low,first_high,second_low,second_high,strict=True)]
+    return dict(dimension=None if min(spans)<0 else sum(span>0 for span in spans),
+                signed_axis_spans=[str(span) for span in spans])
+
+
+def bounded_axial_section_clearance(full_bounds, section_bounds, obstacle_bounds, *, axis):
+    """Refine a box candidate using a verified material bound in one axial slab.
+
+    The caller establishes that section_bounds encloses all source material
+    between its two axial endpoints. The method uses that section only if it
+    covers the entire axial overlap between the full source and obstacle boxes.
+    """
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError('Expected an XYZ axis index')
+    full_low, full_high = _bounds(full_bounds)
+    section_low, section_high = _bounds(section_bounds)
+    obstacle_low, obstacle_high = _bounds(obstacle_bounds)
+    if section_low[axis] >= section_high[axis]:
+        raise ValueError('Expected a section of positive axial length')
+    if static_box_gap(full_bounds, obstacle_bounds)['result'] == 'DISJOINT_BOUNDS':
+        return dict(result='DISJOINT_FULL_BOUNDS', axial_overlap=None)
+    lo = max(full_low[axis], obstacle_low[axis])
+    hi = min(full_high[axis], obstacle_high[axis])
+    overlap = [str(lo), str(hi)]
+    if lo < section_low[axis] or hi > section_high[axis]:
+        return dict(result='SECTION_DOES_NOT_COVER_OVERLAP', axial_overlap=overlap)
+    # An axial gap at the slab boundary cannot prove transverse separation.
+    transverse_gaps = [max(section_low[i]-obstacle_high[i], obstacle_low[i]-section_high[i], 0)
+                       for i in range(3) if i != axis]
+    gap = max(transverse_gaps)
+    result = 'DISJOINT_SECTION_BOUNDS' if gap > 0 else 'SECTION_CONTACT_CANDIDATE'
+    return dict(result=result, axial_overlap=overlap, transverse_axis_gap=str(gap))
+
+
+def orthogonal_sleeve_clearance(first, second):
+    """Screen two square-ended annular cylinders parallel to distinct XYZ axes.
+
+    Each sleeve supplies axis (0, 1 or 2), centre (XYZ), span on its axis,
+    and inner and outer radii. The line through their nearest axis points
+    supplies a strict material witness only when it crosses both open spans.
+    """
+    axes = (first['axis'], second['axis'])
+    if any(type(axis) is not int or not 0 <= axis < 3 for axis in axes) or axes[0] == axes[1]:
+        raise ValueError('Expected two distinct XYZ axes')
+    centres, spans, radii = [], [], []
+    for sleeve in (first, second):
+        centres.append(_vector(sleeve['centre'], 3))
+        span = _vector(sleeve['span'], 2)
+        radial = _vector(sleeve['radii'], 2)
+        if span[0] >= span[1] or not 0 <= radial[0] < radial[1]:
+            raise ValueError('Expected an increasing axial span and inner/outer radii')
+        spans.append(span)
+        radii.append(radial)
+
+    normal = 3 - sum(axes)
+    locations = [centre[normal] for centre in centres]
+    gap = abs(locations[0] - locations[1]) - radii[0][1] - radii[1][1]
+    result = dict(signed_outer_gap=str(gap), normal_axis=normal, witness=None)
+    if gap > 0:
+        return dict(result, result='DISJOINT_OUTER_CYLINDERS')
+    for axis, span, other in zip(axes, spans, reversed(centres), strict=True):
+        if not span[0] < other[axis] < span[1]:
+            return dict(result, result='NEEDS_FINITE_SOLID_CHECK')
+
+    def material_intervals(centre, radius):
+        inner, outer = radius
+        return ((centre - outer, centre - inner), (centre + inner, centre + outer))
+
+    first_walls, second_walls = (material_intervals(c, r) for c, r in zip(locations, radii, strict=True))
+    for lo, hi in first_walls:
+        for other_lo, other_hi in second_walls:
+            lower, upper = max(lo, other_lo), min(hi, other_hi)
+            if lower < upper:
+                witness = [None] * 3
+                witness[axes[0]] = centres[1][axes[0]]
+                witness[axes[1]] = centres[0][axes[1]]
+                witness[normal] = (lower + upper) / 2
+                return dict(result, result='STRICT_MATERIAL_INTERSECTION', witness=list(map(str,witness)))
+    return dict(result, result='NEEDS_FINITE_SOLID_CHECK')
+
+
+def translated_box_group_margin(moving, fixed, displacement):
+    """Return the smallest signed separating-axis margin at one pose.
+
+    Both groups provide ordered boxes in one Cartesian frame. A positive
+    margin separates all pairs, zero permits boundary contact, and a
+    negative result identifies a pair of overlapping enclosures.
+    """
+    delta = _vector(displacement, 3)
+    movers = [tuple(tuple(x + d for x, d in zip(point, delta)) for point in _bounds(box))
+              for box in moving]
+    obstacles = [_bounds(box) for box in fixed]
+    if not movers or not obstacles:
+        raise ValueError("Both box groups must contain at least one box")
+    minimum = None
+    limiting = []
+    for i, (a0, a1) in enumerate(movers):
+        for j, (b0, b1) in enumerate(obstacles):
+            axes = [max(lo - end, start - hi) for lo, end, start, hi in zip(a0, b1, b0, a1)]
+            margin = max(axes)
+            if minimum is None or margin < minimum:
+                minimum = margin
+                limiting = []
+            if margin == minimum:
+                limiting.append(dict(moving_index=i, fixed_index=j,
+                                     axes=[k for k, value in enumerate(axes) if value == margin]))
+    return dict(minimum_axis_margin=str(minimum), pair_count=len(movers) * len(obstacles),
+                limiting_pairs=limiting)
+
+
+def rectangle_radial_bounds(bounds, centre):
+    """Return exact squared radial extrema over a closed planar rectangle."""
+    low, high = (_vector(corner, 2) for corner in bounds)
+    centre = _vector(centre, 2)
+    if any(a > b for a, b in zip(low, high)):
+        raise ValueError("Rectangle minima must precede maxima")
+    near = [max(a - c, c - b, 0) for a, b, c in zip(low, high, centre)]
+    far = [max(abs(a - c), abs(b - c)) for a, b, c in zip(low, high, centre)]
+    return dict(min_radius_squared=str(sum(d * d for d in near)),
+                max_radius_squared=str(sum(d * d for d in far)))
+
+
+def static_box_halfspace_gap(bounds, *, normal, offset):
+    """Screen a box against a part contained in normal · point <= offset."""
+    low, high = _bounds(bounds)
+    direction = _vector(normal, 3)
+    station, = _vector((offset,), 1)
+    squared_length = sum(term**2 for term in direction)
+    if not squared_length:
+        raise ValueError('Nonzero plane normal required')
+    nearest = sum(n*(a if n >= 0 else b)
+                  for n,a,b in zip(direction,low,high,strict=True))
+    excess = nearest - station
+    return dict(result='DISJOINT_BOUNDS' if excess > 0 else 'CANDIDATE',
+                minimum_plane_excess=str(excess),
+                gap_squared=str(max(excess,0)**2/squared_length))
+
+
 def translation_box_window(moving_bounds, fixed_bounds, displacement):
     """Find the closed candidate interval over a finite straight translation.
 
@@ -51,6 +213,60 @@ def translation_box_window(moving_bounds, fixed_bounds, displacement):
         if start > end:
             return {"result": "DISJOINT_BOUNDS", "candidate_fraction": None}
     return {"result": "CANDIDATE", "candidate_fraction": [str(start), str(end)]}
+
+
+def quarter_turn_box(bounds, *, pivot, axis, direction):
+    """Conservatively enclose an axis-aligned box over a signed 90° turn.
+
+    The pivot is any point on the fixed world-coordinate axis. The output
+    is an axis-aligned screening envelope, including the closed start and
+    end poses. Intersections remain candidates for a narrower check.
+    """
+    if type(axis) is not int or axis not in (0, 1, 2):
+        raise ValueError("Expected Cartesian axis 0, 1 or 2")
+    if type(direction) is not int or direction not in (-1, 1):
+        raise ValueError("Expected quarter-turn direction -1 or 1")
+    minimum, maximum = _bounds(bounds)
+    origin = _vector(pivot, 3)
+    u, v = (axis + 1) % 3, (axis + 2) % 3
+    un, up = max(0, origin[u]-minimum[u]), max(0, maximum[u]-origin[u])
+    vn, vp = max(0, origin[v]-minimum[v]), max(0, maximum[v]-origin[v])
+    if direction == 1:
+        limits = ((un, vp, up, vn), (vn, un, vp, up))
+    else:
+        limits = ((un, vn, up, vp), (vn, up, vp, un))
+    result = [list(map(float, minimum)), list(map(float, maximum))]
+    for dimension, (n1,n2,p1,p2) in zip((u,v),limits,strict=True):
+        result[0][dimension] = math.nextafter(float(origin[dimension])-math.hypot(n1,n2), -math.inf)
+        result[1][dimension] = math.nextafter(float(origin[dimension])+math.hypot(p1,p2), math.inf)
+    return result
+
+
+def planar_translation_pieces(vertices, displacement):
+    """Return polygon pieces whose union is one planar linear sweep.
+
+    Provide an ordered, simple, filled polygon ring without holes and a
+    finite displacement in its plane. Validate ring topology with the
+    input geometry provider. The first and last positions and the swept
+    nonparallel boundary segments cover the entire movement.
+    """
+    points = tuple(tuple(point) for point in vertices)
+    if points and points[0] == points[-1]:
+        points = points[:-1]
+    exact = tuple(_vector(point, 2) for point in points)
+    delta = _vector(displacement, 2)
+    if len(exact) < 3 or len(set(exact)) != len(exact):
+        raise ValueError("Expected at least three distinct ring vertices")
+    if not any(delta):
+        return (points,)
+    translated = tuple(tuple(float(a+b) for a,b in zip(point,delta)) for point in exact)
+    sides = []
+    for end in range(len(points)):
+        start = end-1
+        dx,dy = (b-a for a,b in zip(exact[start],exact[end]))
+        if dx*delta[1] != dy*delta[0]:
+            sides.append((points[start],points[end],translated[end],translated[start]))
+    return (points,translated,*sides)
 
 
 def _affine(matrix):
@@ -111,3 +327,33 @@ def axial_section_window(moving_span, fixed_span, travel, *, clearance=0):
     high = min(moving_high, fixed_high + margin - first)
     return dict(axial_gap_lower_bound=str(gap),
                 source_section=[str(low), str(high)] if low <= high else None)
+
+
+def axial_stack_witness(shaft_span, layers, *, axis_sign=1):
+    """Compare consecutive axial layers against a shaft's modeled reach.
+
+    Supply increasing coordinate spans in one model axis. Layer order
+    follows the shaft from shoulder to tip. Set axis_sign=-1 when the
+    shaft points along the decreasing model coordinate. Positive seat
+    and interface gaps mean separation. Negative gaps mean axial overlap.
+    Last-layer shaft overlap measures geometric reach. Return exact
+    rational station differences.
+    """
+    if type(axis_sign) is not int or axis_sign not in (-1, 1):
+        raise ValueError("Shaft axis sign must be 1 or -1")
+    first, last = _vector(shaft_span, 2)
+    spans = [_vector(layer, 2) for layer in layers]
+    if first >= last or not spans or any(low >= high for low, high in spans):
+        raise ValueError("Positive shaft length and one or more positive layer spans required")
+    shoulder, tip = first, last
+    if axis_sign == -1:
+        shoulder, tip = -last, -first
+        spans = [(-high, -low) for low, high in spans]
+    last_entry, last_exit = spans[-1]
+    overlap = max(Fraction(0), min(tip, last_exit) - max(shoulder, last_entry))
+    return {
+        "seat_gap": str(spans[0][0] - shoulder),
+        "interface_gaps": [str(right[0] - left[1]) for left, right in zip(spans, spans[1:])],
+        "last_layer_overlap": str(overlap),
+        "tip_past_stack": str(tip - last_exit),
+    }

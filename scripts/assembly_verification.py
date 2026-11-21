@@ -102,6 +102,63 @@ def compare_occurrence_matrices(source,target,bindings,*,translation_tolerance,l
     return proof
 
 
+def directed_axial_span(points, *, origin, direction):
+    """Measure the signed axial span of observed points in a declared unit direction."""
+    origin = vector(origin)
+    direction = vector(direction)
+    if not math.isclose(math.hypot(*direction),1,rel_tol=0,abs_tol=1e-9):
+        raise ValueError('Unit axial direction required')
+    stations = []
+    for point in points:
+        point = vector(point)
+        stations.append(finite(sum((p-o)*d for p,o,d in zip(point,origin,direction,strict=True))))
+    if not stations:
+        raise ValueError('Observed axial points required')
+    return [min(stations),max(stations)]
+
+
+def compare_axial_occurrences(before, after, *, length_tolerance):
+    """Match named, Z-aligned occurrences by role, XY axis and finite Z span."""
+    tolerance = _tolerance(length_tolerance)
+
+    def index(rows):
+        indexed = {}
+        for row in rows:
+            name, role = row['occurrence'], row['role']
+            if not isinstance(name, str) or not name.strip() or name in indexed:
+                raise ValueError('Unique nonempty occurrence names required')
+            if not isinstance(role, str) or not role.strip():
+                raise ValueError('Named occurrence role required')
+            axis = tuple(row['axis_xy_mm'])
+            span = tuple(row['span_z_mm'])
+            if len(axis)!=2 or len(span)!=2:
+                raise ValueError('Expected two XY coordinates and two Z limits')
+            for value in (*axis, *span):
+                finite(value)
+            if span[0] >= span[1]:
+                raise ValueError('Expected ordered axial span with positive length')
+            indexed[name] = (role, axis, span)
+        if not indexed:
+            raise ValueError('Nonempty occurrence records required')
+        return indexed
+
+    expected, observed = index(before), index(after)
+    checks = []
+    for name in sorted(expected.keys() & observed.keys()):
+        role, axis, span = expected[name]
+        found_role, found_axis, found_span = observed[name]
+        axis_error = math.dist(axis, found_axis)
+        span_error = math.dist(span, found_span)
+        checks.append(dict(occurrence=name, axis_error_mm=axis_error, span_error_mm=span_error,
+                           role_matches=role==found_role,
+                           passed=role==found_role and max(axis_error, span_error)<=tolerance))
+    missing = sorted(expected.keys()-observed.keys())
+    added = sorted(observed.keys()-expected.keys())
+    passed = not missing and not added and all(row['passed'] for row in checks)
+    return dict(result='PASS' if passed else 'FAIL', length_tolerance_mm=tolerance,
+                missing_occurrences=missing, added_occurrences=added, checks=checks)
+
+
 def verify_nested_placements(source_records,source_blocks,source_roots,
                              target_records,target_blocks,target_roots,bindings,*,
                              translation_tolerance,linear_tolerance,

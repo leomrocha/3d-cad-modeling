@@ -1,7 +1,8 @@
 """Encoding-aware native feature reads and explicit OCS point transformations."""
 import math
 from native_acis import sab_structure,sab_features,_sat_body_entities,_sat_cone_parameters
-from step_placements import identity_sat_vertices,solid_instances,apply
+from step_placements import identity_sat_vertices,solid_instances,apply,classify_hand,dot,unit
+from cadtools.geometry import positive,vector
 from cadtools.records import read_stable_entity
 
 
@@ -63,6 +64,20 @@ def assembly_point_extrema(records,blocks,roots,*,allow_uniform_scale=False,allo
     for instance in instances:
         local,_=source_points(by[instance['handle']]);points.extend(apply(instance['matrix'],p) for p in local)
     return dict(instances=instances,vertex_ranges=[[min(p[i] for p in points),max(p[i] for p in points)] for i in range(3)],scope='placed observed vertices in caller-declared drawing units')
+
+
+def placed_circular_cylinders(cylinders, matrix, *, allow_unit_reflection=False):
+    """Place decoded circular cylinder supports through an orthonormal unit pose."""
+    handedness = classify_hand(matrix)
+    if handedness == 'MIRRORED' and not allow_unit_reflection:
+        raise ValueError('Explicit unit reflection required')
+    placed = []
+    for cylinder in cylinders:
+        origin = apply(matrix, vector(cylinder['origin']))
+        axis = unit(cylinder['axis'])
+        direction = [dot(row[:3], axis) for row in matrix[:3]]
+        placed.append(dict(origin=origin, axis=direction, radius=positive(cylinder['radius'])))
+    return placed
 
 
 def wcs_polyline_vertices(record):

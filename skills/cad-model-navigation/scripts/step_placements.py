@@ -151,6 +151,14 @@ def classify_hand(matrix,tolerance=1e-7):
     return 'MIRRORED' if determinant<0 else 'SOURCE_HAND'
 
 
+def root_for_leaf_placement(current_root, current_leaf, desired_leaf):
+    """Return the world root pose that carries one nested leaf to its target."""
+    for placement in (current_root, current_leaf, desired_leaf):
+        if classify_hand(placement) != 'SOURCE_HAND':
+            raise ValueError('Proper unit-rigid placements required for source-frame transfer')
+    return multiply(multiply(desired_leaf, inverse(current_leaf)), current_root)
+
+
 def identity_sat_vertices(text):
     """Read observed SAT point records with zero or one explicit identity transform.
 

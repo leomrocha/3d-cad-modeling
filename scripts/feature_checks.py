@@ -19,6 +19,58 @@ def comparison(name,actual,expected,tolerance,unit='mm',method='native feature c
                 result='PASS' if len(a)==len(b) and all(abs(x-y)<=tolerance for x,y in zip(a,b)) else 'FAIL')
 
 
+def axial_datum_chain(name, stations, offsets, tolerance):
+    """Check each signed source distance between successive observed positions."""
+    if len(stations)<2 or len(offsets)!=len(stations)-1:
+        raise ValueError('One signed offset per successive station pair required')
+    comparison(name+' stations',stations,stations,tolerance)
+    observed = [b-a for a,b in zip(stations[:-1],stations[1:],strict=True)]
+    result = comparison(name,observed,offsets,tolerance,
+                        method='Independent signed dimensions between successive axial datums')
+    result['observed_stations'] = list(stations)
+    return result
+
+
+def circular_opening_edge_land(centre, radius, side_planes):
+    """Return signed lands beside a circle between two parallel side planes.
+
+    All coordinates share one length unit. The planes are perpendicular to
+    the declared transverse coordinate and the circle lies in a face along
+    that coordinate. A negative land denotes breakout at that plane.
+    """
+    if len(side_planes)!=2:
+        raise ValueError('Two side plane coordinates required')
+    low, high = side_planes
+    for value in (centre, radius, low, high):
+        if type(value) not in (float, int) or not math.isfinite(value):
+            raise ValueError('Finite coordinates and radius required')
+    if low>=high or radius<=0:
+        raise ValueError('Ordered side planes and positive radius required')
+    low_land = centre-low-radius
+    high_land = high-centre-radius
+    if not math.isfinite(low_land) or not math.isfinite(high_land):
+        raise ValueError('Edge land cannot be represented with finite coordinates')
+    return dict(low=low_land, high=high_land, minimum=min(low_land, high_land))
+
+
+def concentric_through_keyway_section(bore_diameter, outer_diameter, width, radial_depth):
+    """Return nominal section datums for a rectangular +Y keyway in a centred bore."""
+    inputs = (bore_diameter, outer_diameter, width, radial_depth)
+    if any(type(value) not in (int, float) or not math.isfinite(value) or value<=0 for value in inputs):
+        raise ValueError('Positive finite keyway section dimensions required')
+    if not width < bore_diameter < outer_diameter:
+        raise ValueError('Expected keyway width < bore diameter < outer diameter')
+    bore_radius, outer_radius, half_width = bore_diameter/2, outer_diameter/2, width/2
+    fraction = half_width/bore_radius
+    mouth = bore_radius*math.sqrt((1-fraction)*(1+fraction))
+    floor = bore_radius+radial_depth
+    roof = outer_radius-math.hypot(half_width,floor)
+    if not all(math.isfinite(value) for value in (mouth,floor,roof)):
+        raise ValueError('Keyway section cannot be represented with finite dimensions')
+    return dict(half_width=half_width,mouth_from_axis=mouth,floor_from_axis=floor,
+                minimum_radial_wall=roof)
+
+
 def closed_body(name,features):
     t=features['topology']
     return comparison(name,[t['bodies'],t['lumps'],t['shells'],int(t['reciprocal_closed_partners'])],[1,1,1,1],1e-9,'count','native connected body and reciprocal coedge graph')
@@ -55,6 +107,74 @@ def cylinder_pattern(name,features,diameter,axis,centres,tolerance):
         pairs.append(dict(observed=result['observed'][i],expected=expected))
     result.update(result='PASS' if len(pairs)==len(centres) and not remaining else 'FAIL',matched_pairs=pairs)
     return result
+
+
+def circular_trim_stations(name, points, *, axis, centres, radius, stations, tolerance):
+    """Check observed ring samples on requested axial stations in a Cartesian frame."""
+    if type(axis) is not int or axis not in (0,1,2):
+        raise ValueError('Cartesian ring axis required')
+    if not centres or any(len(centre)!=2 for centre in centres) or not stations:
+        raise ValueError('Expected ring centres and stations required')
+    if radius <= 0 or tolerance >= radius/2:
+        raise ValueError('Positive ring radius and a smaller geometric tolerance required')
+    expected = [radius, list(stations), list(centres)]
+    comparison(name+' inputs',expected,expected,tolerance)
+    if not points or any(len(p)!=3 for p in points):
+        raise ValueError('Observed XYZ boundary samples required')
+    comparison(name+' points',points,points,tolerance)
+    transverse = [i for i in range(3) if i != axis]
+    records = []
+    for centre in centres:
+        for station in stations:
+            vectors = {(p[transverse[0]]-centre[0],p[transverse[1]]-centre[1])
+                       for p in points if abs(p[axis]-station)<=tolerance
+                       and abs(math.hypot(p[transverse[0]]-centre[0],
+                                          p[transverse[1]]-centre[1])-radius)<=tolerance}
+            signs = {(x>0,y>0) for x,y in vectors if abs(x)>tolerance and abs(y)>tolerance}
+            records.append(dict(centre=list(centre),station=station,sample_count=len(vectors),
+                                passed=len(vectors)>=8 and len(signs)==4))
+    return dict(check=name,result='PASS' if all(r['passed'] for r in records) else 'FAIL',
+                numeric_tolerance=tolerance, method='Distributed native circular boundary samples',
+                rings=records)
+
+
+def round_ended_slot_tangents(name, edges, *, axis, centres, radius, stations, tolerance):
+    """Match the two native straight tangents at each requested slot rim."""
+    if type(axis) is not int or axis not in (0,1,2) or len(centres)!=2 or not stations:
+        raise ValueError('Expected one Cartesian axis, two slot centres and stations')
+    if any(len(centre)!=2 for centre in centres) or radius<=0 or tolerance>=radius/2:
+        raise ValueError('Expected finite planar centres and a positive slot radius')
+    expected=[list(centres),list(stations),radius]
+    comparison(name+' inputs',expected,expected,tolerance)
+    first,second=centres
+    dx,dy=(second[i]-first[i] for i in range(2))
+    spacing=math.hypot(dx,dy)
+    if spacing<=2*tolerance:
+        raise ValueError('Slot centres must be distinct at the declared tolerance')
+    normal=(-dy/spacing,dx/spacing)
+    straight=[]
+    for edge in edges:
+        if edge['curve_type']!='straight-curve' or edge.get('endpoints_only'):
+            continue
+        points=edge['points']
+        if len(points)!=2 or any(len(p)!=3 for p in points):
+            raise ValueError('Expected two XYZ endpoints for each straight edge')
+        comparison(name+' edge',points,points,tolerance)
+        straight.append(points)
+
+    records=[]
+    for station in stations:
+        for side in (-1,1):
+            targets=[]
+            for centre in centres:
+                xyz=[v+side*radius*n for v,n in zip(centre,normal,strict=True)]
+                xyz.insert(axis,station)
+                targets.append(xyz)
+            match=any(all(math.dist(a,b)<=tolerance for a,b in zip(pair,targets,strict=True))
+                      for edge in straight for pair in (edge,edge[::-1]))
+            records.append(dict(station=station,side=side,expected_endpoints=targets,passed=match))
+    return dict(check=name,result='PASS' if all(r['passed'] for r in records) else 'FAIL',
+                numeric_tolerance=tolerance,tangents=records)
 
 
 def cylinder_wall_checks(name, faces, *, axis, centre, radius, side, outer, inner_limit, tolerance):

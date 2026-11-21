@@ -9,3 +9,15 @@ Use `scripts/retained_artifacts.py` after the final source/path/provenance edits
 5. Store the emitted receipt in the component project only after the command succeeds. The receipt records the exact manifest hash, unique file count, repeated attributions and omitted work-only records. A hash/JSON pass establishes retained bytes and record syntax; native geometry, source interpretation and physical behavior retain their own checks.
 
 Synthetic checks: `python -m unittest discover -s tests -p test_retained_artifacts.py`.
+
+## Preflight an indexed model package
+
+Read the destination's current schema and an accepted record of the same type before generating an entry. Check the exact value types used by indexed fields. An intake command that validates the title and asset draft can still accept a record whose material, standard or dimensional entries have the wrong structure for the index builder. Validate the generated record with the destination's supported schema or builder in a draft location before replacing the working indexes. Diff the staged companion and check whitespace, including sections with no entries.
+
+If indexing fails after package preparation, inspect the current catalogue revision and changed paths. Verify the saved model and staged views against the job hashes. When only record metadata is affected, correct the existing entry, regenerate every required index and verify exact lookups and asset paths. Commit the model and regenerated records together after the checked staged diff. Preserve the saved geometry and valid package files during metadata recovery.
+
+## Replace an existing model package revision
+
+Give the construction job a separate folder and a fresh native request namespace. Keep the catalogue ID and asset basenames for the same model identity. Before replacing the catalogue entry, confirm its current revision and native hash, then check that no dependent entry pins that revision. Update affected dependencies as separate scoped work if necessary.
+
+When the reviewed asset set stays the same, call `verify_revision_package(current, replacement, assets, model_name=..., old_sha256=..., new_sha256=...)` from `retained_artifacts.py`. Pass the manifest's sibling filenames and the old and checked new native hashes. It checks both directory inventories, rejects symlinks and returns a digest for every file in each revision. Use the exact checked staged bytes for delivery. Retry a preparation failure with its existing staged files only after comparing them with the checked output. The destination still owns geometry checks, registration, index rebuild and commit.

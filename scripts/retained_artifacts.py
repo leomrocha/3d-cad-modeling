@@ -27,6 +27,32 @@ def write_table(path,rows,fields):
     return dict(path=str(path),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),rows=len(rows),result='PASS')
 
 
+def verify_revision_package(current, replacement, assets, *, model_name, old_sha256,
+                            new_sha256):
+    """Bind a geometry revision to the existing package and unchanged asset names."""
+    names = list(assets)
+    if (not names or any(not isinstance(name, str) or not name or
+                         name in {'.', '..'} or '/' in name or '\\' in name for name in names)
+            or len(set(names)) != len(names) or model_name not in names):
+        raise ValueError('Expected unique sibling asset names including the model')
+    current, replacement = Path(current), Path(replacement)
+    if current.resolve() == replacement.resolve():
+        raise ValueError('Stage the replacement in a separate package')
+    inventories = []
+    for root in (current, replacement):
+        entries = {path.name: path for path in root.iterdir()}
+        if entries.keys() != set(names) or any(
+                path.is_symlink() or not path.is_file() for path in entries.values()):
+            raise ValueError('Package inventory differs from the reviewed asset names')
+        inventories.append({name: observe_file(entries[name])['sha256'] for name in sorted(names)})
+    before, after = inventories
+    if before[model_name] != old_sha256 or after[model_name] != new_sha256:
+        raise ValueError('Native model hash differs from the reviewed revision')
+    if old_sha256 == new_sha256:
+        raise ValueError('Geometry revision requires a different native file hash')
+    return dict(result='PASS', current_sha256=before, replacement_sha256=after)
+
+
 def artifact_path(locator, roots, package):
     # Historical manifests also stored named origins without the wrapper.
     prefix, separator, suffix = locator.partition('/')

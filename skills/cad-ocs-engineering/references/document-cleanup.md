@@ -8,3 +8,6 @@
 6. After inactive close, require native closed ID confirmation, target disappearance, unchanged active ID, exact remaining IDs and unchanged other paths/dirty states. Preserve uncertain operations and post-check failures as separate cleanup results. Saved-model completion retains its own evidence.
 
 A verified save can write a checkpoint while the construction tab stays untitled and dirty. Use the original NEW ownership record to bind that tab path and the final verified save to bind the current geometry revision and DWG hash. Successful closure reports `cleanup_status=CLOSED` and `result=PASS`.
+
+
+Before the first request, pass the full planned phase label, including its cleanup suffix, through `cadtools.runtime.bounded_request_namespace`. Labels within the 64-byte UTF-8 limit remain byte-for-byte identical. Longer labels retain a readable prefix and a digest of the complete label. Use the returned namespace for both the client and journal request keys. During recovery keep the namespace of each existing intent unchanged. Only a request rejected before its intent was written can use a newly planned namespace.

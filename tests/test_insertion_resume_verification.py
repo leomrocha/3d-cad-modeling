@@ -5,7 +5,7 @@ from unittest.mock import Mock, patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from cadtools.runtime import CadError,Uncertain,Journal
 from cadtools.checkpoints import verify_resume_checkpoint,save_checkpoint,verify_finish_checkpoint
-from cadtools.records import model_space_after_revolve, model_space_live_handles
+from cadtools.records import consumed_profile_transition, model_space_after_revolve, model_space_live_handles
 from insert_recovery import insert_default_contract,accept_insert_default
 from assembly_build import continue_insert_after_file, correct_insert_point, insert_component, recover_insert_component
 from assembly_verification import check_axis_aligned_placement,compare_occurrence_matrices,verify_nested_placements,match_world_vertices,check_world_envelope
@@ -442,6 +442,16 @@ class ConsumedRevolveProfile(unittest.TestCase):
         return model_space_after_revolve(self.block, self.rows, ['B'], document_id=7,
             profile_handle='A', solid_handle='B', revolve_intent=self.intent,
             revolve_response=self.response)
+
+    def test_completed_extrude_binds_removed_profile_and_added_solid(self):
+        intent = dict(self.intent, cmd='EXTRUDE 30')
+        args = dict(document_id=7, command='EXTRUDE', profile_handle='A', solid_handle='B', intent=intent)
+        expected = dict(request_id='job:revolve', profile_handle='A', solid_handle='B')
+        self.assertEqual(consumed_profile_transition(**args, response=self.response), expected)
+        with self.assertRaises(CadError):
+            consumed_profile_transition(**args, response=dict(self.response,changes=[]))
+        with self.assertRaises(CadError):
+            consumed_profile_transition(**dict(args, command='REVOLVE'), response=self.response)
 
     def test_completed_revolve_consumes_the_expected_profile(self):
         self.assertEqual(self.checked(), dict(live_handles=['B'], erased_references=['A']))
