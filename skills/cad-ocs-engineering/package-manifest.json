@@ -124,7 +124,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "96ec438f13221e482b2f2ce0d5d0a04a203c7ab87d4bc443ac8df018945e55cc"
+      "sha256": "8362fae85c35db409cc69b66221d21f77898991feb26c27fb514e5d8c29584a0"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -372,7 +372,7 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "abee4e2012e3f1a32993bd4476f0be747ec5a1c3a92782ea5c7d5b9a3b06a513"
+      "sha256": "3dee69888d50792b6b14f8a80b6d5d2a446b91424e5073a32bcd0bd3b9c09508"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
