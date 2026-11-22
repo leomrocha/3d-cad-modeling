@@ -20,4 +20,12 @@ If indexing fails after package preparation, inspect the current catalogue revis
 
 Give the construction job a separate folder and a fresh native request namespace. Keep the catalogue ID and asset basenames for the same model identity. Before replacing the catalogue entry, confirm its current revision and native hash, then check that no dependent entry pins that revision. Update affected dependencies as separate scoped work if necessary.
 
+A catalogue locator with a stable ID and basename can resolve to new bytes after replacement. For a downstream preflight that uses earlier verification, check these joins separately:
+
+1. Resolve the current catalogue ID, revision, asset path and file hash. Use that binding when the job calls for the current asset.
+2. Resolve each historical receipt to the archived DWG whose bytes match its recorded hash. Preserve that receipt's source identity and measurements with the archived revision.
+3. Check the derivative DWG against its own output hash and check the derivative receipt's input hash against the exact predecessor used to create it. A published derivative can also match the current catalogue asset. Both checks still apply.
+
+Record the evidence roles and matching hashes in the new preflight. If a required predecessor cannot be resolved, stop the dependent verification at that missing input. An unchanged catalogue ID or path alone cannot carry forward geometry evidence.
+
 When the reviewed asset set stays the same, call `verify_revision_package(current, replacement, assets, model_name=..., old_sha256=..., new_sha256=...)` from `retained_artifacts.py`. Pass the manifest's sibling filenames and the old and checked new native hashes. It checks both directory inventories, rejects symlinks and returns a digest for every file in each revision. Use the exact checked staged bytes for delivery. Retry a preparation failure with its existing staged files only after comparing them with the checked output. The destination still owns geometry checks, registration, index rebuild and commit.
