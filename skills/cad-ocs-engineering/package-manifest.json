@@ -376,7 +376,7 @@
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
-      "sha256": "aed0710e5086591693231e841727717a07b993fa90b49dc35c73cb2b2e0f66d1"
+      "sha256": "341167f259ff2648a25feb96e6f7453d37836619c20e0c74f4e40c4cfbe094d2"
     },
     "scripts/cadtools/records.py": {
       "source": "scripts/cadtools/records.py",

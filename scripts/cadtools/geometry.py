@@ -7,6 +7,7 @@ plans or sends known commands and does not substitute a geometry kernel.
 from collections.abc import Mapping
 import math
 
+from .records import identity, iter_records
 from .runtime import CadError
 
 
@@ -151,13 +152,21 @@ class Geometry:
             raise CadError("Union requires distinct handles")
         self.select(label + "-selection", handles)
         response = self.run(label, "UNION")
-        live = {e["handle"] for e in self.client.read("query", limit=1000)["entities"]}
-        candidates = [e["handle"] for e in response.get("changes", []) or []
-                      if e["kind"] == "Added" and e["handle"] in live]
-        candidates = candidates or [h for h in handles if h in live]
-        if len(candidates) != 1:
+        revision = identity(response.get("state", {}))
+        if revision[0] != self.client.document_id or identity(self.client.read("state")) != revision:
+            raise CadError("Union result state changed; inspect before resuming")
+        changes = response.get("changes") or ()
+        added_handles = {change["handle"] for change in changes if change["kind"] == "Added"}
+        removed_handles = {change["handle"] for change in changes if change["kind"] == "Removed"}
+        candidates = set(handles) | added_handles
+        rows = list(iter_records(self.client, "entities", handles=sorted(candidates)))
+        if identity(self.client.read("state")) != revision:
+            raise CadError("Union result state changed; inspect before resuming")
+        live = {row["handle"] for row in rows}
+        if (len(rows) != 1 or not live <= candidates or not added_handles <= live
+                or live & removed_handles or rows[0]["type"] != "Solid3D"):
             raise CadError("Union result ambiguous; inspect before resuming")
-        return candidates[0]
+        return rows[0]["handle"]
 
     def holes(self, label, pcd, angles, radius, z, depth):
         return [self.cylinder(f"{label}-{i}", [x, y, z], radius, depth)

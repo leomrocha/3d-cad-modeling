@@ -256,6 +256,47 @@ class GeometryAdapterContract(unittest.TestCase):
         client.mutate.assert_called_once()
 
 
+    def union_client(self, changes, live, *, response_revision=7):
+        client = Mock(document_id=1)
+        current = dict(ok=True, document_id=1, revision=7, geometry_revision=45)
+        client.mutate.side_effect = [{}, {"changes": changes, "state": dict(current, revision=response_revision)}]
+
+        def read(op, **fields):
+            if op == "state":
+                return current
+            self.assertEqual(op, "records")
+            self.assertEqual(fields["collection"], "entities")
+            self.assertLessEqual(len(fields["handles"]), 3)
+            return {"records": [live[handle] for handle in fields["handles"] if handle in live]}
+
+        client.read.side_effect = read
+        return client
+
+    def test_union_reads_high_result_handle_in_a_large_drawing(self):
+        live = {f"{i:X}": dict(handle=f"{i:X}", type="Solid3D") for i in range(0x100, 0x1000)}
+        for consumed in ("FF0", "FF5"):
+            del live[consumed]
+        changes = [dict(kind="Added", handle="FF9"),
+                   dict(kind="Removed", handle="FF0"), dict(kind="Removed", handle="FF5")]
+        client = self.union_client(changes, live)
+        self.assertEqual(Geometry(client).combine("union", ["FF0", "FF5"]), "FF9")
+        client.read.assert_any_call("records", collection="entities", offset=0, limit=8,
+                                    handles=["FF0", "FF5", "FF9"])
+
+    def test_union_returns_exact_surviving_original_and_rejects_ambiguity(self):
+        live = {"A1": dict(handle="A1", type="Solid3D")}
+        changes = [dict(kind="Removed", handle="A2"), dict(kind="Modified", handle="A1")]
+        self.assertEqual(Geometry(self.union_client(changes, live)).combine("union", ["A1", "A2"]), "A1")
+        result = [dict(kind="Added", handle="A3"), *changes]
+        for invalid in (
+                self.union_client(result, dict(live, A3=dict(handle="A3", type="Solid3D"))),
+                self.union_client(result, live),
+                self.union_client(changes, {"A1": dict(handle="A1", type="Line")}),
+                self.union_client(changes, live, response_revision=6)):
+            with self.subTest(readback=invalid), self.assertRaisesRegex(CadError, "Union result"):
+                Geometry(invalid).combine("union", ["A1", "A2"])
+
+
 class Patterns(unittest.TestCase):
     def features(self,points,radius=3):
         return {'cylinders':[dict(radius=radius,axis=[0,1,0],origin=[x,0,y]) for x,y in points]}
