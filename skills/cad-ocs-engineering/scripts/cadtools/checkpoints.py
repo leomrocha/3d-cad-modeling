@@ -81,8 +81,13 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
     if handles is not None and (not isinstance(handles,dict) or any(not isinstance(k,str) or not k or not isinstance(v,str) or not v for k,v in handles.items())):raise CadError('Named checkpoint handle mapping required')
     key=client.namespace+':'+label
     intent=client.journal.requests.get(key)
-    if intent and (intent['request'].get('path')!=str(path) or intent['request']['op']!='save_verified'):
-        raise CadError('Checkpoint intent differs')
+    if intent:
+        operation = intent['request']['op']
+        if operation != 'save_verified':
+            raise CadError(f'Checkpoint label {label!r} is already used by {operation!r}. '
+                           'Use a separate save label.')
+        if intent['request'].get('path') != str(path):
+            raise CadError(f'Checkpoint label {label!r} already has a different save path.')
     if path.exists() and not intent:raise CadError('Checkpoint already exists; retain it')
     state=client.read('state')
     if state.get('document_id')!=client.document_id or state.get('command') or state.get('modal') or state.get('operation'):

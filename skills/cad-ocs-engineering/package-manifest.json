@@ -168,7 +168,7 @@
     },
     "references/ocs-runtime.md": {
       "source": "references/ocs-runtime.md",
-      "sha256": "ffc622cf7987c809119d309bbaf64d99ba169b54c96b2ee44b17aaa1a299d7f3"
+      "sha256": "cb5c28b1773da5b71c9862f54a22327a710e7bef51db7295b299ee1c54510225"
     },
     "references/package-completion.md": {
       "source": "references/package-completion.md",
@@ -372,7 +372,7 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "c6e5e7782b2f5ad56bb84e004f252c5e6160930de3b57efc94ef9bf93e525423"
+      "sha256": "5bb3f414814db86dd5d82f241d9cce09c04ff8f0ce0c51c4751c1cff74cb084a"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",

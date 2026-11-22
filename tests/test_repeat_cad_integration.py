@@ -121,6 +121,22 @@ class CheckpointAudits(unittest.TestCase):
         self.c.journal.requests['job:stage']=dict(request=dict(op='save_verified',path=str(self.path),geometry_revision=2),context=dict(document_id=1))
         with self.assertRaises(CadError):self.run_save()
         self.c.recover.assert_not_called()
+    def test_construction_label_collision_identifies_operation_without_write(self):
+        self.c.journal.requests['job:stage'] = {'request': {'op': 'run'}}
+        with self.assertRaisesRegex(CadError, "label 'stage' is already used by 'run'"):
+            self.run_save()
+        self.c.mutate.assert_not_called()
+        self.c.recover.assert_not_called()
+        self.assertFalse(self.path.exists())
+
+    def test_existing_save_label_reports_path_conflict_without_recovery(self):
+        self.c.journal.requests['job:stage'] = {'request': {
+            'op': 'save_verified', 'path': str(self.path.with_name('other.dwg'))}}
+        with self.assertRaisesRegex(CadError, "already has a different save path"):
+            self.run_save()
+        self.c.mutate.assert_not_called()
+        self.c.recover.assert_not_called()
+
     def test_stable_owned_checkpoint_passes(self):
         self.assertEqual(self.run_save()['result'],'PASS')
     def test_external_epoch_change_during_audit_fails(self):

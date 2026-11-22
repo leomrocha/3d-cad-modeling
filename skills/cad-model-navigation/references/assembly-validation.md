@@ -10,3 +10,5 @@
 7. **Check service motion.** Bind the moving and fixed occurrences to the saved revision. Record released hardware, the direction and the full travel. Report static clearance, projected separation over straight motion and interference at a specific pose as distinct observations. For projection checks, retain edge-on geometry and record which represented obstacles were included. A clear rendered pose covers that pose.
 
 For a constant-frame-rate capture, run the [recording checker](../scripts/check_recording.py) with the movie and a JSON receipt containing a `chapters` list of `title` and elapsed `seconds` values. It uses local ffprobe and ffmpeg to check presentation intervals, chapter order and bounds, and decoding. Actual build actions and visibility require the native and visual checks above.
+
+For each inserted occurrence, compare the complete block-to-world transformation. If traversal records the parent frame at the INSERT row, compose that frame with the INSERT's local transform, or inspect the resulting frame at a known child. Verify an origin and two non-collinear axes before using the placement for clearance checks.
