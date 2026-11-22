@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "39e026e797f3fdd55c09b29e12a86961dee3e6e0f9ed79364d813acf51479f8c"
+      "sha256": "665e8bd3e6f84a37e5fb3395ff1a92e6400b7341c10f280b5803f81f55161b67"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -104,7 +104,7 @@
     },
     "references/exact-source-checks.md": {
       "source": "references/exact-source-checks.md",
-      "sha256": "52faa031287a444d40176a60a00fb45b0d9c33ece0c90dba9433c062cc38864b"
+      "sha256": "934d24ea1067cbb9aa07f7c23664df8fde71cd74db317c7fefb495d48742ad55"
     },
     "references/existing-batch-placement.md": {
       "source": "references/existing-batch-placement.md",

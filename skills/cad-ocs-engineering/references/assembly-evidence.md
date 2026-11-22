@@ -9,6 +9,14 @@
 
 For opposite hands, pass measured world points, a common reference origin and each hand's positive outward unit direction to `directed_axial_span` in [assembly_verification.py](../scripts/assembly_verification.py). Compare the resulting ordered stations against the independent shaft, insert and spacer datums with their signed direction preserved. The returned endpoints describe the observed points. Curved extrema require their own analytic or conservative bounds.
 
+### Verify a changed native INSERT
+
+Read the source feature in its own frame before deriving the new placement. For an axisymmetric part, use two ordered stations on its shaft or bore to check the axis direction. Use a separate off-axis feature, such as a keyway or asymmetric hole, to check clocking when that rotation matters.
+
+For an OpenCADStudio block reference, use [step_placements.py](../scripts/step_placements.py) to encode the proposed local matrix with `native_fields` and decode the live native fields with `native_matrix`. The insertion point is stored in the object coordinate system. A rotation value alone turns about the current insert normal. For a changed axis, update the normal, rotation and insertion point together. Compose the decoded matrix with every parent transform before checking world placement. Convert a desired world pose back to the parent frame before encoding it.
+
+Compare the full world matrix with the independently specified pose. Check the origin and basis directions, including scale and handedness. Measure the resulting world-space shaft stations and off-axis feature from the actual child solid. Agreement between the encoder and decoder checks the field conversion. Agreement with source-derived feature positions checks the installed part. Translation and aggregate bounds can agree when a symmetric part points along the wrong axis.
+
 ## Fit datums over retained solids
 
 Use a separate native assembly when a fit study needs layout geometry over an existing checked assembly. Insert the checked source at the reviewed transform, then bind its live root handle and compare the descendant solid count with the source. Save the insertion checkpoint before creating the layout geometry.
