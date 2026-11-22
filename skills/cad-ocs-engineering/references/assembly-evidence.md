@@ -31,6 +31,8 @@ A calibrated in-plane trace requires coplanarity with its reference. For perspec
 5. Check internal component pairs in a reused subassembly separately from its contacts with the receiving assembly. List intended seats, fits and weld contacts by occurrence. Use conservative bounds to reject disjoint pairs and finite geometry or an interior witness for the remaining pairs where clearance is required. Inspect the exact assembly in a native shaded view before delivery.
 6. Compare same-diameter parallel bores as a pattern of expected centres. Coaxial bores at different axial depths can share a projected centre, so also measure their separate rim and blind-end stations or verify the finite cut intervals. For a through pin, use the actual pilot, shoulder and retainer stations to derive the usable grip and withdrawal path.
 
+For a centred cross-drilled shaft, run `perpendicular_through_bore` in [feature_checks.py](../scripts/feature_checks.py) before creating the cutter. Supply both finite intervals in the same Cartesian frame. The check returns the cutter overrun and remaining material at each end. Check the bore cylinder and its trim after subtraction.
+
 For coaxial annular faces interrupted by a straight radial keyway, verify the two actual face stations, radii, slot width and end first. Use `annular_seat_with_radial_slot` in [planar_profiles.py](../scripts/planar_profiles.py) when the slot starts at the bore, crosses the contact annulus's inner arc and ends inside its outer circle. Record the calculated projected area after the cut. Contact pressure and preload distribution require a joint model.
 
 ## Source loops, surface meshes and native recovery

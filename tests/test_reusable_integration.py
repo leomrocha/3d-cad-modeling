@@ -16,7 +16,7 @@ from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_documen
 from cadtools.records import iter_records,read_stable_entity
 from cadtools.checkpoints import write_stage_checkpoint,save_checkpoint
 from feature_checks import circular_trim_stations,cylinder_pattern,cylinder_wall_checks,axial_datum_chain,circular_opening_edge_land,round_ended_slot_tangents
-from feature_checks import concentric_through_keyway_section
+from feature_checks import concentric_through_keyway_section, perpendicular_through_bore
 from step_placements import native_matrix,classify_hand,eye,apply
 from assembly_occurrences import expand_occurrences,recover_insert_sequence,write_occurrence_tables
 from planar_profiles import annular_seat_with_radial_slot,round_ended_slot_profile,clip_circular_openings,bounded_extrusion,conservative_tool_polygon,two_circle_tangent_hull,two_circle_band_box_clearance
@@ -835,6 +835,26 @@ class CleanupAndInsertion(unittest.TestCase):
             with self.assertRaises(CadError):insert_component(c,'part',path,source_locator='part.dwg')
             self.assertEqual(c.mutate.call_count,1)
             self.assertEqual(c.mutate.call_args.args[1],'start')
+
+
+
+
+class FiniteCrossDrillTests(unittest.TestCase):
+    def test_shifted_shaft_requires_world_cutter_stations(self):
+        sizes = dict(shaft_axis=1, shaft_centre=[0, 460], shaft_radius=9.5,
+                     shaft_stations=[-52, 52], bore_axis=2, bore_centre=[0, 46],
+                     bore_radius=3, tolerance=1e-6)
+        missed = perpendicular_through_bore("keeper", **sizes, cutter_stations=[-9.5, 9.5])
+        self.assertEqual(missed["result"], "FAIL")
+        self.assertEqual(missed["required_cutter_stations"], [450.5, 469.5])
+        through = perpendicular_through_bore("keeper", **sizes, cutter_stations=[449.5, 470.5])
+        self.assertEqual(through["result"], "PASS")
+        self.assertEqual(through["cutter_overrun"], [1, 1])
+        self.assertEqual(through["remaining_end_land"]["minimum"], 3)
+        for invalid_centre in ([1, 46], [0, 50]):
+            wrong = dict(sizes, bore_centre=invalid_centre)
+            self.assertEqual(perpendicular_through_bore("keeper", **wrong,
+                             cutter_stations=[449.5, 470.5])["result"], "FAIL")
 
 
 if __name__=='__main__':unittest.main()

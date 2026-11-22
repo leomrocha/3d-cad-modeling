@@ -53,6 +53,40 @@ def circular_opening_edge_land(centre, radius, side_planes):
     return dict(low=low_land, high=high_land, minimum=min(low_land, high_land))
 
 
+def perpendicular_through_bore(name, *, shaft_axis, shaft_centre, shaft_radius, shaft_stations,
+                                 bore_axis, bore_centre, bore_radius, cutter_stations, tolerance):
+    """Screen a centred perpendicular through bore in one Cartesian frame.
+
+    Each centre lists the coordinates orthogonal to its own axis in X/Y/Z
+    order. Cutter stations describe the full finite cutter, including overrun.
+    Read back the cut cylinder and its exit trims after construction.
+    """
+    axes = (shaft_axis, bore_axis)
+    if any(type(axis) is not int or axis not in (0, 1, 2) for axis in axes) or shaft_axis == bore_axis:
+        raise ValueError("Two distinct Cartesian axes required")
+    if len(shaft_centre) != 2 or len(bore_centre) != 2 or len(cutter_stations) != 2:
+        raise ValueError("Two centre coordinates per axis and two cutter stations required")
+    dimensions = [shaft_centre, bore_centre, shaft_radius, bore_radius, cutter_stations]
+    comparison(name + " inputs", dimensions, dimensions, tolerance)
+    if shaft_radius <= 0 or bore_radius <= 0 or cutter_stations[0] >= cutter_stations[1]:
+        raise ValueError("Positive radii and increasing cutter stations required")
+
+    shaft = dict(zip((axis for axis in range(3) if axis != shaft_axis), shaft_centre, strict=True))
+    bore = dict(zip((axis for axis in range(3) if axis != bore_axis), bore_centre, strict=True))
+    remaining_axis, = shaft.keys() & bore.keys()
+    misalignment = bore[remaining_axis] - shaft[remaining_axis]
+    axial_land = circular_opening_edge_land(bore[shaft_axis], bore_radius, shaft_stations)
+    transverse_land = shaft_radius - bore_radius - abs(misalignment)
+    required = [shaft[bore_axis] - shaft_radius, shaft[bore_axis] + shaft_radius]
+    cutter_overrun = [required[0] - cutter_stations[0], cutter_stations[1] - required[1]]
+    passes = (abs(misalignment) <= tolerance and axial_land["minimum"] > tolerance
+              and transverse_land > tolerance and min(cutter_overrun) >= -tolerance)
+    return dict(check=name, result="PASS" if passes else "FAIL", common_axis_offset=misalignment,
+                remaining_end_land=axial_land, remaining_transverse_land=transverse_land,
+                required_cutter_stations=required, observed_cutter_stations=list(cutter_stations),
+                cutter_overrun=cutter_overrun, numeric_tolerance=tolerance)
+
+
 def concentric_through_keyway_section(bore_diameter, outer_diameter, width, radial_depth):
     """Return nominal section datums for a rectangular +Y keyway in a centred bore."""
     inputs = (bore_diameter, outer_diameter, width, radial_depth)
