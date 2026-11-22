@@ -12,3 +12,9 @@
 10. **Dependency check:** `python "$SKILL_ROOT/scripts/package_check.py"` checks installed files, imports, dependency versions and the SAB reader. Add `--session SESSION` or `--descriptor DESCRIPTOR_JSON` to read the actual OCS state with zero geometry mutations.
 
 For calculated geometry arguments, convert validated array-library scalars and vectors to ordinary finite Python numbers and lists at the CAD call boundary. Preserve the coordinate frame, units and tolerance during conversion. Check calculated profiles, cutter dimensions, rotation axes and translation vectors before a long native build.
+
+## Preflight native recipe imports
+
+Run the import and helper-resolution code for the selected native action with the intended Python interpreter and dependency paths. Use a job-owned dry-run path that calls the same loader as the native action and stops before it starts a process, connects to OpenCADStudio or opens a document. Check each resolved helper's file path against the pinned source. A planning command that skips native-only imports leaves that part of the preflight unchecked.
+
+When loading a legacy recipe with `runpy.run_path()`, resolve its bare sibling imports explicitly. Keep this adaptation in the job-owned wrapper. Prefer an isolated Python process for recipes with conflicting helper names. If loading them in the same process, scope changes to `sys.path` and the affected `sys.modules` entries to the recipe invocation, including any deferred imports. Restore the prior bindings and remove temporary sibling bindings on exit, including on failure.
