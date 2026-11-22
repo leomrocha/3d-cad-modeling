@@ -43,6 +43,12 @@ For a centred cross-drilled shaft, run `perpendicular_through_bore` in [feature_
 
 For coaxial annular faces interrupted by a straight radial keyway, verify the two actual face stations, radii, slot width and end first. Use `annular_seat_with_radial_slot` in [planar_profiles.py](../scripts/planar_profiles.py) when the slot starts at the bore, crosses the contact annulus's inner arc and ends inside its outer circle. Record the calculated projected area after the cut. Contact pressure and preload distribution require a joint model.
 
+### Classify reference occurrences for clearance
+
+1. Inventory all solid occurrences under the checked assembly root. Record the assembly revision, complete root-to-solid paths, composed transforms, units and inclusive bounds. When an exclusion could change a result, identify the exact source revision and source role for the reference insert or solid. Confirm its complete mounted ancestry, expected descendant paths or body identities, and count. Resolve remapped handles through the source definition, role and placement.
+2. Exclude only the positively identified nonphysical reference occurrences from the clearance input. Hidden or off layers can corroborate the classification. Physical solids and unresolved occurrences stay in the check regardless of visibility. Keep the reference geometry in the assembly and preserve its complete occurrence inventory.
+3. Record the excluded paths and count, remaining physical paths and count, and physical bounds in the same frame. Reconcile the two sets to the inclusive inventory. Recompute finite clearance for the same poses and tolerances from the remaining bodies. Report the inclusive result and the physical result separately when classification changes the controlling clearance.
+
 ## Source loops, surface meshes and native recovery
 
 1. Use [source trim loops](../scripts/source_trim_loop.py) for one simple sampled loop in a continuous parameter chart. Follow original oriented edge IDs around each trim. Inverse-map each shared topological vertex once per surface and account for periodic seams explicitly. Report source curve endpoint-to-vertex distances, support inverse residuals and disagreement between adjoining faces separately. Bind face/support identifiers to geometry array hashes when repairing metadata.
