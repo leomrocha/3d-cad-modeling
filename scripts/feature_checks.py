@@ -4,6 +4,7 @@ Callers supply expected dimensions/positions from their pinned source job.
 Vertex extrema describe the observed vertices; they are not general bounds
 for an arbitrary curved surface between those vertices.
 """
+from fractions import Fraction
 import math
 
 
@@ -77,14 +78,17 @@ def perpendicular_through_bore(name, *, shaft_axis, shaft_centre, shaft_radius, 
     misalignment = bore[remaining_axis] - shaft[remaining_axis]
     axial_land = circular_opening_edge_land(bore[shaft_axis], bore_radius, shaft_stations)
     transverse_land = shaft_radius - bore_radius - abs(misalignment)
-    required = [shaft[bore_axis] - shaft_radius, shaft[bore_axis] + shaft_radius]
-    cutter_overrun = [required[0] - cutter_stations[0], cutter_stations[1] - required[1]]
+    centre = Fraction(str(shaft[bore_axis]))
+    radius = Fraction(str(shaft_radius))
+    required = [centre - radius, centre + radius]
+    start, end = (Fraction(str(value)) for value in cutter_stations)
+    cutter_overrun = [required[0] - start, end - required[1]]
     passes = (abs(misalignment) <= tolerance and axial_land["minimum"] > tolerance
               and transverse_land > tolerance and min(cutter_overrun) >= 0)
     return dict(check=name, result="PASS" if passes else "FAIL", common_axis_offset=misalignment,
                 remaining_end_land=axial_land, remaining_transverse_land=transverse_land,
-                required_cutter_stations=required, observed_cutter_stations=list(cutter_stations),
-                cutter_overrun=cutter_overrun, numeric_tolerance=tolerance)
+                required_cutter_stations=list(map(float, required)), observed_cutter_stations=list(cutter_stations),
+                cutter_overrun=list(map(float, cutter_overrun)), numeric_tolerance=tolerance)
 
 
 def concentric_through_keyway_section(bore_diameter, outer_diameter, width, radial_depth):

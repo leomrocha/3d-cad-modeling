@@ -49,15 +49,21 @@ class IndexedFitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             check()
 
-    def test_index_movement_at_or_below_resolution(self):
+    def test_index_position_error_against_inclusive_tolerance(self):
         from assembly_verification import check_index_translation
         before = {'slide': eye(), 'frame': eye()}
         after = copy.deepcopy(before)
-        for offset in (.005, .01):
-            result = check_index_translation(before, after, ['slide'], offset_mm=[offset,0,0],
-                                             length_tolerance=.01, linear_tolerance=0.0001)
-            self.assertEqual(result['result'], 'INCONCLUSIVE')
-            self.assertFalse(next(row['passed'] for row in result['checks'] if row['occurrence']=='slide'))
+        for measured, error, expected in ((.005, 0, 'PASS'), (0, .005, 'PASS'),
+                                          (-.005, .01, 'PASS'), (.025, .02, 'FAIL')):
+            with self.subTest(measured=measured):
+                after['slide'][0][3] = measured
+                result = check_index_translation(before, after, ['slide'], offset_mm=[.005,0,0],
+                                                 length_tolerance=.01, linear_tolerance=.0001)
+                self.assertEqual(result['result'], expected)
+                slide = next(row for row in result['checks'] if row['occurrence']=='slide')
+                self.assertEqual(slide['measured_displacement_mm'], [measured,0,0])
+                self.assertAlmostEqual(slide['position_error_mm'], error)
+        after['slide'][0][3] = .005
         after['frame'][0][3] = 2
         self.assertEqual(check_index_translation(before, after, ['slide'], offset_mm=[.005,0,0],
                          length_tolerance=.01, linear_tolerance=.0001)['result'], 'FAIL')
@@ -937,6 +943,19 @@ class CleanupAndInsertion(unittest.TestCase):
 
 
 class FiniteCrossDrillTests(unittest.TestCase):
+    def test_decimal_endpoints_and_each_uncovered_end(self):
+        sizes = dict(shaft_axis=1, shaft_centre=[0, .2], shaft_radius=.1,
+                     shaft_stations=[-2, 2], bore_axis=2, bore_centre=[0, 0],
+                     bore_radius=.03, tolerance=.001)
+        for stations, overrun, expected in (([.1, .3], [0, 0], "PASS"),
+                                            ([.15, .3], [-.05, 0], "FAIL"),
+                                            ([.1, .25], [0, -.05], "FAIL")):
+            with self.subTest(stations=stations):
+                check = perpendicular_through_bore("bore", **sizes, cutter_stations=stations)
+                self.assertEqual(check["result"], expected)
+                self.assertEqual(check["required_cutter_stations"], [.1, .3])
+                self.assertEqual(check["cutter_overrun"], overrun)
+
     def test_shifted_shaft_requires_world_cutter_stations(self):
         sizes = dict(shaft_axis=1, shaft_centre=[0, 460], shaft_radius=9.5,
                      shaft_stations=[-52, 52], bore_axis=2, bore_centre=[0, 46],

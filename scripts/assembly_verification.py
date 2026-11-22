@@ -3,6 +3,7 @@
 Inputs share caller-declared XYZ frames/length units. Matrix linear tolerances
 are dimensionless; translation and point tolerances use the length unit.
 """
+from fractions import Fraction
 import math
 from cadtools.geometry import finite,vector
 from solid_transfer import verify_solid_transfer
@@ -114,25 +115,22 @@ def check_index_translation(before, after, moving_ids, *, offset_mm,
     offset = vector(offset_mm)
     if not any(offset):
         raise ValueError('Two distinct index positions required')
-    length_limit = _tolerance(length_tolerance)
+    squared_limit = Fraction(str(_tolerance(length_tolerance))) ** 2
     linear_limit = _tolerance(linear_tolerance)
+    requested = [Fraction(str(value)) for value in offset]
     checks = []
     for name in sorted(names):
         source, saved = _matrix(before[name]), _matrix(after[name])
-        shift = offset if name in moving else (0, 0, 0)
-        error = math.dist([source[i][3] + shift[i] for i in range(3)],
-                          [saved[i][3] for i in range(3)])
+        measured = [Fraction(str(saved[i][3])) - Fraction(str(source[i][3])) for i in range(3)]
+        shift = requested if name in moving else (0, 0, 0)
+        residual = [actual - target for actual, target in zip(measured, shift)]
+        squared_error = sum(component ** 2 for component in residual)
         linear_error = max(abs(saved[i][j] - source[i][j]) for i in range(3) for j in range(3))
-        result = 'PASS'
-        if error > length_limit or linear_error > linear_limit:
-            result = 'FAIL'
-        elif name in moving and math.hypot(*offset) <= length_limit:
-            result = 'INCONCLUSIVE'
-        checks.append(dict(occurrence=name, position_error_mm=error, linear_error=linear_error,
-                           result=result, passed=result == 'PASS'))
-    outcomes = {row['result'] for row in checks}
-    result = 'FAIL' if 'FAIL' in outcomes else 'INCONCLUSIVE' if 'INCONCLUSIVE' in outcomes else 'PASS'
-    return dict(result=result, checks=checks)
+        passed = squared_error <= squared_limit and linear_error <= linear_limit
+        checks.append(dict(occurrence=name, measured_displacement_mm=list(map(float, measured)),
+                           position_error_mm=math.hypot(*residual), linear_error=linear_error,
+                           result='PASS' if passed else 'FAIL', passed=passed))
+    return dict(result='PASS' if all(row['passed'] for row in checks) else 'FAIL', checks=checks)
 
 
 def directed_axial_span(points, *, origin, direction):

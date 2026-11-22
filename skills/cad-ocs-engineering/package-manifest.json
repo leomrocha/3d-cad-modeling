@@ -296,7 +296,7 @@
     },
     "scripts/assembly_verification.py": {
       "source": "scripts/assembly_verification.py",
-      "sha256": "5fd0818c0d2b2699cbfeac08a285f7c65cace4a5ff94e01863f5f297df18aff2"
+      "sha256": "844fe43ab9a3d7395b86d99a7415eecd7b9252b8e00f8a198427d03448b1f0c1"
     },
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",
@@ -440,7 +440,7 @@
     },
     "scripts/feature_checks.py": {
       "source": "scripts/feature_checks.py",
-      "sha256": "df258706ffbca84eabda07080101420d508198a77b8612008469366b34c39b35"
+      "sha256": "b5da2a439b867b474dfac7d924eeafb98e84be6338640cf184e7cfa11a838a4d"
     },
     "scripts/finite_solid_contact.py": {
       "source": "scripts/finite_solid_contact.py",
