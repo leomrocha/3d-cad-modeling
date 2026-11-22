@@ -4,7 +4,7 @@
 
 1. [Stable record pagination](../scripts/cadtools/records.py) — bounded page-size recovery and native document/revision binding.
 2. [Durable progress checkpoints](../scripts/cadtools/checkpoints.py) — ordered stage evidence and verified IN_PROGRESS saves that audit the intended DWG path.
-3. [Plate operations](../scripts/plate_reference.py) — supplied outlines, bulges, holes, transforms, actual sidewall checks and ideal equal-angle countersunk fit.
+3. [Plate operations](../scripts/plate_reference.py) — supplied outlines, bulges, holes, transforms, actual sidewall checks and ideal equal-angle countersunk fit and flat pin-seat relief.
 4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion, analytic circular opening clipping, rectangular-face overlap, hollow-section end perimeters, two-circle tangent hulls and round-ended slots. Includes concentric quarter-bend and offset Z sections, signed cardinal profile reframing, annular seat area interrupted by a radial slot and an ellipse chord error bound for sampled trims. The two-circle band test checks a projected box against the inner opening and the outer boundary.
 5. [Component insertion](../scripts/assembly_build.py) — source hashes, exact interactive prompts, native metadata and saved placements.
 6. [Assembly occurrences](../scripts/assembly_occurrences.py) — nested part quantities, revision-pinned catalogue BOMs, mirrored hands and original insertion-journal recovery.
@@ -135,9 +135,9 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Insertion recovery, resume and assembly verification
 
 1. [insert_recovery.py](../scripts/insert_recovery.py) — exact native INSERT default contracts, durable same-request continuation and completion checkpoints.
-2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching, optional unique endpoint attribution, signed axis-aligned placement checks and caller-defined envelope checks.
+2. [assembly_verification.py](../scripts/assembly_verification.py) — indexed moving and fixed occurrence checks, geometry-bound nested occurrence matching, repeated source-world vertex matching, optional unique endpoint attribution, signed axis-aligned placement checks and caller-defined envelope checks.
 3. [assembly_build.py](../scripts/assembly_build.py) — guarded insertion-point compare-and-set correction with complete placement readback.
-4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pinned incremental saves, exact same-document mutation recovery and verified resume gates.
+4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pin merging, source-pinned incremental saves, exact same-document mutation recovery and verified resume gates.
 5. [batch_insert_recovery.py](../scripts/batch_insert_recovery.py) starts or resumes modelspace block insertions in a job-owned DXF. It matches saved occurrences to journaled requests and checks dependencies before writing. [DXF insertion recovery procedure](../skills/cad-ocs-engineering/references/insertion-resume-verification.md#recover-a-batch-of-dxf-block-insertions).
 
 ## Rational surfaces and open mesh derivatives

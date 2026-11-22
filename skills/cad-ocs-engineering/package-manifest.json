@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "5eead91fba06a11b03beb0f88c92c1f1a921c3d64b174fda65648e95f7af3e4b"
+      "sha256": "96d4921966b3ba38d95483cf4269eaf756d55a614e1fc0b543fe69d6636e1bab"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -92,7 +92,7 @@
     },
     "references/drawing-feature-checks.md": {
       "source": "references/drawing-feature-checks.md",
-      "sha256": "b1ea1440762729cb2aa1693c522d06d50bd86e45f3b43c17c8379614dcabc9f2"
+      "sha256": "9a2cec84f962035a496529291a1d9d0d0231a98d193020b2d8b2901ed46a8a06"
     },
     "references/envelope-job-runner.md": {
       "source": "references/envelope-job-runner.md",
@@ -104,7 +104,7 @@
     },
     "references/exact-source-checks.md": {
       "source": "references/exact-source-checks.md",
-      "sha256": "f971b170af064bf6a92361dbc49361c0d98a37193afa4d9f4d6f049104066b41"
+      "sha256": "934d24ea1067cbb9aa07f7c23664df8fde71cd74db317c7fefb495d48742ad55"
     },
     "references/existing-batch-placement.md": {
       "source": "references/existing-batch-placement.md",
@@ -124,7 +124,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "96ec438f13221e482b2f2ce0d5d0a04a203c7ab87d4bc443ac8df018945e55cc"
+      "sha256": "ec0fad41ed30f0b6841a430d26a7b6a24b1bcf8da5b6e9e2378348a481a40a67"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -144,7 +144,7 @@
     },
     "references/manufacturer-assembly.md": {
       "source": "references/manufacturer-assembly.md",
-      "sha256": "ff1a075ee79b8061aedee2f70872a4a59dee298ae4c9f19f5a41445f281bc20c"
+      "sha256": "e1eb50eb8c33afb30c0f1116fb7716ec0e3bc63983d270efb665deb71a7bd780"
     },
     "references/model-contract.md": {
       "source": "references/model-contract.md",
@@ -168,7 +168,7 @@
     },
     "references/ocs-runtime.md": {
       "source": "references/ocs-runtime.md",
-      "sha256": "ffc622cf7987c809119d309bbaf64d99ba169b54c96b2ee44b17aaa1a299d7f3"
+      "sha256": "9a8669a68aab8657031fd7f5ba6aa1eafb5315d01f1c85f00973b3d19ba7849d"
     },
     "references/package-completion.md": {
       "source": "references/package-completion.md",
@@ -192,7 +192,7 @@
     },
     "references/retained-artifact-checks.md": {
       "source": "references/retained-artifact-checks.md",
-      "sha256": "68b464ad5136998e5c90833fe61681330efbe9fbe11d1790b3534d203b11bdd6"
+      "sha256": "49e27979a6a478b060318c8026c647ffc1af57d4ecb0a5be73d63213f4307806"
     },
     "references/reversible-source-workflows.md": {
       "source": "references/reversible-source-workflows.md",
@@ -208,7 +208,7 @@
     },
     "references/service-clearance.md": {
       "source": "references/service-clearance.md",
-      "sha256": "0e809874185d01fbb9051dfe521d80dca6c3a8141ff1d5ed178d52b2c29e2889"
+      "sha256": "30797e43f8d4f064517a2499d1cfe1cf2ce1da2919ee940408b73d78f75e264e"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
@@ -296,7 +296,7 @@
     },
     "scripts/assembly_verification.py": {
       "source": "scripts/assembly_verification.py",
-      "sha256": "a0b7af769d28275b26488bcce3bba411019b64e7b9417dba90d2a53040962262"
+      "sha256": "6a262fdc4136bff4a53974469de45b84ddcbeb641e15577f8158634fe0eeca9d"
     },
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",
@@ -372,11 +372,11 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "abee4e2012e3f1a32993bd4476f0be747ec5a1c3a92782ea5c7d5b9a3b06a513"
+      "sha256": "5bb3f414814db86dd5d82f241d9cce09c04ff8f0ce0c51c4751c1cff74cb084a"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
-      "sha256": "aed0710e5086591693231e841727717a07b993fa90b49dc35c73cb2b2e0f66d1"
+      "sha256": "341167f259ff2648a25feb96e6f7453d37836619c20e0c74f4e40c4cfbe094d2"
     },
     "scripts/cadtools/records.py": {
       "source": "scripts/cadtools/records.py",
@@ -440,7 +440,7 @@
     },
     "scripts/feature_checks.py": {
       "source": "scripts/feature_checks.py",
-      "sha256": "dba5c5393ee9cc6e00dc764c3b8de9b82117bbba33e03679b3e1b24a72081265"
+      "sha256": "9e15b8263b0be20f7a74d1ee72734a68558a966569649717a4b94fcaeb2b3398"
     },
     "scripts/finite_solid_contact.py": {
       "source": "scripts/finite_solid_contact.py",
@@ -576,7 +576,7 @@
     },
     "scripts/plate_reference.py": {
       "source": "scripts/plate_reference.py",
-      "sha256": "e09a51f92d2ef140c245f80c013de36ebeea1d6daba3aa9b6aa1a57ece0dadbe"
+      "sha256": "8e91867f7bb127228247fca43e5759b0bf4f40ac021c856366b732bcfc27a536"
     },
     "scripts/private_catalogue.py": {
       "source": "scripts/private_catalogue.py",

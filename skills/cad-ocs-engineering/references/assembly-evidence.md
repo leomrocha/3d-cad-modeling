@@ -9,6 +9,16 @@
 
 For opposite hands, pass measured world points, a common reference origin and each hand's positive outward unit direction to `directed_axial_span` in [assembly_verification.py](../scripts/assembly_verification.py). Compare the resulting ordered stations against the independent shaft, insert and spacer datums with their signed direction preserved. The returned endpoints describe the observed points. Curved extrema require their own analytic or conservative bounds.
 
+### Verify a changed native INSERT
+
+Read the source feature in its own frame before deriving the new placement. For an axisymmetric part, use two ordered stations on its shaft or bore to check the axis direction. Use a separate off-axis feature, such as a keyway or asymmetric hole, to check clocking when that rotation matters.
+
+For an OpenCADStudio block reference, use [step_placements.py](../scripts/step_placements.py) to encode the proposed local matrix with `native_fields` and decode the live native fields with `native_matrix`. The insertion point is stored in the object coordinate system. A rotation value alone turns about the current insert normal. For a changed axis, update the normal, rotation and insertion point together. Compose the decoded matrix with every parent transform before checking world placement. Convert a desired world pose back to the parent frame before encoding it.
+
+Check the walker's frame contract for the exact occurrence path. A traversal can attach the incoming parent-to-world matrix to an INSERT row and pass the composed matrix to its descendants. For that contract, the INSERT world matrix is `multiply(incoming_parent_to_world, native_matrix(insert_properties))`. An identity incoming matrix at a model-space root can accompany a moved or rotated INSERT. A traversal that already returns the INSERT's composed frame uses that frame directly. Use a nonidentity INSERT in a fixture to check the convention before comparing matrices. Record the incoming, decoded local and composed matrices separately when diagnosing a placement mismatch.
+
+Compare the full world matrix with the independently specified pose. Check the origin and basis directions, including scale and handedness. Measure the resulting world-space shaft stations and off-axis feature from the actual child solid. Agreement between the encoder and decoder checks the field conversion. Agreement with source-derived feature positions checks the installed part. Translation and aggregate bounds can agree when a symmetric part points along the wrong axis.
+
 ## Fit datums over retained solids
 
 Use a separate native assembly when a fit study needs layout geometry over an existing checked assembly. Insert the checked source at the reviewed transform, then bind its live root handle and compare the descendant solid count with the source. Save the insertion checkpoint before creating the layout geometry.
@@ -28,7 +38,20 @@ A calibrated in-plane trace requires coplanarity with its reference. For perspec
 3. For service motion, bind removed and retained part sets, orientation, movement order and travel in the saved assembly frame. Use [service clearance](service-clearance.md) to rule out pairs whose conservative swept bounds remain disjoint. Keep finite-body distances and closest points for other pairs. Separate contact, interference at one pose, continuous obstruction and a mechanically feasible service sequence.
 4. For Boolean intersections, use [finite solid contact](../scripts/finite_solid_contact.py) with the optional OpenCascade Python runtime. Require valid closed oriented source solids in a common unit and frame. Check common pieces for validity and closure. Report integration tolerance and convergence per piece. Independently classify a candidate point inside both original solids and measure its distance from each boundary relative to the classifier tolerance. Empty intersections or inconclusive numerical integration alone leave boundary contact unresolved. Preserve failed kernel receipts, inputs and the investigated static pose.
 
+5. Check internal component pairs in a reused subassembly separately from its contacts with the receiving assembly. List intended seats, fits and weld contacts by occurrence. Use conservative bounds to reject disjoint pairs and finite geometry or an interior witness for the remaining pairs where clearance is required. Inspect the exact assembly in a native shaded view before delivery.
+6. Compare same-diameter parallel bores as a pattern of expected centres. Coaxial bores at different axial depths can share a projected centre, so also measure their separate rim and blind-end stations or verify the finite cut intervals. For a through pin, use the actual pilot, shoulder and retainer stations to derive the usable grip and withdrawal path.
+
+For a circular retainer inside an annular opening, an overlapping Cartesian bounding box gives a clearance candidate. Check the exact installed solid paths in the opening frame. Confirm the retainer outer cylinder and its end trims, coaxial alignment and actual material boundaries across the shared axial interval. Where the measured outer cylinder bounds the entire retainer across this interval, subtract its radius from the smallest verified opening radius. A positive difference gives a radial separation bound for that interval. Check adjacent bolt passages, seat mouths and shoulders separately when their axial intervals overlap. Keep the screening result and the signed finite-geometry result with the source revision and transforms.
+
+For a centred cross-drilled shaft, run `perpendicular_through_bore` in [feature_checks.py](../scripts/feature_checks.py) before creating the cutter. Supply both finite intervals in the same Cartesian frame. The check returns the cutter overrun and remaining material at each end. Check the bore cylinder and its trim after subtraction.
+
 For coaxial annular faces interrupted by a straight radial keyway, verify the two actual face stations, radii, slot width and end first. Use `annular_seat_with_radial_slot` in [planar_profiles.py](../scripts/planar_profiles.py) when the slot starts at the bore, crosses the contact annulus's inner arc and ends inside its outer circle. Record the calculated projected area after the cut. Contact pressure and preload distribution require a joint model.
+
+### Classify reference occurrences for clearance
+
+1. Inventory all solid occurrences under the checked assembly root. Record the assembly revision, complete root-to-solid paths, composed transforms, units and inclusive bounds. When an exclusion could change a result, identify the exact source revision and source role for the reference insert or solid. Confirm its complete mounted ancestry, expected descendant paths or body identities, and count. Resolve remapped handles through the source definition, role and placement.
+2. Exclude only the positively identified nonphysical reference occurrences from the clearance input. Hidden or off layers can corroborate the classification. Physical solids and unresolved occurrences stay in the check regardless of visibility. Keep the reference geometry in the assembly and preserve its complete occurrence inventory.
+3. Record the excluded paths and count, remaining physical paths and count, and physical bounds in the same frame. Reconcile the two sets to the inclusive inventory. Recompute finite clearance for the same poses and tolerances from the remaining bodies. Report the inclusive result and the physical result separately when classification changes the controlling clearance.
 
 ## Source loops, surface meshes and native recovery
 
@@ -69,3 +92,11 @@ Reconnect each intended representation and context, accounting for all incoming 
 ### Equal-angle countersunk fit
 
 Use `plate_reference.matching_countersink_fit` after measuring the bore and mouth diameters on the seat and the shank and outer diameters on the head. Verify coaxial alignment and the same included angle for both cones. A positive head setback places the head below the seat mouth plane. The facing cone span measures their shared nominal axial length. This sharp-cone result supplies placement inputs. Use separate measured profiles for fillets, angle mismatch, stand-off and preload.
+
+## Verify an assembly at a second index position
+
+1. Identify the carrier, every part that travels with it, and each fixed support. Bind the same occurrence IDs to both reopened models. Measure complete world placement matrices in a common frame with translations in millimetres. When the adjustable assembly is nested, compose its parent transforms first.
+
+2. Pass both inventories, the moving IDs and the specified world displacement to `check_index_translation` in [assembly_verification.py](../scripts/assembly_verification.py). It measures each moving part against the same displacement and each fixed part against its original pose. Compare native solid payloads independently for parts that retain their shape.
+
+3. At the selected setting, verify the lock shank through each bracket and carrier bore, the actual grip between head and nut, head clearance to the adjacent moving body and material from the bore rim to the nearest free edge. Recalculate working depth and guard clearance against the reference plane in this setting. Keep clearances at other settings with their own model revision and pose.

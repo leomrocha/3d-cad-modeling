@@ -69,6 +69,29 @@ def countersink_tool_profile(*, bore, mouth, angle_degrees, inner_radius, overru
     ])
 
 
+def pin_seat_relief(*, shank_radius, bore_radius, head_radius, shoulder_station,
+                    seat_station, outer_station, axis_sign):
+    """Plan the annular material removal at a coaxial flat seat, in mm."""
+    for radius in (shank_radius, bore_radius, head_radius):
+        positive(radius)
+    for station in (shoulder_station, seat_station, outer_station):
+        finite(station)
+    if type(axis_sign) is not int or axis_sign not in (-1, 1):
+        raise ValueError('Axis sign must point from shank to head')
+    if not shank_radius <= bore_radius < head_radius:
+        raise ValueError('The shank must fit the bore and the head must overlap the seat')
+    if axis_sign * (outer_station - shoulder_station) <= 0:
+        raise ValueError('The head must have positive thickness')
+    depth = finite(axis_sign * (seat_station - shoulder_station))
+    if depth <= 0:
+        return dict(action='retain', seat_gap_mm=-depth)
+    if axis_sign * (outer_station - seat_station) <= 0:
+        raise ValueError('Relief would consume the full head thickness')
+    return dict(action='relieve', depth_mm=depth, radial_span_mm=[shank_radius, head_radius],
+                axial_span_mm=sorted((shoulder_station, seat_station)),
+                remaining_head_mm=finite(axis_sign * (outer_station - seat_station)))
+
+
 def matching_countersink_fit(*, seat_bore, seat_mouth, head_shank, head_outer, angle_degrees):
     """Return ideal axial setback and overlap for two coaxial, equal-angle cones."""
     for value in (seat_bore, seat_mouth, head_shank, head_outer):

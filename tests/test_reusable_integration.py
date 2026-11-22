@@ -16,7 +16,7 @@ from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_documen
 from cadtools.records import iter_records,read_stable_entity
 from cadtools.checkpoints import write_stage_checkpoint,save_checkpoint
 from feature_checks import circular_trim_stations,cylinder_pattern,cylinder_wall_checks,axial_datum_chain,circular_opening_edge_land,round_ended_slot_tangents
-from feature_checks import concentric_through_keyway_section
+from feature_checks import concentric_through_keyway_section, perpendicular_through_bore
 from step_placements import native_matrix,classify_hand,eye,apply
 from assembly_occurrences import expand_occurrences,recover_insert_sequence,write_occurrence_tables
 from planar_profiles import annular_seat_with_radial_slot,round_ended_slot_profile,clip_circular_openings,bounded_extrusion,conservative_tool_polygon,two_circle_tangent_hull,two_circle_band_box_clearance
@@ -27,6 +27,42 @@ from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments
 from ocs_document_cleanup import cleanup_owned_documents
 from retained_artifacts import verify_manifest
 from assembly_verification import compare_axial_occurrences,directed_axial_span
+
+
+class IndexedFitTests(unittest.TestCase):
+    def test_moving_carrier_and_fixed_lock_at_two_settings(self):
+        from assembly_verification import check_index_translation
+        before = {name: eye() for name in ('carrier', 'lock', 'frame')}
+        after = copy.deepcopy(before)
+        for name in ('carrier', 'lock'):
+            after[name][2][3] = -4
+        def check():
+            return check_index_translation(before, after, ['carrier', 'lock'], offset_mm=[0,0,-4],
+                                           length_tolerance=.01, linear_tolerance=.0001)
+        self.assertEqual(check()['result'], 'PASS')
+        after['lock'][2][3] = 0
+        self.assertEqual(check()['result'], 'FAIL')
+        after['lock'][2][3] = -4
+        after['frame'][0][0] = -1
+        self.assertEqual(check()['result'], 'FAIL')
+        del after['frame']
+        with self.assertRaises(ValueError):
+            check()
+
+    def test_seat_interference_both_head_directions(self):
+        from plate_reference import pin_seat_relief
+        for sign in (-1, 1):
+            def plan(seat):
+                return pin_seat_relief(shank_radius=4, bore_radius=4.2, head_radius=6,
+                                       shoulder_station=sign*2, outer_station=sign*4,
+                                       seat_station=sign*seat, axis_sign=sign)
+            self.assertEqual(plan(2.25)['depth_mm'], .25)
+            self.assertEqual(plan(2.25)['radial_span_mm'], [4, 6])
+            self.assertEqual(plan(2.25)['remaining_head_mm'], 1.75)
+            self.assertEqual(plan(2)['action'], 'retain')
+            self.assertEqual(plan(1)['seat_gap_mm'], 1)
+            with self.assertRaises(ValueError):
+                plan(4)
 
 
 class RoundEndedSlotTangents(unittest.TestCase):
@@ -254,6 +290,47 @@ class GeometryAdapterContract(unittest.TestCase):
         with self.assertRaisesRegex(CadError, 'use a geometry helper'):
             added(handle)
         client.mutate.assert_called_once()
+
+
+    def union_client(self, changes, live, *, response_revision=7):
+        client = Mock(document_id=1)
+        current = dict(ok=True, document_id=1, revision=7, geometry_revision=45)
+        client.mutate.side_effect = [{}, {"changes": changes, "state": dict(current, revision=response_revision)}]
+
+        def read(op, **fields):
+            if op == "state":
+                return current
+            self.assertEqual(op, "records")
+            self.assertEqual(fields["collection"], "entities")
+            self.assertLessEqual(len(fields["handles"]), 3)
+            return {"records": [live[handle] for handle in fields["handles"] if handle in live]}
+
+        client.read.side_effect = read
+        return client
+
+    def test_union_reads_high_result_handle_in_a_large_drawing(self):
+        live = {f"{i:X}": dict(handle=f"{i:X}", type="Solid3D") for i in range(0x100, 0x1000)}
+        for consumed in ("FF0", "FF5"):
+            del live[consumed]
+        changes = [dict(kind="Added", handle="FF9"),
+                   dict(kind="Removed", handle="FF0"), dict(kind="Removed", handle="FF5")]
+        client = self.union_client(changes, live)
+        self.assertEqual(Geometry(client).combine("union", ["FF0", "FF5"]), "FF9")
+        client.read.assert_any_call("records", collection="entities", offset=0, limit=8,
+                                    handles=["FF0", "FF5", "FF9"])
+
+    def test_union_returns_exact_surviving_original_and_rejects_ambiguity(self):
+        live = {"A1": dict(handle="A1", type="Solid3D")}
+        changes = [dict(kind="Removed", handle="A2"), dict(kind="Modified", handle="A1")]
+        self.assertEqual(Geometry(self.union_client(changes, live)).combine("union", ["A1", "A2"]), "A1")
+        result = [dict(kind="Added", handle="A3"), *changes]
+        for invalid in (
+                self.union_client(result, dict(live, A3=dict(handle="A3", type="Solid3D"))),
+                self.union_client(result, live),
+                self.union_client(changes, {"A1": dict(handle="A1", type="Line")}),
+                self.union_client(changes, live, response_revision=6)):
+            with self.subTest(readback=invalid), self.assertRaisesRegex(CadError, "Union result"):
+                Geometry(invalid).combine("union", ["A1", "A2"])
 
 
 class Patterns(unittest.TestCase):
@@ -835,6 +912,26 @@ class CleanupAndInsertion(unittest.TestCase):
             with self.assertRaises(CadError):insert_component(c,'part',path,source_locator='part.dwg')
             self.assertEqual(c.mutate.call_count,1)
             self.assertEqual(c.mutate.call_args.args[1],'start')
+
+
+
+
+class FiniteCrossDrillTests(unittest.TestCase):
+    def test_shifted_shaft_requires_world_cutter_stations(self):
+        sizes = dict(shaft_axis=1, shaft_centre=[0, 460], shaft_radius=9.5,
+                     shaft_stations=[-52, 52], bore_axis=2, bore_centre=[0, 46],
+                     bore_radius=3, tolerance=1e-6)
+        missed = perpendicular_through_bore("keeper", **sizes, cutter_stations=[-9.5, 9.5])
+        self.assertEqual(missed["result"], "FAIL")
+        self.assertEqual(missed["required_cutter_stations"], [450.5, 469.5])
+        through = perpendicular_through_bore("keeper", **sizes, cutter_stations=[449.5, 470.5])
+        self.assertEqual(through["result"], "PASS")
+        self.assertEqual(through["cutter_overrun"], [1, 1])
+        self.assertEqual(through["remaining_end_land"]["minimum"], 3)
+        for invalid_centre in ([1, 46], [0, 50]):
+            wrong = dict(sizes, bore_centre=invalid_centre)
+            self.assertEqual(perpendicular_through_bore("keeper", **wrong,
+                             cutter_stations=[449.5, 470.5])["result"], "FAIL")
 
 
 if __name__=='__main__':unittest.main()

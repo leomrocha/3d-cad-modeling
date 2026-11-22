@@ -11,6 +11,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from exact_profiles import compare_loops, reversed_edge, signed_extrusion, validate_edge
 from source_solid_checks import outward_normal, halfspace_check, convex_cell_check, bilinear_patch_check
 from cadtools.captures import verify_capture
+from cadtools.checkpoints import merge_source_pins
 from cadtools.verification import owned_audit
 from cadtools.runtime import CadError
 from component_records import completion_check
@@ -33,6 +34,22 @@ def cube():
             faces.append(dict(surface_type='plane-surface',support=dict(normal=n,origin=o),reversed=level==0,loops=[dict(edges=edges)]))
             halfspaces.append(dict(id=str(axis)+'-'+str(level),normal=n,origin=o,retained_sign=1 if level==0 else -1))
     return dict(points=points,face_boundary_edges=faces,topology=dict(bodies=1,lumps=1,shells=1,reciprocal_closed_partners=True)),halfspaces
+
+
+class SourcePinMerge(unittest.TestCase):
+    def test_repeated_receipt_merges_without_changing_order_or_inputs(self):
+        receipt={'path':'output:part/final.json','sha256':'0'*64}
+        model={'path':'output:part/final.dwg','sha256':'1'*64}
+        repeated=dict(receipt,path=Path(receipt['path']))
+        merged=merge_source_pins([receipt], [repeated, model])
+        self.assertEqual(merged,[receipt,model])
+        self.assertIsNot(merged[0],receipt)
+
+    def test_same_locator_with_different_hash_is_rejected(self):
+        first={'path':'output:part/final.json','sha256':'0'*64}
+        second=dict(first,sha256='1'*64)
+        with self.assertRaisesRegex(CadError,'Conflicting source revisions'):
+            merge_source_pins([first],[second])
 
 
 class ExactProfiles(unittest.TestCase):

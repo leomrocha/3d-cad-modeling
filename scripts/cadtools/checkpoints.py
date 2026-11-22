@@ -81,8 +81,13 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
     if handles is not None and (not isinstance(handles,dict) or any(not isinstance(k,str) or not k or not isinstance(v,str) or not v for k,v in handles.items())):raise CadError('Named checkpoint handle mapping required')
     key=client.namespace+':'+label
     intent=client.journal.requests.get(key)
-    if intent and (intent['request'].get('path')!=str(path) or intent['request']['op']!='save_verified'):
-        raise CadError('Checkpoint intent differs')
+    if intent:
+        operation = intent['request']['op']
+        if operation != 'save_verified':
+            raise CadError(f'Checkpoint label {label!r} is already used by {operation!r}. '
+                           'Use a separate save label.')
+        if intent['request'].get('path') != str(path):
+            raise CadError(f'Checkpoint label {label!r} already has a different save path.')
     if path.exists() and not intent:raise CadError('Checkpoint already exists; retain it')
     state=client.read('state')
     if state.get('document_id')!=client.document_id or state.get('command') or state.get('modal') or state.get('operation'):
@@ -130,14 +135,36 @@ def _checkpoint_locator(locator,roots,base=None):
         raise CadError(str(error)) from error
 
 
+def _source_pin_path(pin):
+    import re
+    if (not isinstance(pin,dict) or set(pin)!={'path','sha256'}
+            or not isinstance(pin['path'],(str,Path)) or not str(pin['path']).strip()
+            or not re.fullmatch('[a-f0-9]{64}',str(pin['sha256']))):
+        raise CadError('Source pins require exact path and SHA-256')
+    return pin['path']
+
+
+def merge_source_pins(*groups):
+    """Combine identical source references before starting a native job.
+
+    Supply one consistent locator spelling per file. File bytes and canonical
+    paths are independently checked at the checkpoint.
+    """
+    merged={}
+    for group in groups:
+        for pin in group:
+            path=str(_source_pin_path(pin))
+            previous=merged.setdefault(path,dict(pin))
+            if previous['sha256']!=pin['sha256']:
+                raise CadError('Conflicting source revisions for '+path)
+    return list(merged.values())
+
+
 def _check_source_pins(pins,roots,base=None):
     from component_records import observe_file
-    import re
     rows=[];seen=set()
     for pin in pins:
-        if not isinstance(pin,dict) or set(pin)!={'path','sha256'} or not re.fullmatch('[a-f0-9]{64}',str(pin.get('sha256',''))):
-            raise CadError('Source pins require exact path and SHA-256')
-        path=_checkpoint_locator(pin['path'],roots,base)
+        path=_checkpoint_locator(_source_pin_path(pin),roots,base)
         if path in seen:raise CadError('Duplicate checkpoint source pin')
         seen.add(path)
         if observe_file(path)['sha256']!=pin['sha256']:raise CadError('Checkpoint source revision changed')

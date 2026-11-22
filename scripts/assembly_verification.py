@@ -102,6 +102,32 @@ def compare_occurrence_matrices(source,target,bindings,*,translation_tolerance,l
     return proof
 
 
+def check_index_translation(before, after, moving_ids, *, offset_mm,
+                            length_tolerance, linear_tolerance):
+    """Compare named occurrence world matrices at two settings of a sliding assembly."""
+    moving = set(moving_ids)
+    names = set(before)
+    if not names or not moving or not moving <= names or names != set(after):
+        raise ValueError('Both inventories must cover the same named occurrences and all moving IDs')
+    if any(not isinstance(name, str) or not name.strip() for name in names):
+        raise ValueError('Readable occurrence IDs required')
+    offset = vector(offset_mm)
+    if not any(offset):
+        raise ValueError('Two distinct index positions required')
+    length_limit = _tolerance(length_tolerance)
+    linear_limit = _tolerance(linear_tolerance)
+    checks = []
+    for name in sorted(names):
+        source, saved = _matrix(before[name]), _matrix(after[name])
+        shift = offset if name in moving else (0, 0, 0)
+        error = math.dist([source[i][3] + shift[i] for i in range(3)],
+                          [saved[i][3] for i in range(3)])
+        linear_error = max(abs(saved[i][j] - source[i][j]) for i in range(3) for j in range(3))
+        checks.append(dict(occurrence=name, position_error_mm=error, linear_error=linear_error,
+                           passed=error <= length_limit and linear_error <= linear_limit))
+    return dict(result='PASS' if all(row['passed'] for row in checks) else 'FAIL', checks=checks)
+
+
 def directed_axial_span(points, *, origin, direction):
     """Measure the signed axial span of observed points in a declared unit direction."""
     origin = vector(origin)
