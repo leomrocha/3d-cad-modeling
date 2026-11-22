@@ -80,7 +80,7 @@ def perpendicular_through_bore(name, *, shaft_axis, shaft_centre, shaft_radius, 
     required = [shaft[bore_axis] - shaft_radius, shaft[bore_axis] + shaft_radius]
     cutter_overrun = [required[0] - cutter_stations[0], cutter_stations[1] - required[1]]
     passes = (abs(misalignment) <= tolerance and axial_land["minimum"] > tolerance
-              and transverse_land > tolerance and min(cutter_overrun) >= -tolerance)
+              and transverse_land > tolerance and min(cutter_overrun) >= 0)
     return dict(check=name, result="PASS" if passes else "FAIL", common_axis_offset=misalignment,
                 remaining_end_land=axial_land, remaining_transverse_land=transverse_land,
                 required_cutter_stations=required, observed_cutter_stations=list(cutter_stations),

@@ -49,6 +49,19 @@ class IndexedFitTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             check()
 
+    def test_index_movement_at_or_below_resolution(self):
+        from assembly_verification import check_index_translation
+        before = {'slide': eye(), 'frame': eye()}
+        after = copy.deepcopy(before)
+        for offset in (.005, .01):
+            result = check_index_translation(before, after, ['slide'], offset_mm=[offset,0,0],
+                                             length_tolerance=.01, linear_tolerance=0.0001)
+            self.assertEqual(result['result'], 'INCONCLUSIVE')
+            self.assertFalse(next(row['passed'] for row in result['checks'] if row['occurrence']=='slide'))
+        after['frame'][0][3] = 2
+        self.assertEqual(check_index_translation(before, after, ['slide'], offset_mm=[.005,0,0],
+                         length_tolerance=.01, linear_tolerance=.0001)['result'], 'FAIL')
+
     def test_seat_interference_both_head_directions(self):
         from plate_reference import pin_seat_relief
         for sign in (-1, 1):
@@ -292,10 +305,10 @@ class GeometryAdapterContract(unittest.TestCase):
         client.mutate.assert_called_once()
 
 
-    def union_client(self, changes, live, *, response_revision=7):
+    def union_client(self, changes, live, *, response_revision=7, selected=("A1","A2")):
         client = Mock(document_id=1)
         current = dict(ok=True, document_id=1, revision=7, geometry_revision=45)
-        client.mutate.side_effect = [{}, {"changes": changes, "state": dict(current, revision=response_revision)}]
+        client.mutate.side_effect = [{"state": {"selection": list(selected)}}, {"changes": changes, "state": dict(current, revision=response_revision)}]
 
         def read(op, **fields):
             if op == "state":
@@ -314,7 +327,7 @@ class GeometryAdapterContract(unittest.TestCase):
             del live[consumed]
         changes = [dict(kind="Added", handle="FF9"),
                    dict(kind="Removed", handle="FF0"), dict(kind="Removed", handle="FF5")]
-        client = self.union_client(changes, live)
+        client = self.union_client(changes, live, selected=("FF0","FF5"))
         self.assertEqual(Geometry(client).combine("union", ["FF0", "FF5"]), "FF9")
         client.read.assert_any_call("records", collection="entities", offset=0, limit=8,
                                     handles=["FF0", "FF5", "FF9"])
@@ -323,10 +336,17 @@ class GeometryAdapterContract(unittest.TestCase):
         live = {"A1": dict(handle="A1", type="Solid3D")}
         changes = [dict(kind="Removed", handle="A2"), dict(kind="Modified", handle="A1")]
         self.assertEqual(Geometry(self.union_client(changes, live)).combine("union", ["A1", "A2"]), "A1")
+        partial = self.union_client(changes, live, selected=("A1",))
+        with self.assertRaisesRegex(CadError, "Union selection"):
+            Geometry(partial).combine("union", ["A1", "A2"])
+        self.assertEqual(partial.mutate.call_count, 1)
         result = [dict(kind="Added", handle="A3"), *changes]
         for invalid in (
                 self.union_client(result, dict(live, A3=dict(handle="A3", type="Solid3D"))),
                 self.union_client(result, live),
+                self.union_client([], live),
+                self.union_client(changes[:1], live),
+                self.union_client([*changes, dict(kind="Removed", handle="unrelated")], live),
                 self.union_client(changes, {"A1": dict(handle="A1", type="Line")}),
                 self.union_client(changes, live, response_revision=6)):
             with self.subTest(readback=invalid), self.assertRaisesRegex(CadError, "Union result"):
@@ -928,6 +948,9 @@ class FiniteCrossDrillTests(unittest.TestCase):
         self.assertEqual(through["result"], "PASS")
         self.assertEqual(through["cutter_overrun"], [1, 1])
         self.assertEqual(through["remaining_end_land"]["minimum"], 3)
+        for stations, expected in (([450.55, 469.45], "FAIL"), ([450.5, 469.5], "PASS")):
+            self.assertEqual(perpendicular_through_bore("keeper", **dict(sizes, tolerance=.1),
+                             cutter_stations=stations)["result"], expected)
         for invalid_centre in ([1, 46], [0, 50]):
             wrong = dict(sizes, bore_centre=invalid_centre)
             self.assertEqual(perpendicular_through_bore("keeper", **wrong,

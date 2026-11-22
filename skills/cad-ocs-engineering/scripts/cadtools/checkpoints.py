@@ -139,9 +139,9 @@ def _source_pin_path(pin):
     import re
     if (not isinstance(pin,dict) or set(pin)!={'path','sha256'}
             or not isinstance(pin['path'],(str,Path)) or not str(pin['path']).strip()
-            or not re.fullmatch('[a-f0-9]{64}',str(pin['sha256']))):
+            or not isinstance(pin['sha256'], str) or not re.fullmatch('[a-f0-9]{64}',pin['sha256'])):
         raise CadError('Source pins require exact path and SHA-256')
-    return pin['path']
+    return str(pin['path'])
 
 
 def merge_source_pins(*groups):
@@ -153,8 +153,8 @@ def merge_source_pins(*groups):
     merged={}
     for group in groups:
         for pin in group:
-            path=str(_source_pin_path(pin))
-            previous=merged.setdefault(path,dict(pin))
+            path=_source_pin_path(pin)
+            previous=merged.setdefault(path,dict(pin,path=path))
             if previous['sha256']!=pin['sha256']:
                 raise CadError('Conflicting source revisions for '+path)
     return list(merged.values())
@@ -164,11 +164,12 @@ def _check_source_pins(pins,roots,base=None):
     from component_records import observe_file
     rows=[];seen=set()
     for pin in pins:
-        path=_checkpoint_locator(_source_pin_path(pin),roots,base)
+        locator=_source_pin_path(pin)
+        path=_checkpoint_locator(locator,roots,base)
         if path in seen:raise CadError('Duplicate checkpoint source pin')
         seen.add(path)
         if observe_file(path)['sha256']!=pin['sha256']:raise CadError('Checkpoint source revision changed')
-        rows.append(dict(pin))
+        rows.append(dict(pin,path=locator))
     return rows
 
 

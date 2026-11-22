@@ -44,6 +44,21 @@ class SourcePinMerge(unittest.TestCase):
         merged=merge_source_pins([receipt], [repeated, model])
         self.assertEqual(merged,[receipt,model])
         self.assertIsNot(merged[0],receipt)
+        self.assertEqual(json.loads(json.dumps(merge_source_pins([repeated], [receipt, model]))),
+                         [receipt, model])
+
+    def test_numeric_digest_is_rejected_before_native_work(self):
+        with self.assertRaisesRegex(CadError, 'SHA-256'):
+            merge_source_pins([{'path':'part.dwg','sha256':int('1'*64)}])
+
+    def test_checkpoint_validation_serializes_path_without_prior_merge(self):
+        from cadtools.checkpoints import _check_source_pins
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / 'part.dwg'
+            source.write_bytes(b'drawing')
+            digest = hashlib.sha256(source.read_bytes()).hexdigest()
+            pins = _check_source_pins([dict(path=source, sha256=digest)], {})
+            self.assertEqual(json.loads(json.dumps(pins)), [dict(path=str(source), sha256=digest)])
 
     def test_same_locator_with_different_hash_is_rejected(self):
         first={'path':'output:part/final.json','sha256':'0'*64}

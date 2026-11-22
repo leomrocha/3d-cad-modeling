@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "96d4921966b3ba38d95483cf4269eaf756d55a614e1fc0b543fe69d6636e1bab"
+      "sha256": "ffadc38b33ed8304bb4c698d953f70f2a77f25c2f722f6d9e7d723a3333bc31d"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -208,7 +208,7 @@
     },
     "references/service-clearance.md": {
       "source": "references/service-clearance.md",
-      "sha256": "30797e43f8d4f064517a2499d1cfe1cf2ce1da2919ee940408b73d78f75e264e"
+      "sha256": "7504c00186a09b92188a898ffb5099636f16680b6ccdcaaff794da68fa57b20a"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
@@ -296,7 +296,7 @@
     },
     "scripts/assembly_verification.py": {
       "source": "scripts/assembly_verification.py",
-      "sha256": "6a262fdc4136bff4a53974469de45b84ddcbeb641e15577f8158634fe0eeca9d"
+      "sha256": "5fd0818c0d2b2699cbfeac08a285f7c65cace4a5ff94e01863f5f297df18aff2"
     },
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",
@@ -372,11 +372,11 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "5bb3f414814db86dd5d82f241d9cce09c04ff8f0ce0c51c4751c1cff74cb084a"
+      "sha256": "be2558667a4ec6e3e4348fcc57007801e98b5e4f23a1199874d5e87c43e31806"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
-      "sha256": "341167f259ff2648a25feb96e6f7453d37836619c20e0c74f4e40c4cfbe094d2"
+      "sha256": "d1b25a735ada2b326c8e4eb92735bd33a55764db7072eaff07a548e67bd0783b"
     },
     "scripts/cadtools/records.py": {
       "source": "scripts/cadtools/records.py",
@@ -440,7 +440,7 @@
     },
     "scripts/feature_checks.py": {
       "source": "scripts/feature_checks.py",
-      "sha256": "9e15b8263b0be20f7a74d1ee72734a68558a966569649717a4b94fcaeb2b3398"
+      "sha256": "df258706ffbca84eabda07080101420d508198a77b8612008469366b34c39b35"
     },
     "scripts/finite_solid_contact.py": {
       "source": "scripts/finite_solid_contact.py",

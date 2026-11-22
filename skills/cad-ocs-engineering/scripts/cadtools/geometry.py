@@ -150,7 +150,13 @@ class Geometry:
     def combine(self, label, handles):
         if len(handles) < 2 or len(set(handles)) != len(handles):
             raise CadError("Union requires distinct handles")
-        self.select(label + "-selection", handles)
+        inputs = set(handles)
+        selection = self.client.mutate(label + "-selection", "select", handles=handles, clear=False)
+        selected = selection.get("state", {}).get("selection")
+        if selected is None:
+            selected = self.client.read("state").get("selection")
+        if sorted(selected or []) != sorted(handles):
+            raise CadError("Union selection differs from requested inputs")
         response = self.run(label, "UNION")
         revision = identity(response.get("state", {}))
         if revision[0] != self.client.document_id or identity(self.client.read("state")) != revision:
@@ -158,13 +164,15 @@ class Geometry:
         changes = response.get("changes") or ()
         added_handles = {change["handle"] for change in changes if change["kind"] == "Added"}
         removed_handles = {change["handle"] for change in changes if change["kind"] == "Removed"}
-        candidates = set(handles) | added_handles
+        modified_handles = {change["handle"] for change in changes if change["kind"] == "Modified"}
+        candidates = inputs | added_handles
         rows = list(iter_records(self.client, "entities", handles=sorted(candidates)))
         if identity(self.client.read("state")) != revision:
             raise CadError("Union result state changed; inspect before resuming")
         live = {row["handle"] for row in rows}
         if (len(rows) != 1 or not live <= candidates or not added_handles <= live
-                or live & removed_handles or rows[0]["type"] != "Solid3D"):
+                or removed_handles != inputs - live or not modified_handles <= live
+                or not live <= added_handles | modified_handles or rows[0]["type"] != "Solid3D"):
             raise CadError("Union result ambiguous; inspect before resuming")
         return rows[0]["handle"]
 

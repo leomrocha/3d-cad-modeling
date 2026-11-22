@@ -123,9 +123,16 @@ def check_index_translation(before, after, moving_ids, *, offset_mm,
         error = math.dist([source[i][3] + shift[i] for i in range(3)],
                           [saved[i][3] for i in range(3)])
         linear_error = max(abs(saved[i][j] - source[i][j]) for i in range(3) for j in range(3))
+        result = 'PASS'
+        if error > length_limit or linear_error > linear_limit:
+            result = 'FAIL'
+        elif name in moving and math.hypot(*offset) <= length_limit:
+            result = 'INCONCLUSIVE'
         checks.append(dict(occurrence=name, position_error_mm=error, linear_error=linear_error,
-                           passed=error <= length_limit and linear_error <= linear_limit))
-    return dict(result='PASS' if all(row['passed'] for row in checks) else 'FAIL', checks=checks)
+                           result=result, passed=result == 'PASS'))
+    outcomes = {row['result'] for row in checks}
+    result = 'FAIL' if 'FAIL' in outcomes else 'INCONCLUSIVE' if 'INCONCLUSIVE' in outcomes else 'PASS'
+    return dict(result=result, checks=checks)
 
 
 def directed_axial_span(points, *, origin, direction):
