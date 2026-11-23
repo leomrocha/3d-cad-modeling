@@ -78,3 +78,9 @@ Use the checked functional palette as a source for the role names and colours. P
 When reusing an existing fitted linkage with a current catalogue tool, compare the active model-space roots to the known base and isolate the exact lift, joint hardware and tool. Verify which joint pieces the catalogue tool supplies. Retain only the complementary hardware. Check the tool and linkage separately in the assembled frame before screening their contact and service paths. Keep the catalogue source unchanged.
 
 Apply assignments to the owned derivative. Check every affected occurrence of each edited definition, including shared definitions. Verify geometry, transforms, membership and hidden references independently of the display changes. Report layer counts for the actual pose and save the matching native view.
+
+## Check installed working surfaces and replacement hardware
+
+Preserve the independently attributed catalogue assembly. Compare its placed solid inventory with the verified mounted revision in the same frame. If the difference consists of fasteners or pins already supplied by the mounting kit, identify each substituted member by native role, measured axis, end stations and exact occurrence path. Check that its definition has no other affected occurrence before removing the member from the mounted derivative. Save before and after the change. Verify the matched geometry, retained attachment hardware and visibility of reference objects independently.
+
+Measure ground depth or working clearance on the specific working surfaces, such as cutting edges. Report the deepest physical part separately when wear hardware extends farther. Bind both measurements to the same ground datum, projection axis and installed pose. Exclude hidden reference geometry from physical results and record its visibility separately.
