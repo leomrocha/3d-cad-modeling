@@ -20,7 +20,7 @@ from feature_checks import concentric_through_keyway_section, perpendicular_thro
 from step_placements import native_matrix,classify_hand,eye,apply
 from assembly_occurrences import expand_occurrences,recover_insert_sequence,write_occurrence_tables
 from planar_profiles import annular_seat_with_radial_slot,round_ended_slot_profile,clip_circular_openings,bounded_extrusion,conservative_tool_polygon,two_circle_tangent_hull,two_circle_band_box_clearance
-from plate_reference import build_plate,countersink_tool_profile,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline,matching_countersink_fit
+from plate_reference import build_plate,countersink_tool_profile,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline,matching_countersink_fit,parallel_roll_band_profiles
 from native_views import sample,render_views,boundary_curves,placed_boundaries,xy_polyline_view_curves
 from source_vector_paths import parse_path,page_point,local_point,cubic_point
 from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments,sat_structure,placed_circular_cylinders
@@ -931,6 +931,31 @@ class FiniteCrossDrillTests(unittest.TestCase):
             wrong = dict(sizes, bore_centre=invalid_centre)
             self.assertEqual(perpendicular_through_bore("keeper", **wrong,
                              cutter_stations=[449.5, 470.5])["result"], "FAIL")
+
+
+class ParallelBandProfiles(unittest.TestCase):
+    def test_level_rollers_share_tangent_seams(self):
+        bands=parallel_roll_band_profiles([0,0],[20,0],inner_radius=2,outer_radius=3)
+        points,bulges=bands["start-wrap"]
+        self.assertEqual(points,[[0,-3],[0,3],[0,2],[0,-2]])
+        self.assertEqual(bulges,{0:-1,2:1})
+        self.assertEqual(bands["end-wrap"][0],[[20,3],[20,-3],[20,-2],[20,2]])
+        upper,bulges=bands["upper-run"]
+        self.assertEqual(upper,[[0,3],[20,3],[20,2],[0,2]])
+        self.assertEqual(bulges,{})
+
+    def test_inclined_rollers_use_local_normals(self):
+        bands=parallel_roll_band_profiles([0,0],[3,4],inner_radius=2,outer_radius=5)
+        for a,b in zip(bands["upper-run"][0][0],[-4,3],strict=True):
+            self.assertAlmostEqual(a,b)
+        for a,b in zip(bands["end-wrap"][0][0],[-1,7],strict=True):
+            self.assertAlmostEqual(a,b)
+
+    def test_degenerate_band_shape_is_rejected(self):
+        with self.assertRaises(ValueError):
+            parallel_roll_band_profiles([1,1],[1,1],inner_radius=3,outer_radius=5)
+        with self.assertRaises(ValueError):
+            parallel_roll_band_profiles([0,0],[1,1],inner_radius=5,outer_radius=3)
 
 
 if __name__=='__main__':unittest.main()

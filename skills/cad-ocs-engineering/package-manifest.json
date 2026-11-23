@@ -124,7 +124,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "33ccb22b1cd27b55916c6d321b486dfdc2939a65f37eb800964c8df854032afa"
+      "sha256": "1fc49d0be95ec507958b8b62e93c60aa4f77f42503efe5fdd17bc211a205b738"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -576,7 +576,7 @@
     },
     "scripts/plate_reference.py": {
       "source": "scripts/plate_reference.py",
-      "sha256": "4cdb1f54fc5ac3209144752623d47830f7e5fdd9646aa2923f8a6ad030005665"
+      "sha256": "53de553a34c6cf7548e957a10ba833da038adb05b84230352bd5555be9ed01f7"
     },
     "scripts/private_catalogue.py": {
       "source": "scripts/private_catalogue.py",

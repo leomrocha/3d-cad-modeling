@@ -29,7 +29,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 
 [Deliver a batch using local methods](cad-ocs-engineering/references/batch-delivery.md) covers catalogue-based method selection, recovery and saved-model verification.
 
-[Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, sidewall cuts, insertion, quantities and native solid and straight polyline boundary views and split straight-edge checks with caller-supplied inputs.
+[Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, equal-radius belt wraps, sidewall cuts, insertion, quantities and native solid and straight polyline boundary views and split straight-edge checks with caller-supplied inputs.
 
 1. [OCS control](cad-ocs-engineering/references/ocs-control.md) — session discovery, installed schemas and guarded requests.
    [Incremental saving](cad-ocs-engineering/SKILL.md#save-work-in-progress) preserves IN_PROGRESS native models and supporting files at verified checkpoints throughout long jobs. The pre-save audit uses the checkpoint destination.

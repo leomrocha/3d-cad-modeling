@@ -8,6 +8,31 @@ from cadtools.records import read_stable_entity
 from native_acis import sab_features
 
 
+def parallel_roll_band_profiles(start, end, *, inner_radius, outer_radius):
+    """Give two tangent runs and two semicircular wraps in the roller plane."""
+    start,end=vector(start,2),vector(end,2)
+    inner_radius,outer_radius=positive(inner_radius),positive(outer_radius)
+    dx,dz=end[0]-start[0],end[1]-start[1]
+    span=math.hypot(dx,dz)
+    if not math.isfinite(span) or span==0 or inner_radius>=outer_radius:
+        raise ValueError("Expected distinct centres and increasing positive radii")
+    nx,nz=-dz/span,dx/span
+
+    def offset(centre,radius,sign):
+        return [finite(centre[0]+sign*radius*nx),finite(centre[1]+sign*radius*nz)]
+
+    profiles={}
+    for name,sign in (("upper-run",1),("return-run",-1)):
+        points=[offset(start,outer_radius,sign),offset(end,outer_radius,sign),
+                offset(end,inner_radius,sign),offset(start,inner_radius,sign)]
+        profiles[name]=(points,{})
+    for name,centre,sign in (("start-wrap",start,-1),("end-wrap",end,1)):
+        points=[offset(centre,outer_radius,sign),offset(centre,outer_radius,-sign),
+                offset(centre,inner_radius,-sign),offset(centre,inner_radius,sign)]
+        profiles[name]=(points,{0:-1,2:1})
+    return profiles
+
+
 def outline(bounds,radius=0):
     (a,b),(c,d),_=bounds
     for value in [a,b,c,d,radius]:
