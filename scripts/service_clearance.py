@@ -85,6 +85,33 @@ def bounded_axial_section_clearance(full_bounds, section_bounds, obstacle_bounds
     return dict(result=result, axial_overlap=overlap, transverse_axis_gap=str(gap))
 
 
+def rpy_world_x_bounds(bounds, *, pivot, roll_deg, pitch_deg, yaw_deg):
+    """Bound world X for a box under symmetric Rz(yaw) Ry(pitch) Rx(roll).
+
+    The input box encloses the component at zero angles. Each stated limit
+    covers both signs. The result covers the whole independent angle domain.
+    """
+    low, high = _bounds(bounds)
+    centre = _vector(pivot, 3)
+    angles = _vector((roll_deg, pitch_deg, yaw_deg), 3)
+    if any(angle < 0 or angle > 90 for angle in angles):
+        raise ValueError("Expected symmetric roll, pitch and yaw limits from zero to 90 degrees")
+    roll, pitch, yaw = (math.radians(float(angle)) for angle in angles)
+    sr, sp, sy = (math.sin(angle) for angle in (roll, pitch, yaw))
+    minimum_x_coefficient = math.cos(pitch) * math.cos(yaw)
+    relative_low = tuple(float(value - origin) for value, origin in zip(low, centre, strict=True))
+    relative_high = tuple(float(value - origin) for value, origin in zip(high, centre, strict=True))
+    x_low, y_low, z_low = relative_low
+    x_high, y_high, z_high = relative_high
+    lateral = (sy + sp * sr) * max(abs(y_low), abs(y_high))
+    vertical = (sp + sy * sr) * max(abs(z_low), abs(z_high))
+    l = float(centre[0]) + min(x_low, minimum_x_coefficient * x_low) - lateral - vertical
+    h = float(centre[0]) + max(x_high, minimum_x_coefficient * x_high) + lateral + vertical
+    if not math.isfinite(l) or not math.isfinite(h):
+        raise ValueError("Motion bound exceeds representable coordinates")
+    return l, h
+
+
 def orthogonal_sleeve_clearance(first, second):
     """Screen two square-ended annular cylinders parallel to distinct XYZ axes.
 

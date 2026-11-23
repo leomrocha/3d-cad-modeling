@@ -41,6 +41,10 @@ For a chamfer or another verified plane that contains one complete relevant part
 
 For one translated pose of a multi-part group, pass the moving and fixed box arrays and displacement to `translated_box_group_margin`. It returns the minimum over all pairs of each pair's largest signed axis separation and all limiting pairs. Use the exact fractional result to confirm the margin of a candidate found by an approximate layout search. Check the same pose against each required obstacle revision. A positive margin applies to the provided enclosures at that pose. Check the travel and the actual mounting parts separately.
 
+## Bound articulation against a fixed X limit
+
+Use `rpy_world_x_bounds` with the minimum and maximum XYZ corners of each verified zero-angle box and the exact pivot in that same frame. Supply symmetric degree limits from 0° to 90° for roll, pitch and yaw. The function bounds X over the continuous product of those intervals with the rotation order Rz(yaw) Ry(pitch) Rx(roll). Check individual boxes and keep the controlling pair. Compare the returned maximum or minimum X with a fixed part's conservative X limit. Positive separation after the source and numerical reserves covers that domain. Overlapping ranges require a narrower geometric check. Keep the fixed reference, coupled hardware, and any different tipping motion as separate checks.
+
 ## Resolve a box candidate inside a bend
 
 Split the bent part into its measured straight regions and annular bend regions. Check the straight regions separately. For a candidate overlapping one bend box, intersect the two enclosures, project the intersection onto the bend section plane and give its rectangle and measured bend centre to `rectangle_radial_bounds`. If the maximum squared radius is strictly below the squared inside radius, the intersection lies entirely in the bend void. If the minimum squared radius is strictly above the squared outside radius, the intersection lies outside the bend. Use the caller's verified conservative radii and bounds when tolerances matter. Equality and intermediate results need a separate finite surface or solid check.

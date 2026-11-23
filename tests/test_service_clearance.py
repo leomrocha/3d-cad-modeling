@@ -1,10 +1,12 @@
 """Continuous screening and exact same-definition witness regressions."""
 import sys
+from itertools import product
+from math import cos, radians, sin
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from service_clearance import axial_stack_witness, bounded_axial_section_clearance, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
+from service_clearance import axial_stack_witness, bounded_axial_section_clearance, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
 def placement(x=0, y=0, z=0):
@@ -13,6 +15,32 @@ def placement(x=0, y=0, z=0):
 
 class ServiceClearance(unittest.TestCase):
     box = [[0, 0, 0], [1, 1, 1]]
+
+    def test_symmetric_rpy_covers_all_box_corners_and_sampled_intermediate_poses(self):
+        box = [(-42,-15,-7),(-13,7,19)]
+        pivot = (-4,2,3)
+        limits = (25,5,25)
+        low, high = rpy_world_x_bounds(box, pivot=pivot, roll_deg=limits[0],
+                                       pitch_deg=limits[1], yaw_deg=limits[2])
+        domains = [(-m,-m/2,0,m/2,m) for m in limits]
+        for roll, pitch, yaw in product(*domains):
+            r, p, a = map(radians, (roll,pitch,yaw))
+            for x, y, z in product(*zip(*box, strict=True)):
+                x, y, z = x-pivot[0], y-pivot[1], z-pivot[2]
+                rotated_y = cos(r)*y-sin(r)*z
+                rotated_z = sin(r)*y+cos(r)*z
+                pitched_x = cos(p)*x+sin(p)*rotated_z
+                observed = pivot[0]+cos(a)*pitched_x-sin(a)*rotated_y
+                self.assertLessEqual(low, observed)
+                self.assertGreaterEqual(high, observed)
+
+    def test_symmetric_rpy_zero_motion_and_input_limits(self):
+        box = [(3,1,-2),(9,7,8)]
+        self.assertEqual(rpy_world_x_bounds(box,pivot=(11,-20,30),roll_deg=0,
+                                            pitch_deg=0,yaw_deg=0), (3,9))
+        for invalid in (-1,91,float("nan")):
+            with self.subTest(yaw_deg=invalid), self.assertRaises(ValueError):
+                rpy_world_x_bounds(box,pivot=(0,0,0),roll_deg=0,pitch_deg=0,yaw_deg=invalid)
 
     def test_axial_section_resolves_only_fully_covered_box_candidates(self):
         full = [[-3,-1,-3],[3,9,3]]
