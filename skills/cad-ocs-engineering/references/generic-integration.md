@@ -70,3 +70,11 @@ Pass the verified first occurrence as `previous` to `insert_component` to reuse 
 Read the native Insert's local matrix from its own record. A traversal can report the parent frame at an Insert path and the composed matrix at its physical children. Verify the local placement and use the composed child matrix for the world-space geometry check.
 
 When supported solids have different native payloads after import, check matching dimensions, independent placement and boundary geometry. For straight, axis-aligned native boundaries, apply `axis_aligned_edge_coverage` from [feature_checks.py](../scripts/feature_checks.py) to the source and mounted endpoint pairs in the same frame. Use a declared coordinate precision. The comparison merges split or overlapping segments on each supporting line and retains gaps. Extra planar seam edges require separate checking against the intended face. Curved or diagonal boundaries require their appropriate feature reader. Check face shape, solid topology and material separately where the job requires them.
+
+## Carry display roles between operating poses
+
+Use the checked functional palette as a source for the role names and colours. Pin the alternate-pose drawing and its own geometry receipt. Read the alternate pose's physical occurrences and recover each role from its own native metadata or construction record. Hardware and reference occurrences can differ between poses. Derive each assignment from the role and check the actual occurrence count before styling.
+
+When reusing an existing fitted linkage with a current catalogue tool, compare the active model-space roots to the known base and isolate the exact lift, joint hardware and tool. Verify which joint pieces the catalogue tool supplies. Retain only the complementary hardware. Check the tool and linkage separately in the assembled frame before screening their contact and service paths. Keep the catalogue source unchanged.
+
+Apply assignments to the owned derivative. Check every affected occurrence of each edited definition, including shared definitions. Verify geometry, transforms, membership and hidden references independently of the display changes. Report layer counts for the actual pose and save the matching native view.
