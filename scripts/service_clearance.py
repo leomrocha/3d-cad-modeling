@@ -27,6 +27,35 @@ def _bounds(bounds):
     return low, high
 
 
+def sampled_rotation_clearance(samples, *, radius_bound, gap_error_bound,
+                               required_reserve=0):
+    """Bound continuous clearance for one body rotating about a fixed axis.
+
+    Samples give increasing angles in degrees, including both sweep limits,
+    and signed clearance witnesses to one stationary obstacle. Subtract the
+    supplied gap error bound, which must cover geometry and readback error.
+    The radius bound encloses every moving point's distance to the axis.
+    Length inputs use one common unit. A non-positive demonstrated reserve
+    leaves clearance unresolved, since the bound can be conservative.
+    """
+    radius, error, reserve = _vector((radius_bound, gap_error_bound, required_reserve), 3)
+    witnesses = [_vector(row, 2) for row in samples]
+    if len(witnesses) < 2 or min(radius, error, reserve) < 0:
+        raise ValueError("Expected two or more samples and nonnegative bounds")
+    # Rational upper bound on pi. Arc length bounds rigid displacement.
+    upper_pi = Fraction("3.141592653589793239")
+    intervals = []
+    for (a, first_gap), (b, last_gap) in zip(witnesses, witnesses[1:]):
+        if b <= a:
+            raise ValueError("Sample angles must increase")
+        half_interval_travel = radius * (b-a) * upper_pi / 360
+        intervals.append((min(first_gap, last_gap)-error-half_interval_travel, a, b))
+    lower, start, end = min(intervals)
+    return dict(result="PASS_CONTINUOUS_RESERVE" if lower > reserve else "UNRESOLVED_RESERVE",
+                lower_bound=str(lower), required_reserve=str(reserve),
+                limiting_angles_deg=[str(start), str(end)])
+
+
 def cartesian_cylinder_bounds(centre, *, axis, radius, span):
     """Enclose a finite cylinder with an axis parallel to a Cartesian axis.
 

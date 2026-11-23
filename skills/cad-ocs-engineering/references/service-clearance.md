@@ -144,3 +144,9 @@ An enlarged head can produce a whole-fastener box candidate even when the other 
 ### Check a guided circular pilot in a round-ended slot
 
 When separate straight guides locate a moving pilot, measure both guide limits and both slot-end centres in the same planar frame. Pass the smallest measured slot radius, largest pilot radius, full centre travel, transverse play and required reserve to `guided_circular_pilot_clearance`. The check includes the combined longitudinal overrun and transverse play at the slot ends. Keep guide side play smaller than the pilot reserve at the tightest section so the slot stays clear during travel. Verify the retained lip, travel stops and other moving sections separately.
+
+## Bound gaps between sampled fixed-axis poses
+
+1. Measure separation from the same stationary obstacle at increasing angles covering both endpoints. Use exact geometry or conservative section bounds. Include trim sampling, readback and numerical error in the supplied gap error bound.
+2. Measure an upper bound on the distance from the rotation axis to any point on the moving body. Pass the samples as `(angle_degrees, gap)` pairs to `sampled_rotation_clearance`. The method subtracts the maximum travel to the nearest sample and returns a rational lower bound across the continuous interval. Parse it with `Fraction`.
+3. An unresolved reserve needs denser samples or tighter geometry bounds. Apply the method separately to each obstacle. Translation, flexible parts and moving obstacles require their own motion bounds.

@@ -1,12 +1,13 @@
 """Continuous screening and exact same-definition witness regressions."""
 import sys
+from fractions import Fraction
 from itertools import product
 from math import cos, radians, sin
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from service_clearance import guided_circular_pilot_clearance
+from service_clearance import guided_circular_pilot_clearance, sampled_rotation_clearance
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
@@ -16,6 +17,24 @@ def placement(x=0, y=0, z=0):
 
 class ServiceClearance(unittest.TestCase):
     box = [[0, 0, 0], [1, 1, 1]]
+
+    def test_sampled_rotation_accounts_for_motion_and_readback_error(self):
+        check = sampled_rotation_clearance([(0, 8), (2, 7), (3, 10)],
+                                           radius_bound=100, gap_error_bound=0.25,
+                                           required_reserve=5)
+        self.assertEqual(check["result"], "PASS_CONTINUOUS_RESERVE")
+        self.assertEqual(check["limiting_angles_deg"], ["0", "2"])
+        self.assertAlmostEqual(float(Fraction(check["lower_bound"])), 6.75 - 100*radians(1))
+
+    def test_positive_endpoints_do_not_prove_mid_interval_clearance(self):
+        check = sampled_rotation_clearance([(0, 5), (30, 5)],
+                                           radius_bound=100, gap_error_bound=0)
+        self.assertEqual(check["result"], "UNRESOLVED_RESERVE")
+
+    def test_duplicate_and_nonfinite_rotation_samples_are_invalid(self):
+        for rows in ([(0, 5), (0, 4)], [(0, 5), (2, float("inf"))], [(0, 5)]):
+            with self.subTest(rows=rows), self.assertRaises(ValueError):
+                sampled_rotation_clearance(rows, radius_bound=100, gap_error_bound=0.5)
 
     def test_cylinder_bounds_include_radius_missing_from_seam_vertices(self):
         box = cartesian_cylinder_bounds((20, 100, -4), axis=1, radius=5, span=(2, 40))
