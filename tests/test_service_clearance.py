@@ -8,6 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from service_clearance import guided_circular_pilot_clearance, sampled_rotation_clearance
+from service_clearance import translation_box_contact
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
@@ -17,6 +18,35 @@ def placement(x=0, y=0, z=0):
 
 class ServiceClearance(unittest.TestCase):
     box = [[0, 0, 0], [1, 1, 1]]
+
+    def test_cover_lift_has_start_only_face_contact(self):
+        seat = [[0, 0, -1], [1, 1, 0]]
+        result = translation_box_contact(self.box, seat, (0, 0, 2))
+        self.assertEqual((result["result"], result["dimension"]), ("BOUNDARY_ONLY", 2))
+        self.assertEqual(result["candidate_fraction"], ["0", "0"])
+
+    def test_hopper_seat_is_a_face_through_part_of_withdrawal(self):
+        runner = [[0, 0, -1], [2, 1, 0]]
+        result = translation_box_contact(self.box, runner, (3, 0, 0))
+        self.assertEqual((result["result"], result["dimension"]), ("BOUNDARY_ONLY", 2))
+        self.assertEqual(result["candidate_fraction"], ["0", "2/3"])
+
+    def test_endpoint_checks_miss_an_interior_obstruction(self):
+        obstruction = [[2, 0, 0], [3, 1, 1]]
+        result = translation_box_contact(self.box, obstruction, (4, 0, 0))
+        self.assertEqual((result["result"], result["dimension"]), ("VOLUME_CANDIDATE", 3))
+        self.assertEqual(result["candidate_fraction"], ["1/4", "3/4"])
+        self.assertEqual(result["witness_fraction"], "1/2")
+
+    def test_clear_motion_and_edge_contact_have_distinct_results(self):
+        obstacles = [
+            ([[0, 2, 1], [1, 3, 2]], ("DISJOINT_BOUNDS", None)),
+            ([[1, 1, 0], [2, 2, 1]], ("BOUNDARY_ONLY", 1)),
+        ]
+        for bounds, expected in obstacles:
+            with self.subTest(bounds=bounds):
+                result = translation_box_contact(self.box, bounds, (-1, 0, 0))
+                self.assertEqual((result["result"], result["dimension"]), expected)
 
     def test_sampled_rotation_accounts_for_motion_and_readback_error(self):
         check = sampled_rotation_clearance([(0, 8), (2, 7), (3, 10)],

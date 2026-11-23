@@ -7,6 +7,11 @@
 5. Run a supported 3D test for remaining candidates. A positive-volume intersection at one sampled pose proves interference there. Clear samples cover their tested poses. A continuous clear result requires a validated swept-volume or continuous collision method for the whole motion and all in-scope geometry. Keep unknown bodies, invalid input solids and untested clearances visible in the result. A path with rotation, bending or staged motion needs its own supported method.
 
 
+## Distinguish seating contact from box overlap
+
+Use `translation_box_contact` in [service_clearance.py](../scripts/service_clearance.py) to classify the maximum contact dimension over a straight travel interval. The helper reports the exact candidate interval and distinguishes boundary contact from a possible positive-volume overlap. A lifted lid can contact its seat at fraction zero. A tray can remain in contact with its rails during part of its withdrawal. Record permitted seat pairs and check any required positive clearance separately. Supply conservative enclosures and account for readback error. Curved-surface witness points alone can understate a box.
+
+
 ## Verify a moving group before native translation
 
 1. Bind each in-scope live occurrence to a unique handle using its saved role.

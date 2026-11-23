@@ -336,6 +336,35 @@ def translation_box_window(moving_bounds, fixed_bounds, displacement):
     return {"result": "CANDIDATE", "candidate_fraction": [str(start), str(end)]}
 
 
+def translation_box_contact(moving_bounds, fixed_bounds, displacement):
+    """Classify the maximum enclosure contact dimension over straight travel.
+
+    A boundary-only result rules out positive-volume overlap of the supplied
+    conservative boxes. Check the required separation and permission for
+    contact separately. A volume candidate requires a more precise check.
+    """
+    window = translation_box_window(moving_bounds, fixed_bounds, displacement)
+    interval = window["candidate_fraction"]
+    if interval is None:
+        return dict(window, dimension=None)
+
+    # Within the relative interior of the closed contact interval, each
+    # axis has either a positive overlap or a persistent boundary contact.
+    start, end = map(Fraction, interval)
+    witness = (start + end) / 2
+    low, high = _bounds(moving_bounds)
+    fixed_low, fixed_high = _bounds(fixed_bounds)
+    offset = [witness * delta for delta in _vector(displacement, 3)]
+    spans = [
+        min(b + d, v) - max(a + d, u)
+        for a, b, u, v, d in zip(low, high, fixed_low, fixed_high, offset, strict=True)
+    ]
+    dimension = sum(span > 0 for span in spans)
+    return dict(result="VOLUME_CANDIDATE" if dimension == 3 else "BOUNDARY_ONLY",
+                candidate_fraction=interval, dimension=dimension,
+                witness_fraction=str(witness))
+
+
 def quarter_turn_box(bounds, *, pivot, axis, direction):
     """Conservatively enclose an axis-aligned box over a signed 90° turn.
 

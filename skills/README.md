@@ -110,7 +110,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 
 ## Service clearance
 
-1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, seated lifts, nested bore guards, source-attributed endpoints and interference witnesses. It includes static box separation and a continuous reserve bound from sampled fixed-axis poses.
+1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, nominal seating contact, seated lifts, nested bore guards, source-attributed endpoints and interference witnesses. It includes static box separation and a continuous reserve bound from sampled fixed-axis poses.
 
 - [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, fit and contact witnesses, source trims, source-preserving STEP wrappers and shell orientation. [Fit datums over retained solids](cad-ocs-engineering/references/assembly-evidence.md#fit-datums-over-retained-solids) checks layout lines on an existing assembly.
 - [Job history archives](cad-ocs-engineering/references/job-history-archive.md) preserve and verify raw receipts and debug histories for each revision.
