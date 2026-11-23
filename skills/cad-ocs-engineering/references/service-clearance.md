@@ -65,6 +65,12 @@ Read the actual shoulder, tip and layer-end stations in a common model axis. Giv
 
 For exact comparisons of nominal decimal dimensions, pass integer stations in one common finer unit. For example, use tenths of a millimetre for stations stated to 0.1 mm. Record the station unit alongside the result and convert the returned gaps and overlap back to model units. Floating-point coordinates produce exact ratios for their stored binary values. For measured coordinates compare the converted results against the declared measurement tolerance.
 
+### Separate screw reach from effective thread engagement
+
+1. Record the installed under-head seat, intervening grip, nominal tip, tapping entrance, through exit or blind floor in one signed axis. Check seating, clearance to the floor or protrusion beyond an exit with `axial_stack_witness`.
+2. Build a separate full-form interval for each thread from the fastener and mating-part source. Trim the male interval for incomplete tip threads and the grip or under-head runout. Trim the female interval for entrance chamfer, exit or tap lead. For matched direction, use the intersection of those two intervals as the nominal full-form engagement. Report the geometric reach and full-form engagement as separate values.
+3. Use source limits, including length and grip variation, for a minimum engagement check. Shaft-envelope solids and drill pilots establish positions and reach. Preload, thread strength and tightening access use their own inputs and checks.
+
 ### Perpendicular sleeves in one cavity
 
 Measure each sleeve body and each fastener as separate occurrences. A shank radius cannot establish sleeve-wall clearance. For two square-ended sleeves parallel to distinct world axes, pass `orthogonal_sleeve_clearance(first, second)` a dictionary per sleeve with `axis` (0, 1 or 2), `centre` (XYZ), `span` (increasing axis-end stations), and `radii` (inner and outer). A positive signed outer gap separates the supplied cylinders. `STRICT_MATERIAL_INTERSECTION` returns a point inside both annular walls and both axial spans. `NEEDS_FINITE_SOLID_CHECK` leaves the pair unresolved and requires an exact solid test or another bound. Retain source scope and measured or assumed tolerances beside the nominal result.
