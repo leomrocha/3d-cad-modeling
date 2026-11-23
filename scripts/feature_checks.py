@@ -19,6 +19,43 @@ def comparison(name,actual,expected,tolerance,unit='mm',method='native feature c
                 result='PASS' if len(a)==len(b) and all(abs(x-y)<=tolerance for x,y in zip(a,b)) else 'FAIL')
 
 
+def axis_aligned_edge_coverage(segments, *, decimal_places):
+    """Return the covered intervals for straight Cartesian boundary segments.
+
+    Supply native straight-edge endpoints in one checked frame and length
+    unit. Round only at the job's stated comparison precision. Coincident,
+    touching or overlapping segments on the same line share one interval.
+    """
+    if type(decimal_places) is not int or decimal_places < 0:
+        raise ValueError("Nonnegative decimal place count required")
+    supports = {}
+    for segment in segments:
+        if len(segment) != 2 or any(len(point) != 3 for point in segment):
+            raise ValueError("Two Cartesian points required per segment")
+        if any(type(value) not in (int, float) or not math.isfinite(value)
+               for point in segment for value in point):
+            raise ValueError("Finite coordinates required")
+        a, b = (tuple(round(value, decimal_places) for value in point) for point in segment)
+        axes = [i for i in range(3) if a[i] != b[i]]
+        if len(axes) != 1:
+            raise ValueError("Nonzero axis-aligned edge required at the specified precision")
+        axis, = axes
+        support = (axis, *(value for i, value in enumerate(a) if i != axis))
+        supports.setdefault(support, []).append(tuple(sorted((a[axis], b[axis]))))
+    if not supports:
+        raise ValueError("At least one segment required")
+    coverage = {}
+    for support, intervals in supports.items():
+        merged = []
+        for low, high in sorted(intervals):
+            if merged and low <= merged[-1][1]:
+                merged[-1] = (merged[-1][0], max(merged[-1][1], high))
+            else:
+                merged.append((low, high))
+        coverage[support] = tuple(merged)
+    return coverage
+
+
 def axial_datum_chain(name, stations, offsets, tolerance):
     """Check each signed source distance between successive observed positions."""
     if len(stations)<2 or len(offsets)!=len(stations)-1:
