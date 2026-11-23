@@ -113,3 +113,7 @@ an oblique axis or unknown trim, use a qualified finite geometry reader.
 ## Bound a fastener section inside a confined joint
 
 An enlarged head can produce a whole-fastener box candidate even when the other part only reaches the shank. Confirm the installed axis, bearing plane and tip against the actual model. Bind a conservative shank bound to the measured axial stations and the exact source revision. Include any washer face, fillet, step or thread major diameter that can enter those stations. Pass both the full box and the verified section box with the obstacle box to `bounded_axial_section_clearance(..., axis=...)`. A section may resolve only an overlap it covers completely. `DISJOINT_SECTION_BOUNDS` proves transverse separation for that overlap. A contact candidate or uncovered overlap requires a wider certified section or a finite-solid check.
+
+### Check a guided circular pilot in a round-ended slot
+
+When separate straight guides locate a moving pilot, measure both guide limits and both slot-end centres in the same planar frame. Pass the smallest measured slot radius, largest pilot radius, full centre travel, transverse play and required reserve to `guided_circular_pilot_clearance`. The check includes the combined longitudinal overrun and transverse play at the slot ends. Keep guide side play smaller than the pilot reserve at the tightest section so the slot stays clear during travel. Verify the retained lip, travel stops and other moving sections separately.

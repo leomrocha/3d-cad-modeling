@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from service_clearance import guided_circular_pilot_clearance
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
@@ -32,6 +33,29 @@ class ServiceClearance(unittest.TestCase):
                         dict(axis=0,radius=1,span=(1,1)), dict(axis=0,radius=float("nan"),span=(1,2))):
             with self.subTest(options=options), self.assertRaises(ValueError):
                 cartesian_cylinder_bounds((0,0,0), **options)
+
+    def test_guided_pilot_clears_slot_through_full_travel(self):
+        report = guided_circular_pilot_clearance(
+            slot_centres=(-8,8), slot_radius=26.8, travel_centres=(-8,8),
+            pilot_radius=26, side_play=.3, minimum_reserve=.49)
+        self.assertEqual(report["result"], "PASS_NOMINAL_CAPSULE_CLEARANCE")
+        self.assertAlmostEqual(report["minimum_slot_gap"], .5)
+
+    def test_guided_pilot_checks_both_end_and_side_play(self):
+        options = dict(slot_centres=(0,8), slot_radius=4, travel_centres=(-3,8),
+                       pilot_radius=2, side_play=.5)
+        self.assertEqual(guided_circular_pilot_clearance(**options)["result"],
+                         "FAIL_REQUIRED_CLEARANCE")
+        options.update(travel_centres=(0,9), side_play=.75)
+        report = guided_circular_pilot_clearance(**options, minimum_reserve=.75)
+        self.assertEqual(report["result"], "PASS_NOMINAL_CAPSULE_CLEARANCE")
+        self.assertEqual(report["minimum_slot_gap"], .75)
+
+    def test_guided_pilot_rejects_reversed_stations(self):
+        with self.assertRaises(ValueError):
+            guided_circular_pilot_clearance(
+                slot_centres=(1,1), slot_radius=5, travel_centres=(0,2),
+                pilot_radius=2, side_play=.25)
 
     def test_symmetric_rpy_covers_all_box_corners_and_sampled_intermediate_poses(self):
         box = [(-42,-15,-7),(-13,7,19)]

@@ -62,6 +62,36 @@ def cartesian_cylinder_bounds(centre, *, axis, radius, span):
             for boundary, direction in ((low, -math.inf), (high, math.inf))]
 
 
+def guided_circular_pilot_clearance(*, slot_centres, slot_radius, travel_centres,
+                                   pilot_radius, side_play, minimum_reserve=0):
+    """Check a circular pilot constrained by separate straight guides.
+
+    Longitudinal stations use the frame of the capsule slot's straight centre
+    segment. The nominal transverse station is zero. Side play bounds the
+    complete transverse displacement, including any tolerances supplied by
+    the caller. Use the smallest slot and largest pilot bounding radii.
+    """
+    slot_start, slot_end = _vector(slot_centres, 2)
+    start, end = _vector(travel_centres, 2)
+    opening, pilot, play, reserve = _vector(
+        (slot_radius, pilot_radius, side_play, minimum_reserve), 4)
+    if slot_start >= slot_end or start > end or min(opening, pilot) <= 0 or min(play, reserve) < 0:
+        raise ValueError("Expected increasing slot centres, ordered travel and positive radii")
+
+    overrun = max(slot_start - start, end - slot_end, Fraction(0))
+    squared_displacement = overrun**2 + play**2
+    available = opening - pilot
+    residual = available - reserve
+    passes = residual >= 0 and squared_displacement <= residual**2
+    return dict(
+        result="PASS_NOMINAL_CAPSULE_CLEARANCE" if passes else "FAIL_REQUIRED_CLEARANCE",
+        minimum_slot_gap=float(available) - math.hypot(float(overrun), float(play)),
+        longitudinal_overrun=float(overrun),
+        maximum_side_play=float(play),
+        required_reserve=float(reserve),
+    )
+
+
 def static_box_gap(first_bounds, second_bounds):
     """Return exact squared separation for two axis-aligned boxes in one frame.
 
