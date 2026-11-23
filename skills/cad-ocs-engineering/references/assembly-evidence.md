@@ -53,6 +53,12 @@ For a centred cross-drilled shaft, run `perpendicular_through_bore` in [feature_
 
 For coaxial annular faces interrupted by a straight radial keyway, verify the two actual face stations, radii, slot width and end first. Use `annular_seat_with_radial_slot` in [planar_profiles.py](../scripts/planar_profiles.py) when the slot starts at the bore, crosses the contact annulus's inner arc and ends inside its outer circle. Record the calculated projected area after the cut. Contact pressure and preload distribution require a joint model.
 
+### Check a bore exit beside an integral arm or step
+
+1. Trace the complete stock interval on the fastener axis at the bore radius. A nearby tab, arm or thicker step can extend local material beyond the general plate face. Locate the actual exit or blind floor using the local solid.
+2. For a through cut, overrun both local material boundaries. Check the full bore rim at entry and exit, and check that the intended washer or head bearing footprint lies on the actual flat face. A nominal exit plane can cut partway into a thicker branch and leave a blocked bore or an incomplete bearing face.
+3. Check the washer and socket swept footprint separately from the shank. Keep remaining wall thickness to nearby crossing bores and free edges explicit. When a design allows you to relieve an integral arm, verify the revised flat contact patch and rebuild the local clearance screen before saving the corrected part.
+
 ### Resolve a box overlap with a verified planar outline
 
 1. Match the candidate to its exact installed occurrence path and full transform. Confirm that the retained profile, thickness, and later Boolean or assembly edits describe that exact saved revision.
