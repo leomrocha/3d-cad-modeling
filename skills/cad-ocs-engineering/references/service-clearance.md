@@ -7,6 +7,17 @@
 5. Run a supported 3D test for remaining candidates. A positive-volume intersection at one sampled pose proves interference there. Clear samples cover their tested poses. A continuous clear result requires a validated swept-volume or continuous collision method for the whole motion and all in-scope geometry. Keep unknown bodies, invalid input solids and untested clearances visible in the result. A path with rotation, bending or staged motion needs its own supported method.
 
 
+## Verify a moving group before native translation
+
+1. Bind each in-scope live occurrence to a unique handle using its saved role.
+   Classify the moving and stationary parts from the assembly design. Include
+   new drive shafts, bearing stacks and covers attached to the moving group.
+2. Resolve the two role lists with `motion_role_handles` in
+   [cadtools/records.py](../scripts/cadtools/records.py). Pass its returned
+   handles to the move. Compare the final positions of the shaft and other
+   independent datums, and confirm that stationary geometry retained its
+   original placement. Keep the verified state before attempting the move.
+
 ## Check a sequence of straight tool moves
 
 1. Keep the tool orientation and the box that encloses it fixed throughout the sequence. List the start pose and each intermediate pose in one world frame. The end of one segment is the start of the next. Record when a cover, tray or other released part leaves the obstacle set.

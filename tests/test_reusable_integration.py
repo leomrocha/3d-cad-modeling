@@ -13,7 +13,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 
 from cadtools.geometry import Geometry, added
 from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_document,owned_document,RecoveringClient,bounded_request_namespace
-from cadtools.records import iter_records,read_stable_entity
+from cadtools.records import iter_records,motion_role_handles,read_stable_entity
 from cadtools.checkpoints import write_stage_checkpoint,save_checkpoint
 from feature_checks import circular_trim_stations,cylinder_pattern,cylinder_wall_checks,axial_datum_chain,circular_opening_edge_land,round_ended_slot_tangents
 from feature_checks import concentric_through_keyway_section, perpendicular_through_bore
@@ -27,6 +27,26 @@ from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments
 from ocs_document_cleanup import cleanup_owned_documents
 from retained_artifacts import verify_manifest
 from assembly_verification import compare_axial_occurrences,directed_axial_span
+
+
+class MotionRolePartition(unittest.TestCase):
+    def test_moving_order_follows_declared_mechanism(self):
+        roles = {'frame': '10', 'carrier': '20', 'shaft': '30'}
+        handles = motion_role_handles(roles, moving=['shaft', 'carrier'], stationary=['frame'])
+        self.assertEqual(handles, ('30', '20'))
+
+    def test_unclassified_shaft_fails_before_native_motion(self):
+        roles = {'frame': '10', 'carrier': '20', 'shaft': '30'}
+        with self.assertRaisesRegex(CadError, 'Unclassified: .*shaft'):
+            motion_role_handles(roles, moving=['carrier'], stationary=['frame'])
+
+    def test_duplicate_role_or_handle_is_rejected(self):
+        roles = {'frame': '10', 'carrier': '20'}
+        with self.assertRaisesRegex(CadError, 'unique classification'):
+            motion_role_handles(roles, moving=['carrier'], stationary=['carrier', 'frame'])
+        with self.assertRaisesRegex(CadError, 'unique native handle'):
+            motion_role_handles({'frame': '20', 'carrier': '20'},
+                                moving=['carrier'], stationary=['frame'])
 
 
 class RoundEndedSlotTangents(unittest.TestCase):

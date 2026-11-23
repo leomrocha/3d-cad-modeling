@@ -208,7 +208,7 @@
     },
     "references/service-clearance.md": {
       "source": "references/service-clearance.md",
-      "sha256": "c6eae12419f7c44846a81795f4be6e4c323887a750284159549f86a90fa9e495"
+      "sha256": "019cdcc6908a7f254b4724b429ca17e295991d3909ad0b0debee4581b617eb0a"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
@@ -380,7 +380,7 @@
     },
     "scripts/cadtools/records.py": {
       "source": "scripts/cadtools/records.py",
-      "sha256": "32ffcdaec29343f97c601be964bb1891cc5c913485ab395ffbbc8516c4b96043"
+      "sha256": "3b6549fcf2c33919eb52616814b25ce8fdac48f21a2c66c1c353660622fa4618"
     },
     "scripts/cadtools/runtime.py": {
       "source": "scripts/cadtools/runtime.py",
