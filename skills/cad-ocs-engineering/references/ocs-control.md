@@ -27,6 +27,15 @@ It never starts OCS, removes stale descriptors, automatically retries or saves a
 5. `running`/`waiting_input` require following operation/command state; do not feed guessed interactive answers or claim completion.
 6. A definitive stale-state rejection permits refreshing and reconsidering the edit, not blind batch replay. Establish that a write did not commit before issuing a new identity.
 
+
+## Verify layer isolation and restoration
+
+1. Read the live layer table and the matching layer records. Pin the drawing identity, layer handles and original visibility flags. Resolve effective layers through visible assembly occurrences, including nested block instances.
+2. Use the installed writable property path. In deployments whose layer record stores visibility as `properties.flags.off`, pass `/flags/off` to `set_properties` and obtain the expected Boolean from that record. The summary returned by `layers` can expose `off` at the top level. Its summary shape does not define the write path.
+3. On the owned drawing, isolate one requested group at a time. Toggle only the selected layer flags and verify the resulting enabled layer set and affected occurrence paths. Restore the original flags and verify the complete layer table before the final save and native preview.
+4. Save the verified style checkpoint before isolation. If visibility verification fails, recover from that exact save and inspect the current schema before changing any flags. Reuse the saved geometry and compare solid payloads, occurrence transforms and definition membership with the original.
+
+
 ## Verify operation evidence
 
 1. Use the selected session's capabilities, command registry and installed schemas to identify operations, geometry types and properties. Record the installed binary version and retain the corresponding responses.
