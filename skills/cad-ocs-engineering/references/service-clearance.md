@@ -49,6 +49,12 @@ Use `rpy_world_x_bounds` with the minimum and maximum XYZ corners of each verifi
 
 Keep the identified joint limits, sample grid and motion frame from the checked linkage. Rebuild the padded member and actuator boxes in that frame at each pose. Measure the revised host in the saved assembly and separate host occurrences from the moving module. Only exclude an obstacle band when the full set of moving boxes is proved to stay outside it over the stated samples. Include actuator lanes, body and rod dimensions and the supported attachment pose in that check. Record the actual pose count, source and host hashes, and the member and obstacle identities for every candidate. A clear result covers the sampled boxes. Use a continuous bound or finite-solid trajectory for a continuous clearance claim.
 
+## Retain ground-contact and wheel-swivel evidence in a revised assembly
+
+Keep the tool pose, support receiver, caster and gauge roller as separately identified sources. Match each placed support and tool to the verified geometry and frame before reusing a clearance result. Recheck the ground witness on every tyre and roller in the same grade plane. For a horizontal right-circular roller, use the native cylinder centre height minus its observed outside radius. Confirm the axis direction and that the outer cylindrical face spans the contact station. A boundary sample above the tangent does not establish a ground gap. Use the complete swivel envelope at each measured pivot when comparing lateral clearance. A single saved wheel orientation supplies only that orientation's clearance.
+
+Compare the rotor or cutting envelope with the revised host separately from clearance to the carried guards, roller and support hardware. Record which surfaces and axes were measured and keep the posed contact checks separate from support reaction, traction and operating limits.
+
 ## Check service space on a capped powered interface
 
 Measure the shaft and receiver circles at their working stations in one frame. Record the bore pattern and shaft-to-throat alignment separately from the coupling diameter and withdrawal envelope. Assign the intended cap, guard or cover state to each service action. Keep host intrusion, intended interfaces, coupling release and electrical plug removal as separate checks with their own travel and dimensions. A host screen can stay valid when the service sequence itself still requires component selection.
