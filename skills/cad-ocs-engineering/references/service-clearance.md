@@ -6,6 +6,15 @@
 4. Use `shared_definition_coincidence(moving_matrix, fixed_matrix, displacement)` only after verifying both occurrences reference the same nonempty geometry definition. Supply nonsingular affine 4×4 matrices in the same world frame. Identical linear transforms and a matching translation within the finite path give a `COINCIDENCE_WITNESS`. Record the witness travel and both occurrences. For a solid with positive volume, coincidence proves interference at that pose. `NO_COINCIDENCE_WITNESS` leaves the collision question open.
 5. Run a supported 3D test for remaining candidates. A positive-volume intersection at one sampled pose proves interference there. Clear samples cover their tested poses. A continuous clear result requires a validated swept-volume or continuous collision method for the whole motion and all in-scope geometry. Keep unknown bodies, invalid input solids and untested clearances visible in the result. A path with rotation, bending or staged motion needs its own supported method.
 
+
+## Check a sequence of straight tool moves
+
+1. Keep the tool orientation and the box that encloses it fixed throughout the sequence. List the start pose and each intermediate pose in one world frame. The end of one segment is the start of the next. Record when a cover, tray or other released part leaves the obstacle set.
+2. For each segment, offset the tool box to its start pose and set displacement to the end pose minus the start pose. Convert axis-span records `[[xmin,xmax],[ymin,ymax],[zmin,zmax]]` into the minimum and maximum XYZ corners accepted by `translation_box_window`.
+3. Check every stationary obstacle for every segment, including equipment that remains after access panels are removed. Verify intermediate poses and the smallest clearance across the complete path. Record any candidate or missing obstacle. Each `DISJOINT_BOUNDS` result covers the continuous segment for the supplied envelopes.
+4. Keep tool entry, engagement and operating swing separate. A translated head envelope can prove entry for its assumed size. A rotating handle, changed orientation or cable bend needs its own swept geometry.
+
+
 ## Project a straight motion through an existing wall opening
 
 1. Bind the moving clearance silhouette to the actual wall slab and keep the full through-cut outline from the saved model. Express both in one wall-plane frame. For travel parallel to that plane, express the silhouette displacement in the wall frame. When the wall moves, use the opposite of its travel for the stationary silhouette.
