@@ -27,6 +27,41 @@ def _bounds(bounds):
     return low, high
 
 
+def cartesian_cylinder_bounds(centre, *, axis, radius, span):
+    """Enclose a finite cylinder with an axis parallel to a Cartesian axis.
+
+    The caller supplies the maximum material radius and two measured absolute
+    end stations in the same frame. The centre's coordinate along the axis
+    does not affect the box. Use separately bounded heads and shoulders when
+    checking clearance for only part of an assembly.
+    """
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError("Expected an XYZ axis index")
+    centre = _vector(centre, 3)
+    radius, = _vector((radius,), 1)
+    start, stop = _vector(span, 2)
+    if radius <= 0 or start >= stop:
+        raise ValueError("Expected a positive radius and increasing end stations")
+    low = [value - radius for value in centre]
+    high = [value + radius for value in centre]
+    low[axis], high[axis] = start, stop
+
+    def round_outward(value, direction):
+        try:
+            result = float(value)
+        except OverflowError as error:
+            raise ValueError("Cylinder bounds exceed finite coordinates") from error
+        rounded = Fraction(result)
+        if (direction < 0 and rounded > value) or (direction > 0 and rounded < value):
+            result = math.nextafter(result, direction)
+        if not math.isfinite(result):
+            raise ValueError("Cylinder bounds exceed finite coordinates")
+        return result
+
+    return [[round_outward(value, direction) for value in boundary]
+            for boundary, direction in ((low, -math.inf), (high, math.inf))]
+
+
 def static_box_gap(first_bounds, second_bounds):
     """Return exact squared separation for two axis-aligned boxes in one frame.
 

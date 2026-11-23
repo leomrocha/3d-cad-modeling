@@ -99,6 +99,17 @@ For exact comparisons of nominal decimal dimensions, pass integer stations in on
 
 Measure each sleeve body and each fastener as separate occurrences. A shank radius cannot establish sleeve-wall clearance. For two square-ended sleeves parallel to distinct world axes, pass `orthogonal_sleeve_clearance(first, second)` a dictionary per sleeve with `axis` (0, 1 or 2), `centre` (XYZ), `span` (increasing axis-end stations), and `radii` (inner and outer). A positive signed outer gap separates the supplied cylinders. `STRICT_MATERIAL_INTERSECTION` returns a point inside both annular walls and both axial spans. `NEEDS_FINITE_SOLID_CHECK` leaves the pair unresolved and requires an exact solid test or another bound. Retain source scope and measured or assumed tolerances beside the nominal result.
 
-### Bound a fastener section inside a confined joint
+### Bound a finite cylinder for clearance
+
+Read the outer cylindrical face and the two end planes in the same frame. Use
+`cartesian_cylinder_bounds(centre, axis=axis, radius=radius, span=(start, stop))`
+in [service_clearance.py](../scripts/service_clearance.py) when the cylinder axis
+is parallel to X, Y or Z. The span contains absolute positions on that axis.
+CAD seam vertices can lie on the shaft centre plane in another coordinate.
+The full measured radius supplies both radial limits. Include separate heads,
+shoulders and other material that extends beyond the cylindrical section. For
+an oblique axis or unknown trim, use a qualified finite geometry reader.
+
+## Bound a fastener section inside a confined joint
 
 An enlarged head can produce a whole-fastener box candidate even when the other part only reaches the shank. Confirm the installed axis, bearing plane and tip against the actual model. Bind a conservative shank bound to the measured axial stations and the exact source revision. Include any washer face, fillet, step or thread major diameter that can enter those stations. Pass both the full box and the verified section box with the obstacle box to `bounded_axial_section_clearance(..., axis=...)`. A section may resolve only an overlap it covers completely. `DISJOINT_SECTION_BOUNDS` proves transverse separation for that overlap. A contact candidate or uncovered overlap requires a wider certified section or a finite-solid check.

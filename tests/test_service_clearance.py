@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from service_clearance import axial_stack_witness, bounded_axial_section_clearance, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
+from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
 def placement(x=0, y=0, z=0):
@@ -15,6 +15,23 @@ def placement(x=0, y=0, z=0):
 
 class ServiceClearance(unittest.TestCase):
     box = [[0, 0, 0], [1, 1, 1]]
+
+    def test_cylinder_bounds_include_radius_missing_from_seam_vertices(self):
+        box = cartesian_cylinder_bounds((20, 100, -4), axis=1, radius=5, span=(2, 40))
+        self.assertEqual(box, [[15, 2, -9],[25, 40, 1]])
+        wall = [[10, 0, -14],[30, 45, -11]]
+        self.assertEqual(static_box_gap(box, wall)["squared_gap"], "4")
+
+    def test_cylinder_bounds_round_outward_and_check_inputs(self):
+        from fractions import Fraction
+
+        box = cartesian_cylinder_bounds((0.1, 0, 0), axis=2, radius=0.2, span=(1, 2))
+        self.assertLessEqual(Fraction(box[0][0]), Fraction(0.1)-Fraction(0.2))
+        self.assertGreaterEqual(Fraction(box[1][0]), Fraction(0.1)+Fraction(0.2))
+        for options in (dict(axis=True,radius=1,span=(1,2)), dict(axis=0,radius=0,span=(1,2)),
+                        dict(axis=0,radius=1,span=(1,1)), dict(axis=0,radius=float("nan"),span=(1,2))):
+            with self.subTest(options=options), self.assertRaises(ValueError):
+                cartesian_cylinder_bounds((0,0,0), **options)
 
     def test_symmetric_rpy_covers_all_box_corners_and_sampled_intermediate_poses(self):
         box = [(-42,-15,-7),(-13,7,19)]
