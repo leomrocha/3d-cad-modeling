@@ -23,6 +23,12 @@ For a completed EXTRUDE or REVOLVE that consumes a checkpointed profile, call `c
 
 For circular mating axes in a saved nested assembly, use `placed_circular_cylinders` in [native_geometry.py](../scripts/native_geometry.py). Supply the decoded supports and the verified composed unit placement from the native occurrence. It maps the origin as a point and the axis as a direction. Use `cylinder_pattern` for the independent expected centres and retain separate native trim checks for axial depths and seating planes.
 
+## Bind an imported solid before replacing its geometry
+
+1. Pin the source and working assembly revisions. Search only beneath the intended installed root. Verify the candidate's full occurrence path, functional layer, definition ownership and local-to-world transform. Check whether the leaf is shared before editing its definition.
+2. A native import can reserialize the same geometry. When source and installed ACIS bytes differ, compare decoded geometric evidence in the same frame. A normalized boundary signature can identify a straight and analytic trimmed solid when the supported reader provides complete edge samples. Compare curve families and point geometry at an explicit tolerance and require a unique candidate within the intended root. Use a face, volume or other independent check when that evidence leaves multiple candidates or the feature requires it.
+3. For an installed definition replacement in a verified compatible local frame, use the installed record's current payload as the expected value. Read back the new payload and compare all unaffected entity records, block membership, layers and complete occurrence matrices. Remeasure the changed world bounds and mating datums, then save and verify the checkpoint.
+
 ## Finish after a final-check interruption
 
 Use `verify_finish_checkpoint` in [checkpoints.py](../scripts/cadtools/checkpoints.py) when all planned occurrences were saved after placement and labelling, and final verification was interrupted. Supply the expected save request from the job recipe and journal, the complete role list from the plan, and the independently read live root handles. Verify the same idle document, geometry epoch, source hashes and checkpoint bytes. The result `FINAL_VERIFICATION_PENDING` authorizes the caller's checks only. Read back each occurrence's source identity, native layer and full matrix, then run the final geometry checks and save the definitive file. Keep the last verified checkpoint until that save passes.
