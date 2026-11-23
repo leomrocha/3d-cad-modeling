@@ -110,6 +110,22 @@ The full measured radius supplies both radial limits. Include separate heads,
 shoulders and other material that extends beyond the cylindrical section. For
 an oblique axis or unknown trim, use a qualified finite geometry reader.
 
+### Check a translating shaft against a perpendicular guide
+
+1. Bind the finite shaft and the guide to their independent native cylindrical
+   faces and end planes. Use the same world frame. Build a full-radius box for
+   each measured cylinder with `cartesian_cylinder_bounds`. Repeat separately
+   for the outer sleeve, its flange and any fastener projections.
+2. On a straight stroke, pass each box pair and the full displacement to
+   `translation_box_window`. The common transverse coordinate is invariant
+   when motion lies along either cylinder axis. A positive gap on that
+   coordinate proves that this pair stays apart throughout the stroke. Keep
+   the signed geometric margin and its measurement tolerance with the result.
+3. When those conservative boxes overlap, retain the candidate. Use the exact
+   finite geometry test before accepting the layout. An outer cylinder can
+   overlap an enclosure while the actual hollow component remains clear.
+   A hole, split or relieved profile requires scope-specific shape evidence.
+
 ## Bound a fastener section inside a confined joint
 
 An enlarged head can produce a whole-fastener box candidate even when the other part only reaches the shank. Confirm the installed axis, bearing plane and tip against the actual model. Bind a conservative shank bound to the measured axial stations and the exact source revision. Include any washer face, fillet, step or thread major diameter that can enter those stations. Pass both the full box and the verified section box with the obstacle box to `bounded_axial_section_clearance(..., axis=...)`. A section may resolve only an overlap it covers completely. `DISJOINT_SECTION_BOUNDS` proves transverse separation for that overlap. A contact candidate or uncovered overlap requires a wider certified section or a finite-solid check.

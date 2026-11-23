@@ -23,6 +23,15 @@ class ServiceClearance(unittest.TestCase):
         wall = [[10, 0, -14],[30, 45, -11]]
         self.assertEqual(static_box_gap(box, wall)["squared_gap"], "4")
 
+    def test_full_radius_boxes_screen_translating_shaft_against_perpendicular_guide(self):
+        shaft = cartesian_cylinder_bounds((50, 0, 0), axis=1, radius=10, span=(-30, 30))
+        blocked = cartesian_cylinder_bounds((40, 15, 0), axis=2, radius=8, span=(-10, 40))
+        clear = cartesian_cylinder_bounds((31, 15, 0), axis=2, radius=8, span=(-10, 40))
+        stroke = (0, 0, 30)
+        self.assertEqual(translation_box_window(shaft, blocked, stroke)["result"], "CANDIDATE")
+        self.assertEqual(translation_box_window(shaft, clear, stroke)["result"], "DISJOINT_BOUNDS")
+        self.assertEqual(static_box_gap(shaft, clear)["axis_gaps"], ["1", "0", "0"])
+
     def test_cylinder_bounds_round_outward_and_check_inputs(self):
         from fractions import Fraction
 
