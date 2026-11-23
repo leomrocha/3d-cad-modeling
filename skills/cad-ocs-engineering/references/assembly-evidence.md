@@ -19,6 +19,12 @@ Check the walker's frame contract for the exact occurrence path. A traversal can
 
 Compare the full world matrix with the independently specified pose. Check the origin and basis directions, including scale and handedness. Measure the resulting world-space shaft stations and off-axis feature from the actual child solid. Agreement between the encoder and decoder checks the field conversion. Agreement with source-derived feature positions checks the installed part. Translation and aggregate bounds can agree when a symmetric part points along the wrong axis.
 
+### Verify an imported package with drawing markers
+
+1. Inventory the traced exterior, each group of reference markers and the exact source measurement report separately. Keep the exterior in the physical count and preserve the markers on a separate layer that is hidden in the normal view. Inspect the retained marker records even when that layer is off.
+2. Use the source labels and recorded marker construction to decode each datum. For a named two-vertex axis marker drawn symmetrically about its centre, transform the midpoint and recorded elevation through the composed occurrence matrix. Compare the result with the independent mating features and seating plane. Marker length and line width are drawing properties. Verify bore geometry on the physical mating part independently.
+3. Compare the measured exterior envelope and its propagated source uncertainty with the installation and extraction apertures. Record which covers and hardware were removed. Report body fit, datum alignment and physical fastener or terminal geometry as distinct results.
+
 ## Fit datums over retained solids
 
 Use a separate native assembly when a fit study needs layout geometry over an existing checked assembly. Insert the checked source at the reviewed transform, then bind its live root handle and compare the descendant solid count with the source. Save the insertion checkpoint before creating the layout geometry.
