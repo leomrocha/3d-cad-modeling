@@ -25,6 +25,12 @@
 
 Pass a conservative moving box, one point on the fixed hinge axis, the Cartesian axis and signed rotation direction to `quarter_turn_box`. Screen the returned envelope against the stationary boxes. Include latch and cover hardware in the moving extent. For multiple plausible hinge datums, run and label each candidate independently. The envelope encloses all angles through 90° and can overstate the volume reached. Positive overlap candidates require a narrower motion check. Keep source hinge identification, cover-to-hinge contact and external-space clearance as different results.
 
+## Carry a source-position interval into a tool path
+
+1. Keep a drawing-derived axis interval separate from the nominal axis and any manufacturing tolerance. Build the tool envelope at both ends of the source interval and include the volume between them. With a fixed approach direction and unchanged tool orientation, the expanded box carries that transverse interval across each staged move.
+2. Keep nearby terminals, divider walls and guard lips in the obstacle set. Exclude the actual intended contact surface only for its mating motion. Compare the expanded socket geometry before engagement and the separate drive, lever and connected-harness geometry as needed. Mark the geometry and removal state examined for each result.
+3. Report the smallest clearance over all stages at the selected tool size. If a larger envelope fails, retain the pair and the maximum size or staging position checked next. A positive result applies to tools and axis positions contained by the checked envelopes.
+
 ## Check a saved pose
 
 Use `static_box_gap(first_bounds, second_bounds)` for two XYZ boxes in the same frame. It returns exact rational strings for the axis gaps and squared Euclidean distance. Parse a squared distance with `Fraction(result["squared_gap"])` before ranking candidates or comparing it with a squared threshold. For a display length, use `math.sqrt(float(distance_squared))`. Overlap or contact remains a candidate for the represented bodies. A positive result from sampled boundary boxes describes the samples. Use conservative enclosures to bound solid clearance.
