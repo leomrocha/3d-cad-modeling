@@ -40,14 +40,25 @@ def validate_outline(points,bulges=None):
     return points,bulges
 
 
-def cylinder_cutter(g,label,axis,centre,diameter,span,overrun):
+def cylinder_cutter(g,label,axis,centre,diameter,span,overrun,*,entrance=None):
+    """Build an axial cutter. A blind cut extends only beyond its entrance.
+
+    Supply increasing physical stations. Set entrance to 'low' or 'high'
+    to preserve the opposite stop plane. The default extends both ends.
+    """
     vector(centre,2);positive(diameter);positive(span[1]-span[0]);positive(overrun)
+    if entrance not in (None, 'low', 'high'):
+        raise ValueError('Cutter entrance must be low, high or None')
     p,q=centre;lo,hi=span
-    if axis==2:return g.cylinder(label,[p,q,lo-overrun],diameter/2,hi-lo+2*overrun)
+    low_overrun=overrun if entrance in (None, 'low') else 0
+    high_overrun=overrun if entrance in (None, 'high') else 0
+    start=lo-low_overrun
+    depth=hi-lo+low_overrun+high_overrun
+    if axis==2:return g.cylinder(label,[p,q,start],diameter/2,depth)
     if axis==1:
-        h=g.cylinder(label,[p,-q,lo-overrun],diameter/2,hi-lo+2*overrun);g.rotate(label+'-axis',[h],'X',-90);return h
+        h=g.cylinder(label,[p,-q,start],diameter/2,depth);g.rotate(label+'-axis',[h],'X',-90);return h
     if axis==0:
-        h=g.cylinder(label,[-q,p,lo-overrun],diameter/2,hi-lo+2*overrun);g.rotate(label+'-axis',[h],'Y',90);return h
+        h=g.cylinder(label,[-q,p,start],diameter/2,depth);g.rotate(label+'-axis',[h],'Y',90);return h
     raise ValueError('Cartesian cutter axis required')
 
 

@@ -571,6 +571,21 @@ class Profiles(unittest.TestCase):
         with self.assertRaises(ValueError):cut_sidewalls(c,'body',axis=0,centre=[0,0],diameter=2,intervals=[[0,3],[2,4]],label='cut')
         c.mutate.assert_not_called()
 
+    def test_blind_cylinder_only_overruns_its_entrance(self):
+        for entrance, expected_start in (('low', 3), ('high', 4)):
+            with self.subTest(entrance=entrance):
+                g = Mock()
+                g.cylinder.return_value = 'tool'
+                cylinder_cutter(g, 'seat', 1, [2, 3], 12, [4, 16], 1, entrance=entrance)
+                g.cylinder.assert_called_once_with('seat', [2, -3, expected_start], 6, 13)
+                g.rotate.assert_called_once_with('seat-axis', ['tool'], 'X', -90)
+
+    def test_blind_cylinder_rejects_an_unknown_entrance(self):
+        g = Mock()
+        with self.assertRaisesRegex(ValueError, 'Cutter entrance'):
+            cylinder_cutter(g, 'seat', 2, [0, 0], 12, [4, 16], 1, entrance='both')
+        g.cylinder.assert_not_called()
+
     def test_sidewall_stages_preserve_tool_and_result_handles(self):
         c=Mock()
         g=Mock()

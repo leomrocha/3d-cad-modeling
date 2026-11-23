@@ -17,6 +17,14 @@
 5. [native_geometry.py](../scripts/native_geometry.py) selects SAB or supported identity-frame SAT features, reads stable native identities, transforms lightweight-polyline OCS vertices to WCS, reads straight centreline segments from explicit zero bulges and the native is_closed flag, and aggregates observed assembly vertices with explicit scale/reflection mode. Unsupported surface/layout errors retain original bytes for inspection.
 6. [source_vector_paths.py](../scripts/source_vector_paths.py) parses the explicit SVG M/L/C/Z grammar with path/subpath/segment IDs. It applies caller six-term affine matrices, positive unit conversion and signed Y mapping. Cubic evaluation and segment distance keep source chain selection and uncertainty outside the helper.
 
+### Preserve a blind axial stop plane
+
+Check the entry and the stop against the stock before constructing the cutter.
+For a Cartesian blind bore or counterbore, pass the increasing measured
+stations to `cylinder_cutter` with `entrance="low"` or `entrance="high"`.
+Its overrun extends only past the chosen entry. Read the actual shoulder/end
+station from the cut solid before using it in an axial stack.
+
 ## Assemblies and native views
 
 1. [step_placements.py](../scripts/step_placements.py) composes native source placements. Unit reflection is opt-in. classify_hand validates a finite orthonormal affine matrix; nested reflection parity follows composed matrices. Array inserts and nonzero block bases retain explicit errors.
