@@ -37,6 +37,12 @@ It never starts OCS, removes stale descriptors, automatically retries or saves a
 
 
 
+### Preserve hidden references during a style revision
+
+1. Inventory physical solids and reference solids separately. When reference geometry has no leaf role metadata, use its exact source definition and full occurrence path to identify it. Preserve its recorded purpose and keep its leaves on a reference layer separate from the working parts.
+2. Calculate visibility along the entire occurrence path. A visible leaf layer cannot display a solid beneath a hidden or frozen parent insert. Record the controlling parent layer and its initial flags. Retain this hidden state in the delivered model unless the job calls for displaying the reference.
+3. Verify physical group isolation against the visible occurrence paths. Record a hidden reference as preserved when its parent flags, leaf assignments, geometry and transform match the requested state. To inspect that reference on demand, enable its controlling parent and leaf in an owned viewing session and restore the original flags afterward.
+
 ### Recover missing part labels during a style revision
 
 1. Use a construction receipt that binds the role to the exact source drawing and handle, or a recorded lineage from that drawing to the current occurrence. Verify the full occurrence path, owning definition and placement. Equal handle strings in separate drawings do not establish identity.
