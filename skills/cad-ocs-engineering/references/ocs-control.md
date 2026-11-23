@@ -36,6 +36,13 @@ It never starts OCS, removes stale descriptors, automatically retries or saves a
 4. Save the verified style checkpoint before isolation. If visibility verification fails, recover from that exact save and inspect the current schema before changing any flags. Reuse the saved geometry and compare solid payloads, occurrence transforms and definition membership with the original.
 
 
+
+### Recover missing part labels during a style revision
+
+1. Use a construction receipt that binds the role to the exact source drawing and handle, or a recorded lineage from that drawing to the current occurrence. Verify the full occurrence path, owning definition and placement. Equal handle strings in separate drawings do not establish identity.
+2. When the current solid lacks a source label, copy the recorded role into its source metadata on the owned revision. Retain existing source labels. Native layer membership supplies isolation, while the source metadata preserves the part identity and its receipt link.
+3. Read the label back before saving. Compare solid payloads, occurrence transforms and block membership before and after the display and metadata edits. Verify the live layers and exact saved file independently. Preserve the source role and model hash in the repair receipt.
+
 ## Verify operation evidence
 
 1. Use the selected session's capabilities, command registry and installed schemas to identify operations, geometry types and properties. Record the installed binary version and retain the corresponding responses.
