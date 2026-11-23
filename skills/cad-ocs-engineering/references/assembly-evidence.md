@@ -53,6 +53,14 @@ For a centred cross-drilled shaft, run `perpendicular_through_bore` in [feature_
 
 For coaxial annular faces interrupted by a straight radial keyway, verify the two actual face stations, radii, slot width and end first. Use `annular_seat_with_radial_slot` in [planar_profiles.py](../scripts/planar_profiles.py) when the slot starts at the bore, crosses the contact annulus's inner arc and ends inside its outer circle. Record the calculated projected area after the cut. Contact pressure and preload distribution require a joint model.
 
+### Resolve a box overlap with a verified planar outline
+
+1. Match the candidate to its exact installed occurrence path and full transform. Confirm that the retained profile, thickness, and later Boolean or assembly edits describe that exact saved revision.
+2. Choose a common orthographic plane. Bound the complete projection of each body in that plane. A verified profile may contain an integral sheet and all of its formed or welded features. Include any flange, boss, pocket wall, or fastener that projects beyond the profile as a separate region or an expanded outline.
+3. For a repeated articulated assembly, bound every segment and joint at the specified pose. Include full width, transverse offsets and exceptional hardware such as a joining clip. Keep each projected feature separate when a single overall rectangle would fill a measured recess.
+4. Measure the minimum distance over all pairs of projected regions. Strictly positive separation, after the stated numerical and source-geometry reserve, is a lower bound on physical separation for that pose. Record the controlling pair, the projection axes and the source hashes. Overlapping projections remain candidates for another conservative plane, a finite solid check or an interior witness.
+5. Label the pose and excluded motion. A bound at one pose covers a sweep only when the projected regions enclose every allowed pose over the checked motion interval.
+
 ### Classify reference occurrences for clearance
 
 1. Inventory all solid occurrences under the checked assembly root. Record the assembly revision, complete root-to-solid paths, composed transforms, units and inclusive bounds. When an exclusion could change a result, identify the exact source revision and source role for the reference insert or solid. Confirm its complete mounted ancestry, expected descendant paths or body identities, and count. Resolve remapped handles through the source definition, role and placement.
