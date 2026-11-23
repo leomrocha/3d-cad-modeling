@@ -45,6 +45,14 @@ For one translated pose of a multi-part group, pass the moving and fixed box arr
 
 Use `rpy_world_x_bounds` with the minimum and maximum XYZ corners of each verified zero-angle box and the exact pivot in that same frame. Supply symmetric degree limits from 0° to 90° for roll, pitch and yaw. The function bounds X over the continuous product of those intervals with the rotation order Rz(yaw) Ry(pitch) Rx(roll). Check individual boxes and keep the controlling pair. Compare the returned maximum or minimum X with a fixed part's conservative X limit. Positive separation after the source and numerical reserves covers that domain. Overlapping ranges require a narrower geometric check. Keep the fixed reference, coupled hardware, and any different tipping motion as separate checks.
 
+## Screen a linkage pose grid against a revised host
+
+Keep the identified joint limits, sample grid and motion frame from the checked linkage. Rebuild the padded member and actuator boxes in that frame at each pose. Measure the revised host in the saved assembly and separate host occurrences from the moving module. Only exclude an obstacle band when the full set of moving boxes is proved to stay outside it over the stated samples. Include actuator lanes, body and rod dimensions and the supported attachment pose in that check. Record the actual pose count, source and host hashes, and the member and obstacle identities for every candidate. A clear result covers the sampled boxes. Use a continuous bound or finite-solid trajectory for a continuous clearance claim.
+
+## Check service space on a capped powered interface
+
+Measure the shaft and receiver circles at their working stations in one frame. Record the bore pattern and shaft-to-throat alignment separately from the coupling diameter and withdrawal envelope. Assign the intended cap, guard or cover state to each service action. Keep host intrusion, intended interfaces, coupling release and electrical plug removal as separate checks with their own travel and dimensions. A host screen can stay valid when the service sequence itself still requires component selection.
+
 ## Resolve a box candidate inside a bend
 
 Split the bent part into its measured straight regions and annular bend regions. Check the straight regions separately. For a candidate overlapping one bend box, intersect the two enclosures, project the intersection onto the bend section plane and give its rectangle and measured bend centre to `rectangle_radial_bounds`. If the maximum squared radius is strictly below the squared inside radius, the intersection lies entirely in the bend void. If the minimum squared radius is strictly above the squared outside radius, the intersection lies outside the bend. Use the caller's verified conservative radii and bounds when tolerances matter. Equality and intermediate results need a separate finite surface or solid check.
