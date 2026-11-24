@@ -20,7 +20,7 @@
     },
     "references/conversion.md": {
       "source": "references/conversion.md",
-      "sha256": "0bcc771f011c513851bc45fce26dd97af13156766534cfd4fe17d2c536933ea2"
+      "sha256": "e8806b5835a21f9c1063c08501f34571884d92f332391139432f2acce19b72c1"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
@@ -56,7 +56,7 @@
     },
     "scripts/convert.py": {
       "source": "scripts/convert.py",
-      "sha256": "3188796a1f15aeec1d07b19ac9159337e828e24a0052f5cc9a09e8318fcfa0cd"
+      "sha256": "6180426f6fc4453cb685c0198fd06307e2d39abf6b344d38b917cfde0fdb41f1"
     },
     "scripts/opencv_probe.py": {
       "source": "scripts/opencv_probe.py",

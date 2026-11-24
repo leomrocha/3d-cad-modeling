@@ -44,7 +44,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 10. [Place existing occurrences at reviewed destinations](cad-ocs-engineering/references/existing-batch-placement.md) covers matching DXF INSERT entities to position IDs, moving them in their parent frames, resuming individual requests and checking saved placements.
 
 11. [Create a group of elements](cad-ocs-engineering/references/batch-creation.md) covers drawing circles, holes in a selected solid and shared part occurrences.
-12. [Modify selected dimensions and properties](cad-ocs-engineering/references/batch-modification.md) covers driving sketch dimensions, STEP bore enlargement and changes to selected XCAF bar lengths and occurrence names.
+12. [Modify selected dimensions and properties](cad-ocs-engineering/references/batch-modification.md) covers reuse of verified correction steps, driving sketch dimensions, STEP bore enlargement and changes to selected XCAF bar lengths and occurrence names.
 13. [Replace selected occurrences or features](cad-ocs-engineering/references/batch-replacement.md) covers the `replace occurrence` action, catalogue part selection, measured keyed seats and placement readback.
 
 ## Installed package references

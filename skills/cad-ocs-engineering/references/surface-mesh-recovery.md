@@ -33,3 +33,9 @@ A cancellation needs explicit scoped authorization, a serialized writer, resolve
 ## Respect the caller's persistence operation
 
 Use the authorized persistence method. When verification reopen is authorized, use the existing save/reopen procedure. When the task explicitly requires save-only verification, use [save_checkpoint](../scripts/cadtools/checkpoints.py), completed request/audit, exact saved-file hash and current owned geometry/metadata checks. Record `verification_reopen=false`, current document/revision and the save evidence. Never label current checks as reopened checks. Close only completed owned documents through [document cleanup](document-cleanup.md) after the task's required persistence gate passes. Retain historical reopen evidence with its original document and date.
+
+## Measure a repaired mesh
+
+Use [mesh_repair_evidence.py](../scripts/mesh_repair_evidence.py) with the original and repaired triangulated OBJ files in the same millimetre frame. Redirect its JSON output to a job evidence file. This operation covers additive patches with retained original triangles. Read `repair.original_boundary_edges_mm` for measurements on the original opening and `repair.saved_triangles` for measurements on added geometry. Triangle indices in the report start at zero.
+
+For a cylindrical source region, supply `--cylinder REGION.json` with `source_triangles` and a known unit `axis` in the same frame. The result records the fitted radius and axis point, the original triangle IDs and maximum radial error sampled at their vertices. Compare that error with the job tolerance before using the fit.

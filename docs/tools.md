@@ -140,12 +140,16 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pin merging, source-pinned incremental saves, exact same-document mutation recovery and verified resume gates.
 5. [batch_insert_recovery.py](../scripts/batch_insert_recovery.py) starts or resumes modelspace block insertions in a job-owned DXF. It matches saved occurrences to journaled requests and checks dependencies before writing. [DXF insertion recovery procedure](../skills/cad-ocs-engineering/references/insertion-resume-verification.md#recover-a-batch-of-dxf-block-insertions).
 
+[Correction sequence](../scripts/correction_sequence.py) reuses verified STEP or XCAF edits and executes dependent corrections.
+
 ## Rational surfaces and open mesh derivatives
 
 1. [rational_surface.py](../scripts/rational_surface.py) — caller-bound rational B-spline evaluation at two precisions with transform before final rounding.
 2. [mesh_checks.py](../scripts/mesh_checks.py) — triangle/UV numerical area, duplicate and oriented edge-incidence checks.
 3. [mesh_dxf.py](../scripts/mesh_dxf.py) — source-pinned MESH-only DXF layer declarations with exact entity-tag readback.
 4. [insert_recovery.py](../scripts/insert_recovery.py) — offline verification of a recorded cancellation and unchanged caller snapshots.
+
+[Mesh repair evidence](../scripts/mesh_repair_evidence.py) compares original and added triangles in saved OBJ files and measures cylinder fit on selected original vertices.
 
 ## Translator-only helpers
 

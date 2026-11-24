@@ -145,6 +145,14 @@ def scan_line(path, number, line, *, filename=False):
                 labelled[match.span(1)] = rule
                 yield Finding(path, number, rule, match[1], blocking=False)
 
+    # Allow the dated attribution explicitly requested for source-study comments.
+    if not filename and path.endswith(".py"):
+        attribution = re.fullmatch(
+            r"# Read (\d{4}-\d{2}-\d{2})\. Upstream licence: [\w.() +\-]+\. https://github\.com/[\w.-]+/[\w.-]+", line)
+        if attribution and valid_date(*attribution[1].split("-")):
+            labelled[attribution.span(1)] = "source-attribution"
+            yield Finding(path, number, "source-attribution", attribution[1], blocking=False)
+
     for span, value in dates(line):
         if span not in labelled:
             yield Finding(path, number, 'dated-path' if filename else 'calendar-date', value)

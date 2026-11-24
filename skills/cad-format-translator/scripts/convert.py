@@ -83,12 +83,63 @@ def cq_shape(workplane):
     raise ValueError("Expected a CadQuery model Shape or Workplane of shapes")
 
 
+def body_reports(shape):
+    """Inspect disjoint topology children; all measurements use the component frame."""
+    if shape.ShapeType() in ("Compound", "CompSolid"):
+        children = [body for child in shape for body in body_reports(child)]
+        if children:
+            return children
+    faces = shape.Faces()
+    kind = shape.ShapeType()
+    closed = (kind == "Solid" and shape.isValid() and bool(shape.Shells())
+              and all(shell.Closed() for shell in shape.Shells()))
+    volume = shape.Volume() if closed else None
+    if closed and math.isfinite(volume) and volume > 0:
+        status = "closed solid"
+    elif not faces:
+        status = "no usable geometry"
+    elif kind in ("Shell", "Face") and shape.isValid() and not shape.Closed():
+        status = "surface geometry"
+    else:
+        status = "closure unknown"
+    planes = []
+    for face in faces:
+        if face.isValid() and face.geomType() == "PLANE":
+            planes.append(dict(centre_mm=list(face.Center().toTuple()),
+                               normal=list(face.normalAt().toTuple())))
+    report = dict(kind=kind, classification=status, face_count=len(faces), planes=planes)
+    if status == "closed solid":
+        report["volume_mm3"] = volume
+    return [report]
+
+
+def inspect_step(source):
+    import cadquery as cq
+
+    original = sha(source)
+    root = cq.Assembly.load(str(source), importType="STEP")
+    rows = []
+
+    def visit(node, parent):
+        path = [*parent, node.name]
+        if node.obj is not None:
+            rows.append(dict(occurrence=path, bodies=body_reports(cq_shape(node.obj))))
+        for child in node.children:
+            visit(child, path)
+
+    visit(root, [])
+    if sha(source) != original:
+        raise ValueError("STEP source changed during inspection")
+    return dict(source_sha256=original, units="mm", frame="component-local", components=rows)
+
+
 def measures(shape):
     bb = shape.BoundingBox()
-    if not shape.isValid() or not shape.Solids():
+    bodies = body_reports(shape)
+    if not shape.isValid() or not bodies or any(b["classification"] != "closed solid" for b in bodies):
         raise ValueError("Expected valid solid geometry")
     return dict(
-        solids=len(shape.Solids()),
+        bodies=bodies, solids=len(shape.Solids()),
         volume_mm3=shape.Volume(),
         bounds_mm=[[bb.xmin, bb.ymin, bb.zmin], [bb.xmax, bb.ymax, bb.zmax]],
         cylinder_radii_mm=sorted(
@@ -172,6 +223,7 @@ def convert(
         "scad-stl": ((".scad",), ".stl"),
         "scad-python": ((".scad",), ".py"),
         "python-step": ((".py",), ".step"),
+        "step-inspect": ((".step", ".stp"), ".json"),
         "step-stl": ((".step", ".stp"), ".stl"),
     }
     src_ext, dest_ext = extensions[mode]
@@ -220,7 +272,10 @@ def convert(
             import cadquery as cq
 
             version = cq.__version__
-            if mode == "python-step":
+            if mode == "step-inspect":
+                checks = inspect_step(source)
+                out.write_text(json.dumps(checks, indent=2, allow_nan=False))
+            elif mode == "python-step":
                 original_path = sys.path[:]
                 try:
                     sys.path.insert(0, str(source.parent))
@@ -261,7 +316,7 @@ def convert(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "route", choices=("scad-stl", "scad-python", "python-step", "step-stl")
+        "route", choices=("scad-stl", "scad-python", "python-step", "step-stl", "step-inspect")
     )
     parser.add_argument("source")
     parser.add_argument("output")

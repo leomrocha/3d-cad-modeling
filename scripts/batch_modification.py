@@ -147,7 +147,7 @@ def modify_bores(spec, output):
         raise ValueError("Reopened host material differs from the reviewed cuts")
     peers = retained_bores(source, saved, [r["xyz"] for r, _, _ in checked])
     return [
-        dict(id=row["id"], before=before, after=measure_cut(saved, row, axis), anchor="entry centre", unselected=peers)
+        dict(id=row["id"], reference_result="matched", before=before, after=measure_cut(saved, row, axis), anchor="entry centre", unselected=peers)
         for row, axis, before in checked
     ]
 

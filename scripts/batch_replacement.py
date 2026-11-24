@@ -43,10 +43,21 @@ def interface(shape, points):
         )
 
     faces = [face for face in shape.Faces() if matches(face)]
-    if len(faces) != 1 or faces[0].normalAt().dot(x.cross(y).normalized()) < 1 - 1e-9:
-        raise ValueError(
-            "Ordered corners must identify one outward-oriented rectangular seating face"
-        )
+    if not faces:
+        footprint = cq.Face.makeFromWires(cq.Wire.makePolygon([origin, along, along+y, across], close=True))
+        normal = x.cross(y).normalized()
+        pieces = [face for face in shape.Faces()
+                  if face.geomType() == "PLANE"
+                  and face.normalAt().dot(normal) > 1-1e-9
+                  and abs((face.Center()-origin).dot(normal)) <= TOL
+                  and face.intersect(footprint).Area() > TOL**2]
+        if len(pieces) > 1 and footprint.cut(*pieces).Area() <= TOL**2:
+            raise ValueError("Selected seating face ambiguous: several faces cover the keyed footprint")
+        raise ValueError("Selected seating face missing at the keyed corners")
+    if len(faces) > 1:
+        raise ValueError("Selected seating face ambiguous at the keyed corners")
+    if faces[0].normalAt().dot(x.cross(y).normalized()) < 1 - 1e-9:
+        raise ValueError("Different seating face: normal reversed at the keyed corners")
     return (
         cq.Plane(faces[0].Center(), x, faces[0].normalAt()).location,
         [x.Length, y.Length],
@@ -242,6 +253,7 @@ def replace(spec, output):
         results.append(
             dict(
                 id=key,
+                reference_result="matched",
                 partner_id=partner_id,
                 original_definition=old_id,
                 saved_definition=identifier,

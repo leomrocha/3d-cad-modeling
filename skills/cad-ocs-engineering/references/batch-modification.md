@@ -31,3 +31,9 @@
    For `bore diameter`, a target is `{"id":"H1","anchor":"entry centre","entry":[5,7,5],"direction":[0,0,-1],"diameter":2,"depth":5,"end":"through"}`. Coordinates and original dimensions use millimetres. Supply `"value":{"diameter":{"value":4,"unit":"mm"}}` or one diameter per ID. The helper identifies the wall and both rims before editing, checks removed volume, then measures the entry, diameter, depth and exit or bottom in the reopened solid.
 
    For `occurrence name`, select named components with targets such as `{"id":"1/1"}` and supply `"value":{"name":"Left rail"}` or one name per occurrence path. The helper verifies the complete occurrence-name map after reopening.
+
+## Resume related corrections
+
+Run [correction_sequence.py](../scripts/correction_sequence.py) with a JSON plan and a job-owned cache directory. Supply an ordered `steps` array. Each step has a unique `id` and an `edit` containing a bore diameter, bar length or occurrence name request as described above. For an independent source supply its `model` relative to the plan and its `revision` hash. For a later edit of the same model set `after` to the earlier step ID and omit `model` and `revision`; its input is the verified output of that step. Use the diameter or dimensions present at that stage.
+
+On failure read the reason beside the step ID. Dependent steps identify the failed predecessor; independent steps continue. A repeated run verifies saved requests, model hashes and readback before returning a cached output. The source hash, settings, predecessor and writer identity determine reuse.

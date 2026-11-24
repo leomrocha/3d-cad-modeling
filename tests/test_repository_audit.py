@@ -46,6 +46,15 @@ class RepositoryAuditTests(unittest.TestCase):
         self.assertEqual(result.stdout.count('ERROR dated-path'), 3)
         self.assertNotIn('ERROR calendar-date', result.stdout)
 
+    def test_source_study_credit_requires_a_dated_licence_and_link(self):
+        day = date.today().isoformat()
+        self.write("reader.py", f"# Read {day}. Upstream licence: MIT. https://github.com/project/reader\n"
+                   f"# Read {day}.\n")
+        self.git("add", "--", "reader.py")
+        result = self.audit("--index")
+        self.assertIn("REVIEW source-attribution", result.stdout)
+        self.assertEqual(result.stdout.count("ERROR calendar-date"), 1)
+
     def test_staged_private_reference_cannot_be_hidden_by_worktree(self):
         retired_project = 'fer' + 'me'
         path = self.write('guide.md', f'Send the model to {retired_project}.\n')

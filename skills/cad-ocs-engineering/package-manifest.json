@@ -48,7 +48,7 @@
     },
     "references/batch-modification.md": {
       "source": "references/batch-modification.md",
-      "sha256": "bb124a01555a4eb73a08bdb779fdfc1c64f44654a417359d4a9312a764a7f575"
+      "sha256": "b96101959a5d476dac97c1ffc5c418948a1d9f10c6013ed0c12d38a92878b294"
     },
     "references/batch-replacement.md": {
       "source": "references/batch-replacement.md",
@@ -256,7 +256,7 @@
     },
     "references/surface-mesh-recovery.md": {
       "source": "references/surface-mesh-recovery.md",
-      "sha256": "76443572715f7c5fcee7fb1ee5c41c446376385cda2e503a59588ad65c59ea07"
+      "sha256": "e075609e09a649fc080ead3bcf48cfa76ec2b30528b8d4879814e069a69bec1d"
     },
     "references/tabbed-battery.md": {
       "source": "references/tabbed-battery.md",
@@ -304,7 +304,7 @@
     },
     "scripts/batch_creation.py": {
       "source": "scripts/batch_creation.py",
-      "sha256": "428f027799beb4fdd7f0e4229088e13feb6151ea36c912369dc5471213067ecc"
+      "sha256": "9b90377cd18b42b9ab6bea68e264e7847935da62732b5d7ede0240e4011382d9"
     },
     "scripts/batch_delivery.py": {
       "source": "scripts/batch_delivery.py",
@@ -332,11 +332,11 @@
     },
     "scripts/batch_modification.py": {
       "source": "scripts/batch_modification.py",
-      "sha256": "3aff4a97bfe0d517348cf5871d49f6682d81ce6e33eeed407981dffd9dacb6c1"
+      "sha256": "f719004ba1c04f6bb97df9156a0ef314fc662b8f5e6711aed93da8977e2d8197"
     },
     "scripts/batch_replacement.py": {
       "source": "scripts/batch_replacement.py",
-      "sha256": "a61584cc918a4f0606e8ea690f81713748716081fd3393a0b05301e83d307226"
+      "sha256": "f150815fd75c6885209f9dcc380b663e41762daca75e94e42596709fda39f4d5"
     },
     "scripts/batch_request.py": {
       "source": "scripts/batch_request.py",
@@ -418,6 +418,10 @@
       "source": "scripts/conical_washer_profile.py",
       "sha256": "44ae2415db876fa3213a5d1952ee35573950709146e71b6e26709ab3f6675c1e"
     },
+    "scripts/correction_sequence.py": {
+      "source": "scripts/correction_sequence.py",
+      "sha256": "f85715db9c73641fd80e6faa8504d22a0a9e21e2ba0d3d1ddb429715fa56d24a"
+    },
     "scripts/driver_checks.py": {
       "source": "scripts/driver_checks.py",
       "sha256": "4f80b3200a8037512940b204631644fc4e7775f117bf4963cc986d14db9610aa"
@@ -497,6 +501,10 @@
     "scripts/mesh_dxf.py": {
       "source": "scripts/mesh_dxf.py",
       "sha256": "a4e0889c076b7ef8c0d8ef9a5c229aa8743c07132149dff55ada5103b91b0b50"
+    },
+    "scripts/mesh_repair_evidence.py": {
+      "source": "scripts/mesh_repair_evidence.py",
+      "sha256": "9831029d3735d4afe88f0114d906452bc91f6d21661ce45e52c965f562670c95"
     },
     "scripts/model_inventory.py": {
       "source": "scripts/model_inventory.py",

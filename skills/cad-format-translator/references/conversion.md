@@ -49,3 +49,7 @@ blender -b --factory-startup --disable-autoexec --python-exit-code 1 --python "$
 
 4. **Apply a reference measurement.** On Blender export, pass `--reference 4 6 in` when a 4 BU distance represents 6 inches. On STL import, replace `--stl-unit mm` with `--stl-reference 4 6 in` for the equivalent measurement in STL coordinates. An explicit Blender scale overrides scene metadata. Record the user's choice when they conflict.
 5. **Check the handoff.** Reopen the derivative, compare the reference feature and world-space bounds in the same physical unit, and record the tolerance and result. A new .blend holds the imported triangle mesh and scene units. STL export writes the selected mesh's evaluated triangles in world placement. Materials, scene hierarchy and editable modifiers stay in the original .blend. For another format or an assembly that needs these properties, qualify the specific reader, writer and receiving software through the capability procedure above.
+
+## Inspect STEP bodies by occurrence
+
+Run `python scripts/convert.py step-inspect INPUT.step REPORT.json` with the available CadQuery interpreter. Read component-local planar face centres (mm) and unit normals with the full occurrence path. A validated closed solid provides its volume in cubic millimetres. Use measured planes for surface work. A closure-unknown body requires a separate closure check before a volume operation. The report preserves mixed assemblies and identifies bodies without usable faces.

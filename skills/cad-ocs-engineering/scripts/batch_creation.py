@@ -277,26 +277,22 @@ def measure_cut(shape, row, axis):
     start = cq.Vector(*row["xyz"])
     end = start + axis * val["depth"]
     found = []
+    at_anchor = False
     for face in shape.Faces():
         if face.geomType() != "CYLINDER":
             continue
-        rings = [
-            e
-            for e in face.Edges()
-            if e.geomType() == "CIRCLE"
-            and e.IsClosed()
-            and abs(2 * e.radius() - val["diameter"]) <= TOL
-        ]
+        rings = [e for e in face.Edges() if e.geomType() == "CIRCLE" and e.IsClosed()]
         if len(rings) != 2:
             continue
         rings.sort(key=lambda e: (e.arcCenter() - start).Length)
         a, b = [e.arcCenter() for e in rings]
-        if (a - start).Length <= TOL and (b - end).Length <= TOL:
-            found.append(rings)
+        if (a - start).Length <= TOL:
+            at_anchor = True
+            if (b - end).Length <= TOL and all(abs(2*e.radius()-val["diameter"]) <= TOL for e in rings):
+                found.append(rings)
     if len(found) != 1:
-        raise ValueError(
-            f"Expected one complete cylindrical wall and two edge circles at {row['id']}"
-        )
+        reason = "ambiguous" if found else "different geometry at anchor" if at_anchor else "missing"
+        raise ValueError(f"Bore reference {row['id']}: {reason}")
     entry, ends = found[0]
     a, b, radius = entry.arcCenter(), ends.arcCenter(), entry.radius()
     check_rim(shape, entry, axis * -1, floor=False)
