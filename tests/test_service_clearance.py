@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from service_clearance import swept_axial_cylinder_bore_clearance, swept_axial_cylinder_box_gap
-from service_clearance import guided_circular_pilot_clearance, sampled_rotation_clearance
+from service_clearance import guided_circular_pilot_clearance, rectangular_support_clearance, sampled_rotation_clearance
 from service_clearance import staged_translation_clearance, translation_box_contact
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
@@ -16,6 +16,33 @@ from service_clearance import axial_stack_witness, bounded_axial_section_clearan
 def placement(x=0, y=0, z=0):
     return [[1, 0, 0, x], [0, 1, 0, y], [0, 0, 1, z], [0, 0, 0, 1]]
 
+
+
+class RectangularSupportClearanceTests(unittest.TestCase):
+    def test_checks_outer_edges_and_every_opening(self):
+        result = rectangular_support_clearance(
+            ((2, 2), (4, 4)), ((0, 0), (10, 10)), [((7, 8), 3), ((8, 5), 1)])
+        self.assertEqual(result["result"], "CLEAR_SUPPORT_LAND")
+        self.assertEqual(result["minimum_edge_land"], "2")
+        self.assertEqual(result["openings"][0]["nearest_distance_squared"], "25")
+        self.assertEqual(result["openings"][0]["margin"], 2.0)
+
+    def test_tangent_hole_and_overhanging_footprint_remain_candidates(self):
+        for footprint, holes in (
+            (((2, 2), (4, 4)), [((7, 8), 5)]),
+            (((2, 2), (4, 4)), [((3, 3), 1)]),
+            (((-1, 2), (4, 4)), []),
+        ):
+            with self.subTest(footprint=footprint, holes=holes):
+                result = rectangular_support_clearance(
+                    footprint, ((0, 0), (10, 10)), holes)
+                self.assertEqual(result["result"], "BOUNDARY_CANDIDATE")
+
+    def test_rejects_degenerate_rectangles_and_holes(self):
+        with self.assertRaises(ValueError):
+            rectangular_support_clearance(((2, 3), (2, 4)), ((0, 0), (10, 10)), [])
+        with self.assertRaises(ValueError):
+            rectangular_support_clearance(((2, 2), (4, 4)), ((0, 0), (10, 10)), [((0, 0), 0)])
 
 
 class SweptCylinderBoreTests(unittest.TestCase):

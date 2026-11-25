@@ -294,6 +294,37 @@ def rectangle_radial_bounds(bounds, centre):
                 max_radius_squared=str(sum(d * d for d in far)))
 
 
+def rectangular_support_clearance(footprint, support, openings):
+    """Check planar coverage under a rectangular contact footprint.
+
+    Footprint and support are minimum and maximum UV corners with positive
+    area. Openings is a sequence of (centre, radius) pairs. Supply the complete
+    set of cutouts with conservative radii on the verified seating plane.
+    Boundary contact is a candidate. Plane contact and strength are separate.
+    """
+    low, high = (_vector(corner, 2) for corner in footprint)
+    support_low, support_high = (_vector(corner, 2) for corner in support)
+    for start, end in ((low, high), (support_low, support_high)):
+        if any(a >= b for a, b in zip(start, end)):
+            raise ValueError("Rectangular footprints and supports require positive area")
+    edge_land = min(*(a-b for a,b in zip(low, support_low)),
+                    *(a-b for a,b in zip(support_high, high)))
+    holes = []
+    for centre, size in openings:
+        radius, = _vector((size,), 1)
+        if radius <= 0:
+            raise ValueError("Opening radius must be positive")
+        radial = rectangle_radial_bounds(footprint, centre)
+        nearest = Fraction(radial["min_radius_squared"])
+        holes.append(dict(nearest_distance_squared=str(nearest),
+                          opening_radius_squared=str(radius**2),
+                          margin=math.sqrt(float(nearest)) - float(radius),
+                          disjoint=nearest > radius**2))
+    supported = edge_land > 0 and all(hole["disjoint"] for hole in holes)
+    return dict(result="CLEAR_SUPPORT_LAND" if supported else "BOUNDARY_CANDIDATE",
+                minimum_edge_land=str(edge_land), openings=holes)
+
+
 def swept_axial_cylinder_box_gap(centre, *, axis, radius, span, travel, obstacle_bounds):
     """Screen a finite circular cylinder translated along its own XYZ axis.
 
