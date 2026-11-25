@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from service_clearance import swept_axial_cylinder_bore_clearance, swept_axial_cylinder_box_gap
-from service_clearance import guided_circular_pilot_clearance, rectangular_support_clearance, sampled_rotation_clearance
+from service_clearance import guided_circular_pilot_clearance, planar_chain_x_bounds, rectangular_support_clearance, sampled_rotation_clearance
 from service_clearance import staged_translation_clearance, translation_box_contact
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
@@ -16,6 +16,32 @@ from service_clearance import axial_stack_witness, bounded_axial_section_clearan
 def placement(x=0, y=0, z=0):
     return [[1, 0, 0, x], [0, 1, 0, y], [0, 0, 1, z], [0, 0, 0, 1]]
 
+
+
+class PlanarChainBoundsTests(unittest.TestCase):
+    def test_axis_extremum_inside_interval(self):
+        lo, hi = planar_chain_x_bounds(5, [((3, 4), (-90, 0))])
+        self.assertAlmostEqual(lo, 8)
+        self.assertAlmostEqual(hi, 10)
+
+    def test_relative_angles_and_wrap(self):
+        lo, hi = planar_chain_x_bounds(50, [((10, 0), (350, 370)), ((5, 0), (175, 185))])
+        self.assertAlmostEqual(lo, 50 + 10*cos(radians(10)) - 5)
+        self.assertAlmostEqual(hi, 60 - 5*cos(radians(15)))
+
+    def test_bounds_enclose_all_sampled_coupled_targets(self):
+        links = [((12, 0), (3, 45)), ((9, -2), (-110, -50)), ((7, -4), (-30, 60))]
+        low, high = planar_chain_x_bounds(-7, links)
+        for angles in product(*[range(a, b+1, 3) for _, (a,b) in links]):
+            x, angle = -7, 0
+            for ((vx, vz), _), relative in zip(links, angles, strict=True):
+                angle += radians(relative)
+                x += vx*cos(angle)-vz*sin(angle)
+            self.assertTrue(low-1e-12 <= x <= high+1e-12)
+
+    def test_rejects_reversed_angles(self):
+        with self.assertRaises(ValueError):
+            planar_chain_x_bounds(0, [((1, 2), (10, -10))])
 
 
 class RectangularSupportClearanceTests(unittest.TestCase):

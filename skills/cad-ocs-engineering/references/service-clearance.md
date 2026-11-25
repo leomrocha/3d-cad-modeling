@@ -85,6 +85,8 @@ Use `rpy_world_x_bounds` with the minimum and maximum XYZ corners of each verifi
 
 ## Screen a linkage pose grid against a revised host
 
+For an articulated chain in the XZ plane, use `planar_chain_x_bounds` with the origin X coordinate, local vectors between successive centres and relative joint angle ranges in degrees. It considers the endpoints and any interior projection extremum of each accumulated angle range. Summing the independent ranges can widen the result. Use separate chains for cylinder eyes and add verified section padding for pins, arms, cylinders and attachments. Compare the resulting bound with the host's conservative X limit in the same frame. Keep the calculation tolerance, observed bounds and any finite-solid contacts separate.
+
 Keep the identified joint limits, sample grid and motion frame from the checked linkage. Rebuild the padded member and actuator boxes in that frame at each pose. Measure the revised host in the saved assembly and separate host occurrences from the moving module. Only exclude an obstacle band when the full set of moving boxes is proved to stay outside it over the stated samples. Include actuator lanes, body and rod dimensions and the supported attachment pose in that check. Record the actual pose count, source and host hashes, and the member and obstacle identities for every candidate. A clear result covers the sampled boxes. Use a continuous bound or finite-solid trajectory for a continuous clearance claim.
 
 ## Retain ground-contact and wheel-swivel evidence in a revised assembly

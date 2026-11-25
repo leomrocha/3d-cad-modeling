@@ -179,6 +179,39 @@ def bounded_axial_section_clearance(full_bounds, section_bounds, obstacle_bounds
     return dict(result=result, axial_overlap=overlap, transverse_axis_gap=str(gap))
 
 
+def planar_chain_x_bounds(origin_x, links):
+    """Enclose X coordinates at the end of an ordered chain in the XZ plane.
+
+    Each link is ((local_x, local_z), (minimum_deg, maximum_deg)). An
+    angle is relative to the previous link and uses positive rotation from
+    +X toward +Z. The independent term bounds also cover dependent joint
+    angles inside the supplied ranges. Account for body thickness separately.
+    """
+    origin, = _vector((origin_x,), 1)
+    minimum = maximum = float(origin)
+    cumulative_low = cumulative_high = 0.0
+    for vector, angle_range in links:
+        x, z = map(float, _vector(vector, 2))
+        low, high = _vector(angle_range, 2)
+        if low > high:
+            raise ValueError("Joint angle minima must precede maxima")
+        cumulative_low += math.radians(low)
+        cumulative_high += math.radians(high)
+        ends = [x * math.cos(angle) - z * math.sin(angle)
+                for angle in (cumulative_low, cumulative_high)]
+        peak = math.atan2(-z, x)
+        radius = math.hypot(x, z)
+        low_x, high_x = min(ends), max(ends)
+        for phase, extremum in ((peak, radius), (peak + math.pi, -radius)):
+            turn = math.ceil((cumulative_low - phase) / math.tau)
+            if phase + turn * math.tau <= cumulative_high:
+                low_x = min(low_x, extremum)
+                high_x = max(high_x, extremum)
+        minimum += low_x
+        maximum += high_x
+    return minimum, maximum
+
+
 def rpy_world_x_bounds(bounds, *, pivot, roll_deg, pitch_deg, yaw_deg):
     """Bound world X for a box under symmetric Rz(yaw) Ry(pitch) Rx(roll).
 
