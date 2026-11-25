@@ -975,4 +975,60 @@ class PlanarBoreLigamentTests(unittest.TestCase):
         self.assertAlmostEqual(result['observed_minimum_land'],7.8)
 
 
+class RectangularPlateOpeningTests(unittest.TestCase):
+    def setUp(self):
+        from feature_checks import rectangular_plate_openings
+
+        self.check = rectangular_plate_openings
+        self.rectangles = {"outline": [[0, 100], [0, 70]], "port": [[20, 40], [10, 30]]}
+        self.faces = [dict(face_index=face, surface_type="plane-surface",
+                           outward_normal=[sign, 0, 0],
+                           loops=[self.loop(x, limits, start)
+                                  for start,limits in zip((2, 6), self.rectangles.values())])
+                      for face,x,sign in ((0,0,-1),(1,3,1))]
+
+    @staticmethod
+    def loop(x, limits, start):
+        (a,b),(c,d) = limits
+        points = [(x,a,c),(x,b,c),(x,b,d),(x,a,d)]
+        return dict(edges=[dict(curve_type="straight-curve", partner_surface_type="plane-surface",
+                                partner_face_index=i+start, endpoints=[point, points[(i+1)%4]])
+                           for i,point in enumerate(points)])
+
+    def evaluate(self):
+        return self.check("Rectangular panel", self.faces, axis=0, stations=(0,3),
+                          loops=self.rectangles, tolerance=0.00001)
+
+    def test_retains_two_face_loop_matching_under_reversed_edge_order(self):
+        self.faces[1]["loops"].reverse()
+        for loop in self.faces[1]["loops"]:
+            loop["edges"].reverse()
+            for edge in loop["edges"]:
+                edge["endpoints"].reverse()
+        self.assertEqual(self.evaluate()["result"], "PASS")
+
+    def test_accepts_planar_boolean_fragments_on_both_ends(self):
+        for face,start in zip(self.faces,(20,21)):
+            x = face["loops"][0]["edges"][0]["endpoints"][0][0]
+            smaller = self.loop(x,[[0,10],[0,70]],2)
+            larger = self.loop(x,[[10,100],[0,70]],2)
+            smaller["edges"][1]["partner_face_index"] = start
+            larger["edges"][3]["partner_face_index"] = face["face_index"]
+            self.faces.append(dict(face,face_index=start,loops=[larger,face["loops"][1]]))
+            face["loops"] = [smaller]
+        self.assertEqual(self.evaluate()["result"],"PASS")
+
+    def test_rejects_remaining_former_aperture(self):
+        self.faces[1]["loops"].append(self.loop(3,[[50,70],[30,50]],10))
+        self.assertIn("Unexpected",self.evaluate()["reason"])
+
+    def test_rejects_curved_edge_with_matching_corner_coordinates(self):
+        self.faces[0]["loops"][1]["edges"][1]["curve_type"] = "ellipse-curve"
+        self.assertEqual(self.evaluate()["result"], "FAIL")
+
+    def test_rejects_matching_end_aperture_without_shared_walls(self):
+        self.faces[0]["loops"][1]["edges"][1]["partner_face_index"] = 20
+        self.assertIn("same planar side faces",self.evaluate()["reason"])
+
+
 if __name__=='__main__':unittest.main()

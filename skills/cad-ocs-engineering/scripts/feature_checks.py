@@ -142,6 +142,93 @@ def concentric_through_keyway_section(bore_diameter, outer_diameter, width, radi
                 minimum_radial_wall=roof)
 
 
+
+def rectangular_plate_openings(name, faces, *, axis, stations, loops, tolerance):
+    """Match both planar faces and their shared straight side faces.
+
+    Pass the complete native face-boundary extraction. Each named rectangle
+    is two increasing in-plane spans in Cartesian coordinate order.
+    Include the outer rectangle and every required through opening.
+    """
+    comparison(name + ' tolerance', [0], [0], tolerance)
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError('Cartesian plate axis required')
+    if len(stations) != 2 or not stations[0] < stations[1] or not all(map(math.isfinite, stations)):
+        raise ValueError('Two increasing finite plate stations required')
+    if not loops:
+        raise ValueError('At least one labelled rectangle required')
+    axis_u, axis_v = [i for i in range(3) if i != axis]
+    sides = {}
+    for label, ((a, b), (c, d)) in loops.items():
+        comparison(name + ' rectangle', [a,b,c,d], [a,b,c,d], tolerance)
+        if b-a <= 2*tolerance or d-c <= 2*tolerance:
+            raise ValueError('Every rectangle needs distinct corners')
+        sides[label] = [(axis_u,a,axis_v,c,d), (axis_u,b,axis_v,c,d),
+                        (axis_v,c,axis_u,a,b), (axis_v,d,axis_u,a,b)]
+
+    def edge_covers_some_side(points, side):
+        fixed, value, along, lo, hi = side
+        if len(points) != 2 or any(abs(p[fixed]-value) > tolerance for p in points):
+            return None
+        u,v = sorted(p[along] for p in points)
+        if lo-tolerance <= u < v <= hi+tolerance:
+            return (u,v)
+        return None
+
+    output = dict(check=name, result='FAIL', faces=[], expected_loops=list(sides))
+    for station, sign in zip(stations, (-1,1)):
+        end_faces = {}
+        for face in faces:
+            if face['surface_type'] != 'plane-surface':
+                continue
+            normal = face['outward_normal']
+            if not all(abs(normal[i]-(sign if i==axis else 0)) <= 1e-8 for i in range(3)):
+                continue
+            edges = [edge for loop in face['loops'] for edge in loop['edges']]
+            if edges and all(abs(point[axis]-station) <= tolerance
+                             for edge in edges for point in edge['endpoints']):
+                end_faces[face['face_index']] = edges
+        if not end_faces:
+            return dict(output,reason='At least one outward face is required at each plate station')
+
+        observed = {(label,k):[] for label,bounds in sides.items() for k in range(len(bounds))}
+        for edges in end_faces.values():
+            for edge in edges:
+                partner = edge['partner_face_index']
+                if partner in end_faces:
+                    continue
+                if edge['curve_type'] != 'straight-curve' or edge['partner_surface_type'] != 'plane-surface':
+                    return dict(output,reason='Unexpected curved or nonplanar material boundary')
+                matches = []
+                for label,bounds in sides.items():
+                    for k,side in enumerate(bounds):
+                        span = edge_covers_some_side(edge['endpoints'], side)
+                        if span is not None:
+                            matches.append(((label,k),span))
+                if len(matches) != 1:
+                    return dict(output,reason='Unexpected or ambiguous rectangular boundary')
+                key,span = matches[0]
+                observed[key].append((*span,partner))
+
+        wall_faces = {label:[] for label in sides}
+        for (label,k), spans in observed.items():
+            lo,hi = sides[label][k][-2:]
+            stop = lo
+            for u,v,_ in sorted(spans):
+                if abs(u-stop) > tolerance:
+                    return dict(output,reason='Gap or overlap in a required rectangular boundary',loop=label)
+                stop = v
+            if abs(stop-hi) > tolerance:
+                return dict(output,reason='Required rectangular boundary is incomplete',loop=label)
+            wall_faces[label].append(sorted({h for _,_,h in spans}))
+        output['faces'].append(dict(face_indices=sorted(end_faces),station=station,loop_wall_faces=wall_faces))
+    lower,upper = output['faces']
+    if lower['loop_wall_faces'] != upper['loop_wall_faces']:
+        return dict(output,reason='End loops do not share the same planar side faces')
+    output['result'] = 'PASS'
+    return output
+
+
 def planar_bore_ligaments(name, circles, minimum_land, tolerance):
     """Check edge-to-edge land for circular bores through the same material wall."""
     comparison(name + ' tolerance', [0], [0], tolerance)

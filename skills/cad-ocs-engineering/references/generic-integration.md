@@ -50,6 +50,10 @@ the exact handle. Verify the resulting world pose and orientation from a
 fresh native read. If the definition containing that handle is itself used
 more than once, audit all affected paths before writing.
 
+### Verify rectangular openings after recutting a panel
+
+Read the native planar face and edge graph with `sab_features(include_edge_curves=True, edge_policy="endpoints")`. The check uses straight trim endpoints and shared planar faces. Pass the required outside boundary and every rectangular opening to `rectangular_plate_openings` in [feature_checks.py](../scripts/feature_checks.py). Include both thickness stations and the wall axis. The check omits edges between coplanar end-face fragments, then matches all straight boundary spans and their shared planar side faces at both ends. A remaining old opening, missing cut or extra loop fails. The check covers straight rectangular prismatic geometry. Check body topology independently and use a separate procedure for steps and fillets.
+
 ## Retained relationships
 
 [retained_artifacts.py](../scripts/retained_artifacts.py) validates portable file/hash manifests and optional relationships. Each binding names a registered record, registered artifact and JSON-pointer field containing that artifact's digest, for example {"record":"view.json","artifact":"model.dwg","field":"/source_sha256"}. It rejects stale model/image/table links even when each current file has an individually correct hash. Keep insertion-time and currently observed source hashes as separate fields.
