@@ -89,7 +89,7 @@ Some of these are specialized tools for particular geometries. I still have work
 
 1. [native_acis.py](../scripts/native_acis.py) — reads ACIS700 SAT topology and trimmed edge samples, plus SAB analytic surfaces and optional [circular boundary curves and adjacent faces](../skills/cad-ocs-engineering/references/circular-boundary-checks.md).
 2. [step_solid_inventory.py](../scripts/step_solid_inventory.py) — inventories STEP solid definitions without counting nested shells as additional solids.
-3. [step_placements.py](../scripts/step_placements.py) — reads supported STEP/native placement matrices, compares component positions and derives a root pose from a verified nested target frame.
+3. [step_placements.py](../scripts/step_placements.py) — reads supported STEP/native placement matrices, compares component positions and derives a root pose from a verified nested target frame, and plans guarded world-space translations for zero-base native INSERTs.
 4. [assembly_units.py](../scripts/assembly_units.py) — prepares a unit-change plan for specified assembly root inserts, preserving internal geometry.
 5. [assembly_repair.py](../scripts/assembly_repair.py) — applies a reviewed component-placement correction through the guarded CAD client.
 6. [feature_checks.py](../scripts/feature_checks.py) — compares measured boundaries, cylinders and other native features with supplied expectations. The round-ended slot check matches native straight tangents on each requested face. Axis-aligned edge coverage compares split straight edges. `planar_bore_ligaments` checks material between circular bores through a common wall.

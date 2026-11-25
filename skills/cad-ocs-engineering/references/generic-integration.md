@@ -37,6 +37,19 @@ station from the cut solid before using it in an axial stack.
 6. For a single top-level solid after a Boolean, the native model-space membership list can retain erased tool handles. Verify the exact saved checkpoint, live geometry revision and sole expected solid handle. Pass that stable live inventory to `single_solid_boundary_edges` to render the checked body directly. Use `placed_boundaries` for groups and assemblies so a missing instance remains a verification error.
 7. [ocs_document_cleanup.py](../scripts/ocs_document_cleanup.py) closes exact owned completed documents using saved hash and epoch evidence. Inactive clean close requires explicit installed support and an exclusive interval because revision guards bind the active tab. [Full cleanup contract](document-cleanup.md).
 
+### Translate a nested native insert in world axes
+
+Use `plan_world_insert_translation` with the composed parent transform, the
+selected INSERT properties and the block definition's observed base point.
+For a zero-base, single unit-scale INSERT, the world pose is the parent
+transform multiplied by `native_matrix(properties)`. An occurrence inventory
+may put the parent transform on an INSERT row and the fully composed
+transform on its child rows. Check the reader's definition before choosing
+the matrix. Apply the returned compare-and-set insertion-point update to
+the exact handle. Verify the resulting world pose and orientation from a
+fresh native read. If the definition containing that handle is itself used
+more than once, audit all affected paths before writing.
+
 ## Retained relationships
 
 [retained_artifacts.py](../scripts/retained_artifacts.py) validates portable file/hash manifests and optional relationships. Each binding names a registered record, registered artifact and JSON-pointer field containing that artifact's digest, for example {"record":"view.json","artifact":"model.dwg","field":"/source_sha256"}. It rejects stale model/image/table links even when each current file has an individually correct hash. Keep insertion-time and currently observed source hashes as separate fields.

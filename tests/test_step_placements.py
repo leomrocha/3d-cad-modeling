@@ -50,6 +50,41 @@ class PlacementTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Proper unit-rigid'):
             root_for_leaf_placement(root,multiply(root,local),[[-1,0,0,0],*eye()[1:]])
 
+
+    def test_world_translation_preserves_local_orientation_under_rotated_parent(self):
+        parent = [[0,-1,0,20],[1,0,0,1],[0,0,1,3],[0,0,0,1]]
+        original = copy.deepcopy(self.p)
+        plan = plan_world_insert_translation(self.p,parent,[0,-40,0],
+                                             block_base_point=dict(x=0,y=0,z=0))
+        self.assertEqual(plan['update']['path'], '/insert_point')
+        self.assertEqual(plan['update']['expected'], original['insert_point'])
+        self.assertEqual(plan['update']['value'], dict(x=659,y=-1771,z=41.9))
+        self.assertEqual(self.p, original)
+        updated = dict(self.p, insert_point=plan['update']['value'])
+        self.assertTrue(near(multiply(parent,native_matrix(updated)),plan['expected_world']))
+        self.assertEqual([row[:3] for row in plan['world_before']],
+                         [row[:3] for row in plan['expected_world']])
+
+    def test_world_translation_under_reflected_parent_and_mirrored_insert(self):
+        parent = [[-1,0,0,20],[0,1,0,1],[0,0,1,3],[0,0,0,1]]
+        self.p['y_scale'] = -1
+        plan = plan_world_insert_translation(self.p,parent,[40,0,-5],
+                                             block_base_point=dict(x=0,y=0,z=0))
+        self.assertEqual(plan['update']['value'], dict(x=659,y=-1776,z=41.9))
+        self.assertEqual(classify_hand(plan['expected_world']), 'SOURCE_HAND')
+
+    def test_world_translation_rejects_unsupported_base_frame_and_array(self):
+        origin = dict(x=0,y=0,z=0)
+        with self.assertRaisesRegex(ValueError,'Zero block base'):
+            plan_world_insert_translation(self.p,eye(),[1,2,3],block_base_point=dict(origin,z=1))
+        with self.assertRaisesRegex(ValueError,'Finite world displacement'):
+            plan_world_insert_translation(self.p,eye(),[1,True,3],block_base_point=origin)
+        with self.assertRaisesRegex(ValueError,'Orthonormal'):
+            plan_world_insert_translation(self.p,[[2,0,0,0],*eye()[1:]],[1,0,0],block_base_point=origin)
+        with self.assertRaisesRegex(ValueError,'Array inserts'):
+            plan_world_insert_translation(dict(self.p,column_count=2),eye(),[1,0,0],block_base_point=origin)
+
+
 class AssemblyTests(unittest.TestCase):
     def fixture(self):
         def insert(h,name,x,y,angle=0):

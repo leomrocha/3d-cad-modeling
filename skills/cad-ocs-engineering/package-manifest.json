@@ -124,7 +124,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "1fc49d0be95ec507958b8b62e93c60aa4f77f42503efe5fdd17bc211a205b738"
+      "sha256": "d646de9dae8a563a367d7d211cd4537ff0b09f22ba2aed60058cd311030ab0f1"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -692,7 +692,7 @@
     },
     "scripts/step_placements.py": {
       "source": "scripts/step_placements.py",
-      "sha256": "c0fc0803a7e778ff9b8da0efff2c6404c262e130dc0c141577ef265c7b3ff5e0"
+      "sha256": "ecd57186320e391308ea42eaa6cea4d753b1841e727eace8bfb81f4efa478e8d"
     },
     "scripts/step_solid_inventory.py": {
       "source": "scripts/step_solid_inventory.py",
