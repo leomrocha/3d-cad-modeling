@@ -7,6 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from service_clearance import swept_axial_cylinder_box_gap
 from service_clearance import guided_circular_pilot_clearance, sampled_rotation_clearance
 from service_clearance import translation_box_contact
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
@@ -175,6 +176,34 @@ class ServiceClearance(unittest.TestCase):
             self.assertEqual(orthogonal_sleeve_clearance(vertical, sleeve)['result'], 'NEEDS_FINITE_SOLID_CHECK')
         with self.assertRaises(ValueError):
             orthogonal_sleeve_clearance(vertical, dict(transverse, axis=2))
+
+    def test_axial_cylinder_clears_corner_overlapped_by_its_box(self):
+        bounds = [[3, 7, 4], [8, 8, 9]]
+        swept = swept_axial_cylinder_box_gap(
+            [0, 0, 0], axis=1, radius=4, span=[0, 4], travel=4, obstacle_bounds=bounds
+        )
+        self.assertEqual(swept["result"], "DISJOINT_BOUNDS")
+        self.assertEqual(swept["rectangle_nearest_radius_squared"], "25")
+        self.assertEqual(swept["swept_axial_span"], ["0", "8"])
+        base = cartesian_cylinder_bounds([0, 0, 0], axis=1, radius=4, span=[0, 4])
+        self.assertEqual(translation_box_window(base, bounds, [0, 4, 0])["result"], "CANDIDATE")
+
+    def test_axial_cylinder_reports_tangent_and_signed_axial_separation(self):
+        bounds = [[-5, 0, -1], [-4, 2, 1]]
+        forward = swept_axial_cylinder_box_gap(
+            [0, 99, 0], axis=1, radius=4, span=[3, 4], travel=-1, obstacle_bounds=bounds
+        )
+        self.assertEqual(forward["result"], "CANDIDATE")
+        self.assertEqual(forward["axial_gap"], "0")
+        backward = swept_axial_cylinder_box_gap(
+            [0, 99, 0], axis=1, radius=4, span=[3, 4], travel=1, obstacle_bounds=bounds
+        )
+        self.assertEqual(backward["result"], "DISJOINT_BOUNDS")
+        self.assertEqual(backward["axial_gap"], "1")
+        with self.assertRaises(ValueError):
+            swept_axial_cylinder_box_gap(
+                [0, 0, 0], axis=1, radius=4, span=[3, 2], travel=0, obstacle_bounds=bounds
+            )
 
     def test_rectangle_radial_bounds_report_nearest_edge_and_farthest_corner(self):
         self.assertEqual(rectangle_radial_bounds([[1,-2],[3,1]],[0,0]),

@@ -294,6 +294,38 @@ def rectangle_radial_bounds(bounds, centre):
                 max_radius_squared=str(sum(d * d for d in far)))
 
 
+def swept_axial_cylinder_box_gap(centre, *, axis, radius, span, travel, obstacle_bounds):
+    """Screen a finite circular cylinder translated along its own XYZ axis.
+
+    Use a maximum material radius for the full swept axial section. The swept
+    solid is the same radius over the union of its start and end stations.
+    A tangent to the supplied box is a contact candidate.
+    """
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError("Expected an XYZ axis index")
+    centre = _vector(centre, 3)
+    radius, travel = _vector((radius, travel), 2)
+    start, stop = _vector(span, 2)
+    if radius <= 0 or start >= stop:
+        raise ValueError("Expected a positive radius and increasing end stations")
+    low, high = _bounds(obstacle_bounds)
+    sweep_low, sweep_high = start + min(travel, 0), stop + max(travel, 0)
+    axial_gap = max(low[axis] - sweep_high, sweep_low - high[axis], 0)
+    radial_squared = sum(
+        max(a - c, c - b, 0)**2
+        for i, (a, b, c) in enumerate(zip(low, high, centre)) if i != axis
+    )
+    radius_squared = radius**2
+    disjoint = axial_gap > 0 or radial_squared > radius_squared
+    return {
+        "result": "DISJOINT_BOUNDS" if disjoint else "CANDIDATE",
+        "swept_axial_span": [str(sweep_low), str(sweep_high)],
+        "axial_gap": str(axial_gap),
+        "rectangle_nearest_radius_squared": str(radial_squared),
+        "cylinder_radius_squared": str(radius_squared),
+    }
+
+
 def static_box_halfspace_gap(bounds, *, normal, offset):
     """Screen a box against a part contained in normal · point <= offset."""
     low, high = _bounds(bounds)

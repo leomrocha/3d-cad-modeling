@@ -31,6 +31,10 @@ Use `translation_box_contact` in [service_clearance.py](../scripts/service_clear
 4. Keep tool entry, engagement and operating swing separate. A translated head envelope can prove entry for its assumed size. A rotating handle, changed orientation or cable bend needs its own swept geometry.
 
 
+## Screen a cylindrical part during axial removal
+
+For a bearing, round pin or tool translated along its own Cartesian axis, pass its measured axial span, maximum radius, centre and signed travel to `swept_axial_cylinder_box_gap` in [service_clearance.py](../scripts/service_clearance.py). Screen each finite shoulder or head separately when the radius changes. The helper checks the whole swept interval against each conservative stationary box. A positive axial gap or a nearest transverse radius strictly larger than the cylinder radius establishes separation. A tangent or overlap remains a candidate. To display the distance, combine the axial gap with the nonnegative difference between the nearest transverse radius and the cylinder radius. For intentional passage through a coaxial bore, verify the bore and its axial coverage independently.
+
 ## Project a straight motion through an existing wall opening
 
 1. Bind the moving clearance silhouette to the actual wall slab and keep the full through-cut outline from the saved model. Express both in one wall-plane frame. For travel parallel to that plane, express the silhouette displacement in the wall frame. When the wall moves, use the opposite of its travel for the stationary silhouette.
