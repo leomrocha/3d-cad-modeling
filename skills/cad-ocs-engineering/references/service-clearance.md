@@ -89,6 +89,8 @@ Keep the identified joint limits, sample grid and motion frame from the checked 
 
 Keep the tool pose, support receiver, caster and gauge roller as separately identified sources. Match each placed support and tool to the verified geometry and frame before reusing a clearance result. Recheck the ground witness on every tyre and roller in the same grade plane. For a horizontal right-circular roller, use the native cylinder centre height minus its observed outside radius. Confirm the axis direction and that the outer cylindrical face spans the contact station. A boundary sample above the tangent does not establish a ground gap. Use the complete swivel envelope at each measured pivot when comparing lateral clearance. A single saved wheel orientation supplies only that orientation's clearance.
 
+When reusing a treaded wheel, compare the lowest sampled tread point with the same sample result from the verified source pose after matching both tread geometry and placement. Record the grade plane and sample elevation separately. Use an exact surface extremum or a qualified sampling error bound when a contact or gap claim depends on the difference. A sampled point above grade can coexist with contact between samples.
+
 Compare the rotor or cutting envelope with the revised host separately from clearance to the carried guards, roller and support hardware. Record which surfaces and axes were measured and keep the posed contact checks separate from support reaction, traction and operating limits.
 
 ## Check service space on a capped powered interface
