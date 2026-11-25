@@ -208,7 +208,7 @@
     },
     "references/service-clearance.md": {
       "source": "references/service-clearance.md",
-      "sha256": "f07cefe5ff5c63d250ac0e9cf67dcf3c9a7f6d90443e1338a9714b0fc09a3afd"
+      "sha256": "4aa7cf7f6766b604ee2451137b5466cd05beadf922670368613f04fe460625d7"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
@@ -572,7 +572,7 @@
     },
     "scripts/planar_profiles.py": {
       "source": "scripts/planar_profiles.py",
-      "sha256": "9dc67f4500a20013c5a2926ef512d10a85a560cfdacff6201ffb6a23cef820bc"
+      "sha256": "470266857935172474cf042ebc5d827133a30197cf58f67d262a2d2c2c77ecc7"
     },
     "scripts/plate_reference.py": {
       "source": "scripts/plate_reference.py",

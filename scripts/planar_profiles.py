@@ -254,6 +254,65 @@ def ellipse_arc_chord_error_bound(major_radius, parameter_step_radians):
     return radius * (2 * math.sin(step/4)**2)
 
 
+
+def rolling_corner_offset(vertices, vertex_index, radius, exit_normal, *, max_chord_error):
+    """Return a round body's centre arc from an incoming straight support edge.
+
+    The ordered polygon has no holes. The exit normal must lie in the outer
+    normal cone of the selected convex vertex. The returned error bounds the
+    deviation of the joined chords from the continuous centre arc.
+    """
+    polygon = validate_profile(vertices)
+    if type(vertex_index) is not int or not 0 <= vertex_index < len(polygon):
+        raise ValueError("A valid profile corner index is required")
+    radius, limit = positive(radius), positive(max_chord_error)
+    if limit >= radius:
+        raise ValueError("Chord error must be smaller than the rolling radius")
+
+    vertex = polygon[vertex_index]
+    relative = [sub(point, vertex) for point in polygon]
+    area = sum(cross(a, b) for a, b in zip(relative, relative[1:] + relative[:1], strict=True))
+    winding = 1 if area > 0 else -1
+
+    def unit(values):
+        u, v = vector(values, 2)
+        length = math.hypot(u, v)
+        if length == 0:
+            raise ValueError("A nonzero normal or edge direction is required")
+        return [u / length, v / length]
+
+    def outward(tangent):
+        u, v = unit(tangent)
+        return [winding * v, -winding * u]
+
+    incoming = outward(sub(vertex, polygon[vertex_index - 1]))
+    outgoing = outward(sub(polygon[(vertex_index + 1) % len(polygon)], vertex))
+    exit_unit = unit(exit_normal)
+
+    def dot(a, b):
+        return sum(x * y for x, y in zip(a, b, strict=True))
+
+    def offset_angle(target):
+        return winding * math.atan2(cross(incoming, target), dot(incoming, target))
+
+    cone, angle = offset_angle(outgoing), offset_angle(exit_unit)
+    if not 0 < angle <= cone + 1e-12 or not 0 < cone < math.pi:
+        raise ValueError("Exit normal must advance within a convex corner's outer cone")
+    epsilon = max(1.0, max(math.hypot(*point) for point in relative)) * 1e-12
+    if any(dot(n, point) > epsilon for point in relative for n in (incoming, exit_unit)):
+        raise ValueError("Both endpoint normals must support the entire profile")
+    step_limit = 4 * math.asin(math.sqrt(0.5 * (limit / radius)))
+    if step_limit < angle / 4096:
+        raise ValueError("Requested chord bound requires more than 4096 intervals")
+    count = math.ceil(angle / step_limit)
+    step = angle / count
+    heading = math.atan2(incoming[1], incoming[0])
+    centres = [[vertex[0] + radius * math.cos(heading + winding * step * i),
+                vertex[1] + radius * math.sin(heading + winding * step * i)]
+               for i in range(count + 1)]
+    return dict(centre_points=centres, chord_error=ellipse_arc_chord_error_bound(radius, step))
+
+
 def annular_seat_with_radial_slot(inner_radius, outer_radius, slot_width, slot_radial_end):
     """Projected annulus left by one centred radial slot reaching from the inner bore."""
     r, outer, half = positive(inner_radius), positive(outer_radius), positive(slot_width)/2
