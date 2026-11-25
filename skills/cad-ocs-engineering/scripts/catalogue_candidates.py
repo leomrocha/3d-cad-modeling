@@ -47,10 +47,11 @@ def lookup(search_cli, data, query, *, include_record=None, interpreter=sys.exec
         item = dict(id=row['id'], name=row['name'], exact_search_hit=exact,
                     dimensions=row.get('dimensions'), standards=row.get('standards'))
         for key in ('manufacturer', 'family', 'base', 'designation', 'part_number',
-                    'closure', 'sides', 'evidence', 'designation_evidence'):
+                    'closure', 'sides', 'evidence', 'designation_evidence',
+                    'state', 'revision', 'needs_information'):
             if key in row:
                 item[key] = row[key]
-        if isinstance(row.get('variant'), dict):
+        if isinstance(row.get('variant'), (str, dict)):
             item['variant'] = row['variant']
         locator = row.get('file')
         if locator:

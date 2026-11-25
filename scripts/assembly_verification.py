@@ -353,3 +353,46 @@ def check_world_envelope(points,allowed_bounds,*,length_tolerance):
     disjoint=any(b<lo-tolerance or a>hi+tolerance for (a,b),(lo,hi) in zip(actual,bounds))
     return dict(result='PASS' if contained else 'SOURCE_REVIEW_REQUIRED',actual_bounds=actual,
                 allowed_bounds=bounds,disjoint=disjoint,action='Preserve source geometry and record caller review')
+
+
+def indexed_feature_heights(settings, height_at, *, target_mm, tolerance_mm):
+    """Measure the signed height at each allowed setting in a single frame."""
+    finite(target_mm)
+    if finite(tolerance_mm) < 0:
+        raise ValueError("Height tolerance must be nonnegative")
+    rows = []
+    for setting in settings:
+        height = finite(height_at(setting))
+        error = height - target_mm
+        rows.append(dict(setting=setting, height_mm=height, error_mm=error,
+                         within_tolerance=abs(error) <= tolerance_mm))
+    if not rows:
+        raise ValueError("At least one indexed setting is required")
+    return rows
+
+
+def solve_feature_height(limits, height_at, *, target_mm, tolerance_mm):
+    """Bisect a caller-established continuous monotonic branch in setting units."""
+    low, high = map(finite, limits)
+    if low >= high:
+        raise ValueError("Expected increasing setting limits")
+    ends = indexed_feature_heights((low, high), height_at, target_mm=target_mm,
+                                  tolerance_mm=tolerance_mm)
+    for row in ends:
+        if row["within_tolerance"]:
+            return dict(result="PASS", **row)
+    increasing = ends[0]["height_mm"] < ends[1]["height_mm"]
+    if (ends[0]["error_mm"] < 0) == (ends[1]["error_mm"] < 0):
+        return dict(result="UNREACHABLE", endpoints=ends)
+    while True:
+        mid = low / 2 + high / 2
+        if not low < mid < high:
+            return dict(result="RESOLUTION_LIMIT", endpoints=ends)
+        row, = indexed_feature_heights((mid,), height_at, target_mm=target_mm,
+                                      tolerance_mm=tolerance_mm)
+        if row["within_tolerance"]:
+            return dict(result="PASS", **row)
+        if (row["error_mm"] < 0) == increasing:
+            low, ends[0] = mid, row
+        else:
+            high, ends[1] = mid, row

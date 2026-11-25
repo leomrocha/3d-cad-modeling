@@ -53,6 +53,33 @@ def verify_revision_package(current, replacement, assets, *, model_name, old_sha
     return dict(result='PASS', current_sha256=before, replacement_sha256=after)
 
 
+def verify_gallery_capture(packages, record, *, view, checkpoint, capture):
+    """Resolve one local catalogue preview and compare native model and image bytes."""
+    if checkpoint.get('result') != 'PASS' or capture.get('result') != 'PASS':
+        raise ValueError('A successful model checkpoint and viewport capture are required')
+    for key in ('document_id', 'geometry_revision'):
+        if type(checkpoint.get(key)) is not int or checkpoint[key] != capture.get(key):
+            raise ValueError('Capture and saved model identities differ')
+    if checkpoint.get('session_id') != capture.get('session_id'):
+        raise ValueError('Checkpoint and capture sessions differ')
+    if not isinstance(view, str) or not view.strip():
+        raise ValueError('Select a named native viewport')
+    matches = [p for p in record['previews'] if p['view'] == view]
+    if len(matches) != 1:
+        raise ValueError('Expected one gallery entry for the selected viewport')
+    root = Path(packages).resolve()
+    for locator, expected in ((record['file'], checkpoint['sha256']),
+                              (matches[0]['file'], capture['sha256'])):
+        path = (root / locator).resolve()
+        if Path(locator).is_absolute() or not path.is_relative_to(root):
+            raise ValueError('Expected an asset inside the packages directory')
+        if observe_file(path)['sha256'] != expected:
+            raise ValueError('Catalogue asset hash differs: ' + locator)
+    return dict(result='PASS', record_id=record['id'], revision=record['revision'],
+                model_sha256=checkpoint['sha256'], view=view, file=matches[0]['file'],
+                image_sha256=capture['sha256'])
+
+
 def artifact_path(locator, roots, package):
     # Historical manifests also stored named origins without the wrapper.
     prefix, separator, suffix = locator.partition('/')

@@ -120,7 +120,7 @@
     },
     "references/existing-model-start-check.md": {
       "source": "references/existing-model-start-check.md",
-      "sha256": "d142a2e587e251351cdd2fa32b35e6c5b71b6a25c9a44a01bcc3ca6bf2b5831c"
+      "sha256": "21bac02fcd8030880125c99976b90f16fc6ca3819fc2c78a6ef609026ccd64b5"
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
@@ -192,7 +192,7 @@
     },
     "references/retained-artifact-checks.md": {
       "source": "references/retained-artifact-checks.md",
-      "sha256": "49e27979a6a478b060318c8026c647ffc1af57d4ecb0a5be73d63213f4307806"
+      "sha256": "1dfdda43a9628c68994af3debba79e216e6d2d3e2747fb9c7ec5f767542e845f"
     },
     "references/reversible-source-workflows.md": {
       "source": "references/reversible-source-workflows.md",
@@ -208,7 +208,7 @@
     },
     "references/service-clearance.md": {
       "source": "references/service-clearance.md",
-      "sha256": "df4de3598eaca08d31330f4cb391d38d8dbd3cfe53190183056181533a712885"
+      "sha256": "c6eae76de874714b0692e9c5f44f779ef7d286e6ec2177311e84d28eb5b16c3c"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
@@ -296,7 +296,7 @@
     },
     "scripts/assembly_verification.py": {
       "source": "scripts/assembly_verification.py",
-      "sha256": "32815ffaf55d216cc8559d9518fb4a680cd9144e5da9663f3df8dd791824dbf5"
+      "sha256": "29593698c9f0ef2421cc92386990fa0358d0cdbdd41aed3e3e42080c9856214e"
     },
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",
@@ -368,7 +368,7 @@
     },
     "scripts/cadtools/captures.py": {
       "source": "scripts/cadtools/captures.py",
-      "sha256": "4891aefb4c6698aa4f88021098ba9bd3c4106a54a930ff6c1eb67b28df360e84"
+      "sha256": "268fd3c2f40286ccac4711495bff3e74ea6086c20867e9dcc74054e9a2933619"
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
@@ -404,7 +404,7 @@
     },
     "scripts/catalogue_candidates.py": {
       "source": "scripts/catalogue_candidates.py",
-      "sha256": "4367856e1fa643cb9a926b24acf535602b65e00c60bf513bb0620724a47bc684"
+      "sha256": "1a52d9dc46eb9ad5ceabf07facbf79c23fd94aff3aa7b8f0abbecf7e9b4e8ea3"
     },
     "scripts/check_contract.py": {
       "source": "scripts/check_contract.py",
@@ -616,7 +616,7 @@
     },
     "scripts/retained_artifacts.py": {
       "source": "scripts/retained_artifacts.py",
-      "sha256": "15794a9c51860278ce5aec931211c572a6b9117088eae21c78f4c38f8818d2fe"
+      "sha256": "554c64e04b839d3eabee041053038384316fad4a0dccd5cd1bc2e449b8efc7a4"
     },
     "scripts/rgbd_surface.py": {
       "source": "scripts/rgbd_surface.py",
@@ -636,7 +636,7 @@
     },
     "scripts/service_clearance.py": {
       "source": "scripts/service_clearance.py",
-      "sha256": "07250aa81693b8c5e73ffb0b1db3e79ab7bd94b52d84e14a92280736b4fc9624"
+      "sha256": "1cc606129b31d43f7358b2402bab449a9dbded67e2c445708f432a0bfe84a62e"
     },
     "scripts/shape_match.py": {
       "source": "scripts/shape_match.py",

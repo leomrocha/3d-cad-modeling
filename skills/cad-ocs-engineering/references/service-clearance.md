@@ -191,3 +191,20 @@ When separate straight guides locate a moving pilot, measure both guide limits a
 1. Measure separation from the same stationary obstacle at increasing angles covering both endpoints. Use exact geometry or conservative section bounds. Include trim sampling, readback and numerical error in the supplied gap error bound.
 2. Measure an upper bound on the distance from the rotation axis to any point on the moving body. Pass the samples as `(angle_degrees, gap)` pairs to `sampled_rotation_clearance`. The method subtracts the maximum travel to the nearest sample and returns a rational lower bound across the continuous interval. Parse it with `Fraction`.
 3. An unresolved reserve needs denser samples or tighter geometry bounds. Apply the method separately to each obstacle. Translation, flexible parts and moving obstacles require their own motion bounds.
+
+## Check a lock through sampled withdrawal positions
+
+Pass the moving occurrence, retainer, surrounding obstacles and world withdrawal direction to `sampled_lock_withdrawal` in [service_clearance.py](../scripts/service_clearance.py). Supply positions in mm including zero, the permitted free travel and the required released withdrawal distance. Derive the free travel and overlap tolerance from the job. The callback places the moving occurrence at the supplied displacement from its initial pose in each lock state. Measure common solid volume against each named obstacle in mm³. An intersection operation that fails must raise an error.
+
+Report released interference, obstruction before the free-travel limit, the first sampled obstruction by the engaged retainer and interference with other parts. Record which retaining faces meet at that position when the retainer has several features. Use a swept-solid check when the job requires clearance throughout the path. Keep the sampled result if a continuous check is unavailable.
+
+## Select a setting for a feature height
+
+Define the feature point and reference plane in the same world frame. At each setting, apply the placement to that point and measure its signed perpendicular distance to the plane in mm. Use this measurement as the `height_at(setting)` function in [assembly_verification.py](../scripts/assembly_verification.py). Reuse `check_index_translation` when verifying a sliding index.
+
+1. For indexed positions, call `indexed_feature_heights` with all permitted settings. Report the setting, measured height, signed error and whether it meets the specified tolerance.
+2. For continuous travel, establish from the mechanism geometry an interval where height changes continuously in one direction. Split travel at reversals. Call `solve_feature_height` for each applicable interval with limits in the original setting units. It reports a matching setting, unreachable target or numerical resolution limit. Recheck the returned setting on the installed model.
+
+## Measure the gap between perpendicular extrusions
+
+For each occurrence supply its name, a filled planar polygon including holes, its lateral interval in mm, and the basis `boundary` or `envelope`. Use the same plane, perpendicular lateral axis and origin for both profiles. In an available Shapely interpreter call `extruded_profile_gap` in [service_clearance.py](../scripts/service_clearance.py) with the named pose. It returns the in-plane gap, lateral gap and combined clearance in mm. Exact constant sections describe actual solid clearance. Enclosing sections give a lower bound. A zero gap requires a separate contact or penetration check. For changing sections or an unavailable planar provider, measure the placed solids with an available CAD tool.

@@ -719,3 +719,80 @@ def axial_stack_witness(shaft_span, layers, *, axis_sign=1):
         "last_layer_overlap": str(overlap),
         "tip_past_stack": str(tip - last_exit),
     }
+
+
+def extruded_profile_gap(first, second, *, pose):
+    """Distance between two perpendicular extrusions of coplanar filled profiles.
+
+    Each input is (occurrence name, planar polygon, lateral span in mm, basis).
+    The basis is 'boundary' for actual geometry or 'envelope' for a bound.
+    """
+    from shapely.geometry import Polygon, MultiPolygon
+
+    if not isinstance(pose, str) or not pose.strip():
+        raise ValueError("A named pose is required")
+    spans = []
+    for name, profile, span, basis in (first, second):
+        if not isinstance(name, str) or not name.strip() or basis not in ("boundary", "envelope"):
+            raise ValueError("A named occurrence and profile basis are required")
+        if (not isinstance(profile, (Polygon, MultiPolygon)) or profile.is_empty
+                or profile.has_z or not profile.is_valid or not 0 < profile.area < math.inf):
+            raise ValueError("A valid filled planar profile is required")
+        lo, hi = _vector(span, 2)
+        if lo >= hi:
+            raise ValueError("Expected a positive lateral extent")
+        spans.append((lo, hi))
+    if first[0] == second[0]:
+        raise ValueError("Distinct occurrence names required")
+    lateral = float(max(0, spans[0][0] - spans[1][1], spans[1][0] - spans[0][1]))
+    planar = first[1].distance(second[1])
+    return dict(occurrences=[first[0], second[0]], basis=[first[3], second[3]], pose=pose,
+                planar_gap_mm=planar, lateral_gap_mm=lateral, clearance_mm=math.hypot(planar, lateral))
+
+
+def sampled_lock_withdrawal(moving, retainer, obstacles, *, direction, stations_mm,
+                            free_travel_mm, volume_tolerance_mm3, common_volume):
+    """Probe one moving occurrence against every named obstacle at each pose.
+
+    common_volume(state, moving, obstacle, displacement_xyz_mm) measures the
+    common solid volume in mm³. States are 'released' and 'engaged'.
+    """
+    obstacles = list(obstacles)
+    names = [moving, *obstacles]
+    if (any(not isinstance(name, str) or not name.strip() for name in names)
+            or len(set(names)) != len(names) or retainer not in obstacles):
+        raise ValueError("Supply distinct occurrence names including the retainer")
+    free, tolerance = _vector((free_travel_mm, volume_tolerance_mm3), 2)
+    stations = _vector(stations_mm, len(stations_mm))
+    if (free < 0 or tolerance < 0 or not stations or stations[0] != 0
+            or stations[-1] <= free or free not in stations
+            or any(b <= a for a, b in zip(stations, stations[1:]))):
+        raise ValueError("Sample zero, the free-travel limit and increasing withdrawal beyond it")
+    axis = tuple(map(float, _vector(direction, 3)))
+    length = math.hypot(*axis)
+    if not 0 < length < math.inf:
+        raise ValueError("A finite nonzero withdrawal direction is required")
+    rows = []
+    obstruction = None
+    passed = True
+    for station in stations:
+        displacement = tuple((v / length) * float(station) for v in axis)
+        for state in ("released", "engaged"):
+            hits = {}
+            for obstacle in obstacles:
+                volume, = _vector((common_volume(state, moving, obstacle, displacement),), 1)
+                if volume < 0:
+                    raise ValueError("Common volume must be nonnegative")
+                if volume > tolerance:
+                    hits[obstacle] = float(volume)
+            rows.append(dict(state=state, station_mm=float(station), overlaps_mm3=hits))
+            if state == "engaged" and station > free:
+                if retainer in hits and obstruction is None:
+                    obstruction = float(station)
+                if hits.keys() - {retainer}:
+                    passed = False
+            elif hits:
+                passed = False
+    return dict(result="PASS" if passed and obstruction is not None else "FAIL",
+                moving=moving, retainer=retainer, direction=list(axis),
+                first_sampled_retainer_obstruction_mm=obstruction, samples=rows)

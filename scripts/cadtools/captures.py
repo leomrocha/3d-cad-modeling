@@ -44,7 +44,11 @@ def verify_capture(response, before, after, path, *, expected_document_id,
         image.verify()
     if observe_file(target) != pin: raise CadError('Capture image changed during verification')
     stale = camera_changed and previous_sha256 == pin['sha256']
-    return dict(result='FAIL' if stale else 'PASS', sha256=pin['sha256'],
+    sessions = {item['session_id'] for item in (before, state, after) if item.get('session_id')}
+    if len(sessions) > 1:
+        raise CadError('Capture session changed')
+    session = {'session_id': sessions.pop()} if sessions else {}
+    return dict(**session, result='FAIL' if stale else 'PASS', sha256=pin['sha256'],
                 bytes=pin['bytes'], document_id=baseline[0], revision=baseline[1],
                 geometry_revision=baseline[2], camera_revision=camera,
                 stale_image_diagnostic='FAIL' if stale else 'UNKNOWN',
