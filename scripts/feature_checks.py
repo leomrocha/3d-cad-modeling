@@ -150,13 +150,7 @@ def rectangular_plate_openings(name, faces, *, axis, stations, loops, tolerance)
     is two increasing in-plane spans in Cartesian coordinate order.
     Include the outer rectangle and every required through opening.
     """
-    comparison(name + ' tolerance', [0], [0], tolerance)
-    if type(axis) is not int or not 0 <= axis < 3:
-        raise ValueError('Cartesian plate axis required')
-    if len(stations) != 2 or not stations[0] < stations[1] or not all(map(math.isfinite, stations)):
-        raise ValueError('Two increasing finite plate stations required')
-    if not loops:
-        raise ValueError('At least one labelled rectangle required')
+    _validate_plate_boundary(name, axis, stations, loops, tolerance)
     axis_u, axis_v = [i for i in range(3) if i != axis]
     sides = {}
     for label, ((a, b), (c, d)) in loops.items():
@@ -166,6 +160,46 @@ def rectangular_plate_openings(name, faces, *, axis, stations, loops, tolerance)
         sides[label] = [(axis_u,a,axis_v,c,d), (axis_u,b,axis_v,c,d),
                         (axis_v,c,axis_u,a,b), (axis_v,d,axis_u,a,b)]
 
+    return _plate_boundary_faces(name, faces, axis, stations, sides, tolerance)
+
+
+def orthogonal_plate_boundaries(name, faces, *, axis, stations, loops, tolerance):
+    """Check an orthogonal through-cut plate with a notched outline.
+
+    Pass complete native face boundaries and labelled polygons in the two
+    in-plane Cartesian coordinates. Close each polygon implicitly. Include
+    the outside material outline and every through opening.
+    """
+    _validate_plate_boundary(name, axis, stations, loops, tolerance)
+    axes = [i for i in range(3) if i != axis]
+    sides = {}
+    for label, points in loops.items():
+        if len(points) < 4 or any(len(point) != 2 for point in points):
+            raise ValueError('At least four two-coordinate polygon vertices required')
+        comparison(name + ' polygon', points, points, tolerance)
+        sides[label] = []
+        for a, b in zip(points, (*points[1:], points[0]), strict=True):
+            moves = [i for i in range(2) if a[i] != b[i]]
+            if len(moves) != 1 or abs(a[moves[0]]-b[moves[0]]) <= 2*tolerance:
+                raise ValueError('Distinct axis-aligned polygon edges required')
+            along, = moves
+            fixed = 1-along
+            low, high = sorted((a[along], b[along]))
+            sides[label].append((axes[fixed], a[fixed], axes[along], low, high))
+    return _plate_boundary_faces(name, faces, axis, stations, sides, tolerance)
+
+
+def _validate_plate_boundary(name, axis, stations, loops, tolerance):
+    comparison(name + ' tolerance', [0], [0], tolerance)
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError('Cartesian plate axis required')
+    if len(stations) != 2 or not stations[0] < stations[1] or not all(map(math.isfinite, stations)):
+        raise ValueError('Two increasing finite plate stations required')
+    if not loops:
+        raise ValueError('At least one labelled plate boundary required')
+
+
+def _plate_boundary_faces(name, faces, axis, stations, sides, tolerance):
     def edge_covers_some_side(points, side):
         fixed, value, along, lo, hi = side
         if len(points) != 2 or any(abs(p[fixed]-value) > tolerance for p in points):
@@ -206,7 +240,7 @@ def rectangular_plate_openings(name, faces, *, axis, stations, loops, tolerance)
                         if span is not None:
                             matches.append(((label,k),span))
                 if len(matches) != 1:
-                    return dict(output,reason='Unexpected or ambiguous rectangular boundary')
+                    return dict(output,reason='Unexpected or ambiguous plate boundary')
                 key,span = matches[0]
                 observed[key].append((*span,partner))
 
@@ -216,10 +250,10 @@ def rectangular_plate_openings(name, faces, *, axis, stations, loops, tolerance)
             stop = lo
             for u,v,_ in sorted(spans):
                 if abs(u-stop) > tolerance:
-                    return dict(output,reason='Gap or overlap in a required rectangular boundary',loop=label)
+                    return dict(output,reason='Gap or overlap in a required plate boundary',loop=label)
                 stop = v
             if abs(stop-hi) > tolerance:
-                return dict(output,reason='Required rectangular boundary is incomplete',loop=label)
+                return dict(output,reason='Required plate boundary is incomplete',loop=label)
             wall_faces[label].append(sorted({h for _,_,h in spans}))
         output['faces'].append(dict(face_indices=sorted(end_faces),station=station,loop_wall_faces=wall_faces))
     lower,upper = output['faces']

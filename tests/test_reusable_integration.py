@@ -1031,4 +1031,49 @@ class RectangularPlateOpeningTests(unittest.TestCase):
         self.assertIn("same planar side faces",self.evaluate()["reason"])
 
 
+class OrthogonalPlateBoundaryTests(unittest.TestCase):
+    def setUp(self):
+        self.outside = [(0,0),(20,0),(20,10),(40,10),(40,0),(80,0),(80,60),(0,60)]
+        self.port = [(50,20),(70,20),(70,40),(50,40)]
+        self.faces = [
+            dict(face_index=index, surface_type="plane-surface", outward_normal=[sign,0,0],
+                 loops=[self.loop(x, self.outside, 2), self.loop(x, self.port, 10)])
+            for index,x,sign in ((0,0,-1),(1,3,1))
+        ]
+
+    @staticmethod
+    def loop(x, polygon, start):
+        points = [(x,*p) for p in polygon]
+        return dict(edges=[
+            dict(curve_type="straight-curve", partner_surface_type="plane-surface",
+                 partner_face_index=start+i, endpoints=[a,b])
+            for i,(a,b) in enumerate(zip(points, points[1:]+points[:1], strict=True))
+        ])
+
+    def check(self):
+        from feature_checks import orthogonal_plate_boundaries
+        return orthogonal_plate_boundaries("notched plate", self.faces, axis=0, stations=(0,3),
+                loops={"outline": self.outside, "opening": self.port}, tolerance=1e-5)
+
+    def test_matches_notch_with_split_edges(self):
+        edges = self.faces[1]["loops"][0]["edges"]
+        edge = edges.pop(2)
+        a,b = edge["endpoints"]
+        middle = (3,30,10)
+        edges.extend([dict(edge, endpoints=[a,middle]), dict(edge, endpoints=[middle,b])])
+        self.assertEqual(self.check()["result"],"PASS")
+
+    def test_detects_filled_notch(self):
+        self.faces[1]["loops"][0] = self.loop(3, [(0,0),(80,0),(80,60),(0,60)], 2)
+        self.assertEqual(self.check()["result"],"FAIL")
+
+    def test_detects_extra_hole(self):
+        self.faces[0]["loops"].append(self.loop(0, [(5,25),(15,25),(15,35),(5,35)], 14))
+        self.assertEqual(self.check()["result"],"FAIL")
+
+    def test_detects_unshared_notch_wall(self):
+        self.faces[0]["loops"][0]["edges"][2]["partner_face_index"] = 14
+        self.assertEqual(self.check()["result"],"FAIL")
+
+
 if __name__=='__main__':unittest.main()
