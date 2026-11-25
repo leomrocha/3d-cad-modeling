@@ -15,6 +15,10 @@ Use `rolling_corner_offset` in [planar_profiles.py](../scripts/planar_profiles.p
 
 Use `translation_box_contact` in [service_clearance.py](../scripts/service_clearance.py) to classify the maximum contact dimension over a straight travel interval. The helper reports the exact candidate interval and distinguishes boundary contact from a possible positive-volume overlap. A lifted lid can contact its seat at fraction zero. A tray can remain in contact with its rails during part of its withdrawal. Record permitted seat pairs and check any required positive clearance separately. Supply conservative enclosures and account for readback error. Curved-surface witness points alone can understate a box.
 
+When two parts seat on coplanar rectangular faces, bind the four actual face corners of each part in the service frame. Use `rectangular_face_overlap` in [planar_profiles.py](../scripts/planar_profiles.py) to obtain the common face area and in-plane contact lengths. For a containment case, the contact length is the length of the interval intersection. A separating-axis margin identifies a candidate and can give a different value. Do not infer bearing capacity from face area. When one contact consists of several adjacent patches, count the area of their union.
+
+For moving geometry inside a nested insert, derive each service direction from a verified straight rail or bore in the composed leaf frame. The drawing root can be at identity while an inner subassembly is rotated or reversed. Confirm the direction and sign with two installed witnesses such as rail endpoints or signed shaft stations. Apply any independent height adjustment in its own measured carrier direction before checking the local withdrawal. A prior standalone result can cover the unchanged parts only if their identities, geometry and relative poses are bound. Include added carrier, guard and host occurrences in the installed sweep.
+
 
 ## Verify a moving group before native translation
 
