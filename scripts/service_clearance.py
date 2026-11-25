@@ -397,6 +397,80 @@ def translation_box_contact(moving_bounds, fixed_bounds, displacement):
                 witness_fraction=str(witness))
 
 
+def staged_translation_clearance(occurrences, stages):
+    """Screen ordered, fixed-orientation removal with explicit stage ownership.
+
+    Map each occurrence name to one or more conservative XYZ boxes. Each
+    stage declares name, moving names, displacement and optional released
+    names. Released names leave the assembly only after the stage passes.
+    verified_pairs maps (moving, fixed) names to caller-owned proof references
+    that cover every reported candidate for the pair in this stage.
+    """
+    active = {}
+    for name, boxes in occurrences.items():
+        if not isinstance(name, str) or not name.strip() or not boxes:
+            raise ValueError("Named occurrences with nonempty boxes are required")
+        for bounds in boxes:
+            _bounds(bounds)
+        active[name] = [[list(corner) for corner in bounds] for bounds in boxes]
+    if not active or not stages:
+        raise ValueError("Nonempty occurrences and ordered stages are required")
+
+    reports = []
+    stage_names = set()
+    for stage in stages:
+        name = stage["name"]
+        if not isinstance(name, str) or not name.strip() or name in stage_names:
+            raise ValueError("Unique nonempty stage name required")
+        stage_names.add(name)
+        moving = stage["moving"]
+        released = stage.get("released", ())
+        if (not isinstance(moving, (list, tuple)) or not moving or len(set(moving)) != len(moving)
+                or not set(moving) <= active.keys()):
+            raise ValueError("Each moving occurrence must be active and named once")
+        if (not isinstance(released, (list, tuple)) or len(set(released)) != len(released)
+                or not set(released) <= set(moving)):
+            raise ValueError("Only occurrences moved in the current stage can be released")
+        fixed = active.keys() - set(moving)
+        displacement = list(stage["displacement"])
+        _vector(displacement, 3)
+        verified = stage.get("verified_pairs", {})
+        for pair, source in verified.items():
+            if (not isinstance(pair, tuple) or len(pair) != 2 or pair[0] not in moving or
+                    pair[1] not in fixed or not isinstance(source, str) or not source.strip()):
+                raise ValueError("Each verified pair needs a moving occurrence, a fixed occurrence and evidence")
+
+        row = dict(name=name, moving=list(moving), displacement=displacement,
+                   boundary_contacts=[], verified_candidates=[], unresolved_candidates=[], released=[])
+        for part in moving:
+            for obstacle in sorted(fixed):
+                pair = part, obstacle
+                for i, first in enumerate(active[part]):
+                    for j, second in enumerate(active[obstacle]):
+                        contact = translation_box_contact(first, second, displacement)
+                        if contact["result"] == "DISJOINT_BOUNDS":
+                            continue
+                        hit = dict(moving=part, fixed=obstacle, moving_box=i, fixed_box=j, **contact)
+                        if contact["result"] == "BOUNDARY_ONLY":
+                            row["boundary_contacts"].append(hit)
+                        elif pair in verified:
+                            row["verified_candidates"].append(dict(hit, proof=verified[pair]))
+                        else:
+                            row["unresolved_candidates"].append(hit)
+        reports.append(row)
+        if row["unresolved_candidates"]:
+            return dict(result="UNRESOLVED_CANDIDATES", stages=reports, blocked_stage=name,
+                        active_occurrences=sorted(active))
+
+        for part in moving:
+            active[part] = [[list(map(sum, zip(c, displacement, strict=True))) for c in box]
+                            for box in active[part]]
+        for part in released:
+            del active[part]
+        row["released"] = list(released)
+    return dict(result="PASS", stages=reports, blocked_stage=None, active_occurrences=sorted(active))
+
+
 def quarter_turn_box(bounds, *, pivot, axis, direction):
     """Conservatively enclose an axis-aligned box over a signed 90° turn.
 

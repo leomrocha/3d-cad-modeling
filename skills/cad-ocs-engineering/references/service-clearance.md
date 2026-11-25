@@ -31,6 +31,12 @@ Use `translation_box_contact` in [service_clearance.py](../scripts/service_clear
 4. Keep tool entry, engagement and operating swing separate. A translated head envelope can prove entry for its assumed size. A rotating handle, changed orientation or cable bend needs its own swept geometry.
 
 
+## Carry removed occurrences through a service sequence
+
+Use `staged_translation_clearance(occurrences, stages)` when multiple components leave the assembly in a defined order. Supply one or more finite envelope boxes per named occurrence. For each stage give its name, moving occurrence names and common displacement. Set `released` only for moved occurrences that no longer take part in later stages. For example, pull the screw before checking washer withdrawal. Several parts can move together as one deck or cover, with starting positions carried forward from the preceding stage.
+
+The checker retains seated boundary contacts in its report and stops at the first unresolved volume candidate. To resolve an intended bore or other overlapping box pair, pass stage-local `verified_pairs` keyed by the moving and stationary names with a reference to the clearance evidence for that entire phase. The evidence must cover the named envelopes and the full movement segment. Check tool swing, interfaces within a moving group and physical handling separately. Preserve the exact active occurrence set and source model revision used for the screen.
+
 ## Screen a cylindrical part during axial removal
 
 For a bearing, round pin or tool translated along its own Cartesian axis, pass its measured axial span, maximum radius, centre and signed travel to `swept_axial_cylinder_box_gap` in [service_clearance.py](../scripts/service_clearance.py). Screen each finite shoulder or head separately when the radius changes. The helper checks the whole swept interval against each conservative stationary box. A positive axial gap or a nearest transverse radius strictly larger than the cylinder radius establishes separation. A tangent or overlap remains a candidate. To display the distance, combine the axial gap with the nonnegative difference between the nearest transverse radius and the cylinder radius. For intentional passage through a coaxial bore, verify the bore and its axial coverage independently.

@@ -9,7 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from service_clearance import swept_axial_cylinder_box_gap
 from service_clearance import guided_circular_pilot_clearance, sampled_rotation_clearance
-from service_clearance import translation_box_contact
+from service_clearance import staged_translation_clearance, translation_box_contact
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
@@ -17,6 +17,44 @@ def placement(x=0, y=0, z=0):
     return [[1, 0, 0, x], [0, 1, 0, y], [0, 0, 1, z], [0, 0, 0, 1]]
 
 
+class StagedTranslationClearance(unittest.TestCase):
+    def test_washer_requires_screw_to_leave_first(self):
+        parts = {"screw": [[[0, 0, 2], [1, 1, 4]]],
+                 "washer": [[[-1, -1, 1], [2, 2, 2]]]}
+        screw = dict(name="withdraw screw", moving=["screw"], displacement=[0, 0, 5], released=["screw"])
+        washer = dict(name="withdraw washer", moving=["washer"], displacement=[0, 0, 5], released=["washer"])
+        fail = staged_translation_clearance(parts, [washer, screw])
+        self.assertEqual(fail["blocked_stage"], "withdraw washer")
+        self.assertEqual(fail["active_occurrences"], ["screw", "washer"])
+        self.assertEqual(fail["stages"][0]["released"], [])
+        result = staged_translation_clearance(parts, [screw, washer])
+        self.assertEqual(result["result"], "PASS")
+        self.assertEqual(result["active_occurrences"], [])
+        self.assertEqual(parts["screw"][0][0], [0, 0, 2])
+
+    def test_pose_carries_to_next_stage_for_joint_group(self):
+        parts = {"plate": [[[0, 0, 0], [1, 1, 1]]],
+                 "cup": [[[0, 0, -1], [1, 1, 0]]],
+                 "rail": [[[2, 0, 0], [3, 1, 2]]]}
+        group = ["plate", "cup"]
+        up = dict(name="lift", moving=group, displacement=[0, 0, 4])
+        out = dict(name="sideways", moving=group, displacement=[4, 0, 0], released=group)
+        self.assertEqual(staged_translation_clearance(parts, [up, out])["result"], "PASS")
+        self.assertEqual(staged_translation_clearance(parts, [out])["blocked_stage"], "sideways")
+
+    def test_approved_pair_is_scoped_to_one_stage(self):
+        parts = {"pin": [[[0, 0, 0], [1, 1, 1]], [[0, 0, 3], [2, 2, 4]]],
+                 "seat": [[[0, 0, 0], [1, 1, 2]]]}
+        approved = {("pin", "seat"): "checked pin and bore along this stage"}
+        lift = dict(name="release", moving=["pin"], displacement=[0, 0, 1], verified_pairs=approved)
+        nudge = dict(name="nudge", moving=["pin"], displacement=[0, 0, .5])
+        result = staged_translation_clearance(parts, [lift, nudge])
+        self.assertEqual(result["blocked_stage"], "nudge")
+        self.assertEqual(result["stages"][0]["verified_candidates"][0]["proof"], approved[("pin", "seat")])
+        with self.assertRaises(ValueError):
+            staged_translation_clearance(parts, [dict(lift, released=["seat"])])
+        with self.assertRaises(ValueError):
+            staged_translation_clearance(parts, [dict(lift, verified_pairs={("pin", "seat"): ""})])
 class ServiceClearance(unittest.TestCase):
     box = [[0, 0, 0], [1, 1, 1]]
 
