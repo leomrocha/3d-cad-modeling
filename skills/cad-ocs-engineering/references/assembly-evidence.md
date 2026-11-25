@@ -39,6 +39,8 @@ Put measured source axes, proposed axes and each calculated pose on separate nam
 
 Read back the native line handles, endpoints and layers independently after creation. Recalculate the required lengths and spans from those endpoints. Confirm the reference lines are at model-space root and the retained solids still descend from the original insert. Validate the saved revision with the caller's persistence method. Report the checked poses and identify any proposed change that requires a new physical part.
 
+For the centre of an available mounting strip on a flat, straight-edged face, use `straight_profile_station_intervals` in [planar_profiles.py](../scripts/planar_profiles.py). Supply the measured closed contour in connected vertex order, the section axis and station, and the comparison tolerance in the drawing's units. Preserve the resulting separate material intervals. Choose the joining interval using the mounting role and independently checked part edges. A station on a vertex, a curved contour or a face with separate openings requires a boundary-aware procedure with scope for that topology.
+
 ## Image constraints
 
 A calibrated in-plane trace requires coplanarity with its reference. For perspective constraints on parallel edges, pin the photo, camera matrix, frame, vanishing point, pixel picks and pick tolerance. Use [photo_constraints.py](../scripts/photo_constraints.py) to intersect line directions consistent with every pick disk. An empty interval rejects that common direction for the supplied camera. Back-project each feasible line to its world plane. Evaluate a metric section only at an independently established depth or height. A direction and small image residual alone leave a family of possible placements.

@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "cfe827e797187c5c8ae0ebf60f336ec81231f103861e70732f1c44649f01f854"
+      "sha256": "f1685fc1f6296cea8ebbf478c6a9a30af4949c9553cea0c11b9aafcb33b99a3e"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -572,7 +572,7 @@
     },
     "scripts/planar_profiles.py": {
       "source": "scripts/planar_profiles.py",
-      "sha256": "f9c4176e8c1aab0d8409292e906efb9d880f57cce8df1705569f465d5d1d3a7d"
+      "sha256": "9dc67f4500a20013c5a2926ef512d10a85a560cfdacff6201ffb6a23cef820bc"
     },
     "scripts/plate_reference.py": {
       "source": "scripts/plate_reference.py",

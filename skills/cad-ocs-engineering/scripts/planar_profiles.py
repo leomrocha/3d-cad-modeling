@@ -20,6 +20,38 @@ def inside(point,poly):
     return result
 
 
+
+def straight_profile_station_intervals(vertices, station, *, axis=0, tolerance=1e-6):
+    """Return material intervals along a section of one straight-edged loop.
+
+    Pass vertices in original connected order and one caller-selected section
+    station on the chosen axis. Intervals use the other axis. Stations within
+    tolerance of a vertex require a separately qualified edge or vertex case.
+    """
+    if type(axis) is not int or axis not in (0, 1):
+        raise ValueError("Section axis must be 0 or 1")
+    station = finite(station)
+    tolerance = positive(tolerance)
+    polygon = validate_profile(vertices)
+    offsets = [p[axis] - station for p in polygon]
+    if any(abs(value) <= tolerance for value in offsets):
+        raise ValueError("Section station meets a profile vertex within tolerance")
+
+    transverse = 1 - axis
+    crossings = []
+    for i, first in enumerate(polygon):
+        j = (i + 1) % len(polygon)
+        if (offsets[i] < 0) == (offsets[j] < 0):
+            continue
+        second = polygon[j]
+        fraction = offsets[i] / (offsets[i] - offsets[j])
+        crossings.append(first[transverse] + fraction * (second[transverse] - first[transverse]))
+    crossings.sort()
+    if len(crossings) % 2 or any(b - a <= tolerance for a, b in zip(crossings, crossings[1:])):
+        raise ValueError("Section crossings are ambiguous at the requested tolerance")
+    return list(zip(crossings[::2], crossings[1::2], strict=True))
+
+
 def line_circle(a,b,c,r,tolerance):
     d=sub(b,a);q=sub(a,c);aa=sum(x*x for x in d)
     if aa==0:raise ValueError('Zero-length stock segment')
