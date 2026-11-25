@@ -179,52 +179,99 @@ def _bounds(points):
     return [[min(p[i] for p in points),max(p[i] for p in points)] for i in range(3)]
 
 
-def match_world_vertices(source,target,*,length_tolerance,max_instances=10000,
-                         require_unique_source=False):
-    """Match point sets, face counts and closed flags with repeated-instance multiplicity.
-
-    Each row has id, points, face_count and closed. This compares vertices and
-    topology observations; analytic surface equations retain separate checks.
-    """
+def _match_world_observations(source, target, *, signature, scope, length_tolerance,
+                              max_instances, require_unique_source):
     if type(require_unique_source) is not bool:
-        raise ValueError('Expected a boolean source attribution option')
-    tolerance=_tolerance(length_tolerance)
-    if type(max_instances) is not int or max_instances<1 or max(len(source),len(target))>max_instances:
-        raise ValueError('Positive instance bound exceeded')
-    if not source or not target:raise ValueError('Nonempty world-geometry observations required')
-    prepared=[]
-    for rows in (source,target):
-        seen=set();out=[]
+        raise ValueError("Expected a boolean source attribution option")
+    tolerance = _tolerance(length_tolerance)
+    if type(max_instances) is not int or max_instances < 1 or max(len(source), len(target)) > max_instances:
+        raise ValueError("Positive instance bound exceeded")
+    if not source or not target:
+        raise ValueError("Nonempty world-geometry observations required")
+
+    prepared = []
+    for rows in (source, target):
+        seen, observations = set(), []
         for row in rows:
-            if not isinstance(row.get('id'),str) or not row['id'] or row['id'] in seen:raise ValueError('Unique readable occurrence identities required')
-            seen.add(row['id']);points=[vector(p) for p in row['points']]
-            if not points or type(row.get('face_count')) is not int or row['face_count']<1 or type(row.get('closed')) is not bool:raise ValueError('Points, face count and explicit closed flag required')
-            out.append(dict(row,points=points,bounds=_bounds(points)))
-        prepared.append(out)
-    candidates=[];residuals={}
-    for i,row in enumerate(prepared[0]):
-        hits=[]
-        for j,other in enumerate(prepared[1]):
-            if not row['closed'] or not other['closed'] or row['face_count']!=other['face_count']:continue
-            if max(abs(x-y) for a,b in zip(row['bounds'],other['bounds']) for x,y in zip(a,b))>tolerance:continue
-            a,b=row['points'],other['points']
-            error=max(max(min(math.dist(p,q) for q in b) for p in a),max(min(math.dist(p,q) for q in a) for p in b))
-            if error<=tolerance:hits.append(j);residuals[i,j]=error
+            name = row.get("id")
+            if not isinstance(name, str) or not name or name in seen:
+                raise ValueError("Unique readable occurrence identities required")
+            seen.add(name)
+            points = {tuple(vector(point)) for point in row["points"]}
+            if not points:
+                raise ValueError("Nonempty observation points required")
+            observations.append((signature(row), points, _bounds(points)))
+        prepared.append(observations)
+
+    candidates, residuals = [], {}
+    for i, (key, a, bounds) in enumerate(prepared[0]):
+        hits = []
+        for j, (other_key, b, other_bounds) in enumerate(prepared[1]):
+            if key is None or key != other_key:
+                continue
+            if any(abs(x-y) > tolerance for pair, other in zip(bounds, other_bounds)
+                   for x, y in zip(pair, other)):
+                continue
+            # Shared samples already have zero nearest-neighbour distance.
+            error = max((min(math.dist(p, q) for q in b) for p in a-b), default=0)
+            error = max(error, max((min(math.dist(p, q) for q in a) for p in b-a), default=0))
+            if error <= tolerance:
+                hits.append(j)
+                residuals[i, j] = error
         candidates.append(hits)
-    proof=_bijection(candidates,len(target))
+
+    proof = _bijection(candidates, len(target))
     if require_unique_source:
-        alternatives = {row['id']: [] for row in target}
+        alternatives = {row["id"]: [] for row in target}
         for i, hits in enumerate(candidates):
             for j in hits:
-                alternatives[target[j]['id']].append(source[i]['id'])
+                alternatives[target[j]["id"]].append(source[i]["id"])
         ambiguous = {key: ids for key, ids in alternatives.items() if len(ids) != 1}
-        proof['unresolved_source_candidates'] = ambiguous
+        proof["unresolved_source_candidates"] = ambiguous
         if ambiguous:
-            proof.update(result='FAIL', reason='Target occurrences require unique geometric source identities')
-            proof['matching'] = {}
-    proof.update(scope='world vertex sets, face counts and closed-topology observations',length_tolerance=tolerance,
-                 matches=[dict(source_id=source[i]['id'],target_id=target[j]['id'],residual=residuals[i,j]) for i,j in proof['matching'].items()])
+            proof.update(result="FAIL", reason="Target occurrences require unique geometric source identities")
+            proof["matching"] = {}
+    proof.update(scope=scope, length_tolerance=tolerance,
+                 matches=[dict(source_id=source[i]["id"], target_id=target[j]["id"], residual=residuals[i, j])
+                          for i, j in proof["matching"].items()])
     return proof
+
+
+def match_world_vertices(source, target, *, length_tolerance, max_instances=10000,
+                         require_unique_source=False):
+    """Match point sets, face counts and closed flags with repeated-instance multiplicity."""
+    def topology(row):
+        faces, closed = row.get("face_count"), row.get("closed")
+        if type(faces) is not int or faces < 1 or type(closed) is not bool:
+            raise ValueError("Positive face count and explicit closed flag required")
+        return faces if closed else None
+
+    return _match_world_observations(
+        source, target, signature=topology, scope="world vertex sets, face counts and closed-topology observations",
+        length_tolerance=length_tolerance, max_instances=max_instances, require_unique_source=require_unique_source)
+
+
+def match_world_boundary_samples(source, target, *, length_tolerance, max_instances=10000,
+                                 require_unique_source=False):
+    """Match each visible occurrence by sampled boundary, effective RGB and layer.
+
+    Supply id, world points, effective rgb (three byte values) and layer per
+    occurrence. Compare identical sampling policies in one declared frame and
+    length unit. The result covers those observations. Face topology, curved
+    extrema and portions between samples require their own checks.
+    """
+    def display(row):
+        layer, rgb = row.get("layer"), row.get("rgb")
+        if not isinstance(layer, str) or not layer.strip():
+            raise ValueError("Named effective layer required")
+        if (not isinstance(rgb, (list, tuple)) or len(rgb) != 3
+                or any(type(value) is not int or not 0 <= value <= 255 for value in rgb)):
+            raise ValueError("Effective RGB requires three byte values")
+        return layer, tuple(rgb)
+
+    return _match_world_observations(
+        source, target, signature=display, scope="world boundary samples, effective RGB and effective layer",
+        length_tolerance=length_tolerance, max_instances=max_instances, require_unique_source=require_unique_source)
 
 
 def check_world_envelope(points,allowed_bounds,*,length_tolerance):

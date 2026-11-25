@@ -9,6 +9,12 @@
 
 For opposite hands, pass measured world points, a common reference origin and each hand's positive outward unit direction to `directed_axial_span` in [assembly_verification.py](../scripts/assembly_verification.py). Compare the resulting ordered stations against the independent shaft, insert and spacer datums with their signed direction preserved. The returned endpoints describe the observed points. Curved extrema require their own analytic or conservative bounds.
 
+### Match installed boundary samples and display
+
+When an insertion changes native solid serialization, compare source and installed boundary samples in the receiving assembly frame. Transform the source samples with the intended pose and use the same boundary sampling policy on the installed solid. Resolve each occurrence's effective RGB and layer, including block and layer inheritance, before calling `match_world_boundary_samples` in [assembly_verification.py](../scripts/assembly_verification.py).
+
+Supply a unique `id`, XYZ `points`, `rgb` and `layer` for every visible occurrence in the checked scope. Set the length tolerance in model units. The matcher requires one source per installed occurrence and checks nearest-sample distances in both directions. Use `require_unique_source=True` when identifying exact source roles is required. Compare occurrence counts and skipped hidden content separately. Record curve coverage and independently measure critical features and topology when the boundary is sampled only at endpoints.
+
 ### Verify a changed native INSERT
 
 Read the source feature in its own frame before deriving the new placement. For an axisymmetric part, use two ordered stations on its shaft or bore to check the axis direction. Use a separate off-axis feature, such as a keyway or asymmetric hole, to check clocking when that rotation matters.

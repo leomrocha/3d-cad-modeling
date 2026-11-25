@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "f5e27ef07ede87139ac97025a9647c99a56c94b0a9faf9c8357d9c2c732d268a"
+      "sha256": "cfe827e797187c5c8ae0ebf60f336ec81231f103861e70732f1c44649f01f854"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -296,7 +296,7 @@
     },
     "scripts/assembly_verification.py": {
       "source": "scripts/assembly_verification.py",
-      "sha256": "a0b7af769d28275b26488bcce3bba411019b64e7b9417dba90d2a53040962262"
+      "sha256": "0cb46aff8de1f3f1481497c5bcf7b0f09750e9426a28ecec6150cf5ab9b60dc8"
     },
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",

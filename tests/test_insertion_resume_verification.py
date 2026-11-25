@@ -8,7 +8,7 @@ from cadtools.checkpoints import verify_resume_checkpoint,save_checkpoint,verify
 from cadtools.records import consumed_profile_transition, model_space_after_revolve, model_space_live_handles
 from insert_recovery import insert_default_contract,accept_insert_default
 from assembly_build import continue_insert_after_file, correct_insert_point, insert_component, recover_insert_component
-from assembly_verification import check_axis_aligned_placement,compare_occurrence_matrices,verify_nested_placements,match_world_vertices,check_world_envelope
+from assembly_verification import check_axis_aligned_placement,compare_occurrence_matrices,verify_nested_placements,match_world_vertices,match_world_boundary_samples,check_world_envelope
 from step_placements import eye
 
 
@@ -508,6 +508,30 @@ class Assemblies(unittest.TestCase):
         for field,value in [('closed',False),('face_count',5)]:
             b=[observation('X',0)];b[0][field]=value
             self.assertEqual(match_world_vertices(a[:1],b,length_tolerance=1e-8)['result'],'FAIL')
+    def test_sample_matching_uses_effective_display_when_geometry_is_coincident(self):
+        first = dict(id="one", points=[[1, 2, 3], [4, 5, 6]], rgb=[49, 189, 178], layer="Supports")
+        second = dict(first, id="two", layer="Wear")
+        observed = [dict(second, id="B", points=list(reversed(first["points"]))), dict(first, id="A")]
+        report = match_world_boundary_samples([first, second], observed, length_tolerance=1e-4,
+                                              require_unique_source=True)
+        self.assertEqual(report["result"], "PASS")
+        self.assertEqual(report["matching"], {0: 1, 1: 0})
+        observed[1]["rgb"] = [49, 189, 177]
+        self.assertEqual(match_world_boundary_samples([first, second], observed,
+                                                      length_tolerance=1e-4)["result"], "FAIL")
+
+    def test_sample_matching_checks_both_directions_and_repeated_occurrences(self):
+        source = dict(id="one", points=[[0, 0, 0], [4, 0, 0]], rgb=[0, 0, 0], layer="Frame")
+        changed = dict(source, id="copy", points=[[0, 0, 0], [2, 0, 0], [4, 0, 0]])
+        for a, b in ((source, changed), (changed, source)):
+            report = match_world_boundary_samples([a], [b], length_tolerance=0.1)
+            self.assertEqual(report["result"], "FAIL")
+        repeat = dict(source, id="repeat")
+        self.assertEqual(match_world_boundary_samples([source, repeat], [source],
+                                                      length_tolerance=0.1)["result"], "FAIL")
+        with self.assertRaises(ValueError):
+            match_world_boundary_samples([source], [dict(source, rgb=[0, 0, 256])], length_tolerance=0.1)
+
     def test_detached_candidate_requires_source_review_without_changes(self):
         points=[[500,500,0],[501,501,1]];before=copy.deepcopy(points)
         r=check_world_envelope(points,[[0,10],[0,10],[-2,2]],length_tolerance=1e-8)
