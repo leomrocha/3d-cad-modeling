@@ -135,7 +135,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Insertion recovery, resume and assembly verification
 
 1. [insert_recovery.py](../scripts/insert_recovery.py) — exact native INSERT default contracts, durable same-request continuation and completion checkpoints.
-2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching, boundary sample matching with effective RGB and layer, optional unique endpoint attribution, signed axis-aligned placement checks and caller-defined envelope checks.
+2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, native geometry and placement differences across saved revisions, repeated source-world vertex matching, boundary sample matching with effective RGB and layer, optional unique endpoint attribution, signed axis-aligned placement checks and caller-defined envelope checks.
 3. [assembly_build.py](../scripts/assembly_build.py) — guarded insertion-point compare-and-set correction with complete placement readback.
 4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pin merging, source-pinned incremental saves, exact same-document mutation recovery and verified resume gates.
 5. [batch_insert_recovery.py](../scripts/batch_insert_recovery.py) starts or resumes modelspace block insertions in a job-owned DXF. It matches saved occurrences to journaled requests and checks dependencies before writing. [DXF insertion recovery procedure](../skills/cad-ocs-engineering/references/insertion-resume-verification.md#recover-a-batch-of-dxf-block-insertions).

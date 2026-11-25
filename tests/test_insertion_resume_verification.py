@@ -9,6 +9,7 @@ from cadtools.records import consumed_profile_transition, model_space_after_revo
 from insert_recovery import insert_default_contract,accept_insert_default
 from assembly_build import continue_insert_after_file, correct_insert_point, insert_component, recover_insert_component
 from assembly_verification import check_axis_aligned_placement,compare_occurrence_matrices,verify_nested_placements,match_world_vertices,match_world_boundary_samples,check_world_envelope
+from assembly_verification import compare_native_occurrence_revisions
 from step_placements import eye
 
 
@@ -482,6 +483,29 @@ def occurrence(handle,path,x=0):
 
 def observation(name,x):
     return dict(id=name,points=[[x,0,0],[x+1,0,0],[x,1,0],[x,0,1]],face_count=4,closed=True)
+
+
+class OccurrenceRevision(unittest.TestCase):
+    def record(self, name, geometry='a', shift=0):
+        matrix = [list(row) for row in eye()]
+        matrix[0][3] = shift
+        return dict(path=['parent', name], native_shape_sha256=geometry * 64, world_matrix=matrix)
+
+    def test_reports_geometry_placement_additions_and_removals(self):
+        previous = [self.record(name) for name in ('keep', 'panel', 'moved', 'both', 'deleted')]
+        current = [self.record('both', geometry='b', shift=2), self.record('new'),
+                   self.record('moved', shift=1), self.record('keep'), self.record('panel', geometry='b')]
+        self.assertEqual(compare_native_occurrence_revisions(previous, current), dict(
+            unchanged=[('parent', 'keep')], reshaped=[('parent', 'both'), ('parent', 'panel')],
+            moved=[('parent', 'both'), ('parent', 'moved')], added=[('parent', 'new')],
+            removed=[('parent', 'deleted')]))
+
+    def test_rejects_duplicate_paths_and_missing_payload_digest(self):
+        row = self.record('kept')
+        with self.assertRaisesRegex(ValueError, 'Duplicate'):
+            compare_native_occurrence_revisions([row, row], [row])
+        with self.assertRaisesRegex(ValueError, 'geometry digest'):
+            compare_native_occurrence_revisions([row], [dict(row, native_shape_sha256='short')])
 
 
 class Assemblies(unittest.TestCase):

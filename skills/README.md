@@ -90,6 +90,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 1. [Insertion, resume and assembly verification](cad-ocs-engineering/references/insertion-resume-verification.md) — verified defaults, point-only correction, pinned checkpoints, repeated-instance matching and preserved source anomalies, and separate storage and installed occurrence checks.
 2. [Recover a batch of DXF block insertions](cad-ocs-engineering/references/insertion-resume-verification.md#recover-a-batch-of-dxf-block-insertions) covers request journals, saved DXF readback and dependent writes after interruption.
 3. [Replace individually addressed nested inserts](cad-ocs-engineering/references/insertion-resume-verification.md#replace-individually-addressed-nested-inserts) covers occurrence uniqueness, exact handle erasure and retained geometry comparisons.
+4. [Review an installation on a revised host](cad-ocs-engineering/references/assembly-evidence.md#interfaces-installation-and-contact) checks occurrence geometry and placement changes before reusing mating and service evidence.
 
 ## Surface and mesh recovery
 

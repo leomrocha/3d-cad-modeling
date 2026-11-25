@@ -45,6 +45,43 @@ def _matrix(m):
     return m
 
 
+def compare_native_occurrence_revisions(previous, current):
+    """Classify geometry and placement changes by stable native occurrence path.
+
+    The caller binds both complete inventories to the same model lineage and
+    frame. Each geometry digest identifies the complete source body payload.
+    A reused path can carry a new shape or placement.
+    """
+    def index(records):
+        indexed = {}
+        for record in records:
+            path = record["path"]
+            if not isinstance(path, (tuple, list)) or not path or any(
+                    not isinstance(handle, str) or not handle for handle in path):
+                raise ValueError("Nonempty native occurrence path required")
+            key = tuple(path)
+            shape = record["native_shape_sha256"]
+            if not isinstance(shape, str) or len(shape) != 64 or any(
+                    digit not in "0123456789abcdef" for digit in shape):
+                raise ValueError("Lowercase SHA-256 geometry digest required")
+            if key in indexed:
+                raise ValueError("Duplicate native occurrence path")
+            matrix = tuple(tuple(row) for row in _matrix(record["world_matrix"]))
+            indexed[key] = (shape, matrix)
+        if not indexed:
+            raise ValueError("Nonempty native occurrence inventory required")
+        return indexed
+
+    before, after = map(index, (previous, current))
+    retained = before.keys() & after.keys()
+    reshaped = {path for path in retained if before[path][0] != after[path][0]}
+    moved = {path for path in retained if before[path][1] != after[path][1]}
+    return dict(unchanged=sorted(retained - reshaped - moved),
+                reshaped=sorted(reshaped), moved=sorted(moved),
+                added=sorted(after.keys() - before.keys()),
+                removed=sorted(before.keys() - after.keys()))
+
+
 def check_axis_aligned_placement(local_bounds, target_bounds, matrix, *, length_tolerance):
     """Check corner-to-corner bounds for a signed axis permutation and translation."""
     tolerance = _tolerance(length_tolerance)
