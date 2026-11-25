@@ -22,6 +22,11 @@ Keep the bore centre referenced to the mating interface when altering stock widt
 Use `circular_opening_edge_land` for a circular rim between two parallel sides. Feed the measured opening centre and side plane coordinates along the same transverse axis. On a countersink use the rim radius at the mouth. Check the signed land to each side. Zero is tangency and a negative value is breakout. Use the measured ring, planar side geometry and the specified acceptance limits separately. The returned length measures edge land.
 
 
+## Check material between parallel bores
+
+1. Before cutting an index row or other group of separate circular bores, project the centres into one plane perpendicular to their axes. Use one group for the bores that pass through the same material wall. Use `planar_bore_ligaments` from [feature_checks.py](../scripts/feature_checks.py) with each centre and diameter, the required material thickness between hole edges, and the numeric tolerance. A zero requirement checks separation only.
+2. Repeat the calculation with centres and diameters read from the native part. Observing several cylinder axes can still leave one connected opening. Check a full circular rim on both wall faces for every bore intended to be separate. Use [saved circular boundaries](circular-boundary-checks.md) for that check. Verify load-based ligament and edge distances against the applicable design requirement.
+
 ## Check a through-keyway in a concentric bore
 
 Use `concentric_through_keyway_section` to derive the two mouth corners on the bore and the two floor corners from independent dimensions. The circular bore is centred at the origin and the slot opens toward +Y. Radial depth is measured at the centreline from the bore radius to the floor. The minimum radial wall is the outer radius minus the distance to either floor corner. A negative result indicates breakout for the declared concentric section.

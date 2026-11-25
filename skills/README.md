@@ -69,6 +69,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 ## Circular opening inspection
 
 1. [Saved circular boundaries](cad-ocs-engineering/references/circular-boundary-checks.md) — associates full circular cap loops, analytic curve parameters and reciprocal cylindrical face boundaries.
+2. [Material between parallel bores](cad-ocs-engineering/references/shared-feature-checks.md#check-material-between-parallel-bores) — checks separation and available material for indexed holes through a common wall.
 
 ## Source-bound screw construction
 

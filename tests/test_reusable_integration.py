@@ -16,7 +16,7 @@ from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_documen
 from cadtools.records import iter_records,motion_role_handles,read_stable_entity
 from cadtools.checkpoints import write_stage_checkpoint,save_checkpoint
 from feature_checks import circular_trim_stations,cylinder_pattern,cylinder_wall_checks,axial_datum_chain,circular_opening_edge_land,round_ended_slot_tangents
-from feature_checks import concentric_through_keyway_section, perpendicular_through_bore
+from feature_checks import concentric_through_keyway_section, perpendicular_through_bore, planar_bore_ligaments
 from step_placements import native_matrix,classify_hand,eye,apply
 from assembly_occurrences import expand_occurrences,recover_insert_sequence,write_occurrence_tables
 from planar_profiles import annular_seat_with_radial_slot,round_ended_slot_profile,clip_circular_openings,bounded_extrusion,conservative_tool_polygon,two_circle_tangent_hull,two_circle_band_box_clearance
@@ -956,6 +956,23 @@ class ParallelBandProfiles(unittest.TestCase):
             parallel_roll_band_profiles([1,1],[1,1],inner_radius=3,outer_radius=5)
         with self.assertRaises(ValueError):
             parallel_roll_band_profiles([0,0],[1,1],inner_radius=5,outer_radius=3)
+
+
+class PlanarBoreLigamentTests(unittest.TestCase):
+    def test_rejects_overlapping_and_tangent_index_bores(self):
+        for pitch in (12, 16.2):
+            with self.subTest(pitch=pitch):
+                result=planar_bore_ligaments('index',[(0,0,16.2),(0,pitch,16.2)],0,1e-6)
+                self.assertEqual(result['result'],'FAIL')
+                self.assertAlmostEqual(result['observed_minimum_land'],pitch-16.2)
+
+    def test_checks_nearest_pair_even_when_input_is_unordered(self):
+        circles=[(0,0,16.2),(0,48,16.2),(0,24,16.2)]
+        self.assertEqual(planar_bore_ligaments('index',circles,7.8,1e-6)['result'],'PASS')
+        result=planar_bore_ligaments('index',circles,8,1e-6)
+        self.assertEqual(result['result'],'FAIL')
+        self.assertEqual(len(result['pairs']),3)
+        self.assertAlmostEqual(result['observed_minimum_land'],7.8)
 
 
 if __name__=='__main__':unittest.main()

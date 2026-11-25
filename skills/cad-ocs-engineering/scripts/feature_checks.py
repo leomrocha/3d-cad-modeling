@@ -142,6 +142,34 @@ def concentric_through_keyway_section(bore_diameter, outer_diameter, width, radi
                 minimum_radial_wall=roof)
 
 
+def planar_bore_ligaments(name, circles, minimum_land, tolerance):
+    """Check edge-to-edge land for circular bores through the same material wall."""
+    comparison(name + ' tolerance', [0], [0], tolerance)
+    circles = [tuple(circle) for circle in circles]
+    if len(circles) < 2 or any(len(circle) != 3 for circle in circles):
+        raise ValueError('At least two x, y, diameter records are required')
+    if any(type(v) not in (int, float) or not math.isfinite(v)
+           for circle in circles for v in circle):
+        raise ValueError('Finite circular bore observations are required')
+    if any(diameter <= 0 for _, _, diameter in circles):
+        raise ValueError('Bore diameters must be positive')
+    if type(minimum_land) not in (int, float) or not math.isfinite(minimum_land) or minimum_land < 0:
+        raise ValueError('Minimum material land must be finite and nonnegative')
+
+    pairs = []
+    for i, (x1, y1, diameter1) in enumerate(circles):
+        for j, (x2, y2, diameter2) in enumerate(circles[i+1:], i+1):
+            distance = math.hypot(x2-x1, y2-y1)
+            land = distance - diameter1/2 - diameter2/2
+            if not math.isfinite(land):
+                raise ValueError('Bore edge distance is outside numeric range')
+            pairs.append(dict(indices=[i,j], centre_distance=distance, edge_to_edge_land=land))
+    observed = min(p['edge_to_edge_land'] for p in pairs)
+    passes = observed > tolerance and observed >= minimum_land - tolerance
+    return dict(check=name, result='PASS' if passes else 'FAIL', observed_minimum_land=observed,
+                required_minimum_land=minimum_land, numeric_tolerance=tolerance, pairs=pairs)
+
+
 def closed_body(name,features):
     t=features['topology']
     return comparison(name,[t['bodies'],t['lumps'],t['shells'],int(t['reciprocal_closed_partners'])],[1,1,1,1],1e-9,'count','native connected body and reciprocal coedge graph')
