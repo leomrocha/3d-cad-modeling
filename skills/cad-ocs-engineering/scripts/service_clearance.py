@@ -326,6 +326,48 @@ def swept_axial_cylinder_box_gap(centre, *, axis, radius, span, travel, obstacle
     }
 
 
+
+def swept_axial_cylinder_bore_clearance(
+        centre, *, axis, radius, span, travel, bore_centre, bore_radius,
+        bore_span, wall_span, radial_reserve=0):
+    """Check a round moving envelope against the measured hole in a finite wall.
+
+    Both axes are parallel to the chosen Cartesian axis. Use an upper moving
+    radius and a lower clear bore radius over their stated spans. Clearance
+    must cover the entire intersection with the wall and exceed the requested
+    radial reserve. Hole tangency remains a candidate.
+    """
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError("Expected an XYZ axis index")
+    centre, bore_centre = (_vector(point, 3) for point in (centre, bore_centre))
+    radius, travel, bore_radius, radial_reserve = _vector(
+        (radius, travel, bore_radius, radial_reserve), 4)
+    start, stop = _vector(span, 2)
+    bore_start, bore_stop = _vector(bore_span, 2)
+    wall_start, wall_stop = _vector(wall_span, 2)
+    if (min(radius, bore_radius) <= 0 or radial_reserve < 0
+            or start >= stop or bore_start >= bore_stop or wall_start >= wall_stop):
+        raise ValueError("Positive radii, ordered finite spans and nonnegative reserve required")
+
+    swept_start = start + min(travel, 0)
+    swept_stop = stop + max(travel, 0)
+    lo, hi = max(swept_start, wall_start), min(swept_stop, wall_stop)
+    offset_squared = sum((centre[i]-bore_centre[i])**2 for i in range(3) if i != axis)
+    radial_budget = bore_radius - radius - radial_reserve
+
+    result = "CLEAR_THROUGH_BORE"
+    if lo > hi:
+        result = "NO_WALL_ENCOUNTER"
+    elif lo < bore_start or hi > bore_stop:
+        result = "UNPROVEN_BORE_SPAN"
+    elif radial_budget <= 0 or offset_squared >= radial_budget**2:
+        result = "RADIAL_CONTACT_CANDIDATE"
+    return dict(result=result, swept_axial_span=[str(swept_start), str(swept_stop)],
+                wall_overlap_span=[str(lo), str(hi)] if lo <= hi else None,
+                radial_budget_before_offset=str(radial_budget),
+                transverse_axis_offset_squared=str(offset_squared))
+
+
 def static_box_halfspace_gap(bounds, *, normal, offset):
     """Screen a box against a part contained in normal · point <= offset."""
     low, high = _bounds(bounds)

@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from service_clearance import swept_axial_cylinder_box_gap
+from service_clearance import swept_axial_cylinder_bore_clearance, swept_axial_cylinder_box_gap
 from service_clearance import guided_circular_pilot_clearance, sampled_rotation_clearance
 from service_clearance import staged_translation_clearance, translation_box_contact
 from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
@@ -16,6 +16,40 @@ from service_clearance import axial_stack_witness, bounded_axial_section_clearan
 def placement(x=0, y=0, z=0):
     return [[1, 0, 0, x], [0, 1, 0, y], [0, 0, 1, z], [0, 0, 0, 1]]
 
+
+
+class SweptCylinderBoreTests(unittest.TestCase):
+    def check(self, **kwargs):
+        data = dict(centre=(0,0,0), axis=0, radius=25, span=(-46,0), travel=100,
+                    bore_centre=(0,0,0), bore_radius=35, bore_span=(15,18), wall_span=(15,18))
+        return swept_axial_cylinder_bore_clearance(**(data | kwargs))
+
+    def test_signed_motion_crosses_the_whole_wall(self):
+        for span, travel, wall in (((-46,0),100,(15,18)), ((0,46),-100,(-18,-15))):
+            with self.subTest(travel=travel):
+                check = self.check(span=span, travel=travel, wall_span=wall, bore_span=wall)
+                self.assertEqual(check["result"], "CLEAR_THROUGH_BORE")
+                self.assertEqual(check["wall_overlap_span"], list(map(str,wall)))
+                self.assertEqual(check["radial_budget_before_offset"], "10")
+
+    def test_offset_and_reserve_count_against_clearance(self):
+        self.assertEqual(self.check(centre=(0,3,4),radial_reserve=4)["result"],
+                         "CLEAR_THROUGH_BORE")
+        for offset, reserve in (((0,6,8),0), ((0,3,4),5), ((0,0,0),10)):
+            with self.subTest(offset=offset,reserve=reserve):
+                self.assertEqual(self.check(centre=offset,radial_reserve=reserve)["result"],
+                                 "RADIAL_CONTACT_CANDIDATE")
+
+    def test_bore_covers_only_verified_axial_interval(self):
+        self.assertEqual(self.check(bore_span=(15,17))["result"],"UNPROVEN_BORE_SPAN")
+        self.assertEqual(self.check(travel=14)["result"],"NO_WALL_ENCOUNTER")
+        self.assertEqual(self.check(travel=15, bore_span=(16,18))["result"],"UNPROVEN_BORE_SPAN")
+
+    def test_invalid_contract_is_rejected(self):
+        for invalid in (dict(axis=True),dict(radius=0),dict(radial_reserve=-1),
+                        dict(wall_span=(18,15)),dict(bore_centre=(0,0,float("nan")))):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                self.check(**invalid)
 
 class StagedTranslationClearance(unittest.TestCase):
     def test_washer_requires_screw_to_leave_first(self):

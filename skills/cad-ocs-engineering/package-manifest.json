@@ -208,7 +208,7 @@
     },
     "references/service-clearance.md": {
       "source": "references/service-clearance.md",
-      "sha256": "d0fecae8ace5ae53cd785acbbc2976165f33c493a4758e79b701fcfe988eed88"
+      "sha256": "f07cefe5ff5c63d250ac0e9cf67dcf3c9a7f6d90443e1338a9714b0fc09a3afd"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
@@ -628,7 +628,7 @@
     },
     "scripts/service_clearance.py": {
       "source": "scripts/service_clearance.py",
-      "sha256": "2384eef8e8f8b55b700152165e1e41cb03e1dc96ac8b887233ec12dacb86322d"
+      "sha256": "5a0991abbd523c0b6059bf6e09553af96f459026599db4e5a4107f301814ed37"
     },
     "scripts/shape_match.py": {
       "source": "scripts/shape_match.py",
