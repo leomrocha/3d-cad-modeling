@@ -13,14 +13,14 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 
 from cadtools.geometry import Geometry, added
 from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_document,owned_document,RecoveringClient,bounded_request_namespace
-from cadtools.records import iter_records,read_stable_entity
+from cadtools.records import iter_records,motion_role_handles,read_stable_entity
 from cadtools.checkpoints import write_stage_checkpoint,save_checkpoint
 from feature_checks import circular_trim_stations,cylinder_pattern,cylinder_wall_checks,axial_datum_chain,circular_opening_edge_land,round_ended_slot_tangents
-from feature_checks import concentric_through_keyway_section, perpendicular_through_bore
+from feature_checks import concentric_through_keyway_section, perpendicular_through_bore, planar_bore_ligaments
 from step_placements import native_matrix,classify_hand,eye,apply
 from assembly_occurrences import expand_occurrences,recover_insert_sequence,write_occurrence_tables
 from planar_profiles import annular_seat_with_radial_slot,round_ended_slot_profile,clip_circular_openings,bounded_extrusion,conservative_tool_polygon,two_circle_tangent_hull,two_circle_band_box_clearance
-from plate_reference import build_plate,countersink_tool_profile,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline,matching_countersink_fit
+from plate_reference import build_plate,countersink_tool_profile,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline,matching_countersink_fit,parallel_roll_band_profiles
 from native_views import sample,render_views,boundary_curves,placed_boundaries,xy_polyline_view_curves
 from source_vector_paths import parse_path,page_point,local_point,cubic_point
 from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments,sat_structure,placed_circular_cylinders
@@ -82,6 +82,26 @@ class IndexedFitTests(unittest.TestCase):
             self.assertEqual(plan(1)['seat_gap_mm'], 1)
             with self.assertRaises(ValueError):
                 plan(4)
+
+
+class MotionRolePartition(unittest.TestCase):
+    def test_moving_order_follows_declared_mechanism(self):
+        roles = {'frame': '10', 'carrier': '20', 'shaft': '30'}
+        handles = motion_role_handles(roles, moving=['shaft', 'carrier'], stationary=['frame'])
+        self.assertEqual(handles, ('30', '20'))
+
+    def test_unclassified_shaft_fails_before_native_motion(self):
+        roles = {'frame': '10', 'carrier': '20', 'shaft': '30'}
+        with self.assertRaisesRegex(CadError, 'Unclassified: .*shaft'):
+            motion_role_handles(roles, moving=['carrier'], stationary=['frame'])
+
+    def test_duplicate_role_or_handle_is_rejected(self):
+        roles = {'frame': '10', 'carrier': '20'}
+        with self.assertRaisesRegex(CadError, 'unique classification'):
+            motion_role_handles(roles, moving=['carrier'], stationary=['carrier', 'frame'])
+        with self.assertRaisesRegex(CadError, 'unique native handle'):
+            motion_role_handles({'frame': '20', 'carrier': '20'},
+                                moving=['carrier'], stationary=['frame'])
 
 
 class RoundEndedSlotTangents(unittest.TestCase):
@@ -613,6 +633,21 @@ class Profiles(unittest.TestCase):
         with self.assertRaises(ValueError):cut_sidewalls(c,'body',axis=0,centre=[0,0],diameter=2,intervals=[[0,3],[2,4]],label='cut')
         c.mutate.assert_not_called()
 
+    def test_blind_cylinder_only_overruns_its_entrance(self):
+        for entrance, expected_start in (('low', 3), ('high', 4)):
+            with self.subTest(entrance=entrance):
+                g = Mock()
+                g.cylinder.return_value = 'tool'
+                cylinder_cutter(g, 'seat', 1, [2, 3], 12, [4, 16], 1, entrance=entrance)
+                g.cylinder.assert_called_once_with('seat', [2, -3, expected_start], 6, 13)
+                g.rotate.assert_called_once_with('seat-axis', ['tool'], 'X', -90)
+
+    def test_blind_cylinder_rejects_an_unknown_entrance(self):
+        g = Mock()
+        with self.assertRaisesRegex(ValueError, 'Cutter entrance'):
+            cylinder_cutter(g, 'seat', 2, [0, 0], 12, [4, 16], 1, entrance='both')
+        g.cylinder.assert_not_called()
+
     def test_sidewall_stages_preserve_tool_and_result_handles(self):
         c=Mock()
         g=Mock()
@@ -974,6 +1009,149 @@ class FiniteCrossDrillTests(unittest.TestCase):
             wrong = dict(sizes, bore_centre=invalid_centre)
             self.assertEqual(perpendicular_through_bore("keeper", **wrong,
                              cutter_stations=[449.5, 470.5])["result"], "FAIL")
+
+
+class ParallelBandProfiles(unittest.TestCase):
+    def test_level_rollers_share_tangent_seams(self):
+        bands=parallel_roll_band_profiles([0,0],[20,0],inner_radius=2,outer_radius=3)
+        points,bulges=bands["start-wrap"]
+        self.assertEqual(points,[[0,-3],[0,3],[0,2],[0,-2]])
+        self.assertEqual(bulges,{0:-1,2:1})
+        self.assertEqual(bands["end-wrap"][0],[[20,3],[20,-3],[20,-2],[20,2]])
+        upper,bulges=bands["upper-run"]
+        self.assertEqual(upper,[[0,3],[20,3],[20,2],[0,2]])
+        self.assertEqual(bulges,{})
+
+    def test_inclined_rollers_use_local_normals(self):
+        bands=parallel_roll_band_profiles([0,0],[3,4],inner_radius=2,outer_radius=5)
+        for a,b in zip(bands["upper-run"][0][0],[-4,3],strict=True):
+            self.assertAlmostEqual(a,b)
+        for a,b in zip(bands["end-wrap"][0][0],[-1,7],strict=True):
+            self.assertAlmostEqual(a,b)
+
+    def test_degenerate_band_shape_is_rejected(self):
+        with self.assertRaises(ValueError):
+            parallel_roll_band_profiles([1,1],[1,1],inner_radius=3,outer_radius=5)
+        with self.assertRaises(ValueError):
+            parallel_roll_band_profiles([0,0],[1,1],inner_radius=5,outer_radius=3)
+
+
+class PlanarBoreLigamentTests(unittest.TestCase):
+    def test_rejects_overlapping_and_tangent_index_bores(self):
+        for pitch in (12, 16.2):
+            with self.subTest(pitch=pitch):
+                result=planar_bore_ligaments('index',[(0,0,16.2),(0,pitch,16.2)],0,1e-6)
+                self.assertEqual(result['result'],'FAIL')
+                self.assertAlmostEqual(result['observed_minimum_land'],pitch-16.2)
+
+    def test_checks_nearest_pair_even_when_input_is_unordered(self):
+        circles=[(0,0,16.2),(0,48,16.2),(0,24,16.2)]
+        self.assertEqual(planar_bore_ligaments('index',circles,7.8,1e-6)['result'],'PASS')
+        result=planar_bore_ligaments('index',circles,8,1e-6)
+        self.assertEqual(result['result'],'FAIL')
+        self.assertEqual(len(result['pairs']),3)
+        self.assertAlmostEqual(result['observed_minimum_land'],7.8)
+
+
+class RectangularPlateOpeningTests(unittest.TestCase):
+    def setUp(self):
+        from feature_checks import rectangular_plate_openings
+
+        self.check = rectangular_plate_openings
+        self.rectangles = {"outline": [[0, 100], [0, 70]], "port": [[20, 40], [10, 30]]}
+        self.faces = [dict(face_index=face, surface_type="plane-surface",
+                           outward_normal=[sign, 0, 0],
+                           loops=[self.loop(x, limits, start)
+                                  for start,limits in zip((2, 6), self.rectangles.values())])
+                      for face,x,sign in ((0,0,-1),(1,3,1))]
+
+    @staticmethod
+    def loop(x, limits, start):
+        (a,b),(c,d) = limits
+        points = [(x,a,c),(x,b,c),(x,b,d),(x,a,d)]
+        return dict(edges=[dict(curve_type="straight-curve", partner_surface_type="plane-surface",
+                                partner_face_index=i+start, endpoints=[point, points[(i+1)%4]])
+                           for i,point in enumerate(points)])
+
+    def evaluate(self):
+        return self.check("Rectangular panel", self.faces, axis=0, stations=(0,3),
+                          loops=self.rectangles, tolerance=0.00001)
+
+    def test_retains_two_face_loop_matching_under_reversed_edge_order(self):
+        self.faces[1]["loops"].reverse()
+        for loop in self.faces[1]["loops"]:
+            loop["edges"].reverse()
+            for edge in loop["edges"]:
+                edge["endpoints"].reverse()
+        self.assertEqual(self.evaluate()["result"], "PASS")
+
+    def test_accepts_planar_boolean_fragments_on_both_ends(self):
+        for face,start in zip(self.faces,(20,21)):
+            x = face["loops"][0]["edges"][0]["endpoints"][0][0]
+            smaller = self.loop(x,[[0,10],[0,70]],2)
+            larger = self.loop(x,[[10,100],[0,70]],2)
+            smaller["edges"][1]["partner_face_index"] = start
+            larger["edges"][3]["partner_face_index"] = face["face_index"]
+            self.faces.append(dict(face,face_index=start,loops=[larger,face["loops"][1]]))
+            face["loops"] = [smaller]
+        self.assertEqual(self.evaluate()["result"],"PASS")
+
+    def test_rejects_remaining_former_aperture(self):
+        self.faces[1]["loops"].append(self.loop(3,[[50,70],[30,50]],10))
+        self.assertIn("Unexpected",self.evaluate()["reason"])
+
+    def test_rejects_curved_edge_with_matching_corner_coordinates(self):
+        self.faces[0]["loops"][1]["edges"][1]["curve_type"] = "ellipse-curve"
+        self.assertEqual(self.evaluate()["result"], "FAIL")
+
+    def test_rejects_matching_end_aperture_without_shared_walls(self):
+        self.faces[0]["loops"][1]["edges"][1]["partner_face_index"] = 20
+        self.assertIn("same planar side faces",self.evaluate()["reason"])
+
+
+class OrthogonalPlateBoundaryTests(unittest.TestCase):
+    def setUp(self):
+        self.outside = [(0,0),(20,0),(20,10),(40,10),(40,0),(80,0),(80,60),(0,60)]
+        self.port = [(50,20),(70,20),(70,40),(50,40)]
+        self.faces = [
+            dict(face_index=index, surface_type="plane-surface", outward_normal=[sign,0,0],
+                 loops=[self.loop(x, self.outside, 2), self.loop(x, self.port, 10)])
+            for index,x,sign in ((0,0,-1),(1,3,1))
+        ]
+
+    @staticmethod
+    def loop(x, polygon, start):
+        points = [(x,*p) for p in polygon]
+        return dict(edges=[
+            dict(curve_type="straight-curve", partner_surface_type="plane-surface",
+                 partner_face_index=start+i, endpoints=[a,b])
+            for i,(a,b) in enumerate(zip(points, points[1:]+points[:1], strict=True))
+        ])
+
+    def check(self):
+        from feature_checks import orthogonal_plate_boundaries
+        return orthogonal_plate_boundaries("notched plate", self.faces, axis=0, stations=(0,3),
+                loops={"outline": self.outside, "opening": self.port}, tolerance=1e-5)
+
+    def test_matches_notch_with_split_edges(self):
+        edges = self.faces[1]["loops"][0]["edges"]
+        edge = edges.pop(2)
+        a,b = edge["endpoints"]
+        middle = (3,30,10)
+        edges.extend([dict(edge, endpoints=[a,middle]), dict(edge, endpoints=[middle,b])])
+        self.assertEqual(self.check()["result"],"PASS")
+
+    def test_detects_filled_notch(self):
+        self.faces[1]["loops"][0] = self.loop(3, [(0,0),(80,0),(80,60),(0,60)], 2)
+        self.assertEqual(self.check()["result"],"FAIL")
+
+    def test_detects_extra_hole(self):
+        self.faces[0]["loops"].append(self.loop(0, [(5,25),(15,25),(15,35),(5,35)], 14))
+        self.assertEqual(self.check()["result"],"FAIL")
+
+    def test_detects_unshared_notch_wall(self):
+        self.faces[0]["loops"][0]["edges"][2]["partner_face_index"] = 14
+        self.assertEqual(self.check()["result"],"FAIL")
 
 
 if __name__=='__main__':unittest.main()

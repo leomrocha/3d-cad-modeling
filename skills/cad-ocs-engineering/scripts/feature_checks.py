@@ -20,6 +20,43 @@ def comparison(name,actual,expected,tolerance,unit='mm',method='native feature c
                 result='PASS' if len(a)==len(b) and all(abs(x-y)<=tolerance for x,y in zip(a,b)) else 'FAIL')
 
 
+def axis_aligned_edge_coverage(segments, *, decimal_places):
+    """Return the covered intervals for straight Cartesian boundary segments.
+
+    Supply native straight-edge endpoints in one checked frame and length
+    unit. Round only at the job's stated comparison precision. Coincident,
+    touching or overlapping segments on the same line share one interval.
+    """
+    if type(decimal_places) is not int or decimal_places < 0:
+        raise ValueError("Nonnegative decimal place count required")
+    supports = {}
+    for segment in segments:
+        if len(segment) != 2 or any(len(point) != 3 for point in segment):
+            raise ValueError("Two Cartesian points required per segment")
+        if any(type(value) not in (int, float) or not math.isfinite(value)
+               for point in segment for value in point):
+            raise ValueError("Finite coordinates required")
+        a, b = (tuple(round(value, decimal_places) for value in point) for point in segment)
+        axes = [i for i in range(3) if a[i] != b[i]]
+        if len(axes) != 1:
+            raise ValueError("Nonzero axis-aligned edge required at the specified precision")
+        axis, = axes
+        support = (axis, *(value for i, value in enumerate(a) if i != axis))
+        supports.setdefault(support, []).append(tuple(sorted((a[axis], b[axis]))))
+    if not supports:
+        raise ValueError("At least one segment required")
+    coverage = {}
+    for support, intervals in supports.items():
+        merged = []
+        for low, high in sorted(intervals):
+            if merged and low <= merged[-1][1]:
+                merged[-1] = (merged[-1][0], max(merged[-1][1], high))
+            else:
+                merged.append((low, high))
+        coverage[support] = tuple(merged)
+    return coverage
+
+
 def axial_datum_chain(name, stations, offsets, tolerance):
     """Check each signed source distance between successive observed positions."""
     if len(stations)<2 or len(offsets)!=len(stations)-1:
@@ -107,6 +144,155 @@ def concentric_through_keyway_section(bore_diameter, outer_diameter, width, radi
         raise ValueError('Keyway section cannot be represented with finite dimensions')
     return dict(half_width=half_width,mouth_from_axis=mouth,floor_from_axis=floor,
                 minimum_radial_wall=roof)
+
+
+
+def rectangular_plate_openings(name, faces, *, axis, stations, loops, tolerance):
+    """Match both planar faces and their shared straight side faces.
+
+    Pass the complete native face-boundary extraction. Each named rectangle
+    is two increasing in-plane spans in Cartesian coordinate order.
+    Include the outer rectangle and every required through opening.
+    """
+    _validate_plate_boundary(name, axis, stations, loops, tolerance)
+    axis_u, axis_v = [i for i in range(3) if i != axis]
+    sides = {}
+    for label, ((a, b), (c, d)) in loops.items():
+        comparison(name + ' rectangle', [a,b,c,d], [a,b,c,d], tolerance)
+        if b-a <= 2*tolerance or d-c <= 2*tolerance:
+            raise ValueError('Every rectangle needs distinct corners')
+        sides[label] = [(axis_u,a,axis_v,c,d), (axis_u,b,axis_v,c,d),
+                        (axis_v,c,axis_u,a,b), (axis_v,d,axis_u,a,b)]
+
+    return _plate_boundary_faces(name, faces, axis, stations, sides, tolerance)
+
+
+def orthogonal_plate_boundaries(name, faces, *, axis, stations, loops, tolerance):
+    """Check an orthogonal through-cut plate with a notched outline.
+
+    Pass complete native face boundaries and labelled polygons in the two
+    in-plane Cartesian coordinates. Close each polygon implicitly. Include
+    the outside material outline and every through opening.
+    """
+    _validate_plate_boundary(name, axis, stations, loops, tolerance)
+    axes = [i for i in range(3) if i != axis]
+    sides = {}
+    for label, points in loops.items():
+        if len(points) < 4 or any(len(point) != 2 for point in points):
+            raise ValueError('At least four two-coordinate polygon vertices required')
+        comparison(name + ' polygon', points, points, tolerance)
+        sides[label] = []
+        for a, b in zip(points, (*points[1:], points[0]), strict=True):
+            moves = [i for i in range(2) if a[i] != b[i]]
+            if len(moves) != 1 or abs(a[moves[0]]-b[moves[0]]) <= 2*tolerance:
+                raise ValueError('Distinct axis-aligned polygon edges required')
+            along, = moves
+            fixed = 1-along
+            low, high = sorted((a[along], b[along]))
+            sides[label].append((axes[fixed], a[fixed], axes[along], low, high))
+    return _plate_boundary_faces(name, faces, axis, stations, sides, tolerance)
+
+
+def _validate_plate_boundary(name, axis, stations, loops, tolerance):
+    comparison(name + ' tolerance', [0], [0], tolerance)
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError('Cartesian plate axis required')
+    if len(stations) != 2 or not stations[0] < stations[1] or not all(map(math.isfinite, stations)):
+        raise ValueError('Two increasing finite plate stations required')
+    if not loops:
+        raise ValueError('At least one labelled plate boundary required')
+
+
+def _plate_boundary_faces(name, faces, axis, stations, sides, tolerance):
+    def edge_covers_some_side(points, side):
+        fixed, value, along, lo, hi = side
+        if len(points) != 2 or any(abs(p[fixed]-value) > tolerance for p in points):
+            return None
+        u,v = sorted(p[along] for p in points)
+        if lo-tolerance <= u < v <= hi+tolerance:
+            return (u,v)
+        return None
+
+    output = dict(check=name, result='FAIL', faces=[], expected_loops=list(sides))
+    for station, sign in zip(stations, (-1,1)):
+        end_faces = {}
+        for face in faces:
+            if face['surface_type'] != 'plane-surface':
+                continue
+            normal = face['outward_normal']
+            if not all(abs(normal[i]-(sign if i==axis else 0)) <= 1e-8 for i in range(3)):
+                continue
+            edges = [edge for loop in face['loops'] for edge in loop['edges']]
+            if edges and all(abs(point[axis]-station) <= tolerance
+                             for edge in edges for point in edge['endpoints']):
+                end_faces[face['face_index']] = edges
+        if not end_faces:
+            return dict(output,reason='At least one outward face is required at each plate station')
+
+        observed = {(label,k):[] for label,bounds in sides.items() for k in range(len(bounds))}
+        for edges in end_faces.values():
+            for edge in edges:
+                partner = edge['partner_face_index']
+                if partner in end_faces:
+                    continue
+                if edge['curve_type'] != 'straight-curve' or edge['partner_surface_type'] != 'plane-surface':
+                    return dict(output,reason='Unexpected curved or nonplanar material boundary')
+                matches = []
+                for label,bounds in sides.items():
+                    for k,side in enumerate(bounds):
+                        span = edge_covers_some_side(edge['endpoints'], side)
+                        if span is not None:
+                            matches.append(((label,k),span))
+                if len(matches) != 1:
+                    return dict(output,reason='Unexpected or ambiguous plate boundary')
+                key,span = matches[0]
+                observed[key].append((*span,partner))
+
+        wall_faces = {label:[] for label in sides}
+        for (label,k), spans in observed.items():
+            lo,hi = sides[label][k][-2:]
+            stop = lo
+            for u,v,_ in sorted(spans):
+                if abs(u-stop) > tolerance:
+                    return dict(output,reason='Gap or overlap in a required plate boundary',loop=label)
+                stop = v
+            if abs(stop-hi) > tolerance:
+                return dict(output,reason='Required plate boundary is incomplete',loop=label)
+            wall_faces[label].append(sorted({h for _,_,h in spans}))
+        output['faces'].append(dict(face_indices=sorted(end_faces),station=station,loop_wall_faces=wall_faces))
+    lower,upper = output['faces']
+    if lower['loop_wall_faces'] != upper['loop_wall_faces']:
+        return dict(output,reason='End loops do not share the same planar side faces')
+    output['result'] = 'PASS'
+    return output
+
+
+def planar_bore_ligaments(name, circles, minimum_land, tolerance):
+    """Check edge-to-edge land for circular bores through the same material wall."""
+    comparison(name + ' tolerance', [0], [0], tolerance)
+    circles = [tuple(circle) for circle in circles]
+    if len(circles) < 2 or any(len(circle) != 3 for circle in circles):
+        raise ValueError('At least two x, y, diameter records are required')
+    if any(type(v) not in (int, float) or not math.isfinite(v)
+           for circle in circles for v in circle):
+        raise ValueError('Finite circular bore observations are required')
+    if any(diameter <= 0 for _, _, diameter in circles):
+        raise ValueError('Bore diameters must be positive')
+    if type(minimum_land) not in (int, float) or not math.isfinite(minimum_land) or minimum_land < 0:
+        raise ValueError('Minimum material land must be finite and nonnegative')
+
+    pairs = []
+    for i, (x1, y1, diameter1) in enumerate(circles):
+        for j, (x2, y2, diameter2) in enumerate(circles[i+1:], i+1):
+            distance = math.hypot(x2-x1, y2-y1)
+            land = distance - diameter1/2 - diameter2/2
+            if not math.isfinite(land):
+                raise ValueError('Bore edge distance is outside numeric range')
+            pairs.append(dict(indices=[i,j], centre_distance=distance, edge_to_edge_land=land))
+    observed = min(p['edge_to_edge_land'] for p in pairs)
+    passes = observed > tolerance and observed >= minimum_land - tolerance
+    return dict(check=name, result='PASS' if passes else 'FAIL', observed_minimum_land=observed,
+                required_minimum_land=minimum_land, numeric_tolerance=tolerance, pairs=pairs)
 
 
 def closed_body(name,features):

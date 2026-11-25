@@ -29,7 +29,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 
 [Deliver a batch using local methods](cad-ocs-engineering/references/batch-delivery.md) covers catalogue-based method selection, recovery and saved-model verification.
 
-[Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, sidewall cuts, insertion, quantities and native solid and straight polyline boundary views with caller-supplied inputs.
+[Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, equal-radius belt wraps, sidewall cuts, insertion, world-space translations of nested inserts, quantities, native solid and straight polyline boundary views and split straight-edge checks with caller-supplied inputs.
 
 1. [OCS control](cad-ocs-engineering/references/ocs-control.md) — session discovery, installed schemas and guarded requests.
    [Incremental saving](cad-ocs-engineering/SKILL.md#save-work-in-progress) preserves IN_PROGRESS native models and supporting files at verified checkpoints throughout long jobs. The pre-save audit uses the checkpoint destination.
@@ -69,6 +69,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 ## Circular opening inspection
 
 1. [Saved circular boundaries](cad-ocs-engineering/references/circular-boundary-checks.md) — associates full circular cap loops, analytic curve parameters and reciprocal cylindrical face boundaries.
+2. [Material between parallel bores](cad-ocs-engineering/references/shared-feature-checks.md#check-material-between-parallel-bores) — checks separation and available material for indexed holes through a common wall.
 
 ## Source-bound screw construction
 
@@ -89,6 +90,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 1. [Insertion, resume and assembly verification](cad-ocs-engineering/references/insertion-resume-verification.md) — verified defaults, point-only correction, pinned checkpoints, repeated-instance matching and preserved source anomalies, and separate storage and installed occurrence checks.
 2. [Recover a batch of DXF block insertions](cad-ocs-engineering/references/insertion-resume-verification.md#recover-a-batch-of-dxf-block-insertions) covers request journals, saved DXF readback and dependent writes after interruption.
 3. [Replace individually addressed nested inserts](cad-ocs-engineering/references/insertion-resume-verification.md#replace-individually-addressed-nested-inserts) covers occurrence uniqueness, exact handle erasure and retained geometry comparisons.
+4. [Review an installation on a revised host](cad-ocs-engineering/references/assembly-evidence.md#interfaces-installation-and-contact) checks occurrence geometry and placement changes before reusing mating and service evidence.
 
 4. [Verify an assembly at a second index position](cad-ocs-engineering/references/assembly-evidence.md#verify-an-assembly-at-a-second-index-position) checks moving and fixed occurrences and lock geometry.
 
@@ -114,9 +116,10 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 
 ## Service clearance
 
-1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, seated lifts, nested bore guards, source-attributed endpoints and interference witnesses. It includes static box separation at a saved pose and [tool approach to an installed opening](cad-ocs-engineering/references/service-clearance.md#check-a-straight-tool-approach-to-an-installed-opening).
+1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, nominal seating contact, seated lifts, nested bore guards, source-attributed endpoints and interference witnesses. It includes support-footprint clearance on plates with circular apertures, static box separation, continuous planar linkage bounds and a continuous reserve bound from sampled fixed-axis poses. See the [tool approach to an installed opening](cad-ocs-engineering/references/service-clearance.md#check-a-straight-tool-approach-to-an-installed-opening).
 
-- [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, fit and contact witnesses, source trims, source-preserving STEP wrappers and shell orientation. [Fit datums over retained solids](cad-ocs-engineering/references/assembly-evidence.md#fit-datums-over-retained-solids) checks layout lines on an existing assembly.
+- [Staged service clearance](cad-ocs-engineering/references/service-clearance.md#carry-removed-occurrences-through-a-service-sequence) checks ordered straight moves and exact occurrence releases.
+- [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, installed boundary samples with colour and layer, fit and contact witnesses, source trims, source-preserving STEP wrappers and shell orientation. [Fit datums over retained solids](cad-ocs-engineering/references/assembly-evidence.md#fit-datums-over-retained-solids) checks layout lines on an existing assembly.
 - [Job history archives](cad-ocs-engineering/references/job-history-archive.md) preserve and verify raw receipts and debug histories for each revision.
 
 [Photo and multi-view blueprint handoff](cad-ocs-engineering/references/source-view-evidence.md#ruler-photographs-and-multi-view-blueprints) covers independent photo controls and orthographic landmark agreement. [Mating-interface evaluation](cad-ocs-engineering/references/assembly-evidence.md#judge-a-mating-interface) applies the job’s stated fit to measured geometry.

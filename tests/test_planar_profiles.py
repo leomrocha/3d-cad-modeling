@@ -7,6 +7,54 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
 from planar_profiles import bounded_extrusion, ellipse_arc_chord_error_bound, offset_bend_section, quarter_bend_section, reframe_planar_profile, revolve_profile_y
 from cadtools.runtime import CadError
+from planar_profiles import rolling_corner_offset, straight_profile_station_intervals
+
+
+class RollingCornerOffsetTests(unittest.TestCase):
+    def test_crest_to_flat_preserves_support_and_error(self):
+        profile = [[0,0],[12,5],[12,-2],[0,-2]]
+        result = rolling_corner_offset(profile,1,13,[0,1],max_chord_error=.001)
+        self.assertAlmostEqual(result['centre_points'][0][0], 7)
+        self.assertAlmostEqual(result['centre_points'][0][1], 17)
+        self.assertAlmostEqual(result['centre_points'][-1][0], 12)
+        self.assertAlmostEqual(result['centre_points'][-1][1], 18)
+        self.assertLessEqual(result['chord_error'],.001)
+        self.assertTrue(all(abs(math.hypot(x-12,z-5)-13) < 1e-10
+                            for x,z in result['centre_points']))
+
+    def test_reflection_preserves_arc_stations(self):
+        profile = [[0,0],[12,5],[12,-2],[0,-2]]
+        expected=rolling_corner_offset(profile,1,7,[0,1],max_chord_error=.005)
+        reflected=rolling_corner_offset([[-x,y] for x,y in profile],1,7,[0,1],max_chord_error=.005)
+        for (a,b),(c,d) in zip(expected['centre_points'],reflected['centre_points'],strict=True):
+            self.assertAlmostEqual(a,-c)
+            self.assertAlmostEqual(b,d)
+
+    def test_rejects_normal_outside_cone_or_concave_corner(self):
+        with self.assertRaisesRegex(ValueError,"convex corner"):
+            rolling_corner_offset([[0,0],[12,5],[12,-2],[0,-2]],1,13,[-1,0],max_chord_error=.001)
+        with self.assertRaisesRegex(ValueError,"convex corner"):
+            rolling_corner_offset([[0,0],[5,0],[5,2],[2,2],[2,5],[0,5]],3,2,[0,1],max_chord_error=.001)
+
+
+class StraightProfileStationTests(unittest.TestCase):
+    def test_sloping_edges_and_axis_selection(self):
+        section = [[0, 0], [4, 0], [6, 4], [0, 4]]
+        self.assertEqual(straight_profile_station_intervals(section, 5), [(2, 4)])
+        self.assertEqual(straight_profile_station_intervals(section, 2, axis=1), [(0, 5)])
+        self.assertEqual(straight_profile_station_intervals(section, 7), [])
+
+    def test_concave_profile_preserves_separate_material_intervals(self):
+        section = [[0,0],[8,0],[8,2],[2,2],[2,6],[8,6],[8,8],[0,8]]
+        self.assertEqual(straight_profile_station_intervals(section, 5), [(0,2),(6,8)])
+        mirrored = [[x,-y] for x,y in section[::-1]]
+        self.assertEqual(straight_profile_station_intervals(mirrored, 5), [(-8,-6),(-2,0)])
+
+    def test_ambiguous_station_and_invalid_loop_fail(self):
+        with self.assertRaisesRegex(ValueError, "profile vertex"):
+            straight_profile_station_intervals([[0,0],[4,0],[4,5],[0,5]], 4+1e-8)
+        with self.assertRaises(ValueError):
+            straight_profile_station_intervals([[0,0],[3,3],[0,3],[3,0]], 1)
 
 
 class QuarterBendSectionTests(unittest.TestCase):

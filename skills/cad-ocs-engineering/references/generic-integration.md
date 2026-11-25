@@ -13,9 +13,19 @@
 1. [plate_reference.py](../scripts/plate_reference.py): build_plate consumes sketch_bounds, outline, bulges, holes (axis/centre/diameter/span), cutouts, rotations, translation, explicit cutter_overrun_mm and optional metadata. Inputs are mm; rotation angles are degrees. It returns the native body handle. Validate the entire recipe before mutations. verify_plate compares final-frame bounds, hole groups and witness vertices with a supplied tolerance.
 2. [planar_profiles.py](../scripts/planar_profiles.py): bounded_extrusion consumes closed line/bulge boundaries, an explicit material-region pickpoint and positive height. It deletes only its retained temporary profiles and identifies one newly created solid. Pass a `checkpoint(stage, handles)` callback when the job requires a checked save after each profile, the identified solid and any temporary-profile deletion. The callback must raise if the save fails or remains uncertain. The helper then leaves the latest completed native stage in place for recovery. clip_circular_openings clips a simple polygon with equal-radius disks, returns exact circular bulges, signed area and outer/opening loop roles, and rejects coincident/ambiguous boundaries. Supply source-specific analytic boundary derivations through the job. For a dense, independently verified clearance projection, `conservative_tool_polygon` uses a caller-supplied polygon engine with Shapely-compatible buffer, simplify and covers operations. Supply the expansion, simplification tolerance, vertex limit and maximum added area. Preserve the original projection and check that the reduced tool contains it before a native cut. Report geometric overcut and keep any through-wall or open-end extension in the caller recipe.
 3. [rounded_tube.py](../scripts/rounded_tube.py) already supplies rounded hollow-section validation, quarter-circle profiles and native construction. [cut_sidewalls](../scripts/plate_reference.py) takes explicit nonoverlapping material intervals and cuts each wall separately. The caller supplies cavity-equivalence reasoning and expected source geometry. The hollow-section solid-subtract route requires an explicit construction.cutter_overrun_mm value before any native write.
+
+For a belt around two rollers with equal diameters, `parallel_roll_band_profiles` in [plate_reference.py](../scripts/plate_reference.py) returns two straight runs and two analytic annular wraps. Supply the roller centres and band radii in the sketch plane. Extrude all four profiles through the same width interval and apply the same placement. Check that the four tangent seams coincide, each body is closed and both wrap radii match the two supplied axes. Use one part identity for the four bodies. This represents unloaded geometry for a band with equal-radius wraps.
 4. [feature_checks.py](../scripts/feature_checks.py) compares finite observations, deduplicated projected cylinder axes and actual cylinder-face wall endpoints. [native_acis.py](../scripts/native_acis.py) keeps strict SAB feature decoding by default. The SAT readback reports reachable vertices and faces, reciprocal coedge links to the same edge, and straight or elliptical trim geometry. Explicit rigid transforms are opt-in. For a documented chamfer adjoining a cylindrical bore, use `sab_features(..., allow_cones=True)` and read the cylindrical section from `cylinders`. Check chamfers and finite engagement as their own observations. When a strict read stops on a known chamfer, verify the live handles and saved checkpoint before retrying readback with the cone option. Unsupported trim equations retain their endpoints.
 5. [native_geometry.py](../scripts/native_geometry.py) selects SAB or supported identity-frame SAT features, reads stable native identities, transforms lightweight-polyline OCS vertices to WCS, reads straight centreline segments from explicit zero bulges and the native is_closed flag, and aggregates observed assembly vertices with explicit scale/reflection mode. Unsupported surface/layout errors retain original bytes for inspection.
 6. [source_vector_paths.py](../scripts/source_vector_paths.py) parses the explicit SVG M/L/C/Z grammar with path/subpath/segment IDs. It applies caller six-term affine matrices, positive unit conversion and signed Y mapping. Cubic evaluation and segment distance keep source chain selection and uncertainty outside the helper.
+
+### Preserve a blind axial stop plane
+
+Check the entry and the stop against the stock before constructing the cutter.
+For a Cartesian blind bore or counterbore, pass the increasing measured
+stations to `cylinder_cutter` with `entrance="low"` or `entrance="high"`.
+Its overrun extends only past the chosen entry. Read the actual shoulder/end
+station from the cut solid before using it in an axial stack.
 
 ## Assemblies and native views
 
@@ -26,6 +36,23 @@
 5. For exact axis-aligned placements, compare independently measured local bounds and intended installation bounds with `check_axis_aligned_placement` before native edits. It applies the full signed axis permutation and translation to the source corners. A reversed axis changes which corner anchors the minimum face. After placement, still check live occurrence transforms and geometry.
 6. For a single top-level solid after a Boolean, the native model-space membership list can retain erased tool handles. Verify the exact saved checkpoint, live geometry revision and sole expected solid handle. Pass that stable live inventory to `single_solid_boundary_edges` to render the checked body directly. Use `placed_boundaries` for groups and assemblies so a missing instance remains a verification error.
 7. [ocs_document_cleanup.py](../scripts/ocs_document_cleanup.py) closes exact owned completed documents using saved hash and epoch evidence. Inactive clean close requires explicit installed support and an exclusive interval because revision guards bind the active tab. [Full cleanup contract](document-cleanup.md).
+
+### Translate a nested native insert in world axes
+
+Use `plan_world_insert_translation` with the composed parent transform, the
+selected INSERT properties and the block definition's observed base point.
+For a zero-base, single unit-scale INSERT, the world pose is the parent
+transform multiplied by `native_matrix(properties)`. An occurrence inventory
+may put the parent transform on an INSERT row and the fully composed
+transform on its child rows. Check the reader's definition before choosing
+the matrix. Apply the returned compare-and-set insertion-point update to
+the exact handle. Verify the resulting world pose and orientation from a
+fresh native read. If the definition containing that handle is itself used
+more than once, audit all affected paths before writing.
+
+### Verify rectangular openings after recutting a panel
+
+Read the native planar face and edge graph with `sab_features(include_edge_curves=True, edge_policy="endpoints")`. The check uses straight trim endpoints and shared planar faces. Pass the required outside boundary and every rectangular opening to `rectangular_plate_openings` in [feature_checks.py](../scripts/feature_checks.py). Include both thickness stations and the wall axis. The check omits edges between coplanar end-face fragments, then matches all straight boundary spans and their shared planar side faces at both ends. A remaining old opening, missing cut or extra loop fails. The check covers straight rectangular prismatic geometry. Check body topology independently and use a separate procedure for steps and fillets. For a plate with an edge notch and through openings, use `orthogonal_plate_boundaries` with the notched outer polygon and each closed opening as separate named loops. Require shared straight planar side faces on both thickness stations.
 
 ## Retained relationships
 
@@ -59,6 +86,10 @@ Use this route when a native Boolean refuses to cut an otherwise valid formed se
 2. Form the web with `bounded_extrusion` from its outer profile and all opening loops. Use an explicit material pick point. For round-ended openings, reuse `round_ended_slot_profile` and preserve the bulge signs under proper planar rotations. Save the checked web before adding flanges.
 3. Extrude each flange from the source section with its bend arcs and a small overlap into the web. Save after extrusion and after placing it in the common frame. Unite the solids using `Geometry.combine`. Save and read back the result as one closed, connected lump. Compare both section ends, the cylindrical bend radii, and the two rims and arc centres of every opening to the source-bound recipe. Preserve the intermediate solids if the union or any readback fails.
 
+### Recover a saved bounded extrusion before placement
+
+Pass the hexadecimal handle in `result["body"]` to selection, rotation or placement. The result also contains the original request ID and profile handles. At the solid and profile-cleanup checkpoints, record the body handle with the stage name, native drawing hash and geometry revision. A rejected placement request can retain the extrusion result in its journal. Read the body handle from that result, check it against the exact saved drawing and match its closed solid and at least one independent source feature before retrying placement. Other solids or nested definitions in the drawing can make a count-based recovery ambiguous.
+
 ### Recover a flat plate with mixed round bores and slots
 
 When a solid subtraction rejects a round-ended slot, verify the failed request changed no geometry and pin the latest checkpoint before removing the owned trial solids. Form the plate from its outer loop and slot loops with `bounded_extrusion`, using a pick point in known retained material. Round through-bores can be included as verified closed loops or added using separately qualified cylinder cuts. Checkpoint each completed stage. After placement, compare the distinct slot-end cylinder axes and radii against the input. Use `round_ended_slot_tangents` in [feature_checks.py](../scripts/feature_checks.py) to match the two native straight connecting edges on each sheet face. It takes the boundary records, axis, two planar end centres, radius, face stations and tolerance. For each slot rim, check the outward semicircle at each end centre. Bind its two tangent endpoints, radial samples in the outward half-plane and a sample near the extreme length station. An arc with matching endpoints supplies only endpoint evidence. The full-ring sample check requires all four quadrants and applies to complete circular rims. For split collinear edges, review continuous coverage independently. Verify both face stations and the closed final solid.
@@ -72,3 +103,29 @@ Pass the verified first occurrence as `previous` to `insert_component` to reuse 
 2. Call `pin_seat_relief` in [plate_reference.py](../scripts/plate_reference.py) with those stations and radii in millimetres. For an overlap smaller than the head thickness, the returned axial and radial spans describe the ring to remove from the pin. For contact or a gap, retain the geometry. Check nearby cross-drills and transitions before applying the cut.
 
 3. Reopen the revision. Measure the new shoulder, outer head face, continuous shank and keeper bore. Compare the fixed seat, surrounding solids and occurrence placements with the original. Verify full withdrawal separately against the revised installed assembly. For another assembly, reuse the corrected solid only after matching its predecessor geometry and local frame.
+
+## Compare straight boundaries after import
+
+Read the native Insert's local matrix from its own record. A traversal can report the parent frame at an Insert path and the composed matrix at its physical children. Verify the local placement and use the composed child matrix for the world-space geometry check.
+
+When supported solids have different native payloads after import, check matching dimensions, independent placement and boundary geometry. For straight, axis-aligned native boundaries, apply `axis_aligned_edge_coverage` from [feature_checks.py](../scripts/feature_checks.py) to the source and mounted endpoint pairs in the same frame. Use a declared coordinate precision. The comparison merges split or overlapping segments on each supporting line and retains gaps. Extra planar seam edges require separate checking against the intended face. Curved or diagonal boundaries require their appropriate feature reader. Check face shape, solid topology and material separately where the job requires them.
+
+## Carry display roles between operating poses
+
+Use the checked functional palette as a source for the role names and colours. Pin the alternate-pose drawing and its own geometry receipt. Read the alternate pose's physical occurrences and recover each role from its own native metadata or construction record. Hardware and reference occurrences can differ between poses. Derive each assignment from the role and check the actual occurrence count before styling.
+
+When reusing an existing fitted linkage with a current catalogue tool, compare the active model-space roots to the known base and isolate the exact lift, joint hardware and tool. Verify which joint pieces the catalogue tool supplies. Retain only the complementary hardware. Check the tool and linkage separately in the assembled frame before screening their contact and service paths. Keep the catalogue source unchanged.
+
+Apply assignments to the owned derivative. Check every affected occurrence of each edited definition, including shared definitions. Verify geometry, transforms, membership and hidden references independently of the display changes. Report layer counts for the actual pose and save the matching native view.
+
+## Check installed working surfaces and replacement hardware
+
+Preserve the independently attributed catalogue assembly. Compare its placed solid inventory with the verified mounted revision in the same frame. If the difference consists of fasteners or pins already supplied by the mounting kit, identify each substituted member by native role, measured axis, end stations and exact occurrence path. Check that its definition has no other affected occurrence before removing the member from the mounted derivative. Save before and after the change. Verify the matched geometry, retained attachment hardware and visibility of reference objects independently.
+
+Measure ground depth or working clearance on the specific working surfaces, such as cutting edges. Report the deepest physical part separately when wear hardware extends farther. Bind both measurements to the same ground datum, projection axis and installed pose. Exclude hidden reference geometry from physical results and record its visibility separately.
+
+### Model a contoured support and its retention separately
+
+Pin the supported stock and measure its axis, the seat profile, the adjoining support face and the available floor ligament. In an open cradle, an exact-radius cut establishes a nominal contact fit. Check the centre, radius, openings and floor ligament after the cut. Check both load directions at every support, including uplift from loads beyond a support. A zero-gap seat only establishes compression contact. Add the weld or mechanical retention to the joint specification and verify it independently. Mark seating and joining separately in the model when only the seating solids are represented.
+
+When replacing a loose support arrangement with a frame, check that the original supported members retain their axes and ends. Measure crossmember end faces against the side members, material overlap, service access and local flow openings. The clear opening at a support can differ from the unobstructed opening between supports. Use the measured geometry as input to wall, weld, fatigue and attachment checks.

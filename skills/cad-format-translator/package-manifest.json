@@ -80,7 +80,7 @@
     },
     "scripts/step_placements.py": {
       "source": "scripts/step_placements.py",
-      "sha256": "c0fc0803a7e778ff9b8da0efff2c6404c262e130dc0c141577ef265c7b3ff5e0"
+      "sha256": "ecd57186320e391308ea42eaa6cea4d753b1841e727eace8bfb81f4efa478e8d"
     }
   }
 }

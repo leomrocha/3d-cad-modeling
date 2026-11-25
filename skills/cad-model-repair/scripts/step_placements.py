@@ -64,6 +64,39 @@ def native_fields(m):
             'insert_point':dict(zip('xyz',[dot(o,a) for a in axes]))}
 
 
+
+def plan_world_insert_translation(properties, parent_world, displacement, *, block_base_point):
+    """Plan a translation of a zero-base, unit-scale native INSERT in world axes.
+
+    parent_world is the composed transform of all ancestors, excluding this
+    INSERT. The returned update changes only the object-coordinate insertion
+    point. Callers bind it to the exact observed handle, then verify readback.
+    """
+    classify_hand(parent_world)
+    if any(isinstance(x, bool) or x != 0 for x in xyz(block_base_point)):
+        raise ValueError('Zero block base point required')
+    if (len(displacement) != 3 or any(
+            isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v)
+            for v in displacement)):
+        raise ValueError('Finite world displacement triple required')
+    local_before = native_matrix(properties, allow_unit_reflection=True)
+    world_before = multiply(parent_world, local_before)
+    local_delta = [sum(parent_world[j][i]*displacement[j] for j in range(3)) for i in range(3)]
+    axes = basis(xyz(properties['normal']))
+    point_before = properties['insert_point']
+    point_after = {axis: point_before[axis] + dot(vector, local_delta)
+                   for axis, vector in zip('xyz', axes, strict=True)}
+    local_after = native_matrix(dict(properties, insert_point=point_after), allow_unit_reflection=True)
+    world_after = multiply(parent_world, local_after)
+    expected = [row[:] for row in world_before]
+    for i, distance in enumerate(displacement):
+        expected[i][3] += distance
+    if not near(world_after, expected):
+        raise ValueError('World translation does not round-trip at native precision')
+    return dict(update=dict(path='/insert_point', expected=dict(point_before), value=point_after),
+                world_before=world_before, expected_world=expected)
+
+
 def identity_target_placements(text):
     if "'AUTOMOTIVE_DESIGN'" not in text:raise ValueError('Exercised AP214 source required')
     pairs=re.findall(r'#(\d+)\s*=\s*(.*?);',text,re.S)

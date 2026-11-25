@@ -8,6 +8,31 @@ from cadtools.records import read_stable_entity
 from native_acis import sab_features
 
 
+def parallel_roll_band_profiles(start, end, *, inner_radius, outer_radius):
+    """Give two tangent runs and two semicircular wraps in the roller plane."""
+    start,end=vector(start,2),vector(end,2)
+    inner_radius,outer_radius=positive(inner_radius),positive(outer_radius)
+    dx,dz=end[0]-start[0],end[1]-start[1]
+    span=math.hypot(dx,dz)
+    if not math.isfinite(span) or span==0 or inner_radius>=outer_radius:
+        raise ValueError("Expected distinct centres and increasing positive radii")
+    nx,nz=-dz/span,dx/span
+
+    def offset(centre,radius,sign):
+        return [finite(centre[0]+sign*radius*nx),finite(centre[1]+sign*radius*nz)]
+
+    profiles={}
+    for name,sign in (("upper-run",1),("return-run",-1)):
+        points=[offset(start,outer_radius,sign),offset(end,outer_radius,sign),
+                offset(end,inner_radius,sign),offset(start,inner_radius,sign)]
+        profiles[name]=(points,{})
+    for name,centre,sign in (("start-wrap",start,-1),("end-wrap",end,1)):
+        points=[offset(centre,outer_radius,sign),offset(centre,outer_radius,-sign),
+                offset(centre,inner_radius,-sign),offset(centre,inner_radius,sign)]
+        profiles[name]=(points,{0:-1,2:1})
+    return profiles
+
+
 def outline(bounds,radius=0):
     (a,b),(c,d),_=bounds
     for value in [a,b,c,d,radius]:
@@ -40,14 +65,25 @@ def validate_outline(points,bulges=None):
     return points,bulges
 
 
-def cylinder_cutter(g,label,axis,centre,diameter,span,overrun):
+def cylinder_cutter(g,label,axis,centre,diameter,span,overrun,*,entrance=None):
+    """Build an axial cutter. A blind cut extends only beyond its entrance.
+
+    Supply increasing physical stations. Set entrance to 'low' or 'high'
+    to preserve the opposite stop plane. The default extends both ends.
+    """
     vector(centre,2);positive(diameter);positive(span[1]-span[0]);positive(overrun)
+    if entrance not in (None, 'low', 'high'):
+        raise ValueError('Cutter entrance must be low, high or None')
     p,q=centre;lo,hi=span
-    if axis==2:return g.cylinder(label,[p,q,lo-overrun],diameter/2,hi-lo+2*overrun)
+    low_overrun=overrun if entrance in (None, 'low') else 0
+    high_overrun=overrun if entrance in (None, 'high') else 0
+    start=lo-low_overrun
+    depth=hi-lo+low_overrun+high_overrun
+    if axis==2:return g.cylinder(label,[p,q,start],diameter/2,depth)
     if axis==1:
-        h=g.cylinder(label,[p,-q,lo-overrun],diameter/2,hi-lo+2*overrun);g.rotate(label+'-axis',[h],'X',-90);return h
+        h=g.cylinder(label,[p,-q,start],diameter/2,depth);g.rotate(label+'-axis',[h],'X',-90);return h
     if axis==0:
-        h=g.cylinder(label,[-q,p,lo-overrun],diameter/2,hi-lo+2*overrun);g.rotate(label+'-axis',[h],'Y',90);return h
+        h=g.cylinder(label,[-q,p,start],diameter/2,depth);g.rotate(label+'-axis',[h],'Y',90);return h
     raise ValueError('Cartesian cutter axis required')
 
 

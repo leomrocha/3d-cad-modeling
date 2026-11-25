@@ -1,18 +1,271 @@
 """Continuous screening and exact same-definition witness regressions."""
 import sys
+from fractions import Fraction
+from itertools import product
+from math import cos, radians, sin
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from service_clearance import axial_stack_witness, bounded_axial_section_clearance, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
+from service_clearance import swept_axial_cylinder_bore_clearance, swept_axial_cylinder_box_gap
+from service_clearance import guided_circular_pilot_clearance, planar_chain_x_bounds, rectangular_support_clearance, sampled_rotation_clearance
+from service_clearance import staged_translation_clearance, translation_box_contact
+from service_clearance import axial_stack_witness, bounded_axial_section_clearance, cartesian_cylinder_bounds, orthogonal_sleeve_clearance, planar_translation_pieces, quarter_turn_box, rectangle_radial_bounds, rpy_world_x_bounds, shared_definition_coincidence, static_box_contact_dimension, static_box_gap, static_box_halfspace_gap, translated_box_group_margin, translation_box_window
 
 
 def placement(x=0, y=0, z=0):
     return [[1, 0, 0, x], [0, 1, 0, y], [0, 0, 1, z], [0, 0, 0, 1]]
 
 
+
+class PlanarChainBoundsTests(unittest.TestCase):
+    def test_axis_extremum_inside_interval(self):
+        lo, hi = planar_chain_x_bounds(5, [((3, 4), (-90, 0))])
+        self.assertAlmostEqual(lo, 8)
+        self.assertAlmostEqual(hi, 10)
+
+    def test_relative_angles_and_wrap(self):
+        lo, hi = planar_chain_x_bounds(50, [((10, 0), (350, 370)), ((5, 0), (175, 185))])
+        self.assertAlmostEqual(lo, 50 + 10*cos(radians(10)) - 5)
+        self.assertAlmostEqual(hi, 60 - 5*cos(radians(15)))
+
+    def test_bounds_enclose_all_sampled_coupled_targets(self):
+        links = [((12, 0), (3, 45)), ((9, -2), (-110, -50)), ((7, -4), (-30, 60))]
+        low, high = planar_chain_x_bounds(-7, links)
+        for angles in product(*[range(a, b+1, 3) for _, (a,b) in links]):
+            x, angle = -7, 0
+            for ((vx, vz), _), relative in zip(links, angles, strict=True):
+                angle += radians(relative)
+                x += vx*cos(angle)-vz*sin(angle)
+            self.assertTrue(low-1e-12 <= x <= high+1e-12)
+
+    def test_rejects_reversed_angles(self):
+        with self.assertRaises(ValueError):
+            planar_chain_x_bounds(0, [((1, 2), (10, -10))])
+
+
+class RectangularSupportClearanceTests(unittest.TestCase):
+    def test_checks_outer_edges_and_every_opening(self):
+        result = rectangular_support_clearance(
+            ((2, 2), (4, 4)), ((0, 0), (10, 10)), [((7, 8), 3), ((8, 5), 1)])
+        self.assertEqual(result["result"], "CLEAR_SUPPORT_LAND")
+        self.assertEqual(result["minimum_edge_land"], "2")
+        self.assertEqual(result["openings"][0]["nearest_distance_squared"], "25")
+        self.assertEqual(result["openings"][0]["margin"], 2.0)
+
+    def test_tangent_hole_and_overhanging_footprint_remain_candidates(self):
+        for footprint, holes in (
+            (((2, 2), (4, 4)), [((7, 8), 5)]),
+            (((2, 2), (4, 4)), [((3, 3), 1)]),
+            (((-1, 2), (4, 4)), []),
+        ):
+            with self.subTest(footprint=footprint, holes=holes):
+                result = rectangular_support_clearance(
+                    footprint, ((0, 0), (10, 10)), holes)
+                self.assertEqual(result["result"], "BOUNDARY_CANDIDATE")
+
+    def test_rejects_degenerate_rectangles_and_holes(self):
+        with self.assertRaises(ValueError):
+            rectangular_support_clearance(((2, 3), (2, 4)), ((0, 0), (10, 10)), [])
+        with self.assertRaises(ValueError):
+            rectangular_support_clearance(((2, 2), (4, 4)), ((0, 0), (10, 10)), [((0, 0), 0)])
+
+
+class SweptCylinderBoreTests(unittest.TestCase):
+    def check(self, **kwargs):
+        data = dict(centre=(0,0,0), axis=0, radius=25, span=(-46,0), travel=100,
+                    bore_centre=(0,0,0), bore_radius=35, bore_span=(15,18), wall_span=(15,18))
+        return swept_axial_cylinder_bore_clearance(**(data | kwargs))
+
+    def test_signed_motion_crosses_the_whole_wall(self):
+        for span, travel, wall in (((-46,0),100,(15,18)), ((0,46),-100,(-18,-15))):
+            with self.subTest(travel=travel):
+                check = self.check(span=span, travel=travel, wall_span=wall, bore_span=wall)
+                self.assertEqual(check["result"], "CLEAR_THROUGH_BORE")
+                self.assertEqual(check["wall_overlap_span"], list(map(str,wall)))
+                self.assertEqual(check["radial_budget_before_offset"], "10")
+
+    def test_offset_and_reserve_count_against_clearance(self):
+        self.assertEqual(self.check(centre=(0,3,4),radial_reserve=4)["result"],
+                         "CLEAR_THROUGH_BORE")
+        for offset, reserve in (((0,6,8),0), ((0,3,4),5), ((0,0,0),10)):
+            with self.subTest(offset=offset,reserve=reserve):
+                self.assertEqual(self.check(centre=offset,radial_reserve=reserve)["result"],
+                                 "RADIAL_CONTACT_CANDIDATE")
+
+    def test_bore_covers_only_verified_axial_interval(self):
+        self.assertEqual(self.check(bore_span=(15,17))["result"],"UNPROVEN_BORE_SPAN")
+        self.assertEqual(self.check(travel=14)["result"],"NO_WALL_ENCOUNTER")
+        self.assertEqual(self.check(travel=15, bore_span=(16,18))["result"],"UNPROVEN_BORE_SPAN")
+
+    def test_invalid_contract_is_rejected(self):
+        for invalid in (dict(axis=True),dict(radius=0),dict(radial_reserve=-1),
+                        dict(wall_span=(18,15)),dict(bore_centre=(0,0,float("nan")))):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                self.check(**invalid)
+
+class StagedTranslationClearance(unittest.TestCase):
+    def test_washer_requires_screw_to_leave_first(self):
+        parts = {"screw": [[[0, 0, 2], [1, 1, 4]]],
+                 "washer": [[[-1, -1, 1], [2, 2, 2]]]}
+        screw = dict(name="withdraw screw", moving=["screw"], displacement=[0, 0, 5], released=["screw"])
+        washer = dict(name="withdraw washer", moving=["washer"], displacement=[0, 0, 5], released=["washer"])
+        fail = staged_translation_clearance(parts, [washer, screw])
+        self.assertEqual(fail["blocked_stage"], "withdraw washer")
+        self.assertEqual(fail["active_occurrences"], ["screw", "washer"])
+        self.assertEqual(fail["stages"][0]["released"], [])
+        result = staged_translation_clearance(parts, [screw, washer])
+        self.assertEqual(result["result"], "PASS")
+        self.assertEqual(result["active_occurrences"], [])
+        self.assertEqual(parts["screw"][0][0], [0, 0, 2])
+
+    def test_pose_carries_to_next_stage_for_joint_group(self):
+        parts = {"plate": [[[0, 0, 0], [1, 1, 1]]],
+                 "cup": [[[0, 0, -1], [1, 1, 0]]],
+                 "rail": [[[2, 0, 0], [3, 1, 2]]]}
+        group = ["plate", "cup"]
+        up = dict(name="lift", moving=group, displacement=[0, 0, 4])
+        out = dict(name="sideways", moving=group, displacement=[4, 0, 0], released=group)
+        self.assertEqual(staged_translation_clearance(parts, [up, out])["result"], "PASS")
+        self.assertEqual(staged_translation_clearance(parts, [out])["blocked_stage"], "sideways")
+
+    def test_approved_pair_is_scoped_to_one_stage(self):
+        parts = {"pin": [[[0, 0, 0], [1, 1, 1]], [[0, 0, 3], [2, 2, 4]]],
+                 "seat": [[[0, 0, 0], [1, 1, 2]]]}
+        approved = {("pin", "seat"): "checked pin and bore along this stage"}
+        lift = dict(name="release", moving=["pin"], displacement=[0, 0, 1], verified_pairs=approved)
+        nudge = dict(name="nudge", moving=["pin"], displacement=[0, 0, .5])
+        result = staged_translation_clearance(parts, [lift, nudge])
+        self.assertEqual(result["blocked_stage"], "nudge")
+        self.assertEqual(result["stages"][0]["verified_candidates"][0]["proof"], approved[("pin", "seat")])
+        with self.assertRaises(ValueError):
+            staged_translation_clearance(parts, [dict(lift, released=["seat"])])
+        with self.assertRaises(ValueError):
+            staged_translation_clearance(parts, [dict(lift, verified_pairs={("pin", "seat"): ""})])
 class ServiceClearance(unittest.TestCase):
     box = [[0, 0, 0], [1, 1, 1]]
+
+    def test_cover_lift_has_start_only_face_contact(self):
+        seat = [[0, 0, -1], [1, 1, 0]]
+        result = translation_box_contact(self.box, seat, (0, 0, 2))
+        self.assertEqual((result["result"], result["dimension"]), ("BOUNDARY_ONLY", 2))
+        self.assertEqual(result["candidate_fraction"], ["0", "0"])
+
+    def test_hopper_seat_is_a_face_through_part_of_withdrawal(self):
+        runner = [[0, 0, -1], [2, 1, 0]]
+        result = translation_box_contact(self.box, runner, (3, 0, 0))
+        self.assertEqual((result["result"], result["dimension"]), ("BOUNDARY_ONLY", 2))
+        self.assertEqual(result["candidate_fraction"], ["0", "2/3"])
+
+    def test_endpoint_checks_miss_an_interior_obstruction(self):
+        obstruction = [[2, 0, 0], [3, 1, 1]]
+        result = translation_box_contact(self.box, obstruction, (4, 0, 0))
+        self.assertEqual((result["result"], result["dimension"]), ("VOLUME_CANDIDATE", 3))
+        self.assertEqual(result["candidate_fraction"], ["1/4", "3/4"])
+        self.assertEqual(result["witness_fraction"], "1/2")
+
+    def test_clear_motion_and_edge_contact_have_distinct_results(self):
+        obstacles = [
+            ([[0, 2, 1], [1, 3, 2]], ("DISJOINT_BOUNDS", None)),
+            ([[1, 1, 0], [2, 2, 1]], ("BOUNDARY_ONLY", 1)),
+        ]
+        for bounds, expected in obstacles:
+            with self.subTest(bounds=bounds):
+                result = translation_box_contact(self.box, bounds, (-1, 0, 0))
+                self.assertEqual((result["result"], result["dimension"]), expected)
+
+    def test_sampled_rotation_accounts_for_motion_and_readback_error(self):
+        check = sampled_rotation_clearance([(0, 8), (2, 7), (3, 10)],
+                                           radius_bound=100, gap_error_bound=0.25,
+                                           required_reserve=5)
+        self.assertEqual(check["result"], "PASS_CONTINUOUS_RESERVE")
+        self.assertEqual(check["limiting_angles_deg"], ["0", "2"])
+        self.assertAlmostEqual(float(Fraction(check["lower_bound"])), 6.75 - 100*radians(1))
+
+    def test_positive_endpoints_do_not_prove_mid_interval_clearance(self):
+        check = sampled_rotation_clearance([(0, 5), (30, 5)],
+                                           radius_bound=100, gap_error_bound=0)
+        self.assertEqual(check["result"], "UNRESOLVED_RESERVE")
+
+    def test_duplicate_and_nonfinite_rotation_samples_are_invalid(self):
+        for rows in ([(0, 5), (0, 4)], [(0, 5), (2, float("inf"))], [(0, 5)]):
+            with self.subTest(rows=rows), self.assertRaises(ValueError):
+                sampled_rotation_clearance(rows, radius_bound=100, gap_error_bound=0.5)
+
+    def test_cylinder_bounds_include_radius_missing_from_seam_vertices(self):
+        box = cartesian_cylinder_bounds((20, 100, -4), axis=1, radius=5, span=(2, 40))
+        self.assertEqual(box, [[15, 2, -9],[25, 40, 1]])
+        wall = [[10, 0, -14],[30, 45, -11]]
+        self.assertEqual(static_box_gap(box, wall)["squared_gap"], "4")
+
+    def test_full_radius_boxes_screen_translating_shaft_against_perpendicular_guide(self):
+        shaft = cartesian_cylinder_bounds((50, 0, 0), axis=1, radius=10, span=(-30, 30))
+        blocked = cartesian_cylinder_bounds((40, 15, 0), axis=2, radius=8, span=(-10, 40))
+        clear = cartesian_cylinder_bounds((31, 15, 0), axis=2, radius=8, span=(-10, 40))
+        stroke = (0, 0, 30)
+        self.assertEqual(translation_box_window(shaft, blocked, stroke)["result"], "CANDIDATE")
+        self.assertEqual(translation_box_window(shaft, clear, stroke)["result"], "DISJOINT_BOUNDS")
+        self.assertEqual(static_box_gap(shaft, clear)["axis_gaps"], ["1", "0", "0"])
+
+    def test_cylinder_bounds_round_outward_and_check_inputs(self):
+        from fractions import Fraction
+
+        box = cartesian_cylinder_bounds((0.1, 0, 0), axis=2, radius=0.2, span=(1, 2))
+        self.assertLessEqual(Fraction(box[0][0]), Fraction(0.1)-Fraction(0.2))
+        self.assertGreaterEqual(Fraction(box[1][0]), Fraction(0.1)+Fraction(0.2))
+        for options in (dict(axis=True,radius=1,span=(1,2)), dict(axis=0,radius=0,span=(1,2)),
+                        dict(axis=0,radius=1,span=(1,1)), dict(axis=0,radius=float("nan"),span=(1,2))):
+            with self.subTest(options=options), self.assertRaises(ValueError):
+                cartesian_cylinder_bounds((0,0,0), **options)
+
+    def test_guided_pilot_clears_slot_through_full_travel(self):
+        report = guided_circular_pilot_clearance(
+            slot_centres=(-8,8), slot_radius=26.8, travel_centres=(-8,8),
+            pilot_radius=26, side_play=.3, minimum_reserve=.49)
+        self.assertEqual(report["result"], "PASS_NOMINAL_CAPSULE_CLEARANCE")
+        self.assertAlmostEqual(report["minimum_slot_gap"], .5)
+
+    def test_guided_pilot_checks_both_end_and_side_play(self):
+        options = dict(slot_centres=(0,8), slot_radius=4, travel_centres=(-3,8),
+                       pilot_radius=2, side_play=.5)
+        self.assertEqual(guided_circular_pilot_clearance(**options)["result"],
+                         "FAIL_REQUIRED_CLEARANCE")
+        options.update(travel_centres=(0,9), side_play=.75)
+        report = guided_circular_pilot_clearance(**options, minimum_reserve=.75)
+        self.assertEqual(report["result"], "PASS_NOMINAL_CAPSULE_CLEARANCE")
+        self.assertEqual(report["minimum_slot_gap"], .75)
+
+    def test_guided_pilot_rejects_reversed_stations(self):
+        with self.assertRaises(ValueError):
+            guided_circular_pilot_clearance(
+                slot_centres=(1,1), slot_radius=5, travel_centres=(0,2),
+                pilot_radius=2, side_play=.25)
+
+    def test_symmetric_rpy_covers_all_box_corners_and_sampled_intermediate_poses(self):
+        box = [(-42,-15,-7),(-13,7,19)]
+        pivot = (-4,2,3)
+        limits = (25,5,25)
+        low, high = rpy_world_x_bounds(box, pivot=pivot, roll_deg=limits[0],
+                                       pitch_deg=limits[1], yaw_deg=limits[2])
+        domains = [(-m,-m/2,0,m/2,m) for m in limits]
+        for roll, pitch, yaw in product(*domains):
+            r, p, a = map(radians, (roll,pitch,yaw))
+            for x, y, z in product(*zip(*box, strict=True)):
+                x, y, z = x-pivot[0], y-pivot[1], z-pivot[2]
+                rotated_y = cos(r)*y-sin(r)*z
+                rotated_z = sin(r)*y+cos(r)*z
+                pitched_x = cos(p)*x+sin(p)*rotated_z
+                observed = pivot[0]+cos(a)*pitched_x-sin(a)*rotated_y
+                self.assertLessEqual(low, observed)
+                self.assertGreaterEqual(high, observed)
+
+    def test_symmetric_rpy_zero_motion_and_input_limits(self):
+        box = [(3,1,-2),(9,7,8)]
+        self.assertEqual(rpy_world_x_bounds(box,pivot=(11,-20,30),roll_deg=0,
+                                            pitch_deg=0,yaw_deg=0), (3,9))
+        for invalid in (-1,91,float("nan")):
+            with self.subTest(yaw_deg=invalid), self.assertRaises(ValueError):
+                rpy_world_x_bounds(box,pivot=(0,0,0),roll_deg=0,pitch_deg=0,yaw_deg=invalid)
 
     def test_axial_section_resolves_only_fully_covered_box_candidates(self):
         full = [[-3,-1,-3],[3,9,3]]
@@ -48,6 +301,34 @@ class ServiceClearance(unittest.TestCase):
             self.assertEqual(orthogonal_sleeve_clearance(vertical, sleeve)['result'], 'NEEDS_FINITE_SOLID_CHECK')
         with self.assertRaises(ValueError):
             orthogonal_sleeve_clearance(vertical, dict(transverse, axis=2))
+
+    def test_axial_cylinder_clears_corner_overlapped_by_its_box(self):
+        bounds = [[3, 7, 4], [8, 8, 9]]
+        swept = swept_axial_cylinder_box_gap(
+            [0, 0, 0], axis=1, radius=4, span=[0, 4], travel=4, obstacle_bounds=bounds
+        )
+        self.assertEqual(swept["result"], "DISJOINT_BOUNDS")
+        self.assertEqual(swept["rectangle_nearest_radius_squared"], "25")
+        self.assertEqual(swept["swept_axial_span"], ["0", "8"])
+        base = cartesian_cylinder_bounds([0, 0, 0], axis=1, radius=4, span=[0, 4])
+        self.assertEqual(translation_box_window(base, bounds, [0, 4, 0])["result"], "CANDIDATE")
+
+    def test_axial_cylinder_reports_tangent_and_signed_axial_separation(self):
+        bounds = [[-5, 0, -1], [-4, 2, 1]]
+        forward = swept_axial_cylinder_box_gap(
+            [0, 99, 0], axis=1, radius=4, span=[3, 4], travel=-1, obstacle_bounds=bounds
+        )
+        self.assertEqual(forward["result"], "CANDIDATE")
+        self.assertEqual(forward["axial_gap"], "0")
+        backward = swept_axial_cylinder_box_gap(
+            [0, 99, 0], axis=1, radius=4, span=[3, 4], travel=1, obstacle_bounds=bounds
+        )
+        self.assertEqual(backward["result"], "DISJOINT_BOUNDS")
+        self.assertEqual(backward["axial_gap"], "1")
+        with self.assertRaises(ValueError):
+            swept_axial_cylinder_box_gap(
+                [0, 0, 0], axis=1, radius=4, span=[3, 2], travel=0, obstacle_bounds=bounds
+            )
 
     def test_rectangle_radial_bounds_report_nearest_edge_and_farthest_corner(self):
         self.assertEqual(rectangle_radial_bounds([[1,-2],[3,1]],[0,0]),

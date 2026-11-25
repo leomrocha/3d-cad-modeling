@@ -54,6 +54,28 @@ def read_stable_entity(client,handle):
     return rows[0],dict(zip(('document_id','revision','geometry_revision'),before))
 
 
+def motion_role_handles(roles, *, moving, stationary):
+    """Resolve an exhaustive, non-overlapping native motion partition.
+
+    The caller binds each in-scope physical role to one current live handle.
+    Moving and stationary roles must come from the mechanism's design.
+    The moving order is retained for the native request.
+    """
+    moving = tuple(moving)
+    stationary = tuple(stationary)
+    classified = moving + stationary
+    if not moving or len(classified) != len(set(classified)):
+        raise CadError('Motion roles require a nonempty moving group and unique classification')
+    missing = sorted(set(roles) - set(classified))
+    unexpected = sorted(set(classified) - set(roles))
+    if missing or unexpected:
+        raise CadError(f'Motion role coverage differs. Unclassified: {missing}. Unknown: {unexpected}.')
+    handles = list(roles.values())
+    if any(not isinstance(handle, str) or not handle for handle in handles) or len(set(handles)) != len(handles):
+        raise CadError('Each motion role requires a unique native handle')
+    return tuple(roles[role] for role in moving)
+
+
 def audit_type_counts(records):
     """Translate observed native entity labels to their audit manifest labels."""
     audit_labels = {'Solid3D': '3D Solid', 'Insert': 'Block Reference'}

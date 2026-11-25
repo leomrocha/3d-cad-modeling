@@ -20,6 +20,38 @@ def inside(point,poly):
     return result
 
 
+
+def straight_profile_station_intervals(vertices, station, *, axis=0, tolerance=1e-6):
+    """Return material intervals along a section of one straight-edged loop.
+
+    Pass vertices in original connected order and one caller-selected section
+    station on the chosen axis. Intervals use the other axis. Stations within
+    tolerance of a vertex require a separately qualified edge or vertex case.
+    """
+    if type(axis) is not int or axis not in (0, 1):
+        raise ValueError("Section axis must be 0 or 1")
+    station = finite(station)
+    tolerance = positive(tolerance)
+    polygon = validate_profile(vertices)
+    offsets = [p[axis] - station for p in polygon]
+    if any(abs(value) <= tolerance for value in offsets):
+        raise ValueError("Section station meets a profile vertex within tolerance")
+
+    transverse = 1 - axis
+    crossings = []
+    for i, first in enumerate(polygon):
+        j = (i + 1) % len(polygon)
+        if (offsets[i] < 0) == (offsets[j] < 0):
+            continue
+        second = polygon[j]
+        fraction = offsets[i] / (offsets[i] - offsets[j])
+        crossings.append(first[transverse] + fraction * (second[transverse] - first[transverse]))
+    crossings.sort()
+    if len(crossings) % 2 or any(b - a <= tolerance for a, b in zip(crossings, crossings[1:])):
+        raise ValueError("Section crossings are ambiguous at the requested tolerance")
+    return list(zip(crossings[::2], crossings[1::2], strict=True))
+
+
 def line_circle(a,b,c,r,tolerance):
     d=sub(b,a);q=sub(a,c);aa=sum(x*x for x in d)
     if aa==0:raise ValueError('Zero-length stock segment')
@@ -220,6 +252,65 @@ def ellipse_arc_chord_error_bound(major_radius, parameter_step_radians):
     if step > math.pi:
         raise CadError('Sample parameter step must be at most pi radians')
     return radius * (2 * math.sin(step/4)**2)
+
+
+
+def rolling_corner_offset(vertices, vertex_index, radius, exit_normal, *, max_chord_error):
+    """Return a round body's centre arc from an incoming straight support edge.
+
+    The ordered polygon has no holes. The exit normal must lie in the outer
+    normal cone of the selected convex vertex. The returned error bounds the
+    deviation of the joined chords from the continuous centre arc.
+    """
+    polygon = validate_profile(vertices)
+    if type(vertex_index) is not int or not 0 <= vertex_index < len(polygon):
+        raise ValueError("A valid profile corner index is required")
+    radius, limit = positive(radius), positive(max_chord_error)
+    if limit >= radius:
+        raise ValueError("Chord error must be smaller than the rolling radius")
+
+    vertex = polygon[vertex_index]
+    relative = [sub(point, vertex) for point in polygon]
+    area = sum(cross(a, b) for a, b in zip(relative, relative[1:] + relative[:1], strict=True))
+    winding = 1 if area > 0 else -1
+
+    def unit(values):
+        u, v = vector(values, 2)
+        length = math.hypot(u, v)
+        if length == 0:
+            raise ValueError("A nonzero normal or edge direction is required")
+        return [u / length, v / length]
+
+    def outward(tangent):
+        u, v = unit(tangent)
+        return [winding * v, -winding * u]
+
+    incoming = outward(sub(vertex, polygon[vertex_index - 1]))
+    outgoing = outward(sub(polygon[(vertex_index + 1) % len(polygon)], vertex))
+    exit_unit = unit(exit_normal)
+
+    def dot(a, b):
+        return sum(x * y for x, y in zip(a, b, strict=True))
+
+    def offset_angle(target):
+        return winding * math.atan2(cross(incoming, target), dot(incoming, target))
+
+    cone, angle = offset_angle(outgoing), offset_angle(exit_unit)
+    if not 0 < angle <= cone + 1e-12 or not 0 < cone < math.pi:
+        raise ValueError("Exit normal must advance within a convex corner's outer cone")
+    epsilon = max(1.0, max(math.hypot(*point) for point in relative)) * 1e-12
+    if any(dot(n, point) > epsilon for point in relative for n in (incoming, exit_unit)):
+        raise ValueError("Both endpoint normals must support the entire profile")
+    step_limit = 4 * math.asin(math.sqrt(0.5 * (limit / radius)))
+    if step_limit < angle / 4096:
+        raise ValueError("Requested chord bound requires more than 4096 intervals")
+    count = math.ceil(angle / step_limit)
+    step = angle / count
+    heading = math.atan2(incoming[1], incoming[0])
+    centres = [[vertex[0] + radius * math.cos(heading + winding * step * i),
+                vertex[1] + radius * math.sin(heading + winding * step * i)]
+               for i in range(count + 1)]
+    return dict(centre_points=centres, chord_error=ellipse_arc_chord_error_bound(radius, step))
 
 
 def annular_seat_with_radial_slot(inner_radius, outer_radius, slot_width, slot_radial_end):

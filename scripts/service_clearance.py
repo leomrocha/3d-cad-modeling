@@ -27,6 +27,100 @@ def _bounds(bounds):
     return low, high
 
 
+def sampled_rotation_clearance(samples, *, radius_bound, gap_error_bound,
+                               required_reserve=0):
+    """Bound continuous clearance for one body rotating about a fixed axis.
+
+    Samples give increasing angles in degrees, including both sweep limits,
+    and signed clearance witnesses to one stationary obstacle. Subtract the
+    supplied gap error bound, which must cover geometry and readback error.
+    The radius bound encloses every moving point's distance to the axis.
+    Length inputs use one common unit. A non-positive demonstrated reserve
+    leaves clearance unresolved, since the bound can be conservative.
+    """
+    radius, error, reserve = _vector((radius_bound, gap_error_bound, required_reserve), 3)
+    witnesses = [_vector(row, 2) for row in samples]
+    if len(witnesses) < 2 or min(radius, error, reserve) < 0:
+        raise ValueError("Expected two or more samples and nonnegative bounds")
+    # Rational upper bound on pi. Arc length bounds rigid displacement.
+    upper_pi = Fraction("3.141592653589793239")
+    intervals = []
+    for (a, first_gap), (b, last_gap) in zip(witnesses, witnesses[1:]):
+        if b <= a:
+            raise ValueError("Sample angles must increase")
+        half_interval_travel = radius * (b-a) * upper_pi / 360
+        intervals.append((min(first_gap, last_gap)-error-half_interval_travel, a, b))
+    lower, start, end = min(intervals)
+    return dict(result="PASS_CONTINUOUS_RESERVE" if lower > reserve else "UNRESOLVED_RESERVE",
+                lower_bound=str(lower), required_reserve=str(reserve),
+                limiting_angles_deg=[str(start), str(end)])
+
+
+def cartesian_cylinder_bounds(centre, *, axis, radius, span):
+    """Enclose a finite cylinder with an axis parallel to a Cartesian axis.
+
+    The caller supplies the maximum material radius and two measured absolute
+    end stations in the same frame. The centre's coordinate along the axis
+    does not affect the box. Use separately bounded heads and shoulders when
+    checking clearance for only part of an assembly.
+    """
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError("Expected an XYZ axis index")
+    centre = _vector(centre, 3)
+    radius, = _vector((radius,), 1)
+    start, stop = _vector(span, 2)
+    if radius <= 0 or start >= stop:
+        raise ValueError("Expected a positive radius and increasing end stations")
+    low = [value - radius for value in centre]
+    high = [value + radius for value in centre]
+    low[axis], high[axis] = start, stop
+
+    def round_outward(value, direction):
+        try:
+            result = float(value)
+        except OverflowError as error:
+            raise ValueError("Cylinder bounds exceed finite coordinates") from error
+        rounded = Fraction(result)
+        if (direction < 0 and rounded > value) or (direction > 0 and rounded < value):
+            result = math.nextafter(result, direction)
+        if not math.isfinite(result):
+            raise ValueError("Cylinder bounds exceed finite coordinates")
+        return result
+
+    return [[round_outward(value, direction) for value in boundary]
+            for boundary, direction in ((low, -math.inf), (high, math.inf))]
+
+
+def guided_circular_pilot_clearance(*, slot_centres, slot_radius, travel_centres,
+                                   pilot_radius, side_play, minimum_reserve=0):
+    """Check a circular pilot constrained by separate straight guides.
+
+    Longitudinal stations use the frame of the capsule slot's straight centre
+    segment. The nominal transverse station is zero. Side play bounds the
+    complete transverse displacement, including any tolerances supplied by
+    the caller. Use the smallest slot and largest pilot bounding radii.
+    """
+    slot_start, slot_end = _vector(slot_centres, 2)
+    start, end = _vector(travel_centres, 2)
+    opening, pilot, play, reserve = _vector(
+        (slot_radius, pilot_radius, side_play, minimum_reserve), 4)
+    if slot_start >= slot_end or start > end or min(opening, pilot) <= 0 or min(play, reserve) < 0:
+        raise ValueError("Expected increasing slot centres, ordered travel and positive radii")
+
+    overrun = max(slot_start - start, end - slot_end, Fraction(0))
+    squared_displacement = overrun**2 + play**2
+    available = opening - pilot
+    residual = available - reserve
+    passes = residual >= 0 and squared_displacement <= residual**2
+    return dict(
+        result="PASS_NOMINAL_CAPSULE_CLEARANCE" if passes else "FAIL_REQUIRED_CLEARANCE",
+        minimum_slot_gap=float(available) - math.hypot(float(overrun), float(play)),
+        longitudinal_overrun=float(overrun),
+        maximum_side_play=float(play),
+        required_reserve=float(reserve),
+    )
+
+
 def static_box_gap(first_bounds, second_bounds):
     """Return exact squared separation for two axis-aligned boxes in one frame.
 
@@ -83,6 +177,66 @@ def bounded_axial_section_clearance(full_bounds, section_bounds, obstacle_bounds
     gap = max(transverse_gaps)
     result = 'DISJOINT_SECTION_BOUNDS' if gap > 0 else 'SECTION_CONTACT_CANDIDATE'
     return dict(result=result, axial_overlap=overlap, transverse_axis_gap=str(gap))
+
+
+def planar_chain_x_bounds(origin_x, links):
+    """Enclose X coordinates at the end of an ordered chain in the XZ plane.
+
+    Each link is ((local_x, local_z), (minimum_deg, maximum_deg)). An
+    angle is relative to the previous link and uses positive rotation from
+    +X toward +Z. The independent term bounds also cover dependent joint
+    angles inside the supplied ranges. Account for body thickness separately.
+    """
+    origin, = _vector((origin_x,), 1)
+    minimum = maximum = float(origin)
+    cumulative_low = cumulative_high = 0.0
+    for vector, angle_range in links:
+        x, z = map(float, _vector(vector, 2))
+        low, high = _vector(angle_range, 2)
+        if low > high:
+            raise ValueError("Joint angle minima must precede maxima")
+        cumulative_low += math.radians(low)
+        cumulative_high += math.radians(high)
+        ends = [x * math.cos(angle) - z * math.sin(angle)
+                for angle in (cumulative_low, cumulative_high)]
+        peak = math.atan2(-z, x)
+        radius = math.hypot(x, z)
+        low_x, high_x = min(ends), max(ends)
+        for phase, extremum in ((peak, radius), (peak + math.pi, -radius)):
+            turn = math.ceil((cumulative_low - phase) / math.tau)
+            if phase + turn * math.tau <= cumulative_high:
+                low_x = min(low_x, extremum)
+                high_x = max(high_x, extremum)
+        minimum += low_x
+        maximum += high_x
+    return minimum, maximum
+
+
+def rpy_world_x_bounds(bounds, *, pivot, roll_deg, pitch_deg, yaw_deg):
+    """Bound world X for a box under symmetric Rz(yaw) Ry(pitch) Rx(roll).
+
+    The input box encloses the component at zero angles. Each stated limit
+    covers both signs. The result covers the whole independent angle domain.
+    """
+    low, high = _bounds(bounds)
+    centre = _vector(pivot, 3)
+    angles = _vector((roll_deg, pitch_deg, yaw_deg), 3)
+    if any(angle < 0 or angle > 90 for angle in angles):
+        raise ValueError("Expected symmetric roll, pitch and yaw limits from zero to 90 degrees")
+    roll, pitch, yaw = (math.radians(float(angle)) for angle in angles)
+    sr, sp, sy = (math.sin(angle) for angle in (roll, pitch, yaw))
+    minimum_x_coefficient = math.cos(pitch) * math.cos(yaw)
+    relative_low = tuple(float(value - origin) for value, origin in zip(low, centre, strict=True))
+    relative_high = tuple(float(value - origin) for value, origin in zip(high, centre, strict=True))
+    x_low, y_low, z_low = relative_low
+    x_high, y_high, z_high = relative_high
+    lateral = (sy + sp * sr) * max(abs(y_low), abs(y_high))
+    vertical = (sp + sy * sr) * max(abs(z_low), abs(z_high))
+    l = float(centre[0]) + min(x_low, minimum_x_coefficient * x_low) - lateral - vertical
+    h = float(centre[0]) + max(x_high, minimum_x_coefficient * x_high) + lateral + vertical
+    if not math.isfinite(l) or not math.isfinite(h):
+        raise ValueError("Motion bound exceeds representable coordinates")
+    return l, h
 
 
 def orthogonal_sleeve_clearance(first, second):
@@ -173,6 +327,111 @@ def rectangle_radial_bounds(bounds, centre):
                 max_radius_squared=str(sum(d * d for d in far)))
 
 
+def rectangular_support_clearance(footprint, support, openings):
+    """Check planar coverage under a rectangular contact footprint.
+
+    Footprint and support are minimum and maximum UV corners with positive
+    area. Openings is a sequence of (centre, radius) pairs. Supply the complete
+    set of cutouts with conservative radii on the verified seating plane.
+    Boundary contact is a candidate. Plane contact and strength are separate.
+    """
+    low, high = (_vector(corner, 2) for corner in footprint)
+    support_low, support_high = (_vector(corner, 2) for corner in support)
+    for start, end in ((low, high), (support_low, support_high)):
+        if any(a >= b for a, b in zip(start, end)):
+            raise ValueError("Rectangular footprints and supports require positive area")
+    edge_land = min(*(a-b for a,b in zip(low, support_low)),
+                    *(a-b for a,b in zip(support_high, high)))
+    holes = []
+    for centre, size in openings:
+        radius, = _vector((size,), 1)
+        if radius <= 0:
+            raise ValueError("Opening radius must be positive")
+        radial = rectangle_radial_bounds(footprint, centre)
+        nearest = Fraction(radial["min_radius_squared"])
+        holes.append(dict(nearest_distance_squared=str(nearest),
+                          opening_radius_squared=str(radius**2),
+                          margin=math.sqrt(float(nearest)) - float(radius),
+                          disjoint=nearest > radius**2))
+    supported = edge_land > 0 and all(hole["disjoint"] for hole in holes)
+    return dict(result="CLEAR_SUPPORT_LAND" if supported else "BOUNDARY_CANDIDATE",
+                minimum_edge_land=str(edge_land), openings=holes)
+
+
+def swept_axial_cylinder_box_gap(centre, *, axis, radius, span, travel, obstacle_bounds):
+    """Screen a finite circular cylinder translated along its own XYZ axis.
+
+    Use a maximum material radius for the full swept axial section. The swept
+    solid is the same radius over the union of its start and end stations.
+    A tangent to the supplied box is a contact candidate.
+    """
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError("Expected an XYZ axis index")
+    centre = _vector(centre, 3)
+    radius, travel = _vector((radius, travel), 2)
+    start, stop = _vector(span, 2)
+    if radius <= 0 or start >= stop:
+        raise ValueError("Expected a positive radius and increasing end stations")
+    low, high = _bounds(obstacle_bounds)
+    sweep_low, sweep_high = start + min(travel, 0), stop + max(travel, 0)
+    axial_gap = max(low[axis] - sweep_high, sweep_low - high[axis], 0)
+    radial_squared = sum(
+        max(a - c, c - b, 0)**2
+        for i, (a, b, c) in enumerate(zip(low, high, centre)) if i != axis
+    )
+    radius_squared = radius**2
+    disjoint = axial_gap > 0 or radial_squared > radius_squared
+    return {
+        "result": "DISJOINT_BOUNDS" if disjoint else "CANDIDATE",
+        "swept_axial_span": [str(sweep_low), str(sweep_high)],
+        "axial_gap": str(axial_gap),
+        "rectangle_nearest_radius_squared": str(radial_squared),
+        "cylinder_radius_squared": str(radius_squared),
+    }
+
+
+
+def swept_axial_cylinder_bore_clearance(
+        centre, *, axis, radius, span, travel, bore_centre, bore_radius,
+        bore_span, wall_span, radial_reserve=0):
+    """Check a round moving envelope against the measured hole in a finite wall.
+
+    Both axes are parallel to the chosen Cartesian axis. Use an upper moving
+    radius and a lower clear bore radius over their stated spans. Clearance
+    must cover the entire intersection with the wall and exceed the requested
+    radial reserve. Hole tangency remains a candidate.
+    """
+    if type(axis) is not int or not 0 <= axis < 3:
+        raise ValueError("Expected an XYZ axis index")
+    centre, bore_centre = (_vector(point, 3) for point in (centre, bore_centre))
+    radius, travel, bore_radius, radial_reserve = _vector(
+        (radius, travel, bore_radius, radial_reserve), 4)
+    start, stop = _vector(span, 2)
+    bore_start, bore_stop = _vector(bore_span, 2)
+    wall_start, wall_stop = _vector(wall_span, 2)
+    if (min(radius, bore_radius) <= 0 or radial_reserve < 0
+            or start >= stop or bore_start >= bore_stop or wall_start >= wall_stop):
+        raise ValueError("Positive radii, ordered finite spans and nonnegative reserve required")
+
+    swept_start = start + min(travel, 0)
+    swept_stop = stop + max(travel, 0)
+    lo, hi = max(swept_start, wall_start), min(swept_stop, wall_stop)
+    offset_squared = sum((centre[i]-bore_centre[i])**2 for i in range(3) if i != axis)
+    radial_budget = bore_radius - radius - radial_reserve
+
+    result = "CLEAR_THROUGH_BORE"
+    if lo > hi:
+        result = "NO_WALL_ENCOUNTER"
+    elif lo < bore_start or hi > bore_stop:
+        result = "UNPROVEN_BORE_SPAN"
+    elif radial_budget <= 0 or offset_squared >= radial_budget**2:
+        result = "RADIAL_CONTACT_CANDIDATE"
+    return dict(result=result, swept_axial_span=[str(swept_start), str(swept_stop)],
+                wall_overlap_span=[str(lo), str(hi)] if lo <= hi else None,
+                radial_budget_before_offset=str(radial_budget),
+                transverse_axis_offset_squared=str(offset_squared))
+
+
 def static_box_halfspace_gap(bounds, *, normal, offset):
     """Screen a box against a part contained in normal · point <= offset."""
     low, high = _bounds(bounds)
@@ -213,6 +472,109 @@ def translation_box_window(moving_bounds, fixed_bounds, displacement):
         if start > end:
             return {"result": "DISJOINT_BOUNDS", "candidate_fraction": None}
     return {"result": "CANDIDATE", "candidate_fraction": [str(start), str(end)]}
+
+
+def translation_box_contact(moving_bounds, fixed_bounds, displacement):
+    """Classify the maximum enclosure contact dimension over straight travel.
+
+    A boundary-only result rules out positive-volume overlap of the supplied
+    conservative boxes. Check the required separation and permission for
+    contact separately. A volume candidate requires a more precise check.
+    """
+    window = translation_box_window(moving_bounds, fixed_bounds, displacement)
+    interval = window["candidate_fraction"]
+    if interval is None:
+        return dict(window, dimension=None)
+
+    # Within the relative interior of the closed contact interval, each
+    # axis has either a positive overlap or a persistent boundary contact.
+    start, end = map(Fraction, interval)
+    witness = (start + end) / 2
+    low, high = _bounds(moving_bounds)
+    fixed_low, fixed_high = _bounds(fixed_bounds)
+    offset = [witness * delta for delta in _vector(displacement, 3)]
+    spans = [
+        min(b + d, v) - max(a + d, u)
+        for a, b, u, v, d in zip(low, high, fixed_low, fixed_high, offset, strict=True)
+    ]
+    dimension = sum(span > 0 for span in spans)
+    return dict(result="VOLUME_CANDIDATE" if dimension == 3 else "BOUNDARY_ONLY",
+                candidate_fraction=interval, dimension=dimension,
+                witness_fraction=str(witness))
+
+
+def staged_translation_clearance(occurrences, stages):
+    """Screen ordered, fixed-orientation removal with explicit stage ownership.
+
+    Map each occurrence name to one or more conservative XYZ boxes. Each
+    stage declares name, moving names, displacement and optional released
+    names. Released names leave the assembly only after the stage passes.
+    verified_pairs maps (moving, fixed) names to caller-owned proof references
+    that cover every reported candidate for the pair in this stage.
+    """
+    active = {}
+    for name, boxes in occurrences.items():
+        if not isinstance(name, str) or not name.strip() or not boxes:
+            raise ValueError("Named occurrences with nonempty boxes are required")
+        for bounds in boxes:
+            _bounds(bounds)
+        active[name] = [[list(corner) for corner in bounds] for bounds in boxes]
+    if not active or not stages:
+        raise ValueError("Nonempty occurrences and ordered stages are required")
+
+    reports = []
+    stage_names = set()
+    for stage in stages:
+        name = stage["name"]
+        if not isinstance(name, str) or not name.strip() or name in stage_names:
+            raise ValueError("Unique nonempty stage name required")
+        stage_names.add(name)
+        moving = stage["moving"]
+        released = stage.get("released", ())
+        if (not isinstance(moving, (list, tuple)) or not moving or len(set(moving)) != len(moving)
+                or not set(moving) <= active.keys()):
+            raise ValueError("Each moving occurrence must be active and named once")
+        if (not isinstance(released, (list, tuple)) or len(set(released)) != len(released)
+                or not set(released) <= set(moving)):
+            raise ValueError("Only occurrences moved in the current stage can be released")
+        fixed = active.keys() - set(moving)
+        displacement = list(stage["displacement"])
+        _vector(displacement, 3)
+        verified = stage.get("verified_pairs", {})
+        for pair, source in verified.items():
+            if (not isinstance(pair, tuple) or len(pair) != 2 or pair[0] not in moving or
+                    pair[1] not in fixed or not isinstance(source, str) or not source.strip()):
+                raise ValueError("Each verified pair needs a moving occurrence, a fixed occurrence and evidence")
+
+        row = dict(name=name, moving=list(moving), displacement=displacement,
+                   boundary_contacts=[], verified_candidates=[], unresolved_candidates=[], released=[])
+        for part in moving:
+            for obstacle in sorted(fixed):
+                pair = part, obstacle
+                for i, first in enumerate(active[part]):
+                    for j, second in enumerate(active[obstacle]):
+                        contact = translation_box_contact(first, second, displacement)
+                        if contact["result"] == "DISJOINT_BOUNDS":
+                            continue
+                        hit = dict(moving=part, fixed=obstacle, moving_box=i, fixed_box=j, **contact)
+                        if contact["result"] == "BOUNDARY_ONLY":
+                            row["boundary_contacts"].append(hit)
+                        elif pair in verified:
+                            row["verified_candidates"].append(dict(hit, proof=verified[pair]))
+                        else:
+                            row["unresolved_candidates"].append(hit)
+        reports.append(row)
+        if row["unresolved_candidates"]:
+            return dict(result="UNRESOLVED_CANDIDATES", stages=reports, blocked_stage=name,
+                        active_occurrences=sorted(active))
+
+        for part in moving:
+            active[part] = [[list(map(sum, zip(c, displacement, strict=True))) for c in box]
+                            for box in active[part]]
+        for part in released:
+            del active[part]
+        row["released"] = list(released)
+    return dict(result="PASS", stages=reports, blocked_stage=None, active_occurrences=sorted(active))
 
 
 def quarter_turn_box(bounds, *, pivot, axis, direction):

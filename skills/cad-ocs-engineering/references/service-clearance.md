@@ -6,6 +6,51 @@
 4. Use `shared_definition_coincidence(moving_matrix, fixed_matrix, displacement)` only after verifying both occurrences reference the same nonempty geometry definition. Supply nonsingular affine 4×4 matrices in the same world frame. Identical linear transforms and a matching translation within the finite path give a `COINCIDENCE_WITNESS`. Record the witness travel and both occurrences. For a solid with positive volume, coincidence proves interference at that pose. `NO_COINCIDENCE_WITNESS` leaves the collision question open.
 5. Run a supported 3D test for remaining candidates. A positive-volume intersection at one sampled pose proves interference there. Clear samples cover their tested poses. A continuous clear result requires a validated swept-volume or continuous collision method for the whole motion and all in-scope geometry. Keep unknown bodies, invalid input solids and untested clearances visible in the result. A path with rotation, bending or staged motion needs its own supported method.
 
+
+## Round-body motion over a convex edge
+
+Use `rolling_corner_offset` in [planar_profiles.py](../scripts/planar_profiles.py) when checking a circular or conservatively spherical body's centre route over a verified straight-profile corner. Begin on the incoming edge offset by the body radius. Pass the ordered support profile, corner index, radius, target exit normal and maximum geometric chord error. The helper verifies the supported arc and returns its sampled centreline. Subtract its chord error from clearance measured to other obstacles. Check the incoming segment, departure and landing separately. Preserve intended support tangency and check all relevant lateral bands.
+
+## Distinguish seating contact from box overlap
+
+Use `translation_box_contact` in [service_clearance.py](../scripts/service_clearance.py) to classify the maximum contact dimension over a straight travel interval. The helper reports the exact candidate interval and distinguishes boundary contact from a possible positive-volume overlap. A lifted lid can contact its seat at fraction zero. A tray can remain in contact with its rails during part of its withdrawal. Record permitted seat pairs and check any required positive clearance separately. Supply conservative enclosures and account for readback error. Curved-surface witness points alone can understate a box.
+
+When two parts seat on coplanar rectangular faces, bind the four actual face corners of each part in the service frame. Use `rectangular_face_overlap` in [planar_profiles.py](../scripts/planar_profiles.py) to obtain the common face area and in-plane contact lengths. For a containment case, the contact length is the length of the interval intersection. A separating-axis margin identifies a candidate and can give a different value. Do not infer bearing capacity from face area. When one contact consists of several adjacent patches, count the area of their union.
+
+For moving geometry inside a nested insert, derive each service direction from a verified straight rail or bore in the composed leaf frame. The drawing root can be at identity while an inner subassembly is rotated or reversed. Confirm the direction and sign with two installed witnesses such as rail endpoints or signed shaft stations. Apply any independent height adjustment in its own measured carrier direction before checking the local withdrawal. A prior standalone result can cover the unchanged parts only if their identities, geometry and relative poses are bound. Include added carrier, guard and host occurrences in the installed sweep.
+
+
+## Verify a moving group before native translation
+
+1. Bind each in-scope live occurrence to a unique handle using its saved role.
+   Classify the moving and stationary parts from the assembly design. Include
+   new drive shafts, bearing stacks and covers attached to the moving group.
+2. Resolve the two role lists with `motion_role_handles` in
+   [cadtools/records.py](../scripts/cadtools/records.py). Pass its returned
+   handles to the move. Compare the final positions of the shaft and other
+   independent datums, and confirm that stationary geometry retained its
+   original placement. Keep the verified state before attempting the move.
+
+## Check a sequence of straight tool moves
+
+1. Keep the tool orientation and the box that encloses it fixed throughout the sequence. List the start pose and each intermediate pose in one world frame. The end of one segment is the start of the next. Record when a cover, tray or other released part leaves the obstacle set.
+2. For each segment, offset the tool box to its start pose and set displacement to the end pose minus the start pose. Convert axis-span records `[[xmin,xmax],[ymin,ymax],[zmin,zmax]]` into the minimum and maximum XYZ corners accepted by `translation_box_window`.
+3. Check every stationary obstacle for every segment, including equipment that remains after access panels are removed. Verify intermediate poses and the smallest clearance across the complete path. Record any candidate or missing obstacle. Each `DISJOINT_BOUNDS` result covers the continuous segment for the supplied envelopes.
+4. Keep tool entry, engagement and operating swing separate. A translated head envelope can prove entry for its assumed size. A rotating handle, changed orientation or cable bend needs its own swept geometry.
+
+
+## Carry removed occurrences through a service sequence
+
+Use `staged_translation_clearance(occurrences, stages)` when multiple components leave the assembly in a defined order. Supply one or more finite envelope boxes per named occurrence. For each stage give its name, moving occurrence names and common displacement. Set `released` only for moved occurrences that no longer take part in later stages. For example, pull the screw before checking washer withdrawal. Several parts can move together as one deck or cover, with starting positions carried forward from the preceding stage.
+
+The checker retains seated boundary contacts in its report and stops at the first unresolved volume candidate. To resolve an intended bore or other overlapping box pair, pass stage-local `verified_pairs` keyed by the moving and stationary names with a reference to the clearance evidence for that entire phase. The evidence must cover the named envelopes and the full movement segment. Check tool swing, interfaces within a moving group and physical handling separately. Preserve the exact active occurrence set and source model revision used for the screen.
+
+## Screen a cylindrical part during axial removal
+
+For a bearing, round pin or tool translated along its own Cartesian axis, pass its measured axial span, maximum radius, centre and signed travel to `swept_axial_cylinder_box_gap` in [service_clearance.py](../scripts/service_clearance.py). Screen each finite shoulder or head separately when the radius changes. The helper checks the whole swept interval against each conservative stationary box. A positive axial gap or a nearest transverse radius strictly larger than the cylinder radius establishes separation. A tangent or overlap remains a candidate. To display the distance, combine the axial gap with the nonnegative difference between the nearest transverse radius and the cylinder radius.
+
+For passage through a circular bore, call `swept_axial_cylinder_bore_clearance` with the measured wall and bore spans, minimum clear radius and axes in the same frame as the moving cylinder. The helper covers the entire swept wall overlap and includes the transverse axis offset in the radial budget. Treat an interrupted bore, tangent, or inadequate clearance as a candidate. For a full traversal require the reported wall overlap to cover the complete wall. Check steps, tapers, and the rest of the assembly with their own measured envelopes.
+
 ## Project a straight motion through an existing wall opening
 
 1. Bind the moving clearance silhouette to the actual wall slab and keep the full through-cut outline from the saved model. Express both in one wall-plane frame. For travel parallel to that plane, express the silhouette displacement in the wall frame. When the wall moves, use the opposite of its travel for the stationary silhouette.
@@ -16,15 +61,45 @@
 
 Pass a conservative moving box, one point on the fixed hinge axis, the Cartesian axis and signed rotation direction to `quarter_turn_box`. Screen the returned envelope against the stationary boxes. Include latch and cover hardware in the moving extent. For multiple plausible hinge datums, run and label each candidate independently. The envelope encloses all angles through 90° and can overstate the volume reached. Positive overlap candidates require a narrower motion check. Keep source hinge identification, cover-to-hinge contact and external-space clearance as different results.
 
+## Carry a source-position interval into a tool path
+
+1. Keep a drawing-derived axis interval separate from the nominal axis and any manufacturing tolerance. Build the tool envelope at both ends of the source interval and include the volume between them. With a fixed approach direction and unchanged tool orientation, the expanded box carries that transverse interval across each staged move.
+2. Keep nearby terminals, divider walls and guard lips in the obstacle set. Exclude the actual intended contact surface only for its mating motion. Compare the expanded socket geometry before engagement and the separate drive, lever and connected-harness geometry as needed. Mark the geometry and removal state examined for each result.
+3. Report the smallest clearance over all stages at the selected tool size. If a larger envelope fails, retain the pair and the maximum size or staging position checked next. A positive result applies to tools and axis positions contained by the checked envelopes.
+
 ## Check a saved pose
 
 Use `static_box_gap(first_bounds, second_bounds)` for two XYZ boxes in the same frame. It returns exact rational strings for the axis gaps and squared Euclidean distance. Parse a squared distance with `Fraction(result["squared_gap"])` before ranking candidates or comparing it with a squared threshold. For a display length, use `math.sqrt(float(distance_squared))`. Overlap or contact remains a candidate for the represented bodies. A positive result from sampled boundary boxes describes the samples. Use conservative enclosures to bound solid clearance.
 
 Use `static_box_contact_dimension` on saved boxes in that same frame when exact boundary contact needs a separate classification. The intersection dimensions zero, one, two and three indicate point, line, face and volume candidates. A negative signed span separates the boxes and gives `dimension=None`. For a motion that preserves a coordinate, compare the verified bounds along that axis before projecting onto the motion plane. If the bands are disjoint, their positive gap is a lower bound throughout the motion. If the bands meet or overlap, check the projected motion with the remaining geometry. For enclosed solids, assess actual trims and material sides before using a candidate as a seating or interference result.
 
+For a rectangular compression shoe or support foot on a perforated plate, first verify the installed plate identity, flat seating faces and common plane in the native assembly. Identify every opening in that face. Pass the contact footprint and outer plate rectangle in plane coordinates to `rectangular_support_clearance` with the aperture centres and conservative radii. The helper checks the outer-edge land and the distance from each circular opening to the entire contact footprint. Tangencies and overhangs remain boundary candidates. Check contact pressure, load path and plate resistance separately.
+
 For a chamfer or another verified plane that contains one complete relevant part on one side, call `static_box_halfspace_gap(box, normal=..., offset=...)`. The part must fit inside `normal · point <= offset` in the same frame as the box. A positive exact gap squared separates the box from the entire material half-space. Supply an enclosing box to prove solid separation. If the box comes from boundary samples, report the sample scope. A candidate still needs a narrower check.
 
 For one translated pose of a multi-part group, pass the moving and fixed box arrays and displacement to `translated_box_group_margin`. It returns the minimum over all pairs of each pair's largest signed axis separation and all limiting pairs. Use the exact fractional result to confirm the margin of a candidate found by an approximate layout search. Check the same pose against each required obstacle revision. A positive margin applies to the provided enclosures at that pose. Check the travel and the actual mounting parts separately.
+
+## Bound articulation against a fixed X limit
+
+Use `rpy_world_x_bounds` with the minimum and maximum XYZ corners of each verified zero-angle box and the exact pivot in that same frame. Supply symmetric degree limits from 0° to 90° for roll, pitch and yaw. The function bounds X over the continuous product of those intervals with the rotation order Rz(yaw) Ry(pitch) Rx(roll). Check individual boxes and keep the controlling pair. Compare the returned maximum or minimum X with a fixed part's conservative X limit. Positive separation after the source and numerical reserves covers that domain. Overlapping ranges require a narrower geometric check. Keep the fixed reference, coupled hardware, and any different tipping motion as separate checks.
+
+## Screen a linkage pose grid against a revised host
+
+For an articulated chain in the XZ plane, use `planar_chain_x_bounds` with the origin X coordinate, local vectors between successive centres and relative joint angle ranges in degrees. It considers the endpoints and any interior projection extremum of each accumulated angle range. Summing the independent ranges can widen the result. Use separate chains for cylinder eyes and add verified section padding for pins, arms, cylinders and attachments. Compare the resulting bound with the host's conservative X limit in the same frame. Keep the calculation tolerance, observed bounds and any finite-solid contacts separate.
+
+Keep the identified joint limits, sample grid and motion frame from the checked linkage. Rebuild the padded member and actuator boxes in that frame at each pose. Measure the revised host in the saved assembly and separate host occurrences from the moving module. Only exclude an obstacle band when the full set of moving boxes is proved to stay outside it over the stated samples. Include actuator lanes, body and rod dimensions and the supported attachment pose in that check. Record the actual pose count, source and host hashes, and the member and obstacle identities for every candidate. A clear result covers the sampled boxes. Use a continuous bound or finite-solid trajectory for a continuous clearance claim.
+
+## Retain ground-contact and wheel-swivel evidence in a revised assembly
+
+Keep the tool pose, support receiver, caster and gauge roller as separately identified sources. Match each placed support and tool to the verified geometry and frame before reusing a clearance result. Recheck the ground witness on every tyre and roller in the same grade plane. For a horizontal right-circular roller, use the native cylinder centre height minus its observed outside radius. Confirm the axis direction and that the outer cylindrical face spans the contact station. A boundary sample above the tangent does not establish a ground gap. Use the complete swivel envelope at each measured pivot when comparing lateral clearance. A single saved wheel orientation supplies only that orientation's clearance.
+
+When reusing a treaded wheel, compare the lowest sampled tread point with the same sample result from the verified source pose after matching both tread geometry and placement. Record the grade plane and sample elevation separately. Use an exact surface extremum or a qualified sampling error bound when a contact or gap claim depends on the difference. A sampled point above grade can coexist with contact between samples.
+
+Compare the rotor or cutting envelope with the revised host separately from clearance to the carried guards, roller and support hardware. Record which surfaces and axes were measured and keep the posed contact checks separate from support reaction, traction and operating limits.
+
+## Check service space on a capped powered interface
+
+Measure the shaft and receiver circles at their working stations in one frame. Record the bore pattern and shaft-to-throat alignment separately from the coupling diameter and withdrawal envelope. Assign the intended cap, guard or cover state to each service action. Keep host intrusion, intended interfaces, coupling release and electrical plug removal as separate checks with their own travel and dimensions. A host screen can stay valid when the service sequence itself still requires component selection.
 
 ## Resolve a box candidate inside a bend
 
@@ -56,11 +131,44 @@ Read the actual shoulder, tip and layer-end stations in a common model axis. Giv
 
 For exact comparisons of nominal decimal dimensions, pass integer stations in one common finer unit. For example, use tenths of a millimetre for stations stated to 0.1 mm. Record the station unit alongside the result and convert the returned gaps and overlap back to model units. Floating-point coordinates produce exact ratios for their stored binary values. For measured coordinates compare the converted results against the declared measurement tolerance.
 
+### Separate screw reach from effective thread engagement
+
+1. Record the installed under-head seat, intervening grip, nominal tip, tapping entrance, through exit or blind floor in one signed axis. Check seating, clearance to the floor or protrusion beyond an exit with `axial_stack_witness`.
+2. Build a separate full-form interval for each thread from the fastener and mating-part source. Trim the male interval for incomplete tip threads and the grip or under-head runout. Trim the female interval for entrance chamfer, exit or tap lead. For matched direction, use the intersection of those two intervals as the nominal full-form engagement. Report the geometric reach and full-form engagement as separate values.
+3. Use source limits, including length and grip variation, for a minimum engagement check. Shaft-envelope solids and drill pilots establish positions and reach. Preload, thread strength and tightening access use their own inputs and checks.
+
 ### Perpendicular sleeves in one cavity
 
 Measure each sleeve body and each fastener as separate occurrences. A shank radius cannot establish sleeve-wall clearance. For two square-ended sleeves parallel to distinct world axes, pass `orthogonal_sleeve_clearance(first, second)` a dictionary per sleeve with `axis` (0, 1 or 2), `centre` (XYZ), `span` (increasing axis-end stations), and `radii` (inner and outer). A positive signed outer gap separates the supplied cylinders. `STRICT_MATERIAL_INTERSECTION` returns a point inside both annular walls and both axial spans. `NEEDS_FINITE_SOLID_CHECK` leaves the pair unresolved and requires an exact solid test or another bound. Retain source scope and measured or assumed tolerances beside the nominal result.
 
-### Bound a fastener section inside a confined joint
+### Bound a finite cylinder for clearance
+
+Read the outer cylindrical face and the two end planes in the same frame. Use
+`cartesian_cylinder_bounds(centre, axis=axis, radius=radius, span=(start, stop))`
+in [service_clearance.py](../scripts/service_clearance.py) when the cylinder axis
+is parallel to X, Y or Z. The span contains absolute positions on that axis.
+CAD seam vertices can lie on the shaft centre plane in another coordinate.
+The full measured radius supplies both radial limits. Include separate heads,
+shoulders and other material that extends beyond the cylindrical section. For
+an oblique axis or unknown trim, use a qualified finite geometry reader.
+
+### Check a translating shaft against a perpendicular guide
+
+1. Bind the finite shaft and the guide to their independent native cylindrical
+   faces and end planes. Use the same world frame. Build a full-radius box for
+   each measured cylinder with `cartesian_cylinder_bounds`. Repeat separately
+   for the outer sleeve, its flange and any fastener projections.
+2. On a straight stroke, pass each box pair and the full displacement to
+   `translation_box_window`. The common transverse coordinate is invariant
+   when motion lies along either cylinder axis. A positive gap on that
+   coordinate proves that this pair stays apart throughout the stroke. Keep
+   the signed geometric margin and its measurement tolerance with the result.
+3. When those conservative boxes overlap, retain the candidate. Use the exact
+   finite geometry test before accepting the layout. An outer cylinder can
+   overlap an enclosure while the actual hollow component remains clear.
+   A hole, split or relieved profile requires scope-specific shape evidence.
+
+## Bound a fastener section inside a confined joint
 
 An enlarged head can produce a whole-fastener box candidate even when the other part only reaches the shank. Confirm the installed axis, bearing plane and tip against the actual model. Bind a conservative shank bound to the measured axial stations and the exact source revision. Include any washer face, fillet, step or thread major diameter that can enter those stations. Pass both the full box and the verified section box with the obstacle box to `bounded_axial_section_clearance(..., axis=...)`. A section may resolve only an overlap it covers completely. `DISJOINT_SECTION_BOUNDS` proves transverse separation for that overlap. A contact candidate or uncovered overlap requires a wider certified section or a finite-solid check.
 
@@ -73,3 +181,13 @@ An enlarged head can produce a whole-fastener box candidate even when the other 
 3. Measure the required insertion depth along the tool axis from the opening mouth plane to the position for full fastener engagement. Measure usable tool reach from the same plane with the tool fully inserted up to its first stop. Report whether usable reach equals or exceeds the required depth separately from radial clearance.
 
 4. If the job supplies only a mouth axis, report the available radial space and axial interval. To verify removal of a part after releasing the fastener, check the moving part and its attached hardware along the entire path against both the local assembly and its installed surroundings. Identify released hardware, datum-only geometry and omitted cables in that result.
+
+### Check a guided circular pilot in a round-ended slot
+
+When separate straight guides locate a moving pilot, measure both guide limits and both slot-end centres in the same planar frame. Pass the smallest measured slot radius, largest pilot radius, full centre travel, transverse play and required reserve to `guided_circular_pilot_clearance`. The check includes the combined longitudinal overrun and transverse play at the slot ends. Keep guide side play smaller than the pilot reserve at the tightest section so the slot stays clear during travel. Verify the retained lip, travel stops and other moving sections separately.
+
+## Bound gaps between sampled fixed-axis poses
+
+1. Measure separation from the same stationary obstacle at increasing angles covering both endpoints. Use exact geometry or conservative section bounds. Include trim sampling, readback and numerical error in the supplied gap error bound.
+2. Measure an upper bound on the distance from the rotation axis to any point on the moving body. Pass the samples as `(angle_degrees, gap)` pairs to `sampled_rotation_clearance`. The method subtracts the maximum travel to the nearest sample and returns a rational lower bound across the continuous interval. Parse it with `Fraction`.
+3. An unresolved reserve needs denser samples or tighter geometry bounds. Apply the method separately to each obstacle. Translation, flexible parts and moving obstacles require their own motion bounds.

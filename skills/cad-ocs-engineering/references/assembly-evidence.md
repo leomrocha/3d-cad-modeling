@@ -9,15 +9,27 @@
 
 For opposite hands, pass measured world points, a common reference origin and each hand's positive outward unit direction to `directed_axial_span` in [assembly_verification.py](../scripts/assembly_verification.py). Compare the resulting ordered stations against the independent shaft, insert and spacer datums with their signed direction preserved. The returned endpoints describe the observed points. Curved extrema require their own analytic or conservative bounds.
 
+### Match installed boundary samples and display
+
+When an insertion changes native solid serialization, compare source and installed boundary samples in the receiving assembly frame. Transform the source samples with the intended pose and use the same boundary sampling policy on the installed solid. Resolve each occurrence's effective RGB and layer, including block and layer inheritance, before calling `match_world_boundary_samples` in [assembly_verification.py](../scripts/assembly_verification.py).
+
+Supply a unique `id`, XYZ `points`, `rgb` and `layer` for every visible occurrence in the checked scope. Set the length tolerance in model units. The matcher requires one source per installed occurrence and checks nearest-sample distances in both directions. Use `require_unique_source=True` when identifying exact source roles is required. Compare occurrence counts and skipped hidden content separately. Record curve coverage and independently measure critical features and topology when the boundary is sampled only at endpoints.
+
 ### Verify a changed native INSERT
 
 Read the source feature in its own frame before deriving the new placement. For an axisymmetric part, use two ordered stations on its shaft or bore to check the axis direction. Use a separate off-axis feature, such as a keyway or asymmetric hole, to check clocking when that rotation matters.
 
-For an OpenCADStudio block reference, use [step_placements.py](../scripts/step_placements.py) to encode the proposed local matrix with `native_fields` and decode the live native fields with `native_matrix`. The insertion point is stored in the object coordinate system. A rotation value alone turns about the current insert normal. For a changed axis, update the normal, rotation and insertion point together. Compose the decoded matrix with every parent transform before checking world placement. Convert a desired world pose back to the parent frame before encoding it.
+For an OpenCADStudio block reference, use [step_placements.py](../scripts/step_placements.py) to encode the proposed local matrix with `native_fields` and decode the live native fields with `native_matrix`. The insertion point is stored in the object coordinate system. A rotation value alone turns about the current insert normal. For a changed axis, update the normal, rotation and insertion point together. Compose the decoded matrix with every parent transform before checking world placement. Convert a desired world pose back to the parent frame before encoding it. A completed interactive rotation command can leave an Insert's matrix unchanged. Read back the full matrix before adding a translation. If the requested orientation is absent, save or recover the preceding checkpoint and write the explicit placement fields through the supported native schema. Use the existing live fields as expected values. Measure the transformed shaft axis and signed seating stations before releasing the component for reuse.
 
 Check the walker's frame contract for the exact occurrence path. A traversal can attach the incoming parent-to-world matrix to an INSERT row and pass the composed matrix to its descendants. Check the definition base point at every nesting level. This reader requires a zero base point. For a nonzero base point, select a reader that maps the definition base point to the insertion point before composing parent transforms. Use `native_fields` for proper rigid transforms (rotation and translation). For the zero-base-point contract, the INSERT world matrix is `multiply(incoming_parent_to_world, native_matrix(insert_properties))`. An identity incoming matrix at a model-space root can accompany a moved or rotated INSERT. A traversal that already returns the INSERT's composed frame uses that frame directly. Use a nonidentity INSERT in a fixture to check the convention before comparing matrices. Record the incoming, decoded local and composed matrices separately when diagnosing a placement mismatch.
 
 Compare the full world matrix with the independently specified pose. Check the origin and basis directions, including scale and handedness. Measure the resulting world-space shaft stations and off-axis feature from the actual child solid. Agreement between the encoder and decoder checks the field conversion. Agreement with source-derived feature positions checks the installed part. Translation and aggregate bounds can agree when a symmetric part points along the wrong axis.
+
+### Verify an imported package with drawing markers
+
+1. Inventory the traced exterior, each group of reference markers and the exact source measurement report separately. Keep the exterior in the physical count and preserve the markers on a separate layer that is hidden in the normal view. Inspect the retained marker records even when that layer is off.
+2. Use the source labels and recorded marker construction to decode each datum. For a named two-vertex axis marker drawn symmetrically about its centre, transform the midpoint and recorded elevation through the composed occurrence matrix. Compare the result with the independent mating features and seating plane. Marker length and line width are drawing properties. Verify bore geometry on the physical mating part independently.
+3. Compare the measured exterior envelope and its propagated source uncertainty with the installation and extraction apertures. Record which covers and hardware were removed. Report body fit, datum alignment and physical fastener or terminal geometry as distinct results.
 
 ## Fit datums over retained solids
 
@@ -27,11 +39,15 @@ Put measured source axes, proposed axes and each calculated pose on separate nam
 
 Read back the native line handles, endpoints and layers independently after creation. Recalculate the required lengths and spans from those endpoints. Confirm the reference lines are at model-space root and the retained solids still descend from the original insert. Validate the saved revision with the caller's persistence method. Report the checked poses and identify any proposed change that requires a new physical part.
 
+For the centre of an available mounting strip on a flat, straight-edged face, use `straight_profile_station_intervals` in [planar_profiles.py](../scripts/planar_profiles.py). Supply the measured closed contour in connected vertex order, the section axis and station, and the comparison tolerance in the drawing's units. Preserve the resulting separate material intervals. Choose the joining interval using the mounting role and independently checked part edges. A station on a vertex, a curved contour or a face with separate openings requires a boundary-aware procedure with scope for that topology.
+
 ## Image constraints
 
 A calibrated in-plane trace requires coplanarity with its reference. For perspective constraints on parallel edges, pin the photo, camera matrix, frame, vanishing point, pixel picks and pick tolerance. Use [photo_constraints.py](../scripts/photo_constraints.py) to intersect line directions consistent with every pick disk. An empty interval rejects that common direction for the supplied camera. Back-project each feasible line to its world plane. Evaluate a metric section only at an independently established depth or height. A direction and small image residual alone leave a family of possible placements.
 
 ## Interfaces, installation and contact
+
+For a revised host with stable native paths, use `compare_native_occurrence_revisions` in [assembly_verification.py](../scripts/assembly_verification.py). Supply complete inventories with the full body payload SHA-256 and composed world matrix in the same unit and frame. Compare the reshaped, moved, added and removed paths to the authorized edit. A moved and reshaped body appears in both lists. If handles were remapped or different serialization changes the digests, establish a new one-to-one geometry and placement match. Confirm inherited mating surfaces and moving tool geometry before reusing their prior clearances. Check every changed obstacle against the full affected installation, articulation and service paths. Check layer and colour separately.
 
 1. For a board with multiple apertures, assign distinct openings to its holes and screen invariant pairwise centre distances against enclosing radii and the stated tolerance. [mounting_pattern.py](../scripts/mounting_pattern.py) enumerates assignments up to an explicit budget. A surviving assignment still needs a rigid pose. For true circular bores, verify a supplied finite pin axis through both circles at that pose, including pin radius and required radial gap.
 2. For irregular openings, verify pins against the finite source curves or mesh. Compare the substrate outline and populated components with the containing outline. Distinguish plan-view fit, Z interference, installation tool access and connector mating travel. Pairing two boards requires distinct openings across both and mutual hardware clearance. An exhaustive discrete sample only covers its sampled poses. Continuous exclusion requires bounds covering every allowed translation and rotation.
@@ -46,6 +62,20 @@ For a circular retainer inside an annular opening, an overlapping Cartesian boun
 For a centred cross-drilled shaft, run `perpendicular_through_bore` in [feature_checks.py](../scripts/feature_checks.py) before creating the cutter. Supply both finite intervals in the same Cartesian frame. The check returns the cutter overrun and remaining material at each end. Check the bore cylinder and its trim after subtraction.
 
 For coaxial annular faces interrupted by a straight radial keyway, verify the two actual face stations, radii, slot width and end first. Use `annular_seat_with_radial_slot` in [planar_profiles.py](../scripts/planar_profiles.py) when the slot starts at the bore, crosses the contact annulus's inner arc and ends inside its outer circle. Record the calculated projected area after the cut. Contact pressure and preload distribution require a joint model.
+
+### Check a bore exit beside an integral arm or step
+
+1. Trace the complete stock interval on the fastener axis at the bore radius. A nearby tab, arm or thicker step can extend local material beyond the general plate face. Locate the actual exit or blind floor using the local solid.
+2. For a through cut, overrun both local material boundaries. Check the full bore rim at entry and exit, and check that the intended washer or head bearing footprint lies on the actual flat face. A nominal exit plane can cut partway into a thicker branch and leave a blocked bore or an incomplete bearing face.
+3. Check the washer and socket swept footprint separately from the shank. Keep remaining wall thickness to nearby crossing bores and free edges explicit. When a design allows you to relieve an integral arm, verify the revised flat contact patch and rebuild the local clearance screen before saving the corrected part.
+
+### Resolve a box overlap with a verified planar outline
+
+1. Match the candidate to its exact installed occurrence path and full transform. Confirm that the retained profile, thickness, and later Boolean or assembly edits describe that exact saved revision.
+2. Choose a common orthographic plane. Bound the complete projection of each body in that plane. A verified profile may contain an integral sheet and all of its formed or welded features. Include any flange, boss, pocket wall, or fastener that projects beyond the profile as a separate region or an expanded outline.
+3. For a repeated articulated assembly, bound every segment and joint at the specified pose. Include full width, transverse offsets and exceptional hardware such as a joining clip. Keep each projected feature separate when a single overall rectangle would fill a measured recess.
+4. Measure the minimum distance over all pairs of projected regions. Strictly positive separation, after the stated numerical and source-geometry reserve, is a lower bound on physical separation for that pose. Record the controlling pair, the projection axes and the source hashes. Overlapping projections remain candidates for another conservative plane, a finite solid check or an interior witness.
+5. Label the pose and excluded motion. A bound at one pose covers a sweep only when the projected regions enclose every allowed pose over the checked motion interval.
 
 ### Classify reference occurrences for clearance
 
