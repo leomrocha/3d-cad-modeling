@@ -11,9 +11,13 @@ For opposite hands, pass measured world points, a common reference origin and ea
 
 ### Match installed boundary samples and display
 
-When an insertion changes native solid serialization, compare source and installed boundary samples in the receiving assembly frame. Transform the source samples with the intended pose and use the same boundary sampling policy on the installed solid. Resolve each occurrence's effective RGB and layer, including block and layer inheritance, before calling `match_world_boundary_samples` in [assembly_verification.py](../scripts/assembly_verification.py).
+When an insertion changes native solid serialization, compare source and installed boundary samples in the receiving assembly frame. Use the same boundary sampling policy on both sides. Resolve each occurrence's effective RGB and layer, including block and layer inheritance, before calling `match_world_boundary_samples` in [assembly_verification.py](../scripts/assembly_verification.py).
 
 Supply a unique `id`, XYZ `points`, `rgb` and `layer` for every visible occurrence in the checked scope. Set the length tolerance in model units. The matcher requires one source per installed occurrence and checks nearest-sample distances in both directions. Use `require_unique_source=True` when identifying exact source roles is required. Compare occurrence counts and skipped hidden content separately. Record curve coverage and independently measure critical features and topology when the boundary is sampled only at endpoints.
+
+For archived bounds or samples, identify the recorded coordinate frame and pose independently of the stored INSERT matrix. A saved assembly can contain world-space geometry beneath an identity INSERT. Compare that archived evidence directly to observations in the same world pose. For a local donor, compose its placements and the target pose once. For a different archived pose, recover the source-to-target relation before converting the observations. Verify placement with independent datums in the receiving frame. Keep bounds derived from transformed shape observations distinct from conservative bounds made by transforming corners of a local bounding box.
+
+When historical and current records use different names for one occurrence, record both names and the source evidence for the mapping. Bind the exact saved revisions, the full occurrence path and the retained geometry and placement. For remapped handles, require a confirmed one-to-one occurrence match before carrying a historical name into the check.
 
 ### Verify a changed native INSERT
 
