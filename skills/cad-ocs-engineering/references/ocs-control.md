@@ -37,6 +37,14 @@ It never starts OCS, removes stale descriptors, automatically retries or saves a
 
 
 
+### Transition between isolated groups
+
+1. Verify and save the styled checkpoint in normal visibility before isolation. Pin the session, owned document, native layer identities and complete original flags. For each requested group, derive the required layer set from every ancestor and leaf in the full occurrence paths. Reject a candidate state that would hide a requested leaf or reveal another physical or protected reference path.
+2. For several groups in one exclusive ownership interval, carry the last verified isolation state forward. [The transition planner](../scripts/layer_isolation.py) takes the original flag table, the observed full table, the preceding hidden layer identities and the next hidden layer identities. Both sets contain only layers whose original flags were on and thawed. It fails on any unexpected flag or missing layer and emits only the differing off-flag writes, with their expected values. Apply them under the verified owned session, document and revision. Hiding changes precede enabling changes.
+3. Give each write a stable journal label for its transition and native layer. Resolve an uncertain request under its original ID and verify the resulting live flag before planning or writing another transition. On a terminal failure, stop and reconcile the exact live table and journal with the last verification and the saved styled checkpoint. Do not treat a partial transition as verified or save it as the final appearance.
+4. Verify the complete expected flag table, exact visible occurrence paths and effective appearance after each transition. Only then use it as the preceding state. After the last group, pass an empty target to restore the original flags once. Verify the complete restored flag table, original visible paths, effective appearance and retained geometry before the final save. Isolating one group at a time and restoring between groups remains valid.
+5. Multiple updates in a single record edit do not establish a multi-record batch capability. Use a provider batch only after qualifying its exact transport, schema, per-step commit evidence and same-request recovery. Do not use a bulk visibility command that changes unrelated flags or silently skips unresolved layer identities.
+
 ### Preserve hidden references during a style revision
 
 1. Inventory physical solids and reference solids separately. When reference geometry has no leaf role metadata, use its exact source definition and full occurrence path to identify it. Preserve its recorded purpose and keep its leaves on a reference layer separate from the working parts.

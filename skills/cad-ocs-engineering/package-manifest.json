@@ -164,7 +164,7 @@
     },
     "references/ocs-control.md": {
       "source": "references/ocs-control.md",
-      "sha256": "c816dbab9ccd9dbe7fb1d690041989ee8c63654f32daafd49a44b7ca1677db35"
+      "sha256": "063d19c4101ce5008f08b711b06682add1734a051ebad173a9d1dda3eeacdc0e"
     },
     "references/ocs-runtime.md": {
       "source": "references/ocs-runtime.md",
@@ -473,6 +473,10 @@
     "scripts/job_paths.py": {
       "source": "scripts/job_paths.py",
       "sha256": "cc3642c1b7d915101abcbacdcbf35ae03b2a4a9337c02c9f9be47a031916dd2c"
+    },
+    "scripts/layer_isolation.py": {
+      "source": "scripts/layer_isolation.py",
+      "sha256": "864d688d9e4743a61b728079ff67442e7ac28d969124ea644c44b5ec467be844"
     },
     "scripts/learned_cad_provider.py": {
       "source": "scripts/learned_cad_provider.py",

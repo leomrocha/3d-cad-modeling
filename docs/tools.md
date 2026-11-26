@@ -119,6 +119,10 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 
 1. [hex_screw_reference.py](../scripts/hex_screw_reference.py) — constructs and inspects a caller-defined regular-hex head joined to a nominal cylindrical shaft. [Procedure](../skills/cad-ocs-engineering/references/hex-screw-reference.md).
 
+## Layer isolation
+
+1. [layer_isolation.py](../scripts/layer_isolation.py) validates the full native flag table against the preceding verified isolation state and plans only the differing off-flag writes. [Procedure](../skills/cad-ocs-engineering/references/ocs-control.md#transition-between-isolated-groups).
+
 ## Exact source and partial-work checks
 
 1. [exact_profiles.py](../scripts/exact_profiles.py) — complete ordered Line/Arc/clamped-NURBS loop matching and signed source extrusion direction.
