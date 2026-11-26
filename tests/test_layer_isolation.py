@@ -5,7 +5,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from layer_isolation import plan_isolation_transition
+from layer_isolation import plan_exact_isolation_masks, plan_isolation_transition, verify_ancestor_appearance
 
 
 class LayerIsolation(unittest.TestCase):
@@ -63,6 +63,53 @@ class LayerIsolation(unittest.TestCase):
             with self.subTest(layer=layer):
                 with self.assertRaisesRegex(ValueError, "not originally on and thawed"):
                     plan_isolation_transition(self.original, self.original, set(), {layer})
+
+
+class AncestorIsolation(unittest.TestCase):
+    def test_single_gate_passes_whole_assembly_and_named_roles(self):
+        flags = {layer: dict(off=False, frozen=False) for layer in ("0", "gate", "edge", "cover")}
+        dependencies = {("tool", "edge"): {"gate", "edge"}, ("tool", "cover"): {"gate", "cover"},
+                        ("host", "cover"): {"0", "cover"}}
+        groups = {"assembly": {("tool", "edge"), ("tool", "cover")}, "guarding": {("tool", "cover")}}
+        self.assertEqual(plan_exact_isolation_masks(flags, dependencies, groups),
+                         {"assembly": {"0"}, "guarding": {"0", "edge"}})
+
+    def test_whole_group_can_pass_while_prior_role_needs_second_gate(self):
+        flags = {layer: dict(off=False, frozen=False) for layer in ("gate", "shared", "scoped", "wheel")}
+        tyre, screw = ("tool", "wheel", "tyre"), ("tool", "wheel", "screw")
+        dependencies = {tyre: {"gate", "wheel"}, screw: {"gate", "wheel"}}
+        self.assertEqual(plan_exact_isolation_masks(flags, dependencies, {"whole": {tyre, screw}}), {"whole": set()})
+        groups = {"whole": {tyre, screw}, "tyre": {tyre}}
+        with self.assertRaisesRegex(ValueError, "tyre.*extra.*screw"):
+            plan_exact_isolation_masks(flags, dependencies, groups)
+        dependencies[screw] = {"gate", "scoped"}
+        dependencies[("host", "screw")] = {"shared"}
+        self.assertEqual(plan_exact_isolation_masks(flags, dependencies, groups),
+                         {"whole": {"shared"}, "tyre": {"scoped", "shared"}})
+
+    def test_hidden_dependency_blocks_a_requested_role(self):
+        flags = {"hidden": dict(off=True, frozen=False), "on": dict(off=False, frozen=False)}
+        with self.assertRaisesRegex(ValueError, "guarding.*missing.*guard"):
+            plan_exact_isolation_masks(flags, {("tool", "guard"): {"hidden", "on"}},
+                                       {"guarding": {("tool", "guard")}})
+
+    def test_shared_insert_use_outside_scope_is_rejected(self):
+        tool, other = ("tool", "insert"), ("other", "insert")
+        views = {tool: ((12, 20, 30), "0", ()), other: ((12, 20, 30), "0", ())}
+        with self.assertRaisesRegex(ValueError, "outside scope.*other"):
+            verify_ancestor_appearance(views, views, {tool}, {"insert"}, {})
+
+    def test_raw_zero_protected_descendant_preserves_effective_layer_and_colour(self):
+        root, ref = ("tool",), ("tool", "protected")
+        original = {root: ((12, 20, 30), "0", ()), ref: ((12, 20, 30), "0", ("hidden",))}
+        moved = {root: ((12, 20, 30), "gate", ()), ref: ((12, 20, 30), "gate", ("hidden",))}
+        with self.assertRaisesRegex(ValueError, "effective appearance.*protected"):
+            verify_ancestor_appearance(original, moved, {root, ref}, {"tool"}, {root: "gate"})
+        moved[ref] = original[ref]
+        verify_ancestor_appearance(original, moved, {root, ref}, {"tool"}, {root: "gate"})
+        moved[ref] = ((30, 20, 12), "0", ("hidden",))
+        with self.assertRaisesRegex(ValueError, "effective appearance.*protected"):
+            verify_ancestor_appearance(original, moved, {root, ref}, {"tool"}, {root: "gate"})
 
 
 if __name__ == "__main__":

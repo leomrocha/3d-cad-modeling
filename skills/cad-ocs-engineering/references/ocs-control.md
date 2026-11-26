@@ -37,6 +37,12 @@ It never starts OCS, removes stale descriptors, automatically retries or saves a
 
 
 
+### Preflight an ancestor layer change
+
+Record the full occurrence paths for every requested role group before changing any layers. In memory, substitute only the proposed ancestor INSERT layers and rebuild the occurrence tree. For each new control layer, retain the actual colour and flag profile of its corresponding source layer. Use `verify_ancestor_appearance` in [layer_isolation.py](../scripts/layer_isolation.py) to check all uses of edited definition handles against the authorized scope. Compare effective RGB, layer and visibility blockers across the full tree, including hidden references and descendants on raw layer 0. Pass only explicitly approved effective layer changes. Compare native records, block membership, world placement and normal visible membership separately.
+
+Use `plan_exact_isolation_masks` on the proposed full dependency sets and the original named groups. Include every raw and effective ancestor layer and each leaf layer in its dependencies. For each group the helper keeps only the enabled layers required by its paths. It reports missing and extra paths across the named groups. Check the whole assembly role and each named subgroup separately before applying the existing transition procedure.
+
 ### Transition between isolated groups
 
 1. Verify and save the styled checkpoint in normal visibility before isolation. Pin the session, owned document, native layer identities and complete original flags. For each requested group, derive the required layer set from every ancestor and leaf in the full occurrence paths. Reject a candidate state that would hide a requested leaf or reveal another physical or protected reference path.
