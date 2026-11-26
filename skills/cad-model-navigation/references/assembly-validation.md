@@ -12,3 +12,9 @@
 For a constant-frame-rate capture, run the [recording checker](../scripts/check_recording.py) with the movie and a JSON receipt containing a `chapters` list of `title` and elapsed `seconds` values. It uses local ffprobe and ffmpeg to check presentation intervals, chapter order and bounds, and decoding. Actual build actions and visibility require the native and visual checks above.
 
 For each inserted occurrence, compare the complete block-to-world transformation. If traversal records the parent frame at the INSERT row, compose that frame with the INSERT's local transform, or inspect the resulting frame at a known child. Verify an origin and two non-collinear axes before using the placement for clearance checks.
+
+## Isolate leaves beneath shared block references
+
+1. Record the exact physical leaf paths in the requested group and the layer dependencies of every ancestor INSERT. Test the required layer flags and compare the complete set of visible physical leaves with the target set. An enabled ancestor layer can also reveal unrelated leaves. Keep those extra paths in the isolation record.
+2. If the ancestor layer creates a conflict, identify an existing neutral parent layer to evaluate on the owned derivative. Check descendant layer and colour inheritance before changing the ancestor INSERT. This includes layer 0 and ByLayer or ByBlock colour. Treat the new parent layer as neutral only when the same physical leaves are visible in normal view and every leaf keeps its effective colour. Preserve the shared definition, the occurrence paths and transforms, and the referenced geometry. Check all installations of the shared definition.
+3. Test each functional group again with its required ancestor layers enabled. Verify exact visible leaf membership and inspect the isolated appearance. Restore the original normal layer visibility, check every leaf again, and bind the result to the verified saved revision.

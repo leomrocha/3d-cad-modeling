@@ -13,6 +13,12 @@
 
 For calculated geometry arguments, convert validated array-library scalars and vectors to ordinary finite Python numbers and lists at the CAD call boundary. Preserve the coordinate frame, units and tolerance during conversion. Check calculated profiles, cutter dimensions, rotation axes and translation vectors before a long native build.
 
+## Repeated helpers with fixed operation labels
+
+Before executing a helper that emits the same operation labels on each call, assign a deterministic client namespace to each independent stage. Include the stage key in the full label passed to `bounded_request_namespace`, then check each resulting request ID against the 128-byte limit. Record the stage-to-namespace mapping in the job before sending requests.
+
+Build each stage's client for the same verified document and session. Share the existing append-only journal and retain a single writer. Start the next stage only after pending requests from the previous stage are resolved and its required checkpoint is verified. Recover a request from an interrupted stage using its recorded namespace and full request ID.
+
 ## Preflight native recipe imports
 
 Run the import and helper-resolution code for the selected native action with the intended Python interpreter and dependency paths. Use a job-owned dry-run path that calls the same loader as the native action and stops before it starts a process, connects to OpenCADStudio or opens a document. Check each resolved helper's file path against the pinned source. A planning command that skips native-only imports leaves that part of the preflight unchecked.

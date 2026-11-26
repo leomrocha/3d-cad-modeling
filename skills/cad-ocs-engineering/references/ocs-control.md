@@ -37,6 +37,20 @@ It never starts OCS, removes stale descriptors, automatically retries or saves a
 
 
 
+### Preflight an ancestor layer change
+
+Record the full occurrence paths for every requested role group before changing any layers. In memory, substitute only the proposed ancestor INSERT layers and rebuild the occurrence tree. For each new control layer, retain the actual colour and flag profile of its corresponding source layer. Use `verify_ancestor_appearance` in [layer_isolation.py](../scripts/layer_isolation.py) to check all uses of edited definition handles against the authorized scope. Compare effective RGB, layer and visibility blockers across the full tree, including hidden references and descendants on raw layer 0. Pass only explicitly approved effective layer changes. Compare native records, block membership, world placement and normal visible membership separately.
+
+Use `plan_exact_isolation_masks` on the proposed full dependency sets and the original named groups. Include every raw and effective ancestor layer and each leaf layer in its dependencies. For each group the helper keeps only the enabled layers required by its paths. It reports missing and extra paths across the named groups. Check the whole assembly role and each named subgroup separately before applying the existing transition procedure.
+
+### Transition between isolated groups
+
+1. Verify and save the styled checkpoint in normal visibility before isolation. Pin the session, owned document, native layer identities and complete original flags. For each requested group, derive the required layer set from every ancestor and leaf in the full occurrence paths. Reject a candidate state that would hide a requested leaf or reveal another physical or protected reference path.
+2. For several groups in one exclusive ownership interval, carry the last verified isolation state forward. [The transition planner](../scripts/layer_isolation.py) takes the original flag table, the observed full table, the preceding hidden layer identities and the next hidden layer identities. Both sets contain only layers whose original flags were on and thawed. It fails on any unexpected flag or missing layer and emits only the differing off-flag writes, with their expected values. Apply them under the verified owned session, document and revision. Hiding changes precede enabling changes.
+3. Give each write a stable journal label for its transition and native layer. Resolve an uncertain request under its original ID and verify the resulting live flag before planning or writing another transition. On a terminal failure, stop and reconcile the exact live table and journal with the last verification and the saved styled checkpoint. Do not treat a partial transition as verified or save it as the final appearance.
+4. Verify the complete expected flag table, exact visible occurrence paths and effective appearance after each transition. Only then use it as the preceding state. After the last group, pass an empty target to restore the original flags once. Verify the complete restored flag table, original visible paths, effective appearance and retained geometry before the final save. Isolating one group at a time and restoring between groups remains valid.
+5. Multiple updates in a single record edit do not establish a multi-record batch capability. Use a provider batch only after qualifying its exact transport, schema, per-step commit evidence and same-request recovery. Do not use a bulk visibility command that changes unrelated flags or silently skips unresolved layer identities.
+
 ### Preserve hidden references during a style revision
 
 1. Inventory physical solids and reference solids separately. When reference geometry has no leaf role metadata, use its exact source definition and full occurrence path to identify it. Preserve its recorded purpose and keep its leaves on a reference layer separate from the working parts.

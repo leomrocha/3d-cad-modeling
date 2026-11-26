@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "a7f1f796798e5168aa8abb361ebcade843ad631243f176dcc9e8c41df9e34fef"
+      "sha256": "67565fed4fbf56e35a4e0b869e16197a301be8ad96632577bafcab28299c6e50"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -104,7 +104,7 @@
     },
     "references/exact-source-checks.md": {
       "source": "references/exact-source-checks.md",
-      "sha256": "934d24ea1067cbb9aa07f7c23664df8fde71cd74db317c7fefb495d48742ad55"
+      "sha256": "340d5fa17317c7107f5e2f681d8afeb21b3b0f57f013aa520974e1ffc7e283e7"
     },
     "references/existing-batch-placement.md": {
       "source": "references/existing-batch-placement.md",
@@ -164,11 +164,11 @@
     },
     "references/ocs-control.md": {
       "source": "references/ocs-control.md",
-      "sha256": "c816dbab9ccd9dbe7fb1d690041989ee8c63654f32daafd49a44b7ca1677db35"
+      "sha256": "36d89ef9d8a6e44624085e0a28bd8cea9910394e13f68e97643dc406666f7d8d"
     },
     "references/ocs-runtime.md": {
       "source": "references/ocs-runtime.md",
-      "sha256": "9a8669a68aab8657031fd7f5ba6aa1eafb5315d01f1c85f00973b3d19ba7849d"
+      "sha256": "6801cd79189dc11f1931411a9c0bbc5849ebadca104b252da68ccc641520ae81"
     },
     "references/package-completion.md": {
       "source": "references/package-completion.md",
@@ -473,6 +473,10 @@
     "scripts/job_paths.py": {
       "source": "scripts/job_paths.py",
       "sha256": "cc3642c1b7d915101abcbacdcbf35ae03b2a4a9337c02c9f9be47a031916dd2c"
+    },
+    "scripts/layer_isolation.py": {
+      "source": "scripts/layer_isolation.py",
+      "sha256": "da9e987ee7b6a689f0cd1215b0f19e4ce6300b97b0b3752e0fe5ddaf8e376cc7"
     },
     "scripts/learned_cad_provider.py": {
       "source": "scripts/learned_cad_provider.py",
